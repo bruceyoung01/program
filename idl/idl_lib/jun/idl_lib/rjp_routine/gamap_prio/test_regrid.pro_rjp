@@ -1,0 +1,32 @@
+; $Id: test_regrid.pro,v 1.49 2001/12/17 15:37:31 bmy v1.49 $
+; 
+; Test program for ctm_regrid.pro (mgs, bmy, 6/99)
+
+
+pro test_regrid,newdata,newgrid,oldgrid
+
+
+  ; newgrid=ctm_grid(ctm_type('GEOS1'),/NO_VERT)
+  ; oldgrid=ctm_grid(ctm_type('generic',res=[1.,1.],halfpolar=0),/NO_VERT)
+    oldgrid=ctm_grid(ctm_type('GEOS1'),/NO_VERT)
+    newgrid=ctm_grid(ctm_type('GISS_II_PRIME'),/NO_VERT)
+
+    ; compute total surface area
+    aold=ctm_boxsize(oldgrid)
+    anew=ctm_boxsize(newgrid)
+    print,'Total surface area: OLD = ',total(aold),'   NEW = ',total(anew)
+
+
+    ; creaet test array filled with 1's
+    test = fltarr(360,180)+1
+
+    newdata = ctm_regrid(test,oldgrid,newgrid)
+
+
+    ; min and max for new data set should also be 1
+    print,'Min and Max of regridded data (should be 1): ',  $
+           min(newdata,max=m),m
+
+return
+end
+

@@ -1,0 +1,9 @@
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+fatal:Number of subscripts do not match number of dimensions of variable,(1) Subscripts used, (2) Subscripts expected
+fatal:["Execute.c":7743]:Execute: Error occurred at or near line 71 in file raster_viirs.ncl
+
+

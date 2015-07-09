@@ -1,0 +1,71 @@
+PRO Chapter3_6Hw
+
+Precip = [43, 10, 4, 0, 2, 31, 0, 0, 0, 2, 3, 0, 4, 15, 2, 0, 1, 127, 2]
+
+ResultPrecip = Sort(Precip)		;Sorting the values
+SortPrecip = Precip[Sort(Precip)]	;Putting the sorted values into an array
+SizePrecip = Size(Precip)		;Implementing the size function of the array
+n = SizePrecip[1]			;Getting the size of the array
+
+minimum = SortPrecip[0]			;min value of the sorted array
+maximum = SortPrecip[n-1]		;max value of the sorted array
+med = Median(Precip)			;median of the array
+
+;Print, "Min = ", minimum, "  Max = ", maximum
+;Print, "Median = ", med
+
+q025 = ((n-1)*0.25)+1
+quantile25 = (SortPrecip[Ceil(q025-1)] + SortPrecip[Floor(q025-1)])/2.
+;Print, "       q_0.25 = ", q025, " Value = ", quantile25
+
+q075 = ((n-1)*0.75)+1
+quantile75 = (SortPrecip[Ceil(q075-1)] + SortPrecip[Floor(q075-1)])/2.
+;Print, "       q_0.75 = ", q075, " Value = ", quantile75
+
+;----------------------------------------------------------------------------------------
+BoxPlot = [minimum, quantile25, med, quantile75, maximum]
+
+;setting plot device to ps
+SET_PLOT, 'PS'
+
+;Here is the filename for the graph
+DEVICE, Filename ="BoxPlot.ps"
+
+Plot, BoxPlot
+
+Device, /close
+;----------------------------------------------------------------------------------------
+
+IQR = quantile75 - quantile25
+
+upperOuterFence = quantile75 + 3*IQR
+upperInnerFence = quantile75 + (3*IQR)/2
+lowerInnerFence = quantile25 - (3*IQR)/2
+lowerOuterFence = quantile25 - 3*IQR
+
+FOR i = 1, n-1 DO BEGIN
+	IF (SortPrecip[i] LE upperInnerFence) THEN BEGIN
+		IF (SortPrecip[i] GE SortPrecip[i-1]) THEN BEGIN
+			largeInside = float(SortPrecip[i])
+		ENDIF
+	ENDIF
+
+	IF (SortPrecip[i] LE quantile25) THEN BEGIN
+		IF (SortPrecip[i] LE SortPrecip[i-1]) THEN BEGIN
+			smallInside = float(SortPrecip[i])
+		ENDIF
+	ENDIF
+ENDFOR
+
+Print, SortPrecip
+Print, "Upper Outer = ", upperOuterFence
+Print, "Upper Inner = ", upperInnerFence
+Print, "Large Inside = ", largeInside
+Print, "Quantile 75 = ", quantile75
+Print, "Median = ", med
+Print, "Quantile 25 = ", quantile25
+Print, "Small Inside = ", smallInside
+Print, "Lower Inner = ", lowerInnerFence
+Print, "Lower Outer = ", lowerOuterFence
+
+END

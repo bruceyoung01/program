@@ -1,0 +1,22 @@
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+fatal:syntax error: line 95 in file /work/jwang7/bruceyoung01/model/ncl/ncl_lib/procedure/atlanta/point_wrfchem_hourly.ncl before or near point_wrfchem_hourly 
+   wallClockElapseTime(tstrt, point_wrfchem_hourly
+-------------------------------------------------^
+
+fatal:error in statement
+fatal:Syntax Error in block, block not executed
+fatal:error at line 98 in file /work/jwang7/bruceyoung01/model/ncl/ncl_lib/procedure/atlanta/point_wrfchem_hourly.ncl
+
+fatal:syntax error: line 64 in file select_wrfchem_point.ncl before or near \n 
+     wrh, wu, wv, wpblh, wpsfc)
+-------------------------------^
+
+fatal:syntax error: possibly an undefined procedure
+fatal:Syntax Error in block, block not executed
+fatal:error at line 72 in file select_wrfchem_point.ncl
+
+

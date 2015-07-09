@@ -1,0 +1,285 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/color/
+last updated : 07/17/2008 10:09
+
+===================
+CINDEX.PRO
+===================
+      INITIAL REVISION: David Fanning, RSI, May 1995
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Added NCOL, ROW, TITLE, ALL keywords to
+                          allow the user to specify these settings
+                          instead of having these be hardwired.
+      bmy, 21 Apr 2008: GAMAP VERSION 2.12
+                        - Now use NAME and INDEX tags from !MYCT 
+                          to define the default title string.
+
+===================
+COLORBAR.PRO
+===================
+      mgs, 02 Jun 1998: VERSION 1.00
+      mgs, 14 Nov 1998: - changed default format to f14.2 from f6.2
+      mgs, 19 Nov 1998: - added cbdefaultformat function to better handle
+                          default labeling format.
+      mgs, 28 Nov 1998: - default labelling format now exponential for
+                          values gt 1.e6
+      mgs, 19 May 1999: - unit string placed a little further right
+                          in horizontal colorbars.
+      mgs, 27 May 1999: - added functionality for discrete colorbars
+                          (C_COLORS, C_LEVELS, and SKIP keywords)
+      bmy, 02 Jun 1999: - added /SCIENTIFIC keyword
+                        - updated comments
+      mgs, 03 Jun 1999: - fixed discrete labeling x positions
+      bmy, 27 Jul 2000: TOOLS VERSION 1.46
+                        - added ORIENTATION keyword so that the user
+                          can control the vertical colorbar labels
+      bmy, 27 Sep 2002: TOOLS VERSION 1.51
+                        - Now use 2 decimal places for exponential
+                          default format instead of 3
+      bmy, 18 Oct 2002: TOOLS VERSION 1.52
+                        - now use _EXTRA=e to pass commands to
+                          XYOUTS (i.e. to set label thickness)
+      bmy, 26 Nov 2002: - Added ANNOTATION keyword to print
+                          string labels instead of numeric labels
+      bmy, 26 Nov 2003: TOOLS VERSION 2.01
+                        - make sure MINV, MAXV, and DIVISIONS
+                          are scalars so as not to generate the
+                          color bar labels incorrectly.
+      bmy, 21 May 2004: TOOLS VERSION 2.02
+                        - If SKIP is passed, make sure that it is
+                          never less than 1.
+                        - added TICKLEN and FLAGVAL keywords
+                        - now add ticks where labels are printed
+                        - Cosmetic changes, updated comments
+      bmy, 07 Mar 2007: TOOLS VERSION 2.06
+                        - Updated documentation and examples
+dbm & bmy, 13 Jun 2007: - Now define default colors for contour plots
+                          if C_LEVELS is passed but C_COLORS isn't
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+cdh & phs, 19 Nov 2007: GAMAP VERSION 2.11
+                        - Added out of range boxes options for
+                          vertical bar
+                        - Added TRIANGLE and NoGAP keyword
+                        - Set default for case of /TRIANGLE, but no
+                          OutOfRange boxes.
+      phs, 21 Apr 2008: GAMAP VERSION 2.12
+                        - Bug fix default MAXV should be NCOLORS+BOTTOM
+
+===================
+COLORBAR_NDIV.PRO
+===================
+      phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+COMPRESS_DIV_CT.PRO
+===================
+      phs, 21 Apr 2008: GAMAP VERSION 2.12
+
+===================
+CUSTOM_COLORTABLE.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Adapted from "dial_ct.pro"
+                        - Now can compress the colortable if
+                          NCOLORS is less than N_ORIG
+                        - Added /BuWhWhRd keyword for selecting
+                          the BLUE-WHITE-WHITE-RED colortable
+                        - Added /BuYlYlRd keyword for selecting
+                          the BLUE-YELLOW-YELLOW-RED colortable
+                        - /DIFF is now a synonym for /BuWhWhRd
+                        - Added /UserDef keyword and internal
+                          routine DEFINE_UserDef for selecting
+                          a user-defined color table. 
+      phs, 12 Feb 2008: GAMAP VERSION 2.12
+                        - Now create /BuWhRd as a concatenation of
+                          the /WhBu and /WhRd colortables.
+                        - Updated the interpolation for case of  
+                          NCOLORS lt NORIG.  It works fine with all 
+                          the 4 diverging colortables, and keeps the 
+                          doubling of the middle range color if NCOLORS 
+                          is even and BuWhWhRd or BuYlYlRd is used. 
+      bmy, 18 Apr 2008: - Bug fix: don't overwrite colortable name
+                          for BuWhRd colortable 
+
+===================
+DOCUMENT_COLOR_TABLE.PRO
+===================
+      phs, 21 Apr 2008: VERSION 1.00
+
+===================
+GAMAP_COLORS.PRO
+===================
+      bmy, 18 Apr 2008: VERSION 1.00
+
+===================
+HCOLORBAR.PRO
+===================
+      bmy, 10 Nov 1994: VERSION 1.00
+      bmy, 24 Jun 1997: VERSION 1.01
+      bmy, 30 Sep 1997: TOOLS VERSION 1.10
+      bmy, 20 Nov 1997: TOOLS VERSION 1.11
+      bmy, 02 Aug 1999: TOOLS VERSION 1.43 
+                        - minor bug fix
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments, cosmetic changes
+
+===================
+MYCT.PRO
+===================
+      mgs, 06 Feb 1997: VERSION 1.00
+      mgs, 03 Aug 1997: - added input parameter and template
+      mgs, 26 Mar 1998: - added NCOLORS keyword
+      mgs, 06 Apr 1998: - added BOTTOM, RANGE, and RGB keywords
+      mgs, 04 May 1998: - added test for null device
+      mgs, 03 Jun 1998: - return if !D.N_COLORS is less than 3 (b/w)
+      mgs, 16 Jun 1998: - bug fix: range check now after tvlct
+      mgs, 18 Jul 1998: - bug re-visited, added HLS keyword and changed
+                          default to HSV. Also added SATURATION and
+                          VALUE keywords.
+      mgs, 12 Aug 1998: - re-written with bug fixes and more concise.
+                          removed RGB and HLS keywords, added REVERSE 
+                          and NO_STD               keywords.
+      mgs, 14 Jan 1999: - limit oldcolors and ncolors to MaxColors (256) 
+                          on PC with TrueColor Graphics to ensure 
+                          compatibility with Unix.
+      bmy, 26 Sep 2002: TOOLS VERSION 1.51
+                        - added /DIAL keyword to specify the DIAL/LIDAR
+                          colortable from Ed Browell et al.
+                        - now save MYCT parameters into a system variable
+                          so that plotting routines can access them.
+      bmy, 22 Oct 2002: TOOLS VERSION 1.52
+                        - fixed minor bugs in defining the !MYCT variable 
+      bmy, 28 May 2004: TOOLS VERSION 2.02
+                        - removed TESTMYCT routine, it's obsolete
+                        - Bug fix: make sure RANGE is defined before
+                          saving it to the !MYCT variable
+      bmy, 09 Jun 2005: TOOLS VERSION 2.04
+                        - Added default value for RANGE keyword
+      bmy, 05 Oct 2006: TOOLS VERSION 2.05
+                        - Now also define the DIFFERENCE color table
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now calls CUSTOM_COLORTABLE to define
+                          several custom colortables 
+                        - Now allow /REVERSE to reverse custom
+                          color table indices
+                        - Added /VERBOSE keyword for printing info
+                          about the selected color table
+                        - Added /BuWhWhRd keyword for the 
+                          BLUE-WHITE-WHITE-RED colortable
+                        - Added /BuYlYlRd keyword for the 
+                          BLUE-YELLOW-YELLOW-RED colortable
+                        - Added /UserDef keyword to select
+                          a user-defined color table.
+cdh & bmy, 19 Nov 2007: GAMAP VERSION 2.11
+                        - Now implement newer, less-saturated MYCT
+                          drawing colors as defaults
+                        - Added /BRIGHT_COLORS keyword to use
+                          the older drawing colors for backwards
+                          compatibility.
+     phs, 17 Apr 2008: GAMAP VERSION 2.12
+                        - Now passes _extra to LOADCT, so a different
+                          table file (*.tbl) can be used for example.
+                        - bug fix: ncolors is correctly passed to
+                          LOADCT if RANGE is not set.
+                        - Added the XINTERACTIVE keyword to use
+                          XCOLORS instead of LOADCT when no custom
+                          table is loaded.
+                        - Now use extra !MYCT tags: NAME, INDEX, FILE
+                        - Added MIDCOLORPRESENT, USE_CURRENT keywords
+                       
+
+===================
+MYCT_DEFAULTS.PRO
+===================
+      bmy, 23 Jul 2001: TOOLS VERSION 1.48
+                        - adapted from "default_colors.pro"
+      bmy, 04 Feb 2004: TOOLS VERSION 2.01
+                        - Increased grayscale color range slightly
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - renamed DIAL to CUSTOM, to reflect that
+                          we have other custom colortables in use
+cdh & bmy, 19 Nov 2007: GAMAP VERSION 2.11
+                        - Added names for the new MYCT drawing colors
+      bmy, 21 Apr 2008: GAMAP VERSION 2.12
+                        - Removed obsolete settings and keywords
+                        - Removed IS_CUSTOM tag name from !MYCT
+                        - Added INDEX, FILE tag names to !MYCT
+
+===================
+MYCT_DEFINE.PRO
+===================
+      bmy, 30 Sep 2002: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+XCOLORS.PRO
+===================
+     Written by:     David W. Fanning, 15 April 97. Extensive modification
+       of an older XCOLORS program with excellent suggestions for
+       improvement by Liam Gumley. Now works on 8-bit and 24-bit
+       systems. Subroutines renamed to avoid ambiguity. Cancel
+       button restores original color table.
+     23 April 1997, added color protection for the program. DWF
+     24 April 1997, fixed a window initialization bug. DWF
+     18 June 1997, fixed a bug with the color protection handler. DWF
+     18 June 1997, Turned tracking on for draw widget to fix a bug
+       in TLB Tracking Events for WindowsNT machines in IDL 5.0. DWF
+     20 Oct 1997, Changed GROUP keyword to GROUP_LEADER. DWF
+     19 Dec 1997, Fixed bug with TOP/BOTTOM reversals and CANCEL. DWF.
+      9 Jun 1998, Fixed bug when using BOTTOM keyword on 24-bit devices. DWF
+      9 Jun 1998, Added Device, Decomposed=0 for TrueColor visual classes. DWF
+      9 Jun 1998, Removed all IDL 4 compatibility.
+     21 Oct 1998, Fixed problem with gamma not being reset on CANCEL. DWF
+      5 Nov 1998. Added the NotifyObj keyword, so that XCOLORS would work
+       interactively with objects. DWF.
+      9 Nov 1998. Made slider reporting only at the end of the drag. If you
+       want continuous updating, set the DRAG keyword. DWF.
+      9 Nov 1998. Fixed problem with TOP and BOTTOM sliders not being reset
+       on CANCEL. DWF.
+     10 Nov 1998. Fixed fixes. Sigh... DWF.
+      5 Dec 1998. Added INDEX field to the XCOLORS_LOAD event structure. This
+       field holds the current color table index number. DWF.
+      5 Dec 1998. Modified the way the colorbar image was created. Results in
+       greatly improved display for low number of colors. DWF.
+      6 Dec 1998. Added the ability to notify an unlimited number of objects. DWF.
+     12 Dec 1998. Removed obsolete Just_Reg keyword and improved documetation. DWF.
+     30 Dec 1998. Fixed the way the color table index was working. DWF.
+      4 Jan 1999. Added slightly modified CONGRID program to fix floating divide
+        by zero problem. DWF
+      2 May 1999. Added code to work around a Macintosh bug in IDL through version
+        5.2 that tries to redraw the graphics window after a TVLCT command. DWF.
+      5 May 1999. Restore the current window index number after drawing graphics.
+        Not supported on Macs. DWF.
+      9 Jul 1999. Fixed a couple of bugs I introduced with the 5 May changes. Sigh... DWF.
+     13 Jul 1999. Scheesh! That May 5th change was a BAD idea! Fixed more bugs. DWF.
+     31 Jul 1999. Substituted !D.Table_Size for !D.N_Colors. DWF.
+      1 Sep 1999. Got rid of the May 5th fixes and replaced with something MUCH simpler. DWF.
+     14 Feb 2000. Removed the window index field from the object notify structure. DWF.
+     14 Feb 2000. Added NOTIFYPRO, DATA, and _EXTRA keywords. DWF.
+     20 Mar 2000. Added MODAL, BLOCK, and COLORINFO keywords. DWF
+     20 Mar 2000. Fixed a slight problem with color protection events triggering
+        notification events. DWF.
+     31 Mar 2000. Fixed a problem with pointer leakage on Cancel events, and improved
+        program documentation. DWF.
+     17 Aug 2000. Fixed a problem with CANCEL that occurred only if you first
+        changed the gamma settings before loading a color table. DWF.
+     10 Sep 2000. Removed the requirement that procedures and object methods must
+        be written with an _Extra keyword. DWF.
+      5 Oct 2000. Added the File keyword to LOADCT command, as I was suppose to. DWF.
+      5 Oct 2000. Now properly freeing program pointers upon early exit from program. DWF.
+      7 Mar 2001. Fixed a problem with the BLOCK keyword. DWF.
+     12 Nov 2001. Renamed Congrid to XColors_Congrid. DWF.
+     14 Aug 2002. Moved the calculation of NCOLORS to after the draw widget creation
+        to fix a problem with !D.TABLE_SIZE having a correct value when no windows had
+        been opened in the current IDL session. DWF.
+     14 Aug 2002. Fixed a documentation problem in the NOTIFYID keyword documentation
+        that still referred to !D.N_COLORS instead of the current !D.TABLE_SIZE. DWF.
+     27 Oct 2003. Added INDEX keyword. DWF.
+     29 July 2004. Fixed a problem with freeing colorInfoPtr if it didn't exist. DWF.
+      5 December 2005. Added NOSLIDERS keyword and performed some small cosmetic changes. DWF.
+     27 Sep 2006. Fixed a problem in which XCOLORS set device to indexed color mode. DWF.
+bmy, 21 Apr 2008: GAMAP VERSION 2.12
+                  - Added XCOLORS into GAMAP v2-12 unmodified, 
+                    except for minor comment header changes, e.g.:
+                    * added ID tag for CVS repository
+                    * also changed category to "Color" for
+                      compatibility w/ GAMAP documentation

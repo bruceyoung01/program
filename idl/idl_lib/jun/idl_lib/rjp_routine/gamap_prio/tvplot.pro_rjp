@@ -1,0 +1,902 @@
+; $Id: tvplot.pro,v 1.50 2002/05/24 14:03:52 bmy v150 $
+;-------------------------------------------------------------
+;+
+; NAME:
+;        TVPLOT
+;
+; PURPOSE:
+;        TVPLOT produces one of the following plots:
+;          (1) A color-pixel image,   overlaid atop X-Y plot axes
+;          (2) A line-contour plot,   overlaid atop X-Y plot axes
+;          (3) A filled-contour plot, overlaid atop X-Y plot axes
+;
+; CATEGORY:
+;        Plotting
+;
+; CALLING SEQUENCE:
+;        TVPLOT, Data, Xarr, Yarr, [, keywords ]
+;
+; INPUTS:
+;        DATA -> 2-D array of values to be plotted.
+;        
+;        XARR, ZARR -> XARR is the array of X-axis ( horizontal axis )
+;             values and ZARR is the array of Z-axis ( vertical axis )
+;             data points needed to construct the plot.
+;
+; KEYWORD PARAMETERS:
+;        BLACK -> The color index corresponding to black.
+;             Default is 1 (for compatibility with MYCT!)
+;
+;        /ERASE -> If set, will erase the graphics device before plotting 
+;             the color image (or contour plot) and world map.
+; 
+;        ZBOT, ZTOP -> Bottom and Top limits for the cubic spline 
+;             interpolation in the vertical dimension.  TVPLOT fits a 
+;             cubic spline of 100 points to the vertical dimension so
+;             that there will be sufficient resolution for the
+;             PostScript printer.  Defaults are 
+;             ZBOT = max( min( ZArr ) - 0.5, 0 ) and ZTOP = max( ZArr ). 
+;
+;        CSFAC -> Character size for the map labels and plot titles. 
+;             Default settings for CSFAC vary according to the number 
+;             of plots per page and type of plot device.
+;
+;        /NOADVANCE -> Set this switch to prevent TVMAP from advancing
+;             to the next plot panel on the page.  This is useful if
+;             you desire to overplot something atop the pixel plot or
+;             contour plot.
+;
+;        _EXTRA=e -> Picks up extra keywords (not listed below) for
+;             BYTSCL, COLORBAR, TVIMAGE, MAP_SET, MAP_GRID,
+;             MAP_CONTINENTS, and CONTOUR.
+;
+;
+;    Keywords for both BYTSCL and COLORBAR:
+;    ======================================
+;        MAXDATA -> Maximum value of the DATA array to use in the
+;             byte scaling.  Default is max( DATA ).
+;
+;        MINDATA -> Minimum value of the DATA array to use in the
+;             byte scaling.  Default is min( DATA ).
+;
+;        BOTTOM -> The lowest color index of the colors to be used
+;             for byte-scaling the color map and colorbar.  Default 
+;             is 20 (or !D.N_COLORS-1 if 20 is too large).
+;
+;        NCOLORS -> This is the maximum color index that will be used.
+;             Default is 120 (or !D.N_COLORS-BOTTOM, if 120 is too large).
+;
+;        /LOG -> Will create a color-pixel plot with logarithmic
+;             scaling.  /LOG has no effect on line-contour or
+;             filled-contour plots, since the default contour levels
+;             are logarithmic.
+;
+;
+;    Additional keywords for COLORBAR:
+;    =================================
+;        /CBAR -> If set, will plot the colorbar below the map in the 
+;             position specified by CBPOSITION.  Default is to NOT
+;             plot a colorbar.
+; 
+;        CBCOLOR -> Color index of the colorbar outline and
+;             characters.  Defaults to BLACK (see above).
+;
+;        CBPOSITION -> A four-element array of normalized coordinates
+;             that specifies the location of the colorbar.  CBPOSITION 
+;             has the same form as the POSITION keyword on a plot. 
+;             Default is [0.1, 0.05, 0.9, 0.08]. 
+;
+;        CBUNIT -> Passes the Unit string to COLORBAR, which will be
+;             plotted to the right of the color bar.
+;
+;        CBFORMAT -> format to use in call to colorbar. Default is I12
+;             if abs(max(data)) < 1e4, else e12.2 (strings get trimmed)
+;
+;        CBMIN, CBMAX -> Explicitly sets the min and max values of
+;             the colorbar range.  If not set, TVPLOT will set 
+;             CBMIN = min( DATA ) and CBMAX = max( DATA ).
+;
+;        DIVISIONS -> Number of labels for the colorbar.  Default is 4.
+;
+;
+;    Keywords for REBIN:
+;    ===================
+;        /SAMPLE -> Used to rebin the byte-scaled image array to a 
+;             larger size, for the PostScript printer.   If /SAMPLE is 
+;             set, then REBIN will use nearest-neighbor sampling
+;             rather than bilinear interpolation, which will result in
+;             a coarse pixel plot.  
+;
+;
+;    Keywords for PLOT:
+;    ===================
+;        POSITION -> A four-element array of normalized coordinates
+;             that specifies the location of the map.  POSITION has
+;             the same form as the POSITION keyword on a plot. 
+;             Default is [0.1, 0.1, 0.9, 0.9]. 
+;
+;        TITLE -> The title string that is to be placed atop the
+;             plot window.  TITLE is passed explicitly to avoid keyword
+;             name duplication in the _EXTRA=e facility.
+;  
+;        COLOR -> Color index for the plot window outline and titles.  
+;             Default is BLACK.
+;
+;        XSTYLE, YSTYLE -> Style settings for the X and Y axes.  See 
+;             the "Graphics Keywords" settings man page for more info.
+;             XSTYLE and YSTYLE are passed as explicit keywords to
+;             avoid keyword name confusion in the _EXTRA=e facility. 
+;
+;        XRANGE, YRANGE -> Two-element vectors for the X-axis and Y-axis 
+;             plot ranges, of the form [Xmin,Xmax] and [YMin,Ymax].
+;             XRANGE and YRANGE are passed as explicit keywords to
+;             avoid keyword name confusion in the _EXTRA=e facility. 
+;
+;        XTITLE, YTITLE -> Titles for the X and Y axes.  XTITLE and 
+;             YTITLE are passed as explicit keywords to avoid keyword 
+;             name confusion in the _EXTRA=e facility. 
+;
+;    Keywords for AXIS: (inactive as of 11/17/98)
+;    =============================================
+;        XA_TITLE, YA_TITLE -> Specifies the top X-axis and right
+;             Y-axis plot titles.  Setting either of these keywords
+;             implies XSTYLE=8 and/or YSTYLE=8.
+;
+;        XA_RANGE, YA_RANGE -> Specifies the ranges of the top X-axis  
+;             and/or right Y-axis.  Setting either of these keywords
+;             implies XSTYLE=8 and/or YSTYLE=8.
+;
+;        XA_TICKNAME, YA_RANGE -> Specifies the tick mark labels for
+;             the top X-axis and/or right Y-axis.  Setting either of 
+;             these keywords implies XSTYLE=8 and/or YSTYLE=8.
+;
+;
+;    Keywords for CONTOUR:
+;    =====================
+;        /CONTOUR -> Will produce a line-contour map instead of the 
+;             default color-pixel image map.
+;
+;        /FCONTOUR -> Will produce a filled-contour map instead
+;             of the default color-pixel image map.
+;
+;        C_LEVELS -> Vector containing the contour levels.  If not
+;             specified, will use preset default levels (see below).
+;
+;        C_ANNOTATION -> Vector containing the contour labels.
+;             Default is to use string representations of C_LEVELS.
+;
+;        C_FORMAT -> Format string used in converting C_LEVELS to
+;             the default C_ANNOTATION values.  Default is '(f8.1)'.
+;
+;        C_COLORS -> Index array of color levels for contour lines or
+;             fill regions.  If not specified then will use uniformly
+;             spaced default color levels.  If C_COLORS is set to a 
+;             scalar value, then all contour lines will have the same
+;             color value.
+;
+;        C_LABELS -> Specifies which contour levels should be labeled.
+;             By default, every other contour level is labeled.  C_LABELS 
+;             allows you to override this default and explicitly
+;             specify the levels to label. This parameter is a vector, 
+;             converted to integer type if necessary.  If the LEVELS 
+;             keyword is specified, the elements of C_LABELS
+;             correspond directly to the levels specified, otherwise, 
+;             they correspond to the default levels chosen by the 
+;             CONTOUR procedure. Setting an element of the vector to 
+;             zero causes that contour label to not be labeled.  A
+;             nonzero value forces labeling.
+; 
+;        /C_LINES -> Will overplot a filled-contour map with contour lines
+;             and labels instead of plotting a colorbar. This was the old
+;             default behaviour but has been changed with the advent of
+;             "discrete" colorbars. The old NOLINES keyword is kept
+;             for compatibility reasons but doesn't do anything.
+;
+;        /NOLABELS -> Will suppress printing contour labels on both
+;             line-contour and filled-contour maps.
+;
+;        OVERLAYCOLOR -> Color of the solid lines that will be
+;             overlaid atop a filled contour map.  Default is BLACK.
+;
+;
+; OUTPUTS:
+;        None
+;
+; SUBROUTINES:
+;        External subroutines required:
+;        ------------------------------
+;        COLORBAR          ( by Martin Schultz & David Fanning )
+;        TVIMAGE           ( by David Fanning                  )
+;        INV_INDEX         ( function, by Martin Schultz       )
+;        LOGLEVELS         ( by Martin Schultz                 )
+;        GET_DEFAULTFORMAT ( by Martin Schultz                 )
+;
+; REQUIREMENTS:
+;
+; NOTES:
+;        (1) The _EXTRA facility picks extra keywords for BYTSCL,
+;        TV_IMAGE, PLOT and COLORBAR, etc...  This is a new feature in 
+;        IDL v. 5.0+!! 
+;
+;        (2) As of 11/17/98, the top X-axis and right Y-axis options
+;        are inactive.  Need to spend more time on this....
+;
+;        (3) For contour plots, contour labels will be specified
+;            using the C_ANNOTATION keyword.  The downside is that
+;            by using C_ANNOTATION, this disables the C_LABELS keyword
+;            and so one cannot specify which contour lines will get
+;            labels.  The solution would be to expand the C_LABELS
+;            vector so that it has the same number of elements as
+;            C_ANNOTATION, and then to individually zero the
+;            corresponding elements of C_ANNOTATION before making
+;            the contour plot.  Don't have enough time for this now,
+;            but maybe can deal with this at a later time...
+;
+; EXAMPLE:
+;        Position    = [0.1, 0.1,  0.9, 0.9 ] ; position for map
+;        BarPosition = [0.1, 0.05, 0.9, 0.08] ; position for colorbar
+;
+;        TVPlot, Data, XArr, YArr,                           $
+;               MaxData=MaxData,    MinData=MinData,         $
+;               NColors=120,        Bottom=17,               $
+;               Position=Position,  CBPosition=CBPosition,   $
+;               /Erase,             Color=1,                 $
+;               Title='Avg O3',     Xtitle='Longitude',      $
+;               Ytitle='Altitude',  Divisions=4,             $
+;               Format='(F6.2)'
+;
+;
+; MODIFICATION HISTORY:
+;        bmy, 27 Apr 1998:  VERSION 1.00
+;        bmy, 04 Jun 1998:  - now can plot separate X or Y axes
+;                             if [XY]STYLE = 4 or 8
+;        mgs, 15 Jun 1998:  - bug fix n_elements instead of keyword_set
+;                           - now does spline interpolation in the
+;                             vertical in order to get correct
+;                             altitudes
+;        bmy, 21 Sep 1998:  - Rename EXTRA1, EXTRA2, etc, to names
+;                             that have more meaning (e.g. E_BYT for
+;                             BytScl, E_TV for TVImage, etc.)
+;        bmy, 22 Sep 1998:  VERSION 1.10
+;                           - now uses _EXTRA=e facility to pass extra
+;                             keywords to BYTSCL, TVIMAGE, PLOT, and
+;                             COLORBAR.
+;                           - add PLOTTITLE (for PLOT) and UNIT (for
+;                             COLORBAR) keywords to prevent keyword
+;                             name duplication in _EXTRA=e.
+;        mgs, 11 Nov 1998:  - added CBar keyword
+;        bmy, 16 Nov 1998:  VERSION 2.00
+;                           - now can produce line-contour and filled-
+;                             contour plots as well as image plots
+;                           - now calls REBIN to rebin the byte-scaled
+;                             image array to higher resolution for
+;                             PostScript output.
+;                           - added the following keywords: /LOG,
+;                             /SAMPLE, /CONTOUR, /FCONTOUR, C_ANNOTATION,
+;                             C_LEVELS, C_LABELS, /NOLABELS, /NOLINES, 
+;        bmy, 17 Nov 1998:  - For image plots, now only display plot axes
+;                             AFTER the image plot has been made.  This
+;                             reduces the "apparent" wait time for the 
+;                             user.
+;                           - renamed keywords to XA_TITLE, XA_RANGE, 
+;                             XA_TICKNAME, etc to avoid keyword name
+;                             duplication in the _EXTRA=e facility.
+;        mgs, 17 Nov 1998:  - added CBFormat keyword
+;        bmy, 18 Nov 1998:  - also added floating point format for 
+;                             CBFORMAT when abs(max(Data)) < 10
+;        mgs, 19 Nov 1998:  - CBFormat no whandled in colorbar.pro
+;        bmy, 27 Jan 1999:  - added defaults for XRANGE and YRANGE
+;        bmy, 08 Jan 1999:  - If /LOG is set, make sure that we don't
+;                             take the log of zero and incur a math error
+;                           - add call to function INV_INDEX  
+;        mgs, 18 Mar 1999:  - cleaned up
+;                           - now uses loglevels and has smarter default 
+;                             contour levels
+;        mgs, 22 Mar 1999:  - added multi-panel ability through use of
+;                             the new MULTIPANEL routine. This alters the
+;                             meaning of MPosition and CB_Position: they now
+;                             refer to positions in the current plot panel!
+;        mgs, 23 Mar 1999:  - fixed a few minor things
+;                           - charsize is now adjusted according to number
+;                             of panels on page
+;        bmy, 25 Mar 1999:  - now use updated GET_DEFAULTFORMAT
+;                           - if NPANELS >=2 then place the plot title
+;                             higher above the window, to allow for 
+;                             carriage-returned lines
+;                           - updated comments
+;        bmy, 27 Apr 1999:  - commented out !x.charsize=csfac and
+;                             !y.charsize=csfac lines...these messed
+;                             up the plot window sizes
+;                           - updated comments
+;        bmy, 28 Apr 1999:  - added CBMin and CBMax keywords for 
+;                             tighter colorbar control
+;        mgs, 19 May 1999: - title shifted a little higher if it has
+;                            more than 1 line.
+;        mgs, 21 May 1999: - variable name for TITLE now MTITLE as in
+;                            TVMAP.
+;        mgs, 27 May 1999: - changed default behaviour for filled contours:
+;                            now plots "discrete" colorbar and no lines.
+;                            Keyword NoLines changed to C_Lines.
+;        bmy, 10 Jun 1999: - CBUnit defaults to '
+;        mgs, 06 Jul 1999: - adjusted charsize for multipanel plots
+;        bmy, 07 Jul 1999: - Save C_COLORS in a temp variable.  Also
+;                            define C_COLORS so that grayscales won't
+;                            appear in Postscript plots
+;                          - multi-panel plots are now well-separated
+;                            from each other (for PostScript output)
+;        bmy, 08 Jul 1999: - more minor fixes
+;        bmy, 18 Nov 1999: - increase default left margin by a little
+;        bmy, 31 Mar 2000: GAMAP VERSION 1.45
+;                          - made CSFAC a keyword
+;        bmy, 23 Jul 2001: GAMAP VERSION 1.48
+;                          - now call MYCT_DEFAULTS to specify default
+;                            values for BLACK, BOTTOM, NCOLORS, etc
+;                            if these keywords are not passed explicitly.
+;        bmy, 07 Jul 2001: - removed obsolete code from 1998 and 1999
+;        bmy, 31 Oct 2001: GAMAP VERSION 1.49
+;                          - add /NOADVANCE keyword to prevent advancing
+;                            to the next page (in case you want to overplot)
+;                                                          
+;-
+; Copyright (C) 1998, 1999, 2000, 2001,
+; Bob Yantosca and Martin Schultz, Harvard University
+; This software is provided as is without any warranty
+; whatsoever. It may be freely used, copied or distributed
+; for non-commercial purposes. This copyright notice must be
+; kept with any copy of this software. If this software shall
+; be used commercially or sold as part of a larger package,
+; please contact the author to arrange payment.
+; Bugs and comments should be directed to bmy@io.harvard.edu
+; with subject "IDL routine tvplot"
+;-------------------------------------------------------------
+
+
+pro TVPlot, Data,  XArr,  ZArr,                                   $
+            BLACK=BLACK,               Erase=Erase,               $
+            MaxData=MaxData,           MinData=MinData,           $
+            Zbot=Zbot,                 Ztop=Ztop,                 $
+            NColors=NColors,           Bottom=Bottom,             $
+            CBar=CBar,                 CBPosition=CBPosition,     $
+            CBColor=CBColor,           CBUnit=CBUnit,             $
+            CBFormat=CBFormat,                                    $
+            CBMin=CBMin,               CBMax=CBMax,               $
+            Divisions=Divisions,       Log=Log,                   $
+            Sample=Sample,             Position=MPosition,        $
+            Title=MTitle,              Color=MColor,              $
+            XStyle=XStyle,             YStyle=YStyle,             $
+            XRange=XRange,             YRange=YRange,             $
+            XTitle=XTitle,             YTitle=YTitle,             $
+            XA_Title=XA_Title,         YA_Title=YA_Title,         $
+            XA_Range=XA_Range,         YA_Range=YA_Range,         $
+            XA_TickName=XA_TickName,   YA_TickName=YA_TickName,   $
+            Contour=MContour,          FContour=FContour,         $
+            C_Levels=C_Levels,         C_Colors=C_Colors,         $
+            C_Annotation=C_Annotation, C_Format=C_Format,         $
+            C_Labels=C_Labels,         C_Lines=C_Lines,           $
+            NoLabels=NoLabels,         OverLayColor=OverLayColor, $
+            CsFac=CsFac,               $ ;Min_Valid=Min_Valid,       $
+            NoAdvance=NoAdvance,       _EXTRA=e,                  $
+            Margin=Margin,                                        $
+            ;
+            ;  >>>>  OBSOLETE KEYWORDS  <<<<
+            ;
+            NoLines=NoLines  
+
+   ;====================================================================
+   ; Pass external functions (bmy, 2/8/99)
+   ;====================================================================
+   FORWARD_FUNCTION Inv_Index, LogLevels, Get_DefaultFormat, MYCT_Defaults
+ 
+   ;=================================================================
+   ; NPANELS = number of plots per page
+   ;
+   ; PSOFFSET will raise the plot window a little for PostScript 
+   ; plots so that we have room for the colorbar.
+   ;
+   ; Also, set PSOFFSET to a small number if NPLOTS gt 4 for non-
+   ; PostScript plots.  This will keep the colorbar from interfering
+   ; with the plot window on the screen.
+   ;=================================================================
+   npanels = !p.multi[1]*!p.multi[2]
+
+   if ( !D.NAME eq 'PS' ) then begin
+      psoffset = 0.02
+      if ( NPanels ge 3    ) then PSOffset = PSOffset * 2.0
+      if ( NPanels ge 9    ) then PSOffset = PSOffset * 3.0
+   endif else begin
+      PSOffset = 0.0
+      if ( NPanels gt 4 ) then PSOffset = 0.02
+   endelse
+ 
+   ;====================================================================
+   ; Error Checking: Arguments
+   ;====================================================================
+   TmpData = reform(Data)
+   SData = Size( reform(TmpData), /Dimensions )
+   if ( N_Elements(SData) ne 2 ) then begin
+      Message, 'DATA must be a 2-D array!!!', /Continue
+      return
+   endif
+
+   if ( N_Elements( XArr      ) eq 0 ) then XArr       = FindGen( SData[0] )
+   if ( N_Elements( ZArr      ) eq 0 ) then ZArr       = FindGen( SData[1] )
+
+   ;====================================================================
+   ; Error Checking: Keywords
+   ;====================================================================
+   C = MYCT_Defaults()
+
+   ; Keywords for TVPLOT
+   if ( N_Elements( ZBot       ) eq 0 ) then ZBot      = Min( ZArr ) - 0.5 > 0
+   if ( N_Elements( ZTop       ) eq 0 ) then ZTop      = Max( ZArr ) + 0.5
+   if ( N_Elements( BLACK      ) eq 0 ) then BLACK     = C.BLACK
+  
+   ; Keywords for BYTSCL and COLORBAR
+   if ( N_Elements( MaxData    ) eq 0 ) then MaxData   = max( TmpData )
+   if ( N_Elements( MinData    ) eq 0 ) then MinData   = min( TmpData )
+   ;--------------------------------------------------------------------
+   ; Prior to 7/23/01:
+   ; Now use defaults from MYCT_DEFAULTS if BOTTOM, NCOLORS are undefined
+   ;if ( N_Elements( Bottom     ) eq 0 ) $
+   ;   then Bottom  = 20  < ( !D.N_Colors-1 )
+   ;if ( N_Elements( NColors    ) eq 0 ) $
+   ;   then NColors = 120 < ( !D.N_Colors-Bottom )
+   ;--------------------------------------------------------------------
+   if ( N_Elements( Bottom     ) eq 0 ) then Bottom    = C.BOTTOM 
+   if ( N_Elements( NColors    ) eq 0 ) then NColors   = C.NCOLORS 
+   Log = Keyword_Set( Log )
+
+   ; Extra keywords for COLORBAR
+   if ( N_Elements( CBar       ) eq 0 ) then CBar      = 0
+   if ( N_Elements( CBColor    ) eq 0 ) then CBColor   = BLACK
+
+   ; Colorbar position vector
+   if ( N_Elements( CBPosition ) eq 0 ) then begin
+
+      ; Standard colorbar position
+      CBPosition = [ 0.20, 0.01, 0.80, 0.04 ]   
+
+      ; Small Y-offset for more than 4 contour plots per page
+     if ( NPanels gt 4 ) then begin
+         CBPosition[1] = CBPosition[1] - 0.03
+         CBPosition[3] = CBPosition[3] - 0.03 
+      endif
+
+      ; Bigger Y-offset for more than 9 contour plots per page
+      if ( NPanels gt 9 ) then begin
+         CBPosition[1] = CBPosition[1] - 0.05
+         CBPosition[3] = CBPosition[3] - 0.05 
+      endif
+   endif
+
+   if ( N_Elements( Divisions  ) eq 0 ) then Divisions = 4
+   if ( N_Elements( CBUnit     ) eq 0 ) then CBUnit    = ''
+
+   ; Keywords for CONTOUR
+   MContour = Keyword_Set( MContour )
+   FContour = Keyword_Set( FContour )
+   if (keyword_set(NoLines)) then $
+       message,'You used the obsolete keyword NOLINES.',/INFO
+
+   ; Keywords for PLOT
+   if ( N_Elements( MColor     ) eq 0 ) then MColor    = BLACK          
+   if ( N_Elements( MTitle     ) eq 0 ) then MTitle     = ''
+   if ( N_Elements( XStyle     ) eq 0 ) then XStyle    = 0
+   if ( N_Elements( YStyle     ) eq 0 ) then YStyle    = 0
+   ; defaults for XRANGE and YRANGE (bmy, 1/27/99)
+   if ( N_Elements( XRange     ) eq 0 ) then XRange = [ Min( Xarr, Max=M ), M ]
+   if ( N_Elements( YRange     ) eq 0 ) then YRange = [ Min( Zarr, Max=M ), M ]
+
+   if ( N_Elements( MPosition  ) eq 0) then begin
+           MPosition = [ 0.05, 0.15+psoffset, 1.0, 1.0 ]  ; room for colorbar
+   endif else print,'Position passed: ',Mposition
+
+   ; Add variable to advance to next page, if necessary (bmy, 10/31/01)
+   Advance = 1 - Keyword_Set( NoAdvance )
+
+   ; Get actual position of current plot panel
+   ; (we may want to add margin parameters at some point??)
+   if ( N_Elements( Margin ) eq 0 ) then Margin = [ 0.05, 0.04, 0.02, 0.07 ]
+   MultiPanel, Position=position, margin= Margin
+
+   ;====================================================================
+   ; Calculate true window position from position and MPosition
+   ; Here we don't need to add a colorbar ...
+   ;====================================================================
+
+   ; get width of plot window
+   wx = (position[2]-position[0])
+   wy = (position[3]-position[1])
+   Mposition[0] = position[0]+wx*MPosition[0]
+   Mposition[1] = position[1]+wy*MPosition[1]
+   Mposition[2] = position[0]+wx*MPosition[2]
+   Mposition[3] = position[1]+wy*MPosition[3]
+
+   ; same with CBPosition
+   CBPosition[0] = position[0]+wx*CBPosition[0]
+   CBPosition[1] = position[1]+wy*CBPosition[1]
+   CBPosition[2] = position[0]+wx*CBPosition[2]
+   CBPosition[3] = position[1]+wy*CBPosition[3]
+
+; print,'####position,MPosition,CBPosition='
+; print,position,MPosition,CBPosition
+; print,'#### !P.MULTI=',!p.multi
+
+   ; save ![xy].charsize for later restore
+   oldxcs = !x.charsize
+   oldycs = !y.charsize
+
+   ;=================================================================
+   ; NPANELS = number of plots per page
+   ;
+   ; PSOFFSET will raise the plot window a little for PostScript
+   ; plots so that we have room for the colorbar.
+   ;
+   ; Also, set PSOFFSET to a small number if NPLOTS gt 4 for non-
+   ; PostScript plots.  This will keep the colorbar from interfering
+   ; with the plot window on the screen.
+   ;=================================================================
+   npanels = !p.multi[1]*!p.multi[2]
+
+   if ( !D.NAME eq 'PS' ) then begin
+      psoffset = 0.02
+      if ( NPanels ge 3    ) then PSOffset = PSOffset * 2.0
+      if ( NPanels ge 9    ) then PSOffset = PSOffset * 3.0
+   endif else begin
+      PSOffset = 0.0
+      if ( NPanels gt 4 ) then PSOffset = 0.02
+   endelse
+   
+   ; CSFAC = scale factor for character sizes
+   ; CSFAC is now a keyword -- use defaults if undefined (bmy, 3/31/00)
+   if ( N_Elements( CsFac ) eq 0 ) then begin
+      csfac = 1.0
+      if (npanels gt 1) then csfac = 0.9
+      if (npanels gt 4) then csfac = 0.75
+      if (npanels gt 9) then csfac = 0.6
+   endif
+
+   plotcsfac = 1.0
+   if (npanels gt 4) then plotcsfac = 1.0/0.62
+
+   if (!D.name ne 'PS') then csfac = csfac*1.2
+
+   if ( MContour OR FContour ) then begin
+
+      ;=================================================================
+      ; Here we are plotting a contour map!
+      ;
+      ; Set default values for some contour input quantities
+      ;=================================================================
+      
+      ; Default C_LEVELS...use quasi-logarithmic contour levels
+      if ( N_Elements( C_Levels ) eq 0 ) then  $
+         C_Levels = loglevels([MinData,MaxData],coarse=4)
+      if ( N_Elements( C_Levels ) lt 3 ) then  $
+         C_Levels = (findgen(9)-1.)/9.*(MaxData-MinData) + MinData
+
+
+      ; NCL is the number of elements in C_LEVELS
+      NCL = N_Elements( C_Levels )
+
+      ; Default C_FORMAT
+      if ( N_Elements( C_Format ) eq 0 ) then  $
+          C_Format = get_defaultformat(C_Levels[0],C_Levels[NCL-1],$
+                                       DefaultLen=['14.2','8.1'], Log=Log)
+
+      ;-----------------------------------------------------------------
+      ; Default C_ANNOTATION...string representations of C_LEVELS
+      ; Suppress printing labels by setting C_ANNOTATION(*) = ''
+      ;-----------------------------------------------------------------
+      if ( Keyword_Set( NoLabels ) ) then begin
+         C_Annotation = Replicate( '', NCL )
+      endif else begin
+         if ( N_Elements( C_Annotation ) eq 0 ) then begin
+            C_Annotation = StrTrim( String( C_Levels, Format=C_Format ), 2 )
+         endif
+      endelse
+
+      ;-----------------------------------------------------------------
+      ; If C_COLORS is not passed, choose evenly spaced colors from
+      ; the MYCT colortable for default colors. Make sure to use a local
+      ; variable.
+      ;
+      ; Otherwise, if C_COLORS is a scalar, then expand so that it
+      ; has the same number of elements as C_LEVELS.
+      ;
+      ; !!!! HERE IS A WEAKNESS !!!! 
+      ; The use of C_ANNOTATION supersedes the C_LEVELS keyword
+      ; (see note in documentation header above)
+      ;-----------------------------------------------------------------
+      if ( N_Elements( C_Colors ) eq 0 ) then begin
+         CC_Colors = Fix( ( IndGen( NCL ) / ( 1.0 * NCL ) ) * $
+                         NColors + Bottom )
+      endif else begin
+         CC_Colors = C_Colors
+         if ( N_Elements( CC_Colors ) eq 1 ) $
+            then CC_Colors = Replicate( CC_Colors[0], NCL )
+      endelse
+
+      ;-----------------------------------------------------------------
+      ; Default C_LABELS...Set all elements to zero to suppress 
+      ; printing labels for each contour level, or one to enable 
+      ; printing labels for each contour level.
+      ;
+      ; Also, if C_LABELS is a scalar, then expand it so that
+      ; it has the same number of elements as C_LEVELS
+      ;
+      ; ***** HERE IS A WEAKNESS!!! *****
+      ; C_LABELS is superseded by the C_ANNOTATION keyword (which we
+      ; use to specify contour labels).  See above in the NOTES section
+      ; of the documentation header.
+      ;-----------------------------------------------------------------
+      if ( N_Elements( C_Labels ) eq 0 ) then begin
+         if ( Keyword_Set( NoLabels ) )         $
+            then C_Labels = Replicate( 0, NCL ) $
+            else C_Labels = Replicate( 1, NCL )
+      endif else begin
+         if ( N_Elements( C_Labels ) eq 1 ) $
+            then C_Labels = Replicate( C_Labels[0], NCL )
+      endelse
+
+      ; Default OVERLAYCOLOR = BLACK
+      if ( N_Elements( OverLayColor ) eq 0 ) then OverLayColor = BLACK
+
+      ;=================================================================
+      ; Establish the plot coordinates with PLOT, /NODATA
+      ;=================================================================
+     
+      Plot, XArr, ZArr,                               $
+         /NoData,       /NoErase,      Color=MColor,  $
+         XRange=XRange, YRange=Yrange,                $
+         XStyle=XStyle, YStyle=YStyle, XTitle=XTitle, $
+         YTitle=YTitle, Position=MPosition,   $
+         charsize=plotcsfac*csfac, _EXTRA=e
+
+      ;=================================================================
+      ; Overlay title
+      ;=================================================================
+      xpmid = (!x.window[1]+!x.window[0])/2.
+
+      ; Place a little higher, for carriage return lines (bmy, 3/25/99)
+      if ( NPanels lt 2 )                 $
+         then yptop = !y.window[1]+0.025  $
+         else yptop = !y.window[1]+0.040
+
+      ; place title yet a little higher if it has two lines
+      if (strpos(mtitle,'!C') ge 0) then begin
+         if ( NPanels le 4 ) $
+            then yptop = yptop + 0.02 $
+            else yptop = yptop + 0.01
+      endif
+
+      xyouts,xpmid,yptop,mtitle,color=MColor,/norm,align=0.5,  $
+           charsize=1.2*csfac
+
+      ;=================================================================
+      ; If /FCONTOUR is set, then create a filled-contour 
+      ; plot within the plot window created above.  
+      ; Add CHARSIZE keyword to CONTOUR call (bmy, 4/27/99)
+      ;=================================================================
+      if ( FContour ) then begin
+         Contour, TmpData, XArr, ZArr,             $
+            Levels=C_Levels, C_Colors=CC_Colors,   $
+            Fill=FContour,   /OverPlot,            $
+            Charsize=CsFac,  _EXTRA=e
+         
+         ;--------------------------------------------------------------
+         ; If C_LINES=1, then overlay the filled-contour
+         ; map with solid contour lines of color OVERLAYCOLOR
+         ; Add CHARSIZE keyword to CONTOUR call (bmy, 4/27/99)
+         ;--------------------------------------------------------------
+         if ( Keyword_Set( C_Lines ) ) then begin
+            OverLayLines = Replicate( OverLayColor, NCL ) 
+ 
+            Contour, TmpData, XArr, ZArr,                        $
+               Levels=C_Levels,           C_Colors=OverLayLines, $
+               C_Annotation=C_Annotation, /OverPlot,             $
+               C_Labels=C_Labels,         CharSize=CsFac,        $
+               _EXTRA=e
+         endif 
+
+         ;--------------------------------------------------------------
+         ; Recreate the plot window to make sure that the plot
+         ; axes show up on top of the filled-contour plot.  
+         ;--------------------------------------------------------------
+         Plot, XArr, ZArr,                               $
+            /NoData,       /NoErase,      Color=MColor,  $
+            XRange=XRange, YRange=Yrange,                $ 
+            XStyle=XStyle, YStyle=YStyle, XTitle=XTitle, $
+            YTitle=YTitle, Position=MPosition,  $
+            charsize=plotcsfac*csfac, _EXTRA=e
+
+         
+      endif $
+
+      ;=================================================================
+      ; If /CONTOUR is set, then produce a line-contour plot 
+      ; atop the current plot
+      ;=================================================================
+      else if ( MContour ) then begin
+         Contour, TmpData, XArr, ZArr,                        $
+            Levels=C_Levels,           C_Colors=CC_Colors,  $
+            C_Annotation=C_Annotation, /OverPlot,          $
+            C_Labels=C_Labels,         _EXTRA=e
+      endif
+
+   endif else begin
+
+      ;=================================================================
+      ; Here we are plotting a color-pixel image plot 
+      ; and overlaying the plot axes atop it!!!
+      ;
+      ; Spline interpolate data so that there will be 100 pixels 
+      ; in the vertical dimension.  NDATA is the new data array.
+      ; 
+      ; **** TRY OUT FANCIER METHOD: INTERPOLATE (congrid,/cubic?) ****
+      ;=================================================================
+      NData   = FltArr( SData[0], 100 )
+      NewVert = FIndGen( 100 ) / 100. * ( ZTop - Zbot ) + Zbot
+      for I = 0, SData[0] - 1 do begin
+         NData[I,*] = Spline( ZArr, TmpData[I,*], NewVert )
+      endfor
+
+      ; Now do not let NDATA go beyond the range of DATA (bmy, 8/7/01)
+      NData = ( NData > Min( Data ) ) < Max( Data )
+
+      ;-----------------------------------------------------------------
+      ; Add for future development (bmy, 8/7/01)
+      ;; Now apply MIN_VALID keyword as in TVMAP.pro (bmy, 8/7/01)
+      ;if ( N_Elements( Min_Valid ) gt 0 ) then begin
+      ;   MVInd = Where( NData lt Min_Valid )
+      ;   if ( MVInd[0] ge 0 ) then NData[MVInd] = Min_Valid
+      ;endif else begin
+      ;   MVInd = -1L
+      ;endelse
+      ;-----------------------------------------------------------------
+     
+      ;=================================================================
+      ; If /LOG is set, then take the log10 of NDATA.  
+      ; Store the extrema in LOGMINDATA and LOGMAXDATA, while 
+      ; leaving MINDATA and MAXDATA unaltered.
+      ;
+      ; First Byte-Scale the NDATA array, using the appropriate 
+      ; extrema for the byte scaling
+      ;=================================================================
+      if ( Log ) then begin
+
+         ;==============================================================
+         ; Make sure that we don't take the log10 of zero (bmy, 2/8/99)
+         ;==============================================================
+         Ind = Where( NData gt 0 )
+         if ( Ind[0] ge 0 ) then begin
+            ; Elements that don't equal zero...take the log10
+            NData[ Ind ] = ALog10( NData[ Ind ] )
+         endif
+
+         if ( MinData gt 0 )                    $
+            then LogMinData = ALog10( MinData ) $
+            else LogMinData = 1e-30             
+
+         if ( MaxData gt 0 )                    $
+            then LogMaxData = ALog10( MaxData ) $
+            else LogMaxData = 1e-30 
+
+
+         Image = BytScl( NData, Min=LogMinData, Max=LogMaxData, $
+                                Top=NColors-1,  _EXTRA=e ) + Bottom
+      endif else begin 
+         Image = BytScl( NData, Min=MinData,    Max=MaxData, $
+                                Top=NColors-1,  _EXTRA=e ) + Bottom
+      endelse
+      
+      ;-----------------------------------------------------------------
+      ; Add for future development (bmy, 8/7/01)
+      ;; Missing data values -- set to color 0 (white) (bmy, 8/7/01)
+      ;if ( MVInd[0] ge 0 ) then Image[ MVInd ] = 0
+      ;-----------------------------------------------------------------
+
+      ;=================================================================
+      ; Compute dithering factor (10 to ..)
+      ; Formula may need to be improved (later on...)
+      ;=================================================================
+      S      = Size( Image, /Dim )
+      BlowUp = 10 * ( ( Fix(50/Min(S) ) > 1 ) < 20 )
+
+      ;=================================================================
+      ; If /SAMPLE then rebin the data using nearest neighbor
+      ; interpolation.  Otherwise use bilateral interpolation 
+      ; (which takes longer but results in a finer grid).
+      ;=================================================================
+      if ( Keyword_Set( Sample ) ) then begin
+         
+         ; Screen (device with windows) needs rebin only if sample=1
+         ; since this will force a lower resolution plot
+         if ( ( !D.FLAGS AND 256 ) gt 0 ) then   $
+            Image = Rebin( Image, S[0]*BlowUp, S[1]*BlowUp, /Sample )
+      endif else begin
+
+         ; PostScript needs rebin only for smoothing, since 
+         ; this will force a higher resolution plot
+         if ( !D.NAME eq 'PS' ) then  $
+            Image = Rebin( Image, S[0]*BlowUp, S[1]*BlowUp, Sample=0 )
+      endelse
+
+      ;=================================================================
+      ; Call David Fanning's TVIMAGE routine to draw a color 
+      ; scale plot.  Use the NEWPOSITION values as defined 
+      ; from the extent of the empty plot that was created above.
+      ;=================================================================
+      NewPosition = MPosition
+      TVImage, Image, Position=NewPosition, _EXTRA=e   ; use /MULTI later???
+
+      ;=================================================================
+      ; We need to overlay the plot axes atop the color image.
+      ;=================================================================
+      Plot, XArr, ZArr, /NoData, /NoErase, Color=MColor, $
+         XRange=XRange, YRange=YRange, $ 
+         XStyle=XStyle, YStyle=YStyle, XTitle=XTitle,    $
+         YTitle=YTitle, Position=NewPosition,   $
+         charsize=plotcsfac*csfac, _EXTRA=e
+
+      ;=================================================================
+      ; Overlay title
+      ;=================================================================
+      xpmid = (!x.window[1]+!x.window[0])/2.
+
+      ; Place a little higher, for carriage return lines (bmy, 3/25/99)
+      if ( NPanels lt 2 )                 $
+         then yptop = !y.window[1]+0.025  $
+         else yptop = !y.window[1]+0.040
+
+      ; place title yet a little higher if it has two lines
+      if (strpos(mtitle,'!C') ge 0) then yptop = yptop+0.02
+
+      xyouts,xpmid,yptop,mtitle,color=MColor,/norm,align=0.5,  $
+            charsize=1.2*csfac
+
+   endelse
+
+   ;====================================================================
+   ; Call COLORBAR to plot the colorbar below the map
+   ; Otherwise, just print the unit string below the X-axis labels
+   ;====================================================================
+   if ( CBar ) then begin
+
+      if ( N_Elements( CBMin ) eq 0 ) then CBMin = MinData
+      if ( N_Elements( CBMax ) eq 0 ) then CBMax = MaxData
+
+      ColorBar, Max=CBMax,       Min=CBMin,           NColors=NColors,     $
+                Bottom=Bottom,   Color=CBColor,       Position=CBPosition, $
+                Unit=CBUnit,     Divisions=Divisions, Log=Log,             $
+                Format=CBFormat, CharSize=CsFac,      $
+                C_Colors=CC_Colors, C_Levels=C_Levels,  _EXTRA=e
+   endif else begin
+      XPos = ( MPosition[2] )
+      YPos = ( CBPosition[3] + CBPosition[1] ) * 0.5
+
+      XYOutS, XPos, YPos, CBUnit, /Normal, $
+          Align=1.0, Color=MColor, CharSize=CsFac
+   endelse 
+      
+
+   ;====================================================================
+   ; Advance to the next plot position for the next plot
+   ; Use NoErase so that we still see the results when the page is full
+   ; (will be erased when we do next plot after page is full)
+   ;====================================================================
+   ;--------------------------------------------------------------------
+   ; Prior to 10/31/01:
+   ;MULTIPANEL,/Advance,/NoErase
+   ;--------------------------------------------------------------------
+   
+   ; Now advance to the next plot only if NOADVANCE=0 (bmy, 10/31/01)
+   MULTIPANEL, Advance=Advance, /NoErase
+
+   ; restore old charsize for !x and !y
+   !x.charsize = oldxcs
+   !y.charsize = oldycs
+
+
+   return
+end

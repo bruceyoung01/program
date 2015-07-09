@@ -1,0 +1,19 @@
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+Mon Jun 10 12:09:42 CDT 2013
+(0)	WORKING ON SITES : 1 OF 1
+(0)	
+=====> Wall Clock Elapsed Time: read_aeronet_data_allpoints.ncl: 1 seconds <=====
+
+(0)	
+=====> Wall Clock Elapsed Time: calculate_aeronet_hourly_average.ncl: 0 seconds <=====
+
+fatal:Undefined identifier: (a) is undefined, can't continue
+fatal:["Execute.c":7743]:Execute: Error occurred at or near line 68 in file /work/jwang7/bruceyoung01/model/ncl/ncl_lib/procedure/sahel/point_wrfchem_aeronet_daily_pm.ncl
+
+fatal:["Execute.c":7743]:Execute: Error occurred at or near line 177 in file aeronet_trend_line_daily_pm.ncl
+
+

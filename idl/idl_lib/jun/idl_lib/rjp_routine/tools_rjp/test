@@ -1,0 +1,56 @@
+file = '/data/eos3/stone/data/biomass/galanter/CO_bio_galanter.dat_gco_360180_12rec_xdr'
+openr,il,file,/xdr,/get
+co = fltarr(360,180,12)
+readu,il,co
+free_lun,il
+
+fdin = total(co,3)*28.
+
+lat = -89.5+findgen(180)*1.0
+lon = -179.5+findgen(360)*1.0
+
+latb = lat+0.5 & latb(179) = 90.
+lonb = lon + 0.5
+
+latb = [-90.,latb]
+lonb = [-180.,lonb]
+
+;ilmm=72 & ijmm=46
+;lon2d = fltarr(ilmm,ijmm)
+;lat2d = lon2d
+
+;for i = 0, ilmm-1 do lat2d(i,*)=-90.+findgen(ijmm)*(180./(ijmm-1))
+;for j = 0, ijmm-1 do lon2d(*,j)=-180.+findgen(ilmm)*(360./ilmm)
+
+device, decomposed=0
+
+;window, 1
+;wset,1
+;cdraw2d,fdin,lon,lat,level=leve
+
+;fdout = interh(fdin,lon,lat,lon2d,lat2d)
+;window, 2
+;wset, 2
+;cdraw2d,fdout,lon2d(*,0),lat2d(0,*),level=leve
+
+ilmm = 144 & ijmm=91
+lon2b = fltarr(ilmm+1,ijmm+1)
+lat2b = lon2b
+
+dx = 360./ilmm & dy = 180./(ijmm-1)
+
+for i = 0, ilmm do lat2b(i,1:ijmm-1) = -90.+0.5*dy+findgen(ijmm-1)*dy
+lat2b(*,0) = -90. & lat2b(*,ijmm) = 90.
+
+for j = 0, ijmm do lon2b(*,j) = -180.-0.5*dx+findgen(ilmm+1)*dx
+
+fdout = aave(fdin, lonb,latb, lon2b, lat2b)
+
+print, total(fdin), total(fdout)
+
+level = [0.,1.,2.,3.,4.,5.]
+!p.multi=[0,1,2]
+area = sfcarea(ilmm=360.,ijmm=180.)
+cdraw2d, fdin/area*1000., pos=[0.15,0.6,0.85,0.9],level=level
+area = sfcarea(ilmm=ilmm,ijmm=ijmm)
+cdraw2d, fdout/area*1000., pos=[0.15,0.13,0.85,0.48],/noerase,level=level

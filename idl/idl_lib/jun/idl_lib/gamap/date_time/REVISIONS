@@ -1,0 +1,98 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/date_time/
+last updated : 07/17/2008 10:09
+
+===================
+ADD_DATE.PRO
+===================
+      bmy, 06 Jun 2006: TOOLS VERSION 2.05
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+DATE2YMD.PRO
+===================
+      bmy, 06 Jun 2006: TOOLS VERSION 2.05
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+DAY_OF_YEAR.PRO
+===================
+      bmy, 14 Oct 1997: VERSION 1.00
+      bmy, 26 Mar 1998: VERSION 1.01
+                         -- now written as a function with 
+                            more elegant error checking.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 03 Apr 2008: GAMAP VERSION 2.12
+                        - Modified to accept either 3 arguments
+                          (month, day, year) or one argument
+                          (date in YYYYMMDD format)
+                        
+
+===================
+ISLEAP.PRO
+===================
+      mgs, 02 Oct 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - updated comments, cosmetic changes
+
+===================
+LOCALTIME.PRO
+===================
+      dbm, 30 Jul 2007: VERSION 1.00
+
+===================
+NYMD2TAU.PRO
+===================
+      bmy, 26 Mar 1998: VERSION 1.00
+      mgs, 26 Mar 1998: - now year 2000 compliable 
+      mgs, 23 Mar 1999: - now handles vectors as input
+      bmy, 23 Mar 2005: GAMAP VERSION 2.03
+                        - Added /NO_Y2K keyword to suppress 
+                          special Y2K treatment of dates (i.e.
+                          treat dates w/ 2 digits as from 1900's)
+                        - renamed internal function NYMD2STRU to
+                          N2T_NYMD2STRU to avoid conflict with
+                          similar function in "tau2yymmdd.pro"
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+REWRITE_AGPROD.PRO
+===================
+phs,    Jul 2007: version 0.1
+      phs, 04 Apr 2007: GAMAP VERSION 2.12
+                        - commemts
+                        - clean non_global pointers
+                        - added YMD and HH keywords
+
+===================
+STRDATE.PRO
+===================
+      mgs, 11 Nov 1997: VERSION 1.00
+      mgs, 26 Mar 1998: VERSION 1.10 
+                        - examines type of DATE parameter 
+                          and accepts structure input.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Renamed /GERMAN to /EUROPEAN
+                        - Updated comments, cosmetic changes
+                        - Now uses function DATATYPE
+
+===================
+TAU2YYMMDD.PRO
+===================
+      mgs, 26 Mar 1998: VERSION 1.00
+      mgs, 16 Mar 1999: - now allows floating point tau values
+                          CAUTION: Use double for second precision !
+      bmy, 27 Jul 1999: VERSION 1.42
+                        - updated comments
+      bmy, 03 Jan 2000: VERSION 1.44
+                        - updated comments
+      bmy, 23 Mar 2005: GAMAP VERSION 2.03
+                        - renamed internal function NYMD2STRU to
+                          T2N_NYMD2STRU to avoid conflict with
+                          similar function in "tau2yymmdd.pro";
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+YMD2DATE.PRO
+===================
+      bmy, 06 Jun 2006: TOOLS VERSION 2.05
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10

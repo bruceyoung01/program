@@ -1,0 +1,121 @@
+function improve_siteinfo
+
+  head = ''
+  site = ''
+  name = ''
+  Addr = ''
+  City = ''
+  State= ''
+  Lon  = ''
+  Lat  = ''
+  Elev = ''
+ openr,il,'/users/ctm/rjp/Data/IMPROVE/Raw_data/IMPROVELocTable.txt',/get
+  readf, il, head
+  readf, il, head
+  readf, il, head
+ while (not eof(il)) do begin
+   readf, il, head
+   bit   = byte(head)
+   Site  = [Site,  strtrim(bit[0:4],2)    ]
+   Name  = [Name,  strtrim(bit[206:260],2)  ]
+   Addr  = [Addr,  strtrim(bit[261:*],2) ]
+;   City  = [City,  strtrim(bit[176:214],2)]
+   State = [State, strtrim(bit[24:25],2)]
+   Lon   = [Lon,   strtrim(bit[36:43],2)]
+   Lat   = [Lat,   strtrim(bit[48:54],2)]
+   Elev  = [Elev,  strtrim(bit[60:63],2)]
+ endwhile
+
+   Site  = Site[1:*]
+   Name  = Name[1:*]
+   Addr  = Addr[1:*]
+;   City  = City[1:*]
+   State = State[1:*]
+   Lon   = Lon[1:*]
+   Lat   = Lat[1:*]
+   Elev  = Elev[1:*]
+
+   for ic = 0, N_elements(Site)-1 do begin
+     if (Site(ic) eq '') then Site(ic) = 'NaN'
+     if (Name(ic) eq '') then Name(ic) = 'NaN'
+     if (Lon(ic ) eq '') then Lon(ic ) = 'NaN'
+     if (Lat(ic ) eq '') then Lat(ic ) = 'NaN'
+     if (Elev(ic) eq '') then Elev(ic) = 'NaN'
+   endfor
+
+   Lon  = float(Lon) 
+   Lat  = float(Lat)
+   Elev = float(Elev)
+
+ 
+ free_lun,il
+
+ For I = 0, N_elements(State)-1 do begin
+   Case State[I] of
+        'AK' : State[I] = 'Alaska'
+        'WA' : State[I] = 'Washington'
+        'OR' : State[I] = 'Oregon'
+        'CA' : State[I] = 'California'
+        'NV' : State[I] = 'Nevada'
+        'ID' : State[I] = 'Idaho'
+        'MT' : State[I] = 'Montana'
+        'UT' : State[I] = 'Utah'
+        'AZ' : State[I] = 'Arizona'
+        'WY' : State[I] = 'Wyoming'
+        'CO' : State[I] = 'Colorado'
+        'NM' : State[I] = 'New Mexico'
+        'ND' : State[I] = 'North Dakota'
+        'SD' : State[I] = 'South Dakota'
+        'NE' : State[I] = 'Nebraska'
+        'KS' : State[I] = 'Kansas'
+        'OK' : State[I] = 'Oklahoma'
+        'TX' : State[I] = 'Texas'
+        'MN' : State[I] = 'Minnesota'
+        'IA' : State[I] = 'Iowa'
+        'MO' : State[I] = 'Missouri'
+        'AR' : State[I] = 'Arkansas'
+        'LA' : State[I] = 'Louisiana'
+        'WI' : State[I] = 'Wisconsin'
+        'IL' : State[I] = 'Illinois'
+        'MS' : State[I] = 'Mississippi'
+        'MI' : State[I] = 'Michigan'
+        'IN' : State[I] = 'Indiana'
+        'OH' : State[I] = 'Ohio'
+        'KY' : State[I] = 'Kentucky'
+        'WV' : State[I] = 'West Virginia'
+        'TN' : State[I] = 'Tennessee'
+        'AL' : State[I] = 'Alabama'
+        'GA' : State[I] = 'Georgia'
+        'FL' : State[I] = 'Florida'
+        'ME' : State[I] = 'Maine'
+        'VT' : State[I] = 'Vermont'
+        'NH' : State[I] = 'New Hampshire'
+        'MA' : State[I] = 'Massachusetts'
+        'RI' : State[I] = 'Rhode Island'
+        'CT' : State[I] = 'Connecticut'
+        'NJ' : State[I] = 'New Jersey'
+        'NY' : State[I] = 'New York'
+        'PA' : State[I] = 'Pennsylvania'
+        'DE' : State[I] = 'Delaware'
+        'DC' : State[I] = 'Washington DC'
+        'MD' : State[I] = 'Maryland'
+        'VA' : State[I] = 'Virginia'
+        'NC' : State[I] = 'North Carolina'
+        'SC' : State[I] = 'South Carolina'
+        'VI' : State[I] = 'Virgin Islands'
+        'HI' : State[I] = 'Hawaii'
+        ELSE : begin
+               print, State[I] 
+               stop
+               end
+      Endcase
+  Endfor
+
+ Info = {Site:Site, Name:Name, Addr:Addr, State:State, $
+         Lon:Lon, Lat:Lat, Elev:Elev}
+
+ Return, Info
+
+ end
+
+

@@ -1,0 +1,152 @@
+; idl_mozaic (iam, bmy, 10/20/03, 3/7/05)
+; Batch script to plot data from 3 GEOS-CHEM models plus MOZAIC data
+
+; NOTE: To run interactively, uncomment this line!
+pro idl_mozaic
+
+;=============================================================================
+; Specify input information
+;=============================================================================
+
+; Model #1 (red): Mat's GEOS-3 4x5 2001 v5-07-08
+pref1   = '/data/ctm/GEOS/stdrun_1yr/v5-07-08.mje/data/v5-07-08.mje.2001'
+ptop1   = 0.01
+dlat1   = 4.0
+dlon1   = 5.0
+nalt1   = 30
+year1   = 2001
+
+; Model #2 (green): GEOS-3 4x5 2001 v7-02-03
+pref2   = '/data/ctm/GEOS/stdrun_1yr/v7-02-03.geos3/data/v7-02-03.geos3.2001'
+ptop2   = 0.01
+dlat2   = 4.0
+dlon2   = 5.0
+nalt2   = 30
+year2   = 2001
+
+; Model #3 (blue): GEOS-4 4x5 2001 v7-02-03
+pref3   = '/data/ctm/GEOS/stdrun_1yr/v7-02-03.geos4/data/v7-02-03.geos4.2001'
+ptop3   = 0.01
+dlat3   = 4.0
+dlon3   = 5.0
+nalt3   = 30
+year3   = 2001
+
+; Title for top of plot
+title   = 'Red: v5-07-08 (2001);  Green: v7-02-03.geos3 (2001);  Blue: v7-02-03.geos4 (2001)'
+
+; String to denote PostScript filenames
+runname = 'v7-02-03.1yr'
+
+; Redirect PostScript output (end w/ slash)
+PSDir   = '/as/home/ctm/bmy/stdrun_1yr' + $
+          '/runs/geos.v7-02-03/run.fullchem.geos4/output/'
+
+;=============================================================================
+; Program execution begins here!
+;=============================================================================
+
+; ID string
+print, '==================================================='
+print, 'IDL_MOZAIC: Prints models vs. MOZAIC data'
+print, '==================================================='
+
+; NOTE: To run in batch mode, uncomment these lines
+; Compile all routines first
+;.r all_stations_geos_mozaic.pro
+;.r plot_gridded_3_vs_data_mozaic_0_5
+;.r plot_4lev_co_geos_3_models_mozaic
+;.r plot_4lev_o3_geos_3_models_mozaic
+;.r plot_station_profiles_geos_3_models_2_months_selected_0_5
+;.r plot_station_profiles_o3_3_models_0_5
+;.r plot_3lev_o3_geos_3_models_mozaic
+
+;------------------
+; Read MOZAIC Data
+;------------------
+; NOTE: Now pass NALT to ALL_STATIONS_GEOS_MOZAIC (bmy, 3/29/04)
+all_stations_geos_mozaic, 'CO','IJ-AVG-$::CO',12,pref1,0,ptop1,'.1',nalt1
+all_stations_geos_mozaic, 'CO','IJ-AVG-$::CO',12,pref2,0,ptop2,'.2',nalt2
+all_stations_geos_mozaic, 'CO','IJ-AVG-$::CO',12,pref3,0,ptop3,'.3',nalt3
+
+;--------------
+; 1st plot
+;--------------
+filest='/users/trop/iam/netCDF/CO.stations.selected.mozaic.2'
+psname=PsDir+'CO.profiles.mozaic.sel.months.'+runname+'.1.ps'
+plot_gridded_3_vs_data_mozaic_0_5,'CO',6,'.1','.2','.3',title,psname,filest
+
+;--------------
+; 2nd plot
+;--------------
+filest='/users/trop/iam/netCDF/CO.stations.selected.mozaic.3'
+psname=PsDir+'CO.profiles.mozaic.sel.months.'+runname+'.2.ps'
+plot_gridded_3_vs_data_mozaic_0_5,'CO',6,'.1','.2','.3',title,psname,filest
+
+;--------------
+; 3rd plot
+;--------------
+filest='/users/trop/iam/netCDF/Sites.CO.prof.mozaic'
+psname=PsDir+'CO.seas.cycle.mozaic.geos.'+runname+'.ps'
+plot_4lev_co_geos_3_models_mozaic, pref1, ptop1, dlat1, dlon1, nalt1, $
+                                   pref2, ptop2, dlat2, dlon2, nalt2, $
+                                   pref3, ptop3, dlat3, dlon3, nalt3, $
+                                   title, psname, 3, filest
+
+;--------------
+; 4th plot
+;--------------
+filest='/users/trop/iam/netCDF/Sites.O3.prof.mozaic.selected'
+psname=PSDir+'O3.profiles.mozaic.geos.'+runname+'.2.months.selected.ps'
+max_station=8
+plot_station_profiles_geos_3_models_2_months_selected_0_5, 1,4,7,10,$
+                                pref1, ptop1, dlat1, dlon1, nalt1, $
+                                pref2, ptop2, dlat2, dlon2, nalt2, $
+                                pref3, ptop3, dlat3, dlon3, nalt3, $
+                                title, psname, max_station, filest
+;--------------
+; 5th plot
+;--------------
+filest='/users/trop/iam/netCDF/Sites.O3.prof.mozaic.selected'
+psname=PsDir+'O3.seascycle.3lev.3.mozaic.selected.'+runname+'.ps'
+max_station=8
+plot_3lev_o3_geos_3_models_mozaic, pref1, ptop1, dlat1, dlon1, nalt1, $
+                                   pref2, ptop2, dlat2, dlon2, nalt2, $
+                                   pref3, ptop3, dlat3, dlon3, nalt3, $
+                                   title, psname, max_station, filest
+
+;--------------
+; 6th plot
+;--------------
+filest='/users/trop/iam/netCDF/Sites.O3.prof.mozaic.1'
+psname=PsDir+'O3.seascycle.3lev.3.mozaic.all.'+runname+'.ps'
+max_station=19
+plot_3lev_o3_geos_3_models_mozaic, pref1, ptop1, dlat1, dlon1, nalt1, $
+                                   pref2, ptop2, dlat2, dlon2, nalt2, $
+                                   pref3, ptop3, dlat3, dlon3, nalt3, $
+                                   title, psname, max_station, filest
+
+;--------------
+; 7th plot
+;--------------
+filest='/users/trop/iam/netCDF/Sites.O3.prof.mozaic.1'
+psname=PsDir+'O3.profiles.mozaic.geos.0.5.'+runname+'.ps'
+max_station=19
+plot_station_profiles_o3_3_models_0_5, 1,     4,     7,     10,           $ 
+                                       pref1, ptop1, dlat1, dlon1, nalt1, $
+                                       pref2, ptop2, dlat2, dlon2, nalt2, $
+                                       pref3, ptop3, dlat3, dlon3, nalt3, $
+                                       title, psname, max_station, filest
+
+;--------------
+; 8th plot
+;--------------
+filest='/users/trop/iam/netCDF/Sites.O3.prof.mozaic.1'
+psname=PsDir+'O3.seas.cycle.mozaic.geos.'+runname+'.ps'
+plot_4lev_o3_geos_3_models_mozaic, pref1, ptop1, dlat1, dlon1, nalt1, $
+                                   pref2, ptop2, dlat2, dlon2, nalt2, $
+                                   pref3, ptop3, dlat3, dlon3, nalt3, $
+                                   title, psname, 19, filest
+
+
+end

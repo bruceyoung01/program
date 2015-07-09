@@ -1,0 +1,9 @@
+CODE :
+main code : figure_01a.ncl
+subroutines are in the directory ./subroutine
+
+data :
+the post data is also the raw data, which are in the directory ./post_data
+
+figure :
+figure_01a : 1plt_figure_01a_v01.pdf

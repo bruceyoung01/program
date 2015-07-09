@@ -1,0 +1,847 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/regridding/
+last updated : 07/17/2008 10:09
+
+===================
+CREATE_NESTED.PRO
+===================
+      bmy, 10 Jan 2003: VERSION 1.00
+      bmy, 25 Sep 2003: VERSION 1.01
+                        - now call PTR_FREE to free pointer heap memory
+      bmy, 16 Dec 2003: - now add THISFILEINFO in call to CTM_WRITEBPCH
+bmy & phs, 04 Oct 2007: GAMAP VERSION 2.10
+                        - Added /CHINA, /NAMER, /EUROPE keywords
+                          which may be specified instead of XRANGE
+                          and YRANGE.  This is a user convenience.
+      phs, 28 Jan 2008: - Bug fix if model name is 'GEOS3_30L'
+                        - Free pointers not referenced at exist.
+
+===================
+CREATE_NESTED_ASCII.PRO
+===================
+      bmy, 10 Apr 2003: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+CREATE_NESTED_MET.PRO
+===================
+      bmy, 18 Jan 2003: VERSION 1.00
+                        - adapted from "create_nested.pro"  
+      bmy, 25 Sep 2003: VERSION 1.01
+                        - also added GEOS-4 met fields
+bmy & phs, 24 Sep 2007: GAMAP VERSION 2.10
+                        - Rewritten for compatibility with
+                          GAMAP internal routine CTM_READ_GMAO
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Make sure we create big-endian binary files
+
+===================
+CREATE_USA_MASK.PRO
+===================
+rch & bmy, 22 Jun 2004: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+CTM_GETWEIGHT.PRO
+===================
+      bmy, 11 Aug 2000: VERSION 1.01
+                        - adapted from CTM_REGRID
+      bmy, 21 Jan 2003: VERSION 1.02
+                        - Added fix for GEOS 1 x 1.25 grid
+      bmy, 04 May 2006: GAMAP VERSION 2.05
+                        - Added fix for GENERIC 2.5 x 2.5 grid
+      bmy, 29 Jun 2006: - Added fix for GEOS 1x1 -> GENERIC 1x1 
+bmy & phs, 04 Oct 2007: GAMAP VERSION 2.10
+                        - added fix for GENERIC 0.5 x 0.5 grid
+                        - general fix for over-the-dateline cases
+
+===================
+CTM_REGRIDH.PRO
+===================
+      bmy, 13 Feb 2002: GAMAP VERSION 1.50
+                        - adapted from CTM_REGRID plus 
+                          other various existing codes
+      bmy, 16 Jan 2003: GAMAP VERSION 1.52
+                        - fixed a small bug which prevented flagging
+                          coarse --> fine regridding when going from
+                          1 x 1.25 to 1 x 1
+      phs, 24 Oct 2005: GAMAP VERSION 2.05
+                        - Fix the Coarse-to-Fine case. Works as
+                          expected for both PER_UNIT_AREA=1 and =0.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+HIST_ND.PRO
+===================
+     Mon Mar 5 09:45:53 2007, J.D. Smith <jdsmith@as.arizona.edu>
+             Correctly trim out of range elements from the
+             histogram, when MIN/MAX are specified. Requires IDL
+             v6.1 or later.
+     Tue Aug 19 09:13:43 2003, J.D. Smith <jdsmith@as.arizona.edu>
+             Slight update to BINSIZE logic to provide consistency
+             with HIST_2D.
+     Fri Oct 11 10:10:01 2002, J.D. Smith <jdsmith@as.arizona.edu>
+             Updated to use new DIMENSION keyword to MAX/MIN.
+     Fri Apr 20 12:57:34 2001, JD Smith <jdsmith@astro.cornell.edu>
+             Slight update to NBINS logic.  More aggressive keyword
+             checking.
+     Wed Mar 28 19:41:10 2001, JD Smith <jdsmith@astro.cornell.edu>
+             Written, based on HIST_2D, and suggestions of CM.
+ phs, bmy, 30 May 2008: GAMAP VERSION 2.12
+                        - Added to GAMAP under "Regridding" category
+ 
+
+===================
+INTERPOLATE_2D.PRO
+===================
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+MAKE_CH_DATA.PRO
+===================
+      bmy, 10 Apr 2003: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+MAKE_CH_MET.PRO
+===================
+      bmy, 10 Apr 2003: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+MAKE_EUR_DATA.PRO
+===================
+      bmy, 15 May 2003: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+MAKE_EUR_MET.PRO
+===================
+      bmy, 10 Apr 2003: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+MAKE_NA_DATA.PRO
+===================
+      bmy, 10 Apr 2003: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+MAKE_NA_MET.PRO
+===================
+      bmy, 10 Apr 2003: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+MERGE_FERT_SOILPREC.PRO
+===================
+      bmy, 04 Aug 2000: VERSION 1.00
+                        - adapted from older IDL code 
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+MERGE_OH.PRO
+===================
+      bey, 21 Jul 2000: VERSION 1.00
+      bmy, 11 Aug 2000: VERSION 1.01
+                        - added standard header, updated comments
+                        - renamed to "merge_oh.pro"
+      bmy, 04 Feb 2002: VERSION 1.02
+                        - rewrote for expediency
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+PULL_PL.PRO
+===================
+rch & bmy, 06 Dec 2005: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRID_BIOFUEL.PRO
+===================
+      bmy, 09 Jun 2000: VERSION 1.00
+      bmy, 12 Jul 2000: VERSION 1.01 
+                        - added NOx keyword
+                        - now read original data with 
+                          internal function RBF_READDATA
+      bmy, 24 Jul 2000: - added OUTDIR keyword
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRID_COLUMN.PRO
+===================
+      bmy, 22 Jan 2002: TOOLS VERSION 1.50
+      bmy, 14 Mar 2002: - added /NO_CHECK keyword
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRID_TOMS_SBUV.PRO
+===================
+      bmy, 16 Mar 2001: VERSION 1.00
+      bmy, 29 Mar 2001: VERSION 1.01
+                        - renamed to REGRID_TOMS_SBUV
+                        - renamed keyword MODELNAME to OUTMODELNAME
+                        - renamed keyword RESOLUTION to OUTRESOLUTION
+                        - now use routine INTERPOLATE_2D
+
+===================
+REGRIDH_3D_OH.PRO
+===================
+      bmy, 12 Sep 2002: VERSION 1.01
+      bmy, 22 Dec 2003: VERSION 1.02
+                        - totally rewritten for GAMAP v2-01
+                        - now call PTR_FREE to free the memory
+                        - added DIAGN keyword
+
+===================
+REGRIDH_AEROSOL.PRO
+===================
+      bmy, 15 Jan 2003: VERSION 1.01
+      bmy, 22 Dec 2003: VERSION 1.02
+                        - rewritten for GAMAP v2-01
+                        - call PTR_FREE to free the pointer heap memory 
+              
+
+===================
+REGRIDH_AIRCRAFT_DATA.PRO
+===================
+      bmy, 23 Dec 2003: VERSION 1.01
+                        - Initial version
+      bmy, 28 Apr 2008: GAMAP VERSION 2.12
+                        - Corrected typo at line 142
+                              
+
+===================
+REGRIDH_AIRCRAFT_FUEL.PRO
+===================
+      bmy, 10 Apr 2003: VERSION 1.00
+      bmy, 29 Nov 2006: VERSION 1.01
+                        - Updated for SO2 output
+
+===================
+REGRIDH_AIRCRAFT_NOX.PRO
+===================
+      bmy, 10 Apr 2003: VERSION 1.00
+
+===================
+REGRIDH_ANTHRO.PRO
+===================
+      bmy, 01 Aug 2000: VERSION 1.00
+      bmy, 14 Mar 2001: VERSION 1.01
+                        - now write output to binary punch file format
+      bmy, 30 Oct 2001: VERSION 1.02
+                        - added /COPY keyword
+                        - now can also copy data from 1 x 1 ASCII
+                          file to binary punch file w/o regridding
+      bmy, 09 Jan 2003: VERSION 1.03
+                        - renamed to "regridh_anthro.pro"
+                        - now uses CTM_REGRIDH, which is faster
+                          when regridding multiple arrays
+
+===================
+REGRIDH_AVHRRCO.PRO
+===================
+clh & bmy, 09 Jun 2000: VERSION 1.00
+                        - adapted from "regrid_bioburn.pro"  
+      bmy, 14 Nov 2002: VERSION 1.01
+                        - now use CTM_REGRIDH for horiz regridding
+                        - renamed to "regridh_avhrrco.pro"
+      bmy, 23 Dec 2003: VERSION 1.02
+                        - updated for GAMAP v2-01
+
+===================
+REGRIDH_BIOBURN.PRO
+===================
+      bmy, 09 Jun 2000: VERSION 1.00
+      bmy, 14 Jul 2000: VERSION 1.01
+                        - adapted for 9 biomass burning tracers
+      bmy, 24 Jul 2000: - added OUTDIR keyword
+      bmy, 13 Feb 2001: VERSION 1.02
+                        - added ALK4, CH4, CH3I as biomass 
+                          burning tracers
+      bmy, 15 Feb 2001: VERSION 1.03
+                        - now use pre-saved mapping weights, 
+                          for computational expediency
+                        - now no longer use
+                        - added /SEASONAL keyword to regrid
+                          seasonal climatological biomass burning
+                          instead of interannual variability BB.
+      bmy, 28 Jun 2001: VERSION 1.04
+                        - added COPY keyword, to just write a 1x1
+                          binary punch file w/o regridding
+      bmy, 02 Jul 2001: VERSION 1.05
+                        - YEAR is now 4 digits
+                        - now uses 1985 TAU values for seasonal
+                          BB emissions and TAU values corresponding
+                          to YEAR for interannual BB emissions
+      bmy, 21 Sep 2001: VERSION 1.06
+                        - modified to handle Randall's year 2000
+                          files for interannual variability
+                        - renamed MODELNAME to OUTMODELNAME and
+                          RESOLUTION to OUTRESOLUTION
+      bmy, 24 Sep 2001: VERSION 1.07
+                        - now created TINFO array of structures
+                          w/ information about each biomass tracer
+                        - also save TOTB (CTM tracer #33) as g/cm2 
+      bmy, 11 Feb 2002: VERSION 1.08
+                        - now regrid all months of 2000
+      bmy, 14 Nov 2002: VERSION 1.09
+                        - renamed to REGRIDH_BIOBURN
+                        - removed WEIGHTFILE keyword
+      bmy, 23 Dec 2003: VERSION 1.10
+                        - updated for GAMAP v2-01
+
+===================
+REGRIDH_BIOBURN2.PRO
+===================
+      bmy, 08 Apr 2004: VERSION 1.00
+      bmy, 20 Oct 2005: VERSION 1.01
+                        - If units are per m3, m2, cm3, or cm2 then 
+                          set PER_UNIT_AREA flag in routine CTM_REGRIDH;
+
+===================
+REGRIDH_BIOFUEL.PRO
+===================
+      bmy, 09 Jun 2000: VERSION 1.00
+      bmy, 12 Jul 2000: VERSION 1.01 
+                        - added NOx keyword
+                        - now read original data with 
+                          internal function RBF_READDATA
+      bmy, 24 Jul 2000: - added OUTDIR keyword
+      bmy, 26 Jan 2001: VERSION 1.02
+                        - added extra species names
+      bmy, 29 Oct 2001: VERSION 1.03
+                        - added /COPY keyword to just copy data
+                          from ASCII format to binary punch format
+                        - now loop over multiple tracer names
+                        - removed TRCNAME keyword
+      bmy, 28 Jan 2002: VERSION 1.04
+                        - bug fix: now convert C2H6, C3H8 and 
+                          ACET from kg/yr to kg C/yr
+      bmy, 14 Nov 2002: VERSION 1.05
+                        - renamed to REGRIDH_BIOFUEL
+      bmy, 23 Dec 2003: VERSION 1.06
+                        - updated for GAMAP v2-01
+
+===================
+REGRIDH_C3H8_C2H6.PRO
+===================
+      bmy, 08 Jan 2003: VERSION 1.00
+      bmy, 22 Dec 2003: VERSION 1.01
+                        - rewritten for GAMAP v2-01 
+                        - now call PTR_FREE to free pointer memory
+
+===================
+REGRIDH_CM2_S.PRO
+===================
+      bmy, 08 Apr 2004: VERSION 1.00
+
+===================
+REGRIDH_CROPLANDS.PRO
+===================
+      bmy, 19 Jul 2001: VERSION 1.00
+      bmy, 09 Jan 2003: VERSION 1.02
+                        - Now use CTM_REGRIDH to regrid data
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_DUST.PRO
+===================
+      bmy, 09 Jun 2000: VERSION 1.00
+      rvm, 18 Jun 2000: VERSION 1.01
+      bmy, 07 Jul 2000: VERSION 1.10
+                        - added OUTDIR keyword
+                        - save regridded data one month at a time
+                          since regridding takes so long 
+      bmy, 19 Dec 2003: VERSION 1.11
+                        - Rewritten for GAMAP v2-01
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_DUST_RAW.PRO
+===================
+      bmy, 09 Jun 2000: VERSION 1.00
+      rvm, 18 Jun 2000: VERSION 1.01
+      bmy, 07 Jul 2000: VERSION 1.10
+                        - added OUTDIR keyword
+                        - save regridded data one month at a time
+                          since regridding takes so long 
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Now read input files as big-endian
+              
+
+===================
+REGRIDH_FERT.PRO
+===================
+      bmy, 01 Aug 2000: VERSION 1.00
+      bmy, 13 Jan 2003: VERSION 1.01
+                        - renamed to "regridh_fert.pro"
+                        - now uses CTM_REGRIDH
+                        - removed OUTDIR, added OUTFILENAME
+                        - updated comments
+      bmy, 23 Dec 2003: VERSION 1.02
+                        - updated for GAMAP v2-01
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_JO1D.PRO
+===================
+      bmy, 11 Aug 2000: VERSION 1.01
+      bmy, 23 Dec 2003: VERSION 1.02
+                        - updated for GAMAP v2-01
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_JV.PRO
+===================
+      bmy, 11 Aug 2000: VERSION 1.01
+      bmy, 22 Dec 2003: VERSION 1.02
+                        - updated for GAMAP v2-01
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_KG.PRO
+===================
+      bmy, 28 Jun 2006: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_LAI.PRO
+===================
+      bmy, 04 Aug 2000: VERSION 1.00
+                        - adapted from old FORTRAN code
+      bmy, 15 Jan 2003: VERSION 1.01
+                        - renamed to "regridh_lai.pro"
+                        - renamed MODELNAME to OUTMODELNAME
+                        - renamed RESOLUTION to OUTRESOLUTION
+      bmy, 18 Jun 2004: VERSION 1.02
+                        - Bug fix: TMPAREA array needs to be
+                          defined with N_TYPE, not N_MON
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_MOLEC_CM2.PRO
+===================
+      bmy, 28 Jun 2006: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_NEP.PRO
+===================
+      bmy, 15 Apr 2003: VERSION 1.00
+      bmy, 23 Dec 2003: VERSION 1.01
+                        - updated for GAMAP v2-01
+                        - added DIAGN keyword
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_NH3.PRO
+===================
+      bmy, 28 Mar 2003: VERSION 1.01
+      bmy, 22 Dec 2003: VERSION 1.02
+                        - rewritten for GAMAP v2-01
+                        - now call PTR_FREE to free pointer memory
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_NPP.PRO
+===================
+      bmy, 15 Apr 2003: VERSION 1.00
+      bmy, 23 Dec 2003: VERSION 1.01
+                        - updated for GAMAP v2-01
+                        - added DIAGN keyword
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_O3PL.PRO
+===================
+      bmy, 27 Mar 2001: VERSION 1.00
+      bmy, 23 Dec 2003: VERSION 1.01
+                        - renamed to "regridv_o3pl.pro"
+                        - rewritten for GAMAP v2-01
+                        - now looks for sfc pressure in ~/IDL/regrid/PSURF
+      bmy, 24 Feb 2004: VERSION 1.02
+                        - now convert P(Ox) to kg/s and L(Ox) 1/s for
+                          regridding -- then convert back after regridding
+                        - now use REGRID_COLUMN to regrid P(Ox) in kg/s
+                        - now use INTERPOL to regrid L(Ox) in 1/s
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_OCEAN_ACET.PRO
+===================
+      bmy, 15 Jun 2003: VERSION 1.00
+      bmy, 23 Dec 2003: VERSION 1.01
+                        - rewritten for GAMAP v2-01
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_POPS.PRO
+===================
+      bmy, 23 May 2005: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_PORL.PRO
+===================
+      bmy, 01 Nov 2002: VERSION 1.01
+      bmy, 19 Sep 2003: VERSION 1.02
+                        - now call PTR_FREE to free pointer memory
+      bmy, 19 Dec 2003: VERSION 1.03
+                        - rewritten for GAMAP v2-01
+                        - added DIAGN keyword
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_RESP.PRO
+===================
+      bmy, 11 Aug 2000: VERSION 1.01
+      bmy, 22 Dec 2003: VERSION 1.02
+                        - rewritten for GAMAP v2-01
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_RESTART.PRO
+===================
+      bmy, 22 Jan 2003: VERSION 1.01
+      bmy, 15 Apr 2003: VERSION 1.02
+                        - now reads bpch file w/o using CTM_GET_DATA;
+                          this keeps us from running out of memory
+      bmy, 22 Dec 2003: VERSION 1.03
+                        - rewritten for GAMAP v2-01
+                        - rewritten so that we can now regrid files
+                          containing less than GRIDINFO.LMX levels
+                        - reorganized a few things for clarity
+      bmy, 13 Apr 2004: VERSION 1.04
+                        - now use surface pressure files on both
+                          the input and output grids
+                        - now use separate arrays for airmass
+                          on the two grids
+                        - now adjusts polar latitudes so as to avoid
+                          artificial buildup of concentration when
+                          regridding from coarse --> fine grids
+      bmy, 31 Jan 2005: VERSION 1.05
+                        - Minor bug fix: INAREA and OUTAREA should
+                          have units of [m2] for the airmass computation
+                        - Now use /QUIET and /NOPRINT keywords in
+                          call to CTM_GET_DATABLOCK
+      bmy, 26 May 2005: VERSION 1.06
+                        - added /GCAP keyword for special handling
+                          when creating restart files on 4x5 GCAP grid
+                        - now references INTERPOLATE_2D function
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - fixed typo for fine -> coarse regridding
+                        - Now use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDH_SCALEFOSS.PRO
+===================
+      bmy, 09 Jun 2000: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+      phs, 08 Feb 2008: GAMAP VERSION 2.12
+                        - added swap_endian keyword to OPEN_FILE
+                          in RS_Read_Data and RS_WRITE_DATA
+                        - fixed keywords checking
+                        - replace ctm_regrid w/ ctm_regridh
+
+===================
+REGRIDH_SCALEFOSS_SOX.PRO
+===================
+      bmy, 09 Jun 2000: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_SHIPSO2.PRO
+===================
+      bmy, 08 Jan 2003: VERSION 1.00
+      bmy, 22 Dec 2003: VERSION 1.01
+                        - rewritten for GAMAP v2-01 
+                        - now call PTR_FREE to free pointer memory
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_SOILPREC.PRO
+===================
+      bmy, 01 Aug 2000: VERSION 1.00
+      bmy, 08 Jan 2003: VERSION 1.01
+                        - renamed to "regridh_soilprec.pro"
+                        - removed OUTDIR, added OUTFILENAME
+                        - updated comments
+      bmy, 23 Dec 2003: VERSION 1.02
+                        - updated for GAMAP v2-01
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+      bmy, 24 Apr 2008: GAMAP VERSION 2.12
+                        - bug fix: N_ELEMENTS was misspelled
+
+===================
+REGRIDH_SST.PRO
+===================
+      bmy, 28 Mar 2003: VERSION 1.01
+      bmy, 22 Dec 2003: VERSION 1.02
+                        - rewritten for GAMAP v2-01
+                        - now call PTR_FREE to free pointer memory
+                        - added DIAGN keyword
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_STRATJV.PRO
+===================
+      bmy, 13 Jan 2003: VERSION 1.00
+      bmy, 22 Dec 2003: VERSION 1.01
+                        - rewritten for GAMAP v2-01
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_TAGCO_MASK.PRO
+===================
+      bmy, 22 Jun 2004: VERSION 1.00
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Read input data as big-endian
+
+===================
+REGRIDH_UNIT_AREA.PRO
+===================
+      bmy, 18 Aug 2005: VERSION 1.00
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDH_UVALBEDO.PRO
+===================
+      bmy, 06 Jul 2000: VERSION 1.00
+      bmy, 24 Jul 2000: VERSION 1.01
+                        - added OUTDIR keyword
+      bmy, 16 Nov 2001: VERSION 1.02
+                        - adapted for Koelemeijer et al 2001 data
+      bmy, 15 Jan 2003: VERISON 1.03
+                        - renamed to "regridh_uvalbedo.pro"
+                        - "read_uvalbedo.pro" is now an internal function
+                        - now uses CTM_REGRIDH to do the regridding
+      bmy, 23 Dec 2003: VERSION 1.04
+                        - updated for GAMAP v2-01
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+
+===================
+REGRIDV_3D_OH.PRO
+===================
+      bmy, 02 Aug 2000: VERSION 1.00
+                        - adapted from "regrid_oh_for_geos2.pro"
+      bmy, 05 Feb 2002: VERSION 1.01
+                        - now conserves column mass
+      bmy, 14 Mar 2002: VERSION 1.02
+                        - RENAMED TO "regridv_3d_oh.pro"
+      bmy, 22 Dec 2003: VERSION 1.03
+                        - totally rewritten for GAMAP v2-01
+                        - now supports hybrid grids
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDV_AEROSOL.PRO
+===================
+      bmy, 26 Jan 2001: VERSION 1.00
+                        - based on "regrid_dust_weights.pro" 
+      bmy, 13 Feb 2001: VERSION 1.01
+                        - de-hardwired calls to CTM_BOXSIZE
+      bmy, 22 Feb 2001: VERSION 1.02
+                        - now use improved version of SUMV.PRO
+                          which can handle GEOS-1 --> GEOS-STRAT
+                          vertical regridding
+      bmy, 28 Feb 2002: VERSION 1.03
+                        - Now use REGRID_COLUMN as a robust way
+                          to do the vertical regridding
+      bmy, 22 Dec 2003: VERSION 1.04
+                        - rewritten for GAMAP v2-01
+                        - now looks for sfc pressure in ~/IDL/regrid/PSURF
+                        - now supports hybrid grids
+                        - now call PTR_FREE to clear the heap memory
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDV_DUST.PRO
+===================
+      bmy, 26 Jan 2001: VERSION 1.00
+                        - based on "regrid_dust_weights.pro" 
+      bmy, 13 Feb 2001: VERSION 1.01
+                        - de-hardwired calls to CTM_BOXSIZE
+      bmy, 22 Feb 2001: VERSION 1.02
+                        - now use improved version of SUMV.PRO
+                          which can handle GEOS-1 --> GEOS-STRAT
+                          vertical regridding
+      bmy, 28 Feb 2002: VERSION 1.03
+                        - Now use REGRID_COLUMN as a robust way
+                          to do the vertical regridding
+      bmy, 23 Dec 2003: VERSION 1.04
+                        - rewritten for GAMAP v2-01
+                        - now looks for sfc pressure ~/IDL/regrid/PSURF
+                        - now supports hybrid grids
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDV_JV.PRO
+===================
+      bmy, 11 Aug 2000: VERSION 1.01
+      bmy, 22 Dec 2003: VERSION 1.02
+                        - renamed to "regridv_jv"
+                        - now looks for sfc pressure in ~/IDL/regrid/PSURF
+                        - now updated for GAMAP v2-01
+                        - added /TROP_ONLY keyword
+                        - updated comments
+      bmy, 07 Jul 2005: VERSION 1.03
+                        - Now pass /QUIET keyword to CTM_GET_DATA
+                        - Now pass /NOPRINT keyword to CTM_GET_DATABLOCK
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDV_O3PL.PRO
+===================
+      bmy, 27 Mar 2001: VERSION 1.00
+      bmy, 23 Dec 2003: VERSION 1.01
+                        - renamed to "regridv_o3pl.pro"
+                        - rewritten for GAMAP v2-01
+                        - now looks for sfc pressure in ~/IDL/regrid/PSURF
+      bmy, 24 Feb 2004: VERSION 1.02
+                        - now convert P(Ox) to kg/s and L(Ox) 1/s for
+                          regridding -- then convert back after regridding
+                        - now use REGRID_COLUMN to regrid P(Ox) in kg/s
+                        - now use INTERPOL to regrid L(Ox) in 1/s
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDV_PORL.PRO
+===================
+      bmy, 01 Nov 2002: VERSION 1.01
+      bmy, 19 Dec 2003: VERSION 1.02
+                        - rewritten for GAMAP v2-01
+                        - now looks for sfc pressure in ~/IDL/regrid/PSURF/
+                        - now supports hybrid grids
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDV_RESTART.PRO
+===================
+      bmy, 21 Jan 2003: VERSION 1.00
+                        - adapted from "regridv_3d_oh.pro
+      bmy, 25 Jun 2003: VERSION 1.01
+                        - added routine RVR_GetPEdge
+                        - now uses ETA coords for GEOS-4 hybrid grid
+      bmy, 31 Oct 2003: VERSION 1.02
+                        - now call PTR_FREE to free pointer memory
+                        - now recognizes GEOS3_30L model name
+                        - now recognizes GEOS4_30L model name
+      bmy, 19 Dec 2003: VERSION 1.03
+                        - now supports hybrid grids
+                        - added /TROP_ONLY switch to regrid only
+                          as high as the tropopause
+                        - now looks for sfc pressure in ~/IDL/regrid/PSURF
+                        - removed routine RVR_GetPEdge
+                        - modified routine RVR_GetAirMass
+      bmy, 17 Feb 2004: VERSION 1.04
+                        - bug fix: replaced D with N as loop index
+      bmy, 01 Feb 2005  - Now suppress excessive printing to screen
+                          with keywords /QUIET and /NOPRINT in
+                          call to CTM_GET_DATABLOCK
+      bmy, 26 May 2005: VERSION 1.05
+                        - added /GCAP keyword for special handling
+                          when creating restart files on 4x5 GCAP grid
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDVH_NOY.PRO
+===================
+      bmy, 29 Jun 2000: VERSION 1.00
+      bmy, 11 Aug 2000: VERSION 1.01
+                        - added OUTDIR keyword
+                        - FILENAME is now a keyword
+      bmy, 04 Dec 2000: VERSION 1.02
+                        - bug fix: use 801 pts for GEOS-STRAT interpolation
+      bmy, 28 Mar 2001: VERSION 1.02
+                        - now use cubic spline interpolation
+                        - now use CTM_WRITEBPCH, CTM_NAMEXT, CTM_RESEXT
+                        - renamed keyword MODELNAME to OUTMODELNAME
+                        - renamed keyword RESOLUTION to OUTRESOLUTION
+                        - renamed keyword FILENAME to INFILENAME
+                        - updated comments
+      bmy, 19 Jun 2001: VERSION 1.03
+                        - bug fix: make sure output is [v/v/s] or [v/v]
+                        - now make sure concentrations aren't negative 
+                          after interpolating to CTM grid 
+      bmy, 08 Jan 2003: VERSION 1.04
+                        - renamed to "regridvh_noy.pro"
+                        - now use linear interpolation in vertical
+      bmy, 23 Dec 2003: VERSION 1.05
+                        - rewritten for GAMAP v2-01
+                        - looks for sfc pressure file in ./PSURF subdir
+                        - now supports output hybrid grid
+      bmy, 06 Aug 2004: VERSION 1.06
+                        - now calls GET_GCAP_PRESSURE to get the
+                          array of pressures (since it is a hybrid
+                          grid w/ a wacky PTOP of 150 hPa.)
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Now suppresses verbose output 
+                        - Use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDVH_PCO_LCO.PRO
+===================
+      bmy, 29 Jun 2000: VERSION 1.00
+      bmy, 11 Aug 2000: VERSION 1.01
+                        - added OUTDIR keyword
+                        - FILENAME is now a keyword
+      bmy, 28 Mar 2001: VERSION 1.02
+                        - now use cubic spline interpolation
+                        - now use CTM_WRITEBPCH, CTM_NAMEXT, CTM_RESEXT
+                        - renamed keyword MODELNAME to OUTMODELNAME
+                        - renamed keyword RESOLUTION to OUTRESOLUTION
+                        - renamed keyword FILENAME to INFILENAME
+      bmy, 08 Jan 2003: VERSION 1.03
+                        - renamed to "regridvh_pco_lco.pro"l
+                        - now do linear interpolation in the vertical
+      bmy, 18 Dec 2003: VERSION 1.04
+                        - rewritten for GAMAP v2-01
+                        - Now looks for 
+                        - Now supports hybrid output grid
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+      bmy, 28 Jan 2008: GAMAP VERSION 2.12
+                        - Bug fix: PSFILE instead of PSFILENAME
+
+===================
+REGRIDVH_STRATJV.PRO
+===================
+      bmy, 06 Aug 2004: VERSION 1.01
+      bmy, 15 Feb 2007: VERSION 1.02
+                        - Suppress verbose output
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+
+===================
+REGRIDVH_STRATOH.PRO
+===================
+      bmy, 30 Jun 2000: VERSION 1.00
+      bmy, 02 Aug 2000: VERSION 1.01
+                        - FILENAME is now a keyword
+      bmy, 18 Dec 2003: VERSION 1.02
+                        - renamed to REGRIDVH_STRATOH
+                        - rewritten for GAMAP v2-01
+                        - Now supports hybrid output grids
+      bmy, 15 Feb 2007: VERSION 1.03
+                        - Bug fix for PS file name
+                        - Suppress verbose printing
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files
+      bmy, 28 Jan 2008: GAMAP VERSION 2.12
+                        - Bug fix: don't hardwire path for PS file
+
+===================
+TROP_CUT.PRO
+===================
+      bmy, 31 Oct 2002: VERSION 1.00
+      bmy, 25 Sep 2003: VERSION 1.01
+                        - Call PTR_FREE to free the pointer heap memory
+bmy & phs, 20 Jun 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to locate surf prs files

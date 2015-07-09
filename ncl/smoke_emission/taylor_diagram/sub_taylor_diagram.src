@@ -1,0 +1,18 @@
+#!/bin/sh
+#SBATCH --job-name=taylor_diagram
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=40240
+#SBATCH --time=6:00:00
+#SBATCH --error=taylor_diagram_%J.out
+#SBATCH --output=taylor_diagram_%J.stderr
+##SBATCH --partition=jwang7
+#SBATCH --qos=normal
+
+
+#change to job directory
+cd /lustre/work/jwang7/bruceyoung01/model/ncl/smoke_emission/taylor_diagram
+
+#run program
+stdbuf -o0 -e0 ncl taylor_diagram.ncl
+

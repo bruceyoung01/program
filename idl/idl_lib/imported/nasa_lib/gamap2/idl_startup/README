@@ -1,0 +1,20 @@
+This directory contains a sample idl_startup.pro directory for use with GAMAP.
+
+It is recommended to copy this idl_startup.pro file to your ~/IDL directory.
+
+Also make sure that your .cshrc file has the following line:
+
+    setenv IDL_STARTUP $home/IDL/idl_startup.pro
+
+This will define the IDL_STARTUP environment variable.  This variable tells
+IDL where to look for the "idl_startup.pro" file.
+
+You may edit the "idl_startup.pro" file as you wish (e.g. to add more
+IDL source code directories to the search path).  Please see Chapter 2 
+of the GAMAP User's Guide for more information.
+
+    http://www.as.harvard.edu/chemistry/trop/gamap/gamap2_manual/
+
+14 April 2008
+Bob Yantosca              and Philippe Le Sager
+yantosca@seas.harvard.edu     plesager@seas.harvard.edu

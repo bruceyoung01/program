@@ -1,0 +1,98 @@
+PRO Chapter5_6Hw
+
+Precip48 = [4.17, 5.61, 3.88, 1.55, 2.30, 5.58, 5.58, 5.14, 4.52, $
+1.53, 4.24, 1.18, 3.17, 4.72, 2.17, 2.17, 3.94, 0.95, 1.48, $
+5.68, 4.25, 3.66, 2.12, 1.24, 3.64, 8.44, 5.20, 2.33, 2.18, 3.43]
+
+PrecipA2 = [0.44, 1.18, 2.69, 2.08, 3.66, 1.72, 2.82, 0.72, 1.46, $
+1.30, 1.35, 0.54, 2.74, 1.13, 2.50, 1.72, 2.27, 2.82, 1.98, 2.44, $
+2.53, 2.00, 1.12, 2.13, 1.36, 4.90, 2.94, 1.75, 1.69, 1.88, 1.31, $
+1.76, 2.17, 2.38, 1.16, 1.39, 1.36, 1.03, 1.11, 1.35, 1.44, 1.84, $
+1.69, 3.00, 1.36, 6.37, 4.55, 0.52, 0.87, 1.51]
+
+Combine = [4.17, 5.61, 3.88, 1.55, 2.30, 5.58, 5.58, 5.14, 4.52, $
+1.53, 4.24, 1.18, 3.17, 4.72, 2.17, 2.17, 3.94, 0.95, 1.48, $
+5.68, 4.25, 3.66, 2.12, 1.24, 3.64, 8.44, 5.20, 2.33, 2.18, 3.43, $
+0.44, 1.18, 2.69, 2.08, 3.66, 1.72, 2.82, 0.72, 1.46, $
+1.30, 1.35, 0.54, 2.74, 1.13, 2.50, 1.72, 2.27, 2.82, 1.98, 2.44, $
+2.53, 2.00, 1.12, 2.13, 1.36, 4.90, 2.94, 1.75, 1.69, 1.88, 1.31, $
+1.76, 2.17, 2.38, 1.16, 1.39, 1.36, 1.03, 1.11, 1.35, 1.44, 1.84, $
+1.69, 3.00, 1.36, 6.37, 4.55, 0.52, 0.87, 1.51]
+
+SizePrecip48 = Size(Precip48)		;Implementing the size function of the array
+n = SizePrecip48[1]			;Getting the size of the array
+SizePrecipA2 = Size(PrecipA2)		;Implementing the size function of the array
+m = SizePrecipA2[1]			;Getting the size of the array
+SizeCombine = Size(Combine)		;Implementing the size function of the array
+p = SizeCombine[1]			;Getting the size of the array
+
+;alpha = (mean^2)/(sd^2)
+;beta = (sd^2)/mean
+;L = (alpha - 1) * ln(x(i)/beta) - x(i)/beta - ln(beta) - ln(gamma(alpha))
+;---Table 4.8----------------------------------------------------------------------------------
+
+;Adding up all the values in the array Precip
+table_48 = Total(alog(Precip48))
+
+;Applying the sample statistic (equation 4.40)
+D_48 = alog(mean(Precip48)) - (1/float(n))*float(table_48)
+
+;Thom estimator for the shape parameter
+alpha_48 = (1+((1+(4*D_48/3.0))^(0.5)))/(4*D_48)
+
+;Equation for beta
+beta_48 = (mean(Precip48))/alpha_48
+
+Sum_48 = 0
+FOR i = 0, n-1 DO BEGIN
+	L_48 = (alpha_48 - 1) * alog(Precip48(i)/beta_48) - Precip48(i)/beta_48 - alog(beta_48) - alog(gamma(alpha_48))
+	Sum_48 = Sum_48 + L_48
+ENDFOR
+
+;---Table A.2----------------------------------------------------------------------------------
+
+;Adding up all the values in the array Precip
+table_A2 = Total(alog(PrecipA2))
+
+;Applying the sample statistic (equation 4.40)
+D_A2 = alog(mean(PrecipA2)) - (1/float(m))*float(table_A2)
+
+;Thom estimator for the shape parameter
+alpha_A2 = (1+((1+(4*D_A2/3))^(0.5)))/(4*D_A2)
+
+;Equation for beta
+beta_A2 = (mean(PrecipA2))/alpha_A2
+
+Sum_A2 = 0
+FOR j = 0, m-1 DO BEGIN
+	L_A2 = (alpha_A2 - 1) * alog(PrecipA2(j)/beta_A2) - PrecipA2(j)/beta_A2 - alog(beta_A2) - alog(gamma(alpha_A2))
+	Sum_A2 = Sum_A2 + L_A2
+ENDFOR
+
+;---Table 4.8 and Table A.2--------------------------------------------------------------------
+
+;Adding up all the values in the array Precip
+Sum = Total(alog(Combine))
+
+;Applying the sample statistic (equation 4.40)
+D = alog(mean(Combine)) - (1/float(p))*float(Sum)
+
+;Thom estimator for the shape parameter
+alpha = (1+((1+(4*D/3))^(0.5)))/(4*D)
+
+;Equation for beta
+beta = (mean(Combine))/alpha
+
+Sum = 0
+FOR k = 0, p-1 DO BEGIN
+	L = (alpha - 1) * alog(Combine(k)/beta) - Combine(k)/beta - alog(beta) - alog(gamma(alpha))
+	Sum = Sum + L
+ENDFOR
+
+likelihood = 2 * (Sum_48 + Sum_A2 - Sum)
+
+Print, "Likelihood = ", likelihood
+Print, "Degrees of freedom: 2"
+Print, "Gamma table rejects with a p-value of < 1-.999 = 0.001"
+
+END

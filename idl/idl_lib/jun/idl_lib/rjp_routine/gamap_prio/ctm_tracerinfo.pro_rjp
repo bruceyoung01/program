@@ -1,0 +1,404 @@
+; $Id: ctm_tracerinfo.pro,v 1.50 2002/05/24 14:03:52 bmy v150 $
+;-------------------------------------------------------------
+;+
+; NAME:
+;        CTM_TRACERINFO
+;
+; PURPOSE:
+;        return information about one or all tracers of the 
+;        global CTM
+;
+; CATEGORY:
+;        CTM tools
+;
+; CALLING SEQUENCE:
+;        CTM_TRACERINFO,tracern,tracerstru [,keywords]
+;
+; INPUTS:
+;        TRACERN -> tracer number or name for which to extract the 
+;            information. If TRACERN is numeric, it is interpreted as 
+;            an index to the FULLCHEM or SMALLCHEM tracernumber
+;            in the global model. If it is a string, it will be compared 
+;            to NAME then FULLNAME. TRACERN may contain more than one 
+;            element. To retrieve information about all tracers, use the
+;            /ALL_TRACERS keyword.
+;
+; KEYWORD PARAMETERS:
+;        /ALL_TRACERS -> retrieve information about all tracers
+;        INDEX -> returns the CTM index of the requested tracer(s)
+;        NAME -> returns the (short) name of the requested tracer(s)
+;        FULLNAME -> returns the (long) name of the requested tracer(s)
+;        MOLWT -> returns the molecular weight (kg/mole) of the requested 
+;            tracer(s)
+;        MOLC -> returns the carbon number of the requested tracer(s)
+;        SCALE -> standard scale factor for tracer
+;        UNIT -> returns the standard unit of the requested tracer(s)
+;            (i.e. unit as supplied by CTM with standard scale factor 
+;             applied (e.g. ppbv instead of V/V))
+;        /SMALLCHEM -> tracerindex refers to small chemistry module instead
+;            of full chemistry
+;        /FORCE_READING -> overwrite the contents of the common block
+;        FILENAME --> name of the tracerinfo file (default tracerinfo.dat)
+;            The file will be searched in the current directory first, then
+;            in the directory where ctm_tracerinfo.pro is located. If not found
+;            in either location, a standard data block is retrieved from this 
+;            file.
+;
+; OUTPUTS:
+;        TRACERSTRU -> returns a structure or structure array with the 
+;            following tags:
+;               name    : short name for tracer as used in the model
+;               fullname: long name for tracer (may be used in titles)
+;               mwt     : molec. weight as kg N or kg C 
+;               fulli   : tracer index in full chemistry module
+;               smalli  : tracer index in small chemistry module
+;               molc    : carbon number for NMHC
+;               scale   : standard scale factor
+;               unit    : standard unit for tracer with scale factor applied
+;
+; SUBROUTINES:
+;
+; REQUIREMENTS:
+;        uses file_exist, getdatablock, routine_name
+;
+; NOTES:
+;        At first call, the tracer information structure array is
+;        either read from file or retrieved from the
+;        DATA block at the end of this program. Thereafter, the information
+;        is stored in a common block where it is accessible in subsequent 
+;        calls.
+;        The newer tags MOLC, SCALE and UNIT are optional and defaulted
+;        to 1.0, 1.0, and 'UNDEFINED', resp.
+;
+; EXAMPLE:
+;        ctm_tracerinfo,2,res
+;        print,res.name,res.mwt,res.fulli
+;        ; prints        Ox    0.0480000     2
+;
+;        ctm_tracerinfo,'OX',res
+;        print,res.name,res.mwt,res.fulli
+;        ; prints identical results
+;
+;        ctm_tracerinfo,[1,3,5],name=name,molwt=mwt,molc=molc,/force_reading
+;        print,name,mwt,molc
+;        ; reads tracerinfo.dat file (or /DATA/ block) and prints 
+;        ; NOx PAN ALK4
+;        ; 0.0140000     0.121000    0.0120000
+;        ; 1.00000      1.00000      4.00000
+;
+; MODIFICATION HISTORY:
+;        mgs, 22 Apr 1998: VERSION 1.00
+;        mgs, 24 Apr 1998: - added NAME keyword
+;        bmy, 07 May 1998: - added MOLC structure field to store 
+;                            carbon number for NMHC
+;        mgs, 07 May 1998: VERSION 2.00
+;                          - substantially revised
+;        mgs, 08 May 1998: - added SCALE and UNIT tags, made them optional
+;        mgs, 28 May 1998: - bug fix with on_ioerror
+;        mgs, 09 Oct 1998: - bug fix for tracern=0, changed CALLING SEQ. entry
+;        mgs, 12 Nov 1998: - unit string now defaulted to 'UNDEFINED' 
+;        bmy, 03 Jan 2001: GAMAP VERSION 1.47
+;                          - skip tracer lines beginning with '#' character
+;
+;-
+; Copyright (C) 1998, 2001, Martin Schultz and Bob Yantosca,
+; Harvard University
+; This software is provided as is without any warranty
+; whatsoever. It may be freely used, copied or distributed
+; for non-commercial purposes. This copyright notice must be
+; kept with any copy of this software. If this software shall
+; be used commercially or sold as part of a larger package,
+; please contact the author to arrange payment.
+; Bugs and comments should be directed to mgs@io.harvard.edu
+; or bmy@io.harvard.edu with subject "IDL routine ctm_tracerinfo"
+;-------------------------------------------------------------
+
+
+pro ctm_tracerinfo,tracern,tracerstru,    $
+         all_tracers=all_tracers,   $
+         index=index,name=name,fullname=fullname, $
+         molwt=mwt,molc=molc,scale=scale,unit=unit, $
+         smallchem=smallchem,  $
+         force_reading=force_reading,filename=filename
+ 
+ 
+      ; set-up array of structures with tracer information
+      ; index information referes to the current state of the GEOS model
+      ; and may have to be changed for different applications
+      ; moleweights (mwt) refer to kg N or kg C !
+ 
+; common block stores pointer to information for future calls
+common tracercom, ptracerinfo
+ 
+
+      ; sample structure for void return
+      sample = { tstru, name:'', fullname:'',  $
+                        mwt:0.0, fulli:0L, smalli:0L, molc:1.0, $
+                        scale:1.0, unit:'UNDEFINED' }
+ 
+
+      ; initialize pointer at first call
+      if (n_elements(ptracerinfo) eq 0) then ptracerinfo = ptr_new()
+
+
+      ; ============================================================  
+      ; if tracerinfo contains no elements: 
+      ; (1) read file tracerinfo.dat
+      ;     (file is searched in current directory, then in 
+      ;      directory of this procedure)
+      ; (2) if no file tracerinfo.dat is found get information from
+      ;     DATA block at the end of this program
+      ; ============================================================  
+
+ 
+      if (keyword_set(force_reading) OR  $
+          not ptr_valid(ptracerinfo)) then begin
+
+        if (n_elements(filename) eq 0) then $ 
+           filename = 'tracerinfo.dat'
+
+        if (not file_exist(filename,full=full)) then begin
+            ; find directory of this procedure
+            dum=routine_name(filename=profilename)
+            if (file_exist(profilename,path=!PATH,full=full)) then begin
+               filename = extract_path(full)+filename
+               if (not file_exist(filename,full=full)) then filename = ''
+            endif 
+        endif
+ 
+        if (filename eq '') then begin
+           print,'CTM_TRACERINFO: could not find file tracerinfo.dat '+ $
+                'will use defaults from DATA block.'
+ 
+           ; read DATA block from this file
+           getdatablock,sdata
+        endif else begin
+           ; read file tracerinfo.dat as string array
+           print,'reading '+full+' ...'
+           openr,ilun,full,/get_lun
+           line = '#'
+           while (not eof(ilun) AND strmid(line,0,1) eq '#') do $
+               readf,ilun,line
+ 
+           sdata = line
+           while ( not eof(ilun) ) do begin
+               ;--------------------------------------------------------------
+               ; Prior to 1/3/01:
+               ; Be careful -- the following code doesn't screen out 
+               ; comment lines beginning with '#' (bmy, 1/3/01)
+               ;readf,ilun,line
+               ;sdata = [ sdata,line ]
+               ;--------------------------------------------------------------
+
+              ; Skip comment lines beginning with # (bmy, 1/3/01)
+              ReadF, Ilun, Line
+              if ( StrMid( Line, 0, 1 ) ne '#' ) then SData = [ SData, Line ]
+           endwhile
+           free_lun,ilun
+        endelse
+ 
+        ; extract data from string array sdata   
+        if (sdata(0) eq '') then begin
+           stop,'** CTM_TRACERINFO: Could not retrieve tracer information !'
+        endif
+ 
+ 
+        tracerstru = replicate(sample,n_elements(sdata))
+ 
+        for i=0,n_elements(sdata)-1 do begin
+             name = ''
+             fullname = ''
+             mwt = 0.0
+             fulli = 0L
+             smalli = 0L
+             molc = 1.0
+             scale = 1.0
+             unit = ''
+
+             ; parse string - don't be too fussy ...
+             on_ioerror,w0 
+             reads,sdata(i),name,fullname,mwt,fulli,smalli,molc,scale,unit, $
+                  format = '(A7,A31,E10.0,2I5,f6.1,e10.3,A20)'
+             goto,wend
+w0:
+             on_ioerror,w1 
+             reads,sdata(i),name,fullname,mwt,fulli,smalli,molc,scale, $
+                  format = '(A7,A31,E10.0,2I5,f6.1,e10.3)'
+             goto,wend
+w1:
+             on_ioerror,w2 
+             reads,sdata(i),name,fullname,mwt,fulli,smalli,molc, $
+                  format = '(A7,A31,E10.0,2I5,f6.1)'
+             goto,wend
+w2:
+             on_ioerror,wend
+             reads,sdata(i),name,fullname,mwt,fulli,smalli, $
+                  format = '(A7,A31,E10.0,2I5)'
+wend:
+             on_ioerror,null
+
+             tracerstru(i).name = strtrim(name,2)          
+             tracerstru(i).fullname = strtrim(fullname,2)          
+             tracerstru(i).mwt = mwt
+             tracerstru(i).fulli = fulli
+             tracerstru(i).smalli = smalli
+             tracerstru(i).molc = molc
+             tracerstru(i).scale = scale
+             tracerstru(i).unit = strtrim(unit,2)
+        endfor
+ 
+        print,'retrieved information about ',n_elements(tracerstru),' tracers.'
+
+        ; delete all entries with tracernumber le 0
+        ind = where(tracerstru.fulli gt 0)
+        if (ind[0] ge 0) then tracerstru = tracerstru[ind] $
+        else begin
+            message,'No valid records found!',/Cont
+            return
+        endelse
+
+        ; store as pointer (delete old one)
+        if (ptr_valid(ptracerinfo)) then ptr_free,ptracerinfo
+        ptracerinfo = ptr_new(tracerstru,/no_copy)
+ 
+      endif
+ 
+ 
+      
+
+      ; ============================================================  
+      ; now process specific user request
+      ; ============================================================  
+
+      ; if output is desired for all tracers, do it here
+      if (keyword_set(all_tracers)) then begin
+          tracerstru = *ptracerinfo 
+          if (keyword_set(smallchem)) then $
+              index = tracerstru(*).smalli  $
+          else $
+              index = tracerstru(*).fulli
+          name     = tracerstru(*).name
+          fullname = tracerstru(*).fullname
+          mwt      = tracerstru(*).mwt
+          molc     = tracerstru(*).molc
+          scale    = tracerstru(*).scale
+          unit     = tracerstru(*).unit
+
+          return
+      endif
+
+
+
+      ; initialize return values for no valid tracer
+      tracerstru = sample 
+      index = -1
+      name = ''
+      fullname = ''
+      mwt = 1.000
+      molc = 1.
+      scale = 1.
+      unit = ''
+
+      ind = -1
+ 
+      if (n_elements(tracern) eq 0) then return ; nothing requested
+
+
+      ; check if tracern is numeric (i.e. index) or string (i.e. name)
+      s = size(tracern,/TYPE)
+
+      if (s eq 6 OR s gt 7) then return   ; invalid argument type
+
+      ; loop through all tracern arguments and try to find them
+      for i= 0,n_elements(tracern)-1 do begin
+
+         if (s eq 7) then begin   ; tracer identified by name or fullname
+
+
+            tind = where(strupcase((*ptracerinfo).name) eq $
+                         strupcase(tracern[i])) 
+            if (tind(0) lt 0) then $
+               tind = where(strupcase((*ptracerinfo).fullname) eq $
+                            strupcase(tracern[i])) 
+
+
+         endif else begin         ; tracer identified by CTM index
+
+            
+            if (keyword_set(smallchem)) then $
+               tind = where((*ptracerinfo).smalli eq fix(tracern[i])) $
+            else  $
+               tind = where((*ptracerinfo).fulli eq fix(tracern[i]))
+
+         endelse
+
+         ind = [ ind, tind ]
+      endfor
+
+      ind = temporary(ind[1:*])  ; remove dummy
+
+      tracerstru = replicate(sample,n_elements(ind))
+
+
+      ; found desired tracers ? 
+      tind = where(ind ge 0)
+
+      ; return information for each requested tracer
+      if (tind(0) ge 0) then begin
+         tracerstru[tind] = (*ptracerinfo)[ind[tind]]
+         if (keyword_set(smallchem)) then $
+            index = tracerstru[*].smalli  $
+         else  $
+            index = tracerstru[*].fulli
+         name     = tracerstru[*].name
+         fullname = tracerstru[*].fullname
+         mwt      = tracerstru[*].mwt
+         molc     = tracerstru[*].molc
+         scale    = tracerstru[*].scale
+         unit     = tracerstru[*].unit
+      endif
+
+      ; strip array dimensioning if only one tracer requested
+      if (n_elements(ind) eq 1) then begin
+      ;  tracerstru = tracerstru[0]
+         index = index[0]
+         name = name[0]
+         fullname = fullname[0]
+         mwt = mwt[0]
+         molc = molc[0]
+         scale = scale[0]
+         unit = unit[0]
+      endif
+
+ 
+return
+end
+ 
+ 
+; ========================================================
+; /DATA/ BLOCK (DEFAULT VALUES FOR TRACERINFO)
+; NOx    NOx                              14.e-3    1    1   1.0
+; Ox     Ox                               48.e-3    2    2   1.0
+; PAN    PAN                             121.e-3    3    0   1.0
+; CO     CO                               28.e-3    4    3   1.0
+; ALK4   Alkanes(>C4)                     12.e-3    5    0   4.0
+; ISOP   Isoprene                         12.e-3    6    0   5.0
+; HNO3   HNO3                             63.e-3    7    4   1.0
+; H2O2   H2O2                             34.e-3    8    5   1.0
+; ACET   Acetone                          58.e-3    9    0   1.0
+; MEK    Ketones(>C3)                     72.e-3   10    0   1.0
+; ALD2   Acetaldehyde                     44.e-3   11    0   1.0
+; RCHO   Aldehyde(>C3)                    58.e-3   12    0   1.0
+; MVK    Methylvinylketone                70.e-3   13    0   1.0
+; MACR   Methacrolein                     70.e-3   14    0   1.0
+; PMN    MPAN                            147.e-3   15    0   1.0
+; PPN    PPN                             135.e-3   16    0   1.0
+; R4N2   Alkylnitrate(>C3)               119.e-3   17    0   1.0
+; PRPE   Propene                          12.e-3   18    0   3.0
+; C3H8   Propane                          12.e-3   19    0   3.0
+; C2HO   HCHO                             30.e-3   20    6   1.0
+; C2H6   Ethane                           12.e-3   21    0   2.0
+; N2O5   N2O5                            105.e-3   22    0   1.0
+; HNO4   HNO4                             79.e-3   23    0   1.0
+; MP     CH3OOH                           24.e-3   24    0   1.0
+; O3     O3                               48.e-3   25    7   1.0

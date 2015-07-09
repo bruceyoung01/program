@@ -1,0 +1,1085 @@
+# tracerinfo.dat
+# This file contains name weight and index information about CTM tracers.
+# It is read by routine "ctm_tracerinfo.pro" of the GAMAP package.
+#-----------------------------------------------------------------------------
+# GAMAP v1-52 release (23 Jan 2003)
+# Contact: bmy@io.harvard.edu
+#-----------------------------------------------------------------------------
+# Format of lines as read is
+# NAME     (A7)
+# FULLNAME (A31)
+# MWT      (E10.0)  molecular weight (as kg N or kg C)
+# FULLI    (I5)     tracer index in full chemistry mode
+# SMALLI   (I5)     tracer index in small chemistry mode (*** NOW OBSOLETE ***)
+# MOLC     (F6.1)   For hydrocarbons, moles of C per moles of tracer
+#                   (otherwise set equal to 1.0)
+# SCALE    (E10.3)  Standard scale factor to convert to unit given below
+# UNIT     (A20)    unit as supplied by CTM w/o any conversion
+#                   (except for standard scaling 1.0E-9 or 1.0E-12)
+#-----------------------------------------------------------------------------
+# NOTES: 
+# (1) Comment lines begin with "#".  
+# (2) Tracer numbers can be reused, especially between special chemistry
+#      simulations (e.g. methane is tracer #55 but so is CO2 and one of the
+#      sulfate tracers).  You can always comment out the tracers that do not
+#      correspond to your particular needs.  This file is meant to be
+#      user-customizable.
+# (3) If you want to total NOx in Tg N, then list a molecular weight of NOx 
+#      of 14e-3 in the lines pertaining to NOx below.
+#-----------------------------------------------------------------------------
+#
+#NAME  FULLNAME                        MWT      FULL SMALL  MOLC   SCALE   UNIT
+#     |.                             |.        |.   |.   |.    |.        |.                   |
+NOx    NOx                               14.e-3     1    1  1.0   1.0E+09 ppbv
+Ox     Ox                                48.e-3     2    2  1.0   1.0E+09 ppbv
+PAN    PAN                              121.e-3     3    0  1.0   1.0E+09 ppbv
+CO     CO                                28.e-3     4    3  1.0   1.0E+09 ppbv
+ALK4   Alkanes(>C4)                      12.e-3     5    0  4.0   1.0E+09 ppbC
+ISOP   Isoprene                          12.e-3     6    0  5.0   1.0E+09 ppbC
+HNO3   HNO3                              63.e-3     7    4  1.0   1.0E+09 ppbv
+H2O2   H2O2                              34.e-3     8    0  1.0   1.0E+09 ppbv
+ACET   Acetone                           12.e-3     9    5  3.0   1.0E+09 ppbC
+MEK    Ketones(>C3)                      12.e-3    10    0  4.0   1.0E+09 ppbC
+ALD2   Acetaldehyde                      12.e-3    11    0  2.0   1.0E+09 ppbC
+RCHO   Aldehyde(>C3)                     58.e-3    12    0  1.0   1.0E+09 ppbv
+MVK    Methylvinylketone                 70.e-3    13    0  1.0   1.0E+09 ppbv
+MACR   Methacrolein                      70.e-3    14    0  1.0   1.0E+09 ppbv
+PMN    MPAN                             147.e-3    15    0  1.0   1.0E+09 ppbv
+PPN    PPN                              135.e-3    16    0  1.0   1.0E+09 ppbv
+R4N2   Alkylnitrate(>C3)                119.e-3    17    0  1.0   1.0E+09 ppbv
+PRPE   Propene                           12.e-3    18    0  3.0   1.0E+09 ppbC
+C3H8   Propane                           12.e-3    19    0  3.0   1.0E+09 ppbC
+CH2O   HCHO                              30.e-3    20    6  1.0   1.0E+09 ppbv
+C2H6   Ethane                            12.e-3    21    0  2.0   1.0E+09 ppbC
+N2O5   N2O5                             105.e-3    22    0  1.0   1.0E+09 ppbv
+HNO4   HNO4                              79.e-3    23    0  1.0   1.0E+09 ppbv
+MP     CH3OOH                            24.e-3    24    0  1.0   1.0E+09 ppbv
+DMS    DMS sulfate                       62.e-3    25    0  1.0   1.0E+09 ppbv
+SO2    SO2 sulfate                       64.e-3    26    0  1.0   1.0E+09 ppbv
+SO4    SO4 sulfate                       96.e-3    27    0  1.0   1.0E+09 ppbv
+MSA    MSA sulfate                       96.e-3    28    0  1.0   1.0E+09 ppbv
+NH3    NH3 aerosol                       17.e-3    29    0  1.0   1.0E+09 ppbv
+NH4    NH4 aerosol                       18.e-3    30    0  1.0   1.0E+09 ppbv
+NIT    NIT aerosol                       62.e-3    31    0  1.0   1.0E+09 ppbv
+#O3     O3                                48.e-3    25    7  1.0   1.0E+09 ppbv
+#NO     Nitrogen Oxide                    30.e-3    26    8  1.0   1.0E+09 ppbv
+#NOy    Reactive Nitrogen                 14.e-3    27    9  1.0   1.0E+09 ppbv
+#NO2    Nitrogen Dioxide                  46.e-3    28   10  1.0   1.0E+09 ppbv
+O3     O3                                48.e-3    32    7  1.0   1.0E+09 ppbv
+###### OFFLINE SULFATE SIMULATION with extra SO4 tracers ----------------------
+DMS    DMS sulfate                       62.e-3    51   51  1.0   1.0E+09 ppbv
+SO2    SO2 sulfate                       64.e-3    52   52  1.0   1.0E+09 ppbv
+SO4A   SO4 sulfate                       96.e-3    53   53  1.0   1.0E+09 ppbv
+SO4B   SO4 sulfate                       96.e-3    54   54  1.0   1.0E+09 ppbv
+SO4C   SO4 sulfate                       96.e-3    55   55  1.0   1.0E+09 ppbv
+SO4D   SO4 sulfate                       96.e-3    56   56  1.0   1.0E+09 ppbv
+MSA    MSA sulfate                       96.e-3    57   57  1.0   1.0E+09 ppbv
+NH3    NH3 aerosol                       17.e-3    58   58  1.0   1.0E+09 ppbv
+NH4    NH4 aerosol                       18.e-3    59   59  1.0   1.0E+09 ppbv
+NIT    NIT aerosol                       62.e-3    60   60  1.0   1.0E+09 ppbv
+H2O2   H2O2                              34.e-3    61   61  1.0   1.0E+09 ppbv
+SAL1   Seasalt fine                      58.e-3    62   62  1.0   1.0E+09 ppbv
+SAL2   Seasalt coarse                    58.e-3    63   63  1.0   1.0E+09 ppbv
+###### METHANE ---------------------------------------------------------------
+#CH4    Methane                           16.e-3    55   55  1.0   1.0E+06 ppmv
+###### TAGGED CO2 (pns) ------------------------------------------------------
+#CO2    CO2 Total                        44.e-3    51   51  1.0   1.0E+06 ppmv
+#CO2f   CO2 Fossil                       44.e-3    52   52  1.0   1.0E+06 ppmv
+#CO2o   CO2 Oceans                       44.e-3    53   53  1.0   1.0E+06 ppmv
+#CO2b   CO2 Balanced Biosphere           44.e-3    54   54  1.0   1.0E+06 ppmv
+#CO2x   CO2 Unassigned                   44.e-3    55   55  1.0   1.0E+06 ppmv
+#CO2x   CO2 Unassigned                   44.e-3    56   56  1.0   1.0E+06 ppmv
+#CO2x   CO2 Unassigned                   44.e-3    57   57  1.0   1.0E+06 ppmv
+#CO2x   CO2 Unassigned                   44.e-3    58   58  1.0   1.0E+06 ppmv
+###### RADON-LEAD-BERYLLIUM --------------------------------------------------
+#222Rn  Radon                            222.e-3    61   61  1.0 1.5243E+21pCi/SCM
+#210Pb  Lead 210                         210.e-3    62   62  1.0 7.0651E+20fCi/SCM
+#7Be    Beryllium 7                        7.e-3    63   63  1.0 1.0938E+23fCi/SCM
+###### TAGGED ETHANE ---------------------------------------------------------
+C2H6   Total C2H6                        30.e-3    65   65  1.0   1.0E+09 ppbv
+C2H6bb C2H6 from Biomass Burning         30.e-3    66   66  1.0   1.0E+09 ppbv
+C2H6bf C2H6 from Biofuel Burning         30.e-3    67   67  1.0   1.0E+09 ppbv
+C2H6ng C2H6 from Natural Gas Leaks       30.e-3    68   68  1.0   1.0E+09 ppbv
+###### METHYL IODIDE ---------------------------------------------------------
+CH3I   Methyl Iodide                    142.e-3    71   71  1.0   1.0E+12 pptv
+###### HYDROGEN CYANIDE ------------------------------------------------------
+#HCN    Hydrogen Cyanide                  27.e-3    81   81  1.0   1.0E+09 ppbv
+###### IAPS TAGGED CO RUN ----------------------------------------------------
+CO     CO                                28.e-3    85   85  1.0   1.0E+09 ppbv
+COffAs Fossil fuel CO from Asia          28.e-3    86   86  1.0   1.0E+09 ppbv
+COffEu Fossil fuel CO from Europe        28.e-3    87   87  1.0   1.0E+09 ppbv
+COffNa Fossil fuel CO from NA            28.e-3    88   88  1.0   1.0E+09 ppbv
+CObbAs CO from biomass burning -- As     28.e-3    89   89  1.0   1.0E+09 ppbv
+###### GEOS-CHEM tagged CO run (bnd) -----------------------------------------
+#Co     Co                                28.E-3    80   82  1.0   1.0e+09 Ppbv
+#Cous   Co From North America             28.E-3    81   83  1.0   1.0e+09 Ppbv
+#Coeur  Co From Europe                    28.E-3    82   84  1.0   1.0e+09 Ppbv
+#Coasia Co From Asia                      28.E-3    83   85  1.0   1.0e+09 Ppbv
+#Cooth  Co From Elsewhere                 28.E-3    84   86  1.0   1.0e+09 Ppbv
+#Cobbam Co From Biomass Burning -- S.Am   28.E-3    85   87  1.0   1.0e+09 Ppbv
+#Cobbaf Co From Biomass Burning -- Af     28.E-3    86   88  1.0   1.0e+09 Ppbv
+#Cobbas Co From Biomass Burning -- As     28.E-3    87   89  1.0   1.0e+09 Ppbv
+#Cobboc Co From Biomass Burning -- Oce    28.E-3    88   90  1.0   1.0e+09 Ppbv
+#Cobbeu Co From Biomass Burning -- Eur    28.E-3    89   91  1.0   1.0e+09 Ppbv
+#Cobbna Co From Biomass Burning -- N.Am   28.E-3    90   92  1.0   1.0e+09 Ppbv
+#Coch4  Co From Ch4 Oxidation             28.E-3    91   93  1.0   1.0e+09 Ppbv
+#Cobiof Co From Biofuels                  28.E-3    92   94  1.0   1.0e+09 Ppbv
+#Coisop Co From Isop Oxidation            28.E-3    93   95  1.0   1.0e+09 Ppbv
+#Comono Co From Mono Oxidation            28.E-3    94   96  1.0   1.0e+09 Ppbv
+#Comeoh Co From Meoh Oxidation            28.E-3    95   97  1.0   1.0e+09 Ppbv
+#COacet CO from ACET oxidation            28.e-3    96   98  1.0   1.0E+09 ppbv
+#COxxx  CO from ACET oxidation            28.e-3    97   98  1.0   1.0E+09 ppbv
+#=============================================================================
+# OFFSET=100: FLUXES [molec/cm2/s] or [atoms C/cm2/s]
+#=============================================================================
+NOx    NOx                               14.e-3   101  101  1.0   1.0E+00 molec/cm2/s
+Ox     Ox                                48.e-3   102  102  1.0   1.0E+00 molec/cm2/s
+PAN    PAN                              121.e-3   103    0  1.0   1.0E+00 molec/cm2/s
+CO     CO                                28.e-3   104  103  1.0   1.0E+00 molec/cm2/s
+ALK4   Alkanes(>C4)                      12.e-3   105    0  4.0   1.0E+00 atoms C/cm2/s
+ISOP   Isoprene                          12.e-3   106    0  5.0   1.0E+00 atoms C/cm2/s
+HNO3   HNO3                              63.e-3   107  104  1.0   1.0E+00 molec/cm2/s
+H2O2   H2O2                              34.e-3   108  105  1.0   1.0E+00 molec/cm2/s
+ACET   Acetone                           12.e-3   109    0  3.0   1.0E+00 atoms C/cm2/s
+MEK    Ketones(>C3)                      12.e-3   110    0  4.0   1.0E+00 atoms C/cm2/s
+ALD2   Acetaldehyde                      12.e-3   111    0  2.0   1.0E+00 atoms C/cm2/s
+RCHO   Aldehyde(>C3)                     58.e-3   112    0  1.0   1.0E+00 molec/cm2/s
+MVK    Methylvinylketone                 70.e-3   113    0  1.0   1.0E+00 molec/cm2/s
+MACR   Methacrolein                      70.e-3   114    0  1.0   1.0E+00 molec/cm2/s
+PMN    MPAN                             147.e-3   115    0  1.0   1.0E+00 molec/cm2/s
+PPN    PPN                              135.e-3   116    0  1.0   1.0E+00 molec/cm2/s
+R4N2   Alkylnitrate(>C3)                119.e-3   117    0  1.0   1.0E+00 molec/cm2/s
+PRPE   Propene                           12.e-3   118    0  3.0   1.0E+00 atoms C/cm2/s
+C3H8   Propane                           12.e-3   119    0  3.0   1.0E+00 atoms C/cm2/s
+CH2O   HCHO                              30.e-3   120  106  1.0   1.0E+00 molec/cm2/s
+C2H6   Ethane                            12.e-3   121    0  2.0   1.0E+00 atoms C/cm2/s
+N2O5   N2O5                             105.e-3   122    0  1.0   1.0E+00 molec/cm2/s
+HNO4   HNO4                              79.e-3   123    0  1.0   1.0E+00 molec/cm2/s
+MP     CH3OOH                            24.e-3   124    0  1.0   1.0E+00 molec/cm2/s
+DMS    DMS sulfate                       62.e-3   125    0  1.0   1.0E+00 molec/cm2/s
+SO2    SO2 sulfate                       64.e-3   126    0  1.0   1.0E+00 molec/cm2/s
+SO4    SO4 sulfate                       96.e-3   127    0  1.0   1.0E+00 molec/cm2/s
+MSA    MSA sulfate                       96.e-3   128    0  1.0   1.0E+00 molec/cm2/s
+NH3    NH3 aerosol                       17.e-3   129    0  1.0   1.0E+00 molec/cm2/s
+NH4    NH4 aerosol                       18.e-3   130    0  1.0   1.0E+00 molec/cm2/s
+NIT    NIT aerosol                       62.e-3   131    0  1.0   1.0E+00 molec/cm2/s
+O3     O3                                48.e-3   132  107  1.0   1.0E+00 molec/cm2/s
+#ETHE   Ethene                            12.e-3   126    0  1.0   1.0E+00 molec/cm2/s
+#SOx    SOx                               32.e-3   127  127  1.0   1.0E+00 molec/cm2/s
+TOTB   Total Biomass Burned               1.e-3   133  133  1.0   1.0E+00 g/cm2/s
+###### METHANE ---------------------------------------------------------------
+#CH4    Methane                           16.e-3   155  155  1.0   1.0E+00 molec/cm2/s
+###### OFFLINE SULFATE SIMULATON with extra SO4 tracers-----------------------
+DMS    DMS sulfate                       62.e-3   151  151  1.0   1.0E+00 molec/cm2/s
+SO2    SO2 sulfate                       64.e-3   152  152  1.0   1.0E+00 molec/cm2/s
+SO4A   so4 sulfate                       96.e-3   153  153  1.0   1.0E+00 molec/cm2/s
+SO4B   so4 sulfate                       96.e-3   154  153  1.0   1.0E+00 molec/cm2/s
+SO4C   so4 sulfate                       96.e-3   155  153  1.0   1.0E+00 molec/cm2/s
+SO4D   so4 sulfate                       96.e-3   156  153  1.0   1.0E+00 molec/cm2/s
+MSA    msa sulfate                       96.e-3   157  154  1.0   1.0E+00 molec/cm2/s
+NH3    nh3 aerosol                       17.e-3   158  155  1.0   1.0E+00 molec/cm2/s
+NH4    nh4 aerosol                       18.e-3   159  156  1.0   1.0E+00 molec/cm2/s
+NIT    nit aerosol                       62.e-3   160  157  1.0   1.0E+00 molec/cm2/s
+H2O2   H2O2                              34.e-3   161  158  1.0   1.0E+00 molec/cm2/s
+SAL1   Seasalt fine                      58.e-3   162  162  1.0   1.0E+00 molec/cm2/s
+SAL2   Seasalt coarse                    58.e-3   163  163  1.0   1.0E+00 molec/cm2/s
+###### TAGGED ETHANE (xyp) ---------------------------------------------------
+C2H6   Total C2H6                        30.e-3   165  165  1.0   1.0E+00 atoms C/cm2/s
+C2H6bb C2H6 from Biomass Burning         30.e-3   166  166  1.0   1.0E+00 atoms C/cm2/s
+C2H6bf C2H6 from Biofuel Burning         30.e-3   167  167  1.0   1.0E+00 atoms C/cm2/s
+C2H6ng C2H6 from Natural Gas Leaks       30.e-3   168  168  1.0   1.0E+00 atoms C/cm2/s
+###### METHYL IODIDE ---------------------------------------------------------
+CH3I   Methyl Iodide                    142.e-3   171  171  1.0   1.0E+12 pptv
+###### IAPS TAGGED CO --------------------------------------------------------
+CO     CO                                28.e-3   185  185  1.0   1.0E+00 molec/cm2/s
+COffAs Fossil fuel CO from Asia          28.e-3   186  186  1.0   1.0E+00 molec/cm2/s
+COffEu Fossil fuel CO from Europe        28.e-3   187  187  1.0   1.0E+00 molec/cm2/s
+COffNa Fossil fuel CO from NA            28.e-3   188  188  1.0   1.0E+00 molec/cm2/s
+CObbAs CO from biomass burning -- As     28.e-3   189  189  1.0   1.0E+00 molec/cm2/s
+###### GEOS-CHEM TAGGED CO (bnd) ---------------------------------------------
+#CO     CO                                28.e-3   182  182  1.0   1.0E+00 molec/cm2/s
+#COus   CO from North America             28.e-3   183  183  1.0   1.0E+00 molec/cm2/s
+#COeur  CO from Europe                    28.e-3   184  184  1.0   1.0E+00 molec/cm2/s
+#COasia CO from Asia                      28.e-3   185  185  1.0   1.0E+00 molec/cm2/s
+#COoth  CO from elsewhere                 28.e-3   186  186  1.0   1.0E+00 molec/cm2/s
+#CObbAm CO from biomass burning -- S.Am   28.e-3   187  187  1.0   1.0E+00 molec/cm2/s
+#CObbAf CO from biomass burning -- Af     28.e-3   188  188  1.0   1.0E+00 molec/cm2/s
+#CObbAs CO from biomass burning -- As     28.e-3   189  189  1.0   1.0E+00 molec/cm2/s
+#CObbOc CO from biomass burning -- Oce    28.e-3   190  190  1.0   1.0E+00 molec/cm2/s
+#CObbEu CO from biomass burning -- Eur    28.e-3   191  191  1.0   1.0E+00 molec/cm2/s
+#CObbNA CO from biomass burning -- N.Am   28.e-3   192  192  1.0   1.0E+00 molec/cm2/s
+#COch4  CO from CH4 oxidation             28.e-3   193  193  1.0   1.0E+00 molec/cm2/s
+#CObiof CO from biofuels                  28.e-3   194  194  1.0   1.0E+00 molec/cm2/s
+#COisop CO from ISOP oxidation            28.e-3   195  195  1.0   1.0E+00 molec/cm2/s
+#COmono CO from MONO oxidation            28.e-3   196  196  1.0   1.0E+00 molec/cm2/s
+#COmeoh CO from MeOH oxidation            28.e-3   197  197  1.0   1.0E+00 molec/cm2/s
+#COacet CO from ACET oxidation            28.e-3   198  198  1.0   1.0E+00 molec/cm2/s
+#=============================================================================
+# OFFSET=200: FLUXES [kg/s] or [kg C/s] 
+#=============================================================================
+NOx    NOx                               14.e-3   201  201  1.0   1.0E+00 kg/s
+Ox     Ox                                48.e-3   202  202  1.0   1.0E+00 kg/s
+PAN    PAN                              121.e-3   203    0  1.0   1.0E+00 kg/s
+CO     CO                                28.e-3   204  203  1.0   1.0E+00 kg/s
+ALK4   Alkanes(>C4)                      12.e-3   205    0  4.0   1.0E+00 kgC/s
+ISOP   Isoprene                          12.e-3   206    0  5.0   1.0E+00 kgC/s
+HNO3   HNO3                              63.e-3   207  204  1.0   1.0E+00 kg/s
+H2O2   H2O2                              34.e-3   208  205  1.0   1.0E+00 kg/s
+ACET   Acetone                           12.e-3   209    0  3.0   1.0E+00 kgC/s
+MEK    Ketones(>C3)                      12.e-3   210    0  4.0   1.0E+00 kgC/s
+ALD2   Acetaldehyde                      12.e-3   211    0  2.0   1.0E+00 kgC/s
+RCHO   Aldehyde(>C3)                     58.e-3   212    0  1.0   1.0E+00 kg/s
+MVK    Methylvinylketone                 70.e-3   213    0  1.0   1.0E+00 kg/s
+MACR   Methacrolein                      70.e-3   214    0  1.0   1.0E+00 kg/s
+PMN    MPAN                             147.e-3   215    0  1.0   1.0E+00 kg/s
+PPN    PPN                              135.e-3   216    0  1.0   1.0E+00 kg/s
+R4N2   Alkylnitrate(>C3)                119.e-3   217    0  1.0   1.0E+00 kg/s
+PRPE   Propene                           12.e-3   218    0  3.0   1.0E+00 kgC/s
+C3H8   Propane                           12.e-3   219    0  3.0   1.0E+00 kgC/s
+CH2O   HCHO                              30.e-3   220  206  1.0   1.0E+00 kg/s
+C2H6   Ethane                            12.e-3   221    0  2.0   1.0E+00 kgC/s
+N2O5   N2O5                             105.e-3   222    0  1.0   1.0E+00 kg/s
+HNO4   HNO4                              79.e-3   223    0  1.0   1.0E+00 kg/s
+MP     CH3OOH                            24.e-3   224    0  1.0   1.0E+00 kg/s
+DMS    DMS sulfate                       62.e-3   225    0  1.0   1.0E+00 kg/s
+SO2    SO2 sulfate                       64.e-3   226    0  1.0   1.0E+00 kg/s
+SO4    SO4 sulfate                       96.e-3   227    0  1.0   1.0E+00 kg/s
+MSA    MSA sulfate                       96.e-3   228    0  1.0   1.0E+00 kg/s
+NH3    NH3 aerosol                       17.e-3   229    0  1.0   1.0E+00 kg/s
+NH4    NH4 aerosol                       18.e-3   230    0  1.0   1.0E+00 kg/s
+NIT    NIT aerosol                       62.e-3   231    0  1.0   1.0E+00 kg/s
+O3     O3                                48.e-3   232  107  1.0   1.0E+00 kg/s
+#NO     Nitrogen Oxide                    30.e-3   226  208  1.0   1.0E+09 kg/s
+#NOy    Reactive Nitrogen                 14.e-3   227  209  1.0   1.0E+00 kg/s
+#NO2    Nitrogen Dioxide                  46.e-3   228  210  1.0   1.0E+00 kg/s
+###### RADON-LEAD-BERYLLIUM --------------------------------------------------
+#222Rn  Radon                            222.e-3   261  261  1.0   1.0E+00 kg/s
+#210Pb  Lead 210                         210.e-3   262  262  1.0   1.0E+00 kg/s
+#7Be    Beryllium 7                        7.e-3   263  263  1.0   1.0E+00 kg/s
+###### OFFLINE SULFATE SIMULATON with extra SO4 tracers-----------------------
+DMS    DMS sulfate                       62.e-3   251  251  1.0   1.0E+00 kg/s
+SO2    SO2 sulfate                       64.e-3   252  252  1.0   1.0E+00 kg/s
+SO4A   SO4 sulfate                       96.e-3   253  253  1.0   1.0E+00 kg/s
+SO4B   SO4 sulfate                       96.e-3   254  253  1.0   1.0E+00 kg/s
+SO4C   SO4 sulfate                       96.e-3   255  253  1.0   1.0E+00 kg/s
+SO4D   SO4 sulfate                       96.e-3   256  253  1.0   1.0E+00 kg/s
+MSA    MSA sulfate                       96.e-3   257  254  1.0   1.0E+00 kg/s
+NH3    NH3 aerosol                       17.e-3   258  255  1.0   1.0E+00 kg/s
+NH4    NH4 aerosol                       18.e-3   259  256  1.0   1.0E+00 kg/s
+NIT    NIT aerosol                       62.e-3   260  257  1.0   1.0E+00 kg/s
+H2O2   H2O2                              34.e-3   261  258  1.0   1.0E+00 kg/s
+SAL1   Seasalt fine                      58.e-3   262  262  1.0   1.0E+00 kg/s
+SAL2   Seasalt coarse                    58.e-3   263  263  1.0   1.0E+00 kg/s
+###### METHANE ---------------------------------------------------------------
+#CH4    Methane                           16.e-3   255  255  1.0   1.0E+00 kg/s
+###### TAGGED ETHANE (xyp) ---------------------------------------------------
+C2H6   Total C2H6                        30.e-3   265  265  1.0   1.0E+00 kg/s
+C2H6bb C2H6 from Biomass Burning         30.e-3   266  266  1.0   1.0E+00 kg/s
+C2H6bf C2H6 from Biofuel Burning         30.e-3   267  267  1.0   1.0E+00 kg/s
+C2H6ng C2H6 from Natural Gas Leaks       30.e-3   268  268  1.0   1.0E+00 kg/s
+###### METHYL IODIDE ---------------------------------------------------------
+CH3Ioc Methyl Iodide (oceanic source)   142.e-3   271  271  1.0   1.0E+00 ng/m2/s
+CH3Ibb Methyl Iodide (biomass burning)  142.e-3   272  272  1.0   1.0E+00 ng/m2/s
+CH3Iwb Methyl Iodide (wood burning)     142.e-3   273  273  1.0   1.0E+00 ng/m2/s
+CH3Irc Methyl Iodide (rice paddies)     142.e-3   274  274  1.0   1.0E+00 ng/m2/s
+CH3Iwl Methyl Iodide (wetlands)         142.e-3   275  275  1.0   1.0E+00 ng/m2/s
+CH3Iaq CH3I surface water conc.         142.e-3   276  276  1.0   1.0E+00 ng/L
+KW     CH3I ocean atmos. exch. coeff.   142.e-3   277  277  1.0   1.0E+00 cm/h
+CH3Iof CH3I ocean mass flux             142.e-3   278  278  1.0   1.0E+00 kg   
+###### IAPS tagged CO --------------------------------------------------------
+CO     CO                                28.e-3   285  285  1.0   1.0E+00 kg/s
+COffAs Fossil fuel CO from Asia          28.e-3   286  286  1.0   1.0E+00 kg/s
+COffEu Fossil fuel CO from Europe        28.e-3   287  287  1.0   1.0E+00 kg/s
+COffNa Fossil fuel CO from NA            28.e-3   288  288  1.0   1.0E+00 kg/s
+CObbAs CO from biomass burning -- As     28.e-3   289  289  1.0   1.0E+00 kg/s
+###### GEOS-CHEM tagged CO (bnd) ---------------------------------------------
+#CO     CO                                28.e-3   282  282  1.0   1.0E+00 kg/s
+#COus   CO from North America             28.e-3   283  283  1.0   1.0E+00 kg/s
+#COeur  CO from Europe                    28.e-3   284  284  1.0   1.0E+00 kg/s
+#COasia CO from Asia                      28.e-3   285  285  1.0   1.0E+00 kg/s
+#COoth  CO from elsewhere                 28.e-3   286  286  1.0   1.0E+00 kg/s
+#CObbAm CO from biomass burning -- S.Am   28.e-3   287  287  1.0   1.0E+00 kg/s
+#CObbAf CO from biomass burning -- Af     28.e-3   288  288  1.0   1.0E+00 kg/s
+#CObbAs CO from biomass burning -- As     28.e-3   289  289  1.0   1.0E+00 kg/s
+#CObbOc CO from biomass burning -- Oce    28.e-3   290  290  1.0   1.0E+00 kg/s
+#CObbEu CO from biomass burning -- Eur    28.e-3   291  291  1.0   1.0E+00 kg/s
+#CObbNA CO from biomass burning -- N.Am   28.e-3   292  292  1.0   1.0E+00 kg/s
+#COch4  CO from CH4 oxidation             28.e-3   293  293  1.0   1.0E+00 kg/s
+#CObiof CO from biofuels                  28.e-3   294  294  1.0   1.0E+00 kg/s
+#COisop CO from ISOP oxidation            28.e-3   295  295  1.0   1.0E+00 kg/s
+#COmono CO from MONO oxidation            28.e-3   296  296  1.0   1.0E+00 kg/s
+#COmeoh CO from MeOH oxidation            28.e-3   297  297  1.0   1.0E+00 kg/s
+#COacet CO from ACET oxidation            28.e-3   298  298  1.0   1.0E+00 kg/s
+#COprod CO from chemical production       28.e-3   294  294  1.0   1.0E+00 kg/s
+#=============================================================================
+# OFFSET=300: Column concentrations [molec/cm2]
+#=============================================================================
+NOx    NOx                               14.e-3   301  301  1.0   1.0E+00 molec/cm2
+Ox     Ox                                48.e-3   302  302  1.0   1.0E+00 molec/cm2
+PAN    PAN                              121.e-3   303    0  1.0   1.0E+00 molec/cm2
+CO     CO                                28.e-3   304  303  1.0   1.0E+00 molec/cm2
+ALK4   Alkanes(>C4)                      12.e-3   305    0  4.0   1.0E+00 atoms C/cm2
+ISOP   Isoprene                          12.e-3   306    0  5.0   1.0E+00 atoms CC/cm2
+HNO3   HNO3                              63.e-3   307  304  1.0   1.0E+00 molec/cm2
+H2O2   H2O2                              34.e-3   308    0  1.0   1.0E+00 molec/cm2
+ACET   Acetone                           12.e-3   309  305  3.0   1.0E+00 atoms C/cm2
+MEK    Ketones(>C3)                      12.e-3   310    0  4.0   1.0E+00 atoms C/cm2
+ALD2   Acetaldehyde                      12.e-3   311    0  2.0   1.0E+00 atoms C/cm2
+RCHO   Aldehyde(>C3)                     58.e-3   312    0  1.0   1.0E+00 molec/cm2
+MVK    Methylvinylketone                 70.e-3   313    0  1.0   1.0E+00 molec/cm2
+MACR   Methacrolein                      70.e-3   314    0  1.0   1.0E+00 molec/cm2
+PMN    MPAN                             147.e-3   315    0  1.0   1.0E+00 molec/cm2
+PPN    PPN                              135.e-3   316    0  1.0   1.0E+00 molec/cm2
+R4N2   Alkylnitrate(>C3)                119.e-3   317    0  1.0   1.0E+00 molec/cm2
+PRPE   Propene                           12.e-3   318    0  3.0   1.0E+00 atoms C/cm2
+C3H8   Propane                           12.e-3   319    0  3.0   1.0E+00 atoms C/cm2
+CH2O   HCHO                              30.e-3   320  306  1.0   1.0E+00 molec/cm2
+C2H6   Ethane                            12.e-3   321    0  2.0   1.0E+00 atoms C/cm2
+N2O5   N2O5                             105.e-3   322    0  1.0   1.0E+00 molec/cm2
+HNO4   HNO4                              79.e-3   323    0  1.0   1.0E+00 molec/cm2
+MP     CH3OOH                            24.e-3   324    0  1.0   1.0E+00 molec/cm2
+DMS    DMS sulfate                       62.e-3   325    0  1.0   1.0E+00 molec/cm2
+SO2    SO2 sulfate                       64.e-3   326    0  1.0   1.0E+00 molec/cm2
+SO4    SO4 sulfate                       96.e-3   327    0  1.0   1.0E+00 molec/cm2
+MSA    MSA sulfate                       96.e-3   328    0  1.0   1.0E+00 molec/cm2
+NH3    NH3 aerosol                       17.e-3   329    0  1.0   1.0E+00 molec/cm2
+NH4    NH4 aerosol                       18.e-3   330    0  1.0   1.0E+00 molec/cm2
+NIT    NIT aerosol                       62.e-3   331    0  1.0   1.0E+00 molec/cm2
+O3     O3                                48.e-3   332    0  1.0   1.0E+00 molec/cm2
+NO     Nitrogen Oxide                    30.e-3   326    0  1.0   1.0E+00 molec/cm2
+NOy    Reactive Nitrogen                 14.e-3   327    0  1.0   1.0E+00 molec/cm2
+NO2    Nitrogen Dioxide                  46.e-3   328    0  1.0   1.0E+00 molec/cm2
+###### METHANE ---------------------------------------------------------------
+#CH4    Methane                           16.e-3   355  355  1.0   1.0E+00 molec/cm2
+###### OFFLINE SULFATE SIMULATON with extra SO4 tracers-----------------------
+DMS    DMS sulfate                       62.e-3   351  351  1.0   1.0E+00 molec/cm2
+SO2    SO2 sulfate                       64.e-3   352  352  1.0   1.0E+00 molec/cm2
+SO4A   SO4 sulfate                       96.e-3   353  353  1.0   1.0E+00 molec/cm2
+SO4B   SO4 sulfate                       96.e-3   354  353  1.0   1.0E+00 molec/cm2
+SO4C   SO4 sulfate                       96.e-3   355  353  1.0   1.0E+00 molec/cm2
+SO4D   SO4 sulfate                       96.e-3   356  353  1.0   1.0E+00 molec/cm2
+MSA    MSA sulfate                       96.e-3   357  354  1.0   1.0E+00 molec/cm2
+NH3    NH3 aerosol                       17.e-3   358  355  1.0   1.0E+00 molec/cm2
+NH4    NH4 aerosol                       18.e-3   359  356  1.0   1.0E+00 molec/cm2
+NIT    NIT aerosol                       62.e-3   360  357  1.0   1.0E+00 molec/cm2
+H2O2   H2O2                              34.e-3   361  358  1.0   1.0E+00 molec/cm2
+SAL1   Seasalt fine                      58.e-3   362  362  1.0   1.0E+00 molec/cm2
+SAL2   Seasalt coarse                    58.e-3   363  363  1.0   1.0E+00 molec/cm2
+###### RADON-LEAD-BERYLLIUM --------------------------------------------------
+#Rn     Radon                            222.e-3   361  361  1.0   1.0E+00 molec/cm2
+#Pb210  Lead 210                         210.e-3   362  362  1.0   1.0E+00 molec/cm2
+#Be7    Beryllium 7                        7.e-3   363  363  1.0   1.0E+00 molec/cm2
+#Be10   Beryllium 10                      10.e-3   364  364  1.0   1.0E+00 molec/cm2
+###### TAGGED ETHANE (xyp) ---------------------------------------------------
+C2H6   Total C2H6                        30.e-3   365  365  1.0   1.0E+00 molec/cm2
+C2H6bb C2H6 from Biomass Burning         30.e-3   366  366  1.0   1.0E+00 molec/cm2
+C2H6bf C2H6 from Biofuel Burning         30.e-3   367  367  1.0   1.0E+00 molec/cm2
+C2H6ng C2H6 from Natural Gas Leaks       30.e-3   368  368  1.0   1.0E+00 molec/cm2
+###### METHYL IODIDE ---------------------------------------------------------
+CH3Ioc Methyl Iodide (oceanic source)   142.e-3   371  371  1.0   1.0E+00 molec/cm2
+CH3Ibb Methyl Iodide (biomass burning)  142.e-3   372  372  1.0   1.0E+00 molec/cm2
+CH3Iwb Methyl Iodide (wood burning)     142.e-3   373  373  1.0   1.0E+00 molec/cm2
+CH3Irc Methyl Iodide (rice paddies)     142.e-3   374  374  1.0   1.0E+00 molec/cm2
+CH3Iwl Methyl Iodide (wetlands)         142.e-3   375  375  1.0   1.0E+00 molec/cm2
+HCN    Hydrogen Cyanide                  27.e-3   381  381  1.0   1.0E+00 molec/cm2
+###### IAPS TAGGED CO --------------------------------------------------------
+CO     CO                                28.e-3   385  385  1.0   1.0E+00 molec/cm2
+COffAs Fossil fuel CO from Asia          28.e-3   386  386  1.0   1.0E+00 molec/cm2
+COffEu Fossil fuel CO from Europe        28.e-3   387  387  1.0   1.0E+00 molec/cm2
+COffNa Fossil fuel CO from NA            28.e-3   388  388  1.0   1.0E+00 molec/cm2
+CObbAs CO from biomass burning -- As     28.e-3   389  389  1.0   1.0E+00 molec/cm2
+###### GEOS-CHEM TAGGED CO (bnd) ---------------------------------------------
+#CO     CO                                28.e-3   382  382  1.0   1.0E+00 molec/cm2
+#COus   CO from North America             28.e-3   383  383  1.0   1.0E+00 molec/cm2
+#COeur  CO from Europe                    28.e-3   384  384  1.0   1.0E+00 molec/cm2
+#COasia CO from Asia                      28.e-3   385  385  1.0   1.0E+00 molec/cm2
+#COoth  CO from elsewhere                 28.e-3   386  386  1.0   1.0E+00 molec/cm2
+#CObbAm CO from biomass burning -- S.Am   28.e-3   387  387  1.0   1.0E+00 molec/cm2
+#CObbAf CO from biomass burning -- Af     28.e-3   388  388  1.0   1.0E+00 molec/cm2
+#CObbAs CO from biomass burning -- As     28.e-3   389  389  1.0   1.0E+00 molec/cm2
+#CObbOc CO from biomass burning -- Oce    28.e-3   390  390  1.0   1.0E+00 molec/cm2 
+#CObbEu CO from biomass burning -- Eur    28.e-3   391  391  1.0   1.0E+00 molec/cm2
+#CObbNA CO from biomass burning -- N.Am   28.e-3   392  392  1.0   1.0E+00 molec/cm2
+#COch4  CO from CH4 oxidation             28.e-3   393  393  1.0   1.0E+00 molec/cm2
+#CObiof CO from biofuels                  28.e-3   394  394  1.0   1.0E+00 molec/cm2
+#COisop CO from ISOP oxidation            28.e-3   395  395  1.0   1.0E+00 molec/cm2
+#COmono CO from MONO oxidation            28.e-3   396  396  1.0   1.0E+00 molec/cm2
+#COmeoh CO from MeOH oxidation            28.e-3   397  397  1.0   1.0E+00 molec/cm2
+#COacet CO from ACET oxidation            28.e-3   398  398  1.0   1.0E+00 molec/cm2
+#=============================================================================
+# OFFSET=400: Tracer masses [kg] 
+#=============================================================================
+NOx    NOx                               14.e-3   401  401  1.0   1.0E+00 kg
+Ox     Ox                                48.e-3   402  402  1.0   1.0E+00 kg
+PAN    PAN                              121.e-3   403    0  1.0   1.0E+00 kg
+CO     CO                                28.e-3   404  403  1.0   1.0E+00 kg
+ALK4   Alkanes(>C4)                      12.e-3   405    0  4.0   1.0E+00 kgC
+ISOP   Isoprene                          12.e-3   406    0  5.0   1.0E+00 kgC
+HNO3   HNO3                              63.e-3   407  404  1.0   1.0E+00 kg
+H2O2   H2O2                              34.e-3   408  405  1.0   1.0E+00 kg
+ACET   Acetone                           12.e-3   409    0  3.0   1.0E+00 kgC
+MEK    Ketones(>C3)                      12.e-3   410    0  4.0   1.0E+00 kgC
+ALD2   Acetaldehyde                      12.e-3   411    0  2.0   1.0E+00 kgC
+RCHO   Aldehyde(>C3)                     58.e-3   412    0  1.0   1.0E+00 kg
+MVK    Methylvinylketone                 70.e-3   413    0  1.0   1.0E+00 kg
+MACR   Methacrolein                      70.e-3   414    0  1.0   1.0E+00 kg
+PMN    MPAN                             147.e-3   415    0  1.0   1.0E+00 kg
+PPN    PPN                              135.e-3   416    0  1.0   1.0E+00 kg
+R4N2   Alkylnitrate(>C3)                119.e-3   417    0  1.0   1.0E+00 kg
+PRPE   Propene                           12.e-3   418    0  3.0   1.0E+00 kgC
+C3H8   Propane                           12.e-3   419    0  3.0   1.0E+00 kgC
+CH2O   HCHO                              30.e-3   420  406  1.0   1.0E+00 kg
+C2H6   Ethane                            12.e-3   421    0  2.0   1.0E+00 kgC
+N2O5   N2O5                             105.e-3   422    0  1.0   1.0E+00 kg
+HNO4   HNO4                              79.e-3   423    0  1.0   1.0E+00 kg
+MP     CH3OOH                            24.e-3   424    0  1.0   1.0E+00 kg
+DMS    DMS sulfate                       62.e-3   425    0  1.0   1.0E+00 kg
+SO2    SO2 sulfate                       64.e-3   426    0  1.0   1.0E+00 kg
+SO4    SO4 sulfate                       96.e-3   427    0  1.0   1.0E+00 kg
+MSA    MSA sulfate                       96.e-3   428    0  1.0   1.0E+00 kg
+NH3    NH3 aerosol                       17.e-3   429    0  1.0   1.0E+00 kg
+NH4    NH4 aerosol                       18.e-3   430    0  1.0   1.0E+00 kg
+NIT    NIT aerosol                       62.e-3   431    0  1.0   1.0E+00 kg
+O3     O3                                48.e-3   432  407  1.0   1.0E+00 kg
+#NO     Nitrogen Oxide                    30.e-3   426    0  1.0   1.0E+00 kg
+#NOy    Reactive Nitrogen                 14.e-3   427    0  1.0   1.0E+00 kg
+#NO2    Nitrogen Dioxide                  46.e-3   428    0  1.0   1.0E+00 kg
+###### METHANE ---------------------------------------------------------------
+#CH4    Methane                           16.e-3   455  455  1.0   1.0E+00 kg
+###### OFFLINE SULFATE SIMULATION with extra SO4 tracers----------------------
+DMS    DMS sulfate                       62.e-3   451  451  1.0   1.0E+00 kg
+SO2    SO2 sulfate                       64.e-3   452  452  1.0   1.0E+00 kg
+SO4A   so4 sulfate                       96.e-3   453  453  1.0   1.0E+00 kg
+SO4B   so4 sulfate                       96.e-3   454  453  1.0   1.0E+00 kg
+SO4C   so4 sulfate                       96.e-3   455  453  1.0   1.0E+00 kg
+SO4D   so4 sulfate                       96.e-3   456  453  1.0   1.0E+00 kg
+MSA    msa sulfate                       96.e-3   457  454  1.0   1.0E+00 kg
+NH3    nh3 aerosol                       17.e-3   458  455  1.0   1.0E+00 kg
+NH4    nh4 aerosol                       18.e-3   459  456  1.0   1.0E+00 kg
+NIT    nit aerosol                       62.e-3   460  457  1.0   1.0E+00 kg
+H2O2   H2O2                              34.e-3   461  458  1.0   1.0E+00 kg
+SAL1   Seasalt fine                      58.e-3   462  462  1.0   1.0E+00 kg
+SAL2   Seasalt coarse                    58.e-3   463  463  1.0   1.0E+00 kg
+###### RADON-LEAD-BERYLLIUM --------------------------------------------------
+#222Rn  Radon                            222.e-3   461  461  1.0   1.0E+00 kg
+#210Pb  Lead 210                         210.e-3   462  462  1.0   1.0E+00 kg
+#7Be    Beryllium 7                        7.e-3   463  463  1.0   1.0E+00 kg
+###### TAGGED ETHANE (xyp) ---------------------------------------------------
+C2H6   Total C2H6                        30.e-3   265  265  1.0   1.0E+00 kg 
+C2H6bb C2H6 from Biomass Burning         30.e-3   266  266  1.0   1.0E+00 kg
+C2H6bf C2H6 from Biofuel Burning         30.e-3   267  267  1.0   1.0E+00 kg
+C2H6ng C2H6 from Natural Gas Leaks       30.e-3   268  268  1.0   1.0E+00 kg
+###### METHYL IODIDE ---------------------------------------------------------
+CH3I   Methyl Iodide                    142.e-3   470  470  1.0   1.0E+00 kg
+CH3Ioc Methyl Iodide (oceanic source)   142.e-3   471  471  1.0   1.0E+00 kg
+CH3Ibb Methyl Iodide (biomass burning)  142.e-3   472  472  1.0   1.0E+00 kg
+CH3Iwb Methyl Iodide (wood burning)     142.e-3   473  473  1.0   1.0E+00 kg
+CH3Irc Methyl Iodide (rice paddies)     142.e-3   474  474  1.0   1.0E+00 kg
+CH3Iwl Methyl Iodide (wetlands)         142.e-3   475  475  1.0   1.0E+00 kg
+###### HYDROGEN CYANIDE ------------------------------------------------------
+HCN    Hydrogen Cyanide                  27.e-3   481  481  1.0   1.0E+00 kg
+###### IAPS TAGGED CO --------------------------------------------------------
+CO     CO                                28.e-3   485  485  1.0   1.0E+00 kg 
+COffAs Fossil fuel CO from Asia          28.e-3   486  486  1.0   1.0E+00 kg 
+COffEu Fossil fuel CO from Europe        28.e-3   487  487  1.0   1.0E+00 kg 
+COffNa Fossil fuel CO from NA            28.e-3   488  488  1.0   1.0E+00 kg 
+CObbAs CO from biomass burning -- As     28.e-3   489  489  1.0   1.0E+00 kg 
+###### GEOS-CHEM TAGGED CO (bnd) ---------------------------------------------
+#CO     CO                                28.e-3   482  482  1.0   1.0E+00 kg
+#COus   CO from North America             28.e-3   483  483  1.0   1.0E+00 kg
+#COeur  CO from Europe                    28.e-3   484  484  1.0   1.0E+00 kg
+#COasia CO from Asia                      28.e-3   485  485  1.0   1.0E+00 kg
+#COoth  CO from elsewhere                 28.e-3   486  486  1.0   1.0E+00 kg
+#CObbAm CO from biomass burning -- S.Am   28.e-3   487  487  1.0   1.0E+00 kg
+#CObbAf CO from biomass burning -- Af     28.e-3   488  488  1.0   1.0E+00 kg
+#CObbAs CO from biomass burning -- As     28.e-3   489  489  1.0   1.0E+00 kg
+#CObbOc CO from biomass burning -- Oce    28.e-3   490  490  1.0   1.0E+00 kg
+#CObbEu CO from biomass burning -- Eur    28.e-3   491  491  1.0   1.0E+00 kg
+#CObbNA CO from biomass burning -- N.Am   28.e-3   492  492  1.0   1.0E+00 kg
+#COch4  CO from CH4 oxidation             28.e-3   493  493  1.0   1.0E+00 kg
+#CObiof CO from biofuels                  28.e-3   494  494  1.0   1.0E+00 kg
+#COisop CO from ISOP oxidation            28.e-3   495  495  1.0   1.0E+00 kg
+#COmono CO from MONO oxidation            28.e-3   496  496  1.0   1.0E+00 kg
+#COmeoh CO from MeOH oxidation            28.e-3   497  497  1.0   1.0E+00 kg
+#COacet CO from ACET oxidation            28.e-3   498  498  1.0   1.0E+00 kg
+#=============================================================================
+# OFFSET=700 ND22 J-Values ("JV-MAP-$")
+#=============================================================================
+JNO2   NO2   J-Value (s^-1)                0.e0   701  701  1.0   1.0E+00 s-1
+JHNO3  HNO3  J-Value (s^-1)                0.e0   702  702  1.0   1.0E+00 s-1
+JH2O2  H2O2  J-Value (s^-1)                0.e0   703  703  1.0   1.0E+00 s-1
+JCH2O  CH2O  J-Value (s^-1)                0.e0   704  704  1.0   1.0E+00 s-1
+JO3    O3    J-Value (s^-1)                0.e0   705  705  1.0   1.0E+00 s-1
+POH    OH-source from O3 photolysis        0.e0   706  706  1.0   1.0E+00 s-1
+JO1D   O1D   J-Value (s^-1)                0.e0   751  751  1.0   1.0E+00 s-1
+JCH3I  CH3I  J-value (s^-1)                0.e0   771  771  1.0   1.0E+00 s-1
+JHCN   HCN   J-value (s^-1)                0.e0   781  781  1.0   1.0E+00 s-1
+###### FOR GENERATING STRATOSPHERIC J-VALUES FOR SCHEM.f ---------------------
+#JPAN   PAN   J-Value (s^-1)                0.e0   703  703  1.0   1.0E+00 s-1
+#JHNO3  HNO3  J-value (s^-1)                0.e0   707  707  1.0   1.0E+00 s-1
+#JH2O2  H2O2  J-Value (s^-1)                0.e0   708  708  1.0   1.0E+00 s-1
+#JACET  ACET  J-Value (s^-1)                0.e0   709  709  1.0   1.0E+00 s-1
+#JMEK   MEK   J-Value (s^-1)                0.e0   710  710  1.0   1.0E+00 s-1
+#JALD2  ALD2  J-Value (s^-1)                0.e0   711  711  1.0   1.0E+00 s-1
+#JRCHO  CHO   J-Value (s^-1)                0.e0   712  712  1.0   1.0E+00 s-1
+#JMVK   MVK   J-Value (s^-1)                0.e0   713  713  1.0   1.0E+00 s-1
+#JMACR  MACR  J-Value (s^-1)                0.e0   714  714  1.0   1.0E+00 s-1
+#JR4N2  R4N2  J-Value (s^-1)                0.e0   717  717  1.0   1.0E+00 s-1 
+#JCH2O  CH2O  J-Value (s^-1)                0.e0   720  720  1.0   1.0E+00 s-1 
+#JN2O5  N2O5  J-Value (s^-1)                0.e0   722  722  1.0   1.0E+00 s-1 
+#JHNO4  HNO4  J-Value (s^-1)                0.e0   723  723  1.0   1.0E+00 s-1
+#JMP    MP    J-Value (s^-1)                0.e0   724  724  1.0   1.0E+00 s-1
+#=============================================================================
+# OFFSET=800 ND30 land map ("LAND-MAP")
+#=============================================================================
+LWI    DAO Land-Water Indices              0.e0   801  801  1.0   1.0E+00 none
+#=============================================================================
+# OFFSET=900 ND31 surface pressure ("PS-PTOP")
+#=============================================================================
+PSURF  Surface Pressure                    0.e0   900  900  1.0   1.0E+00 hPa
+PSURF  Surface Pressure                    0.e0   901  901  1.0   1.0E+00 hPa
+#=============================================================================
+# OFFSET=1000: ND43 chemical prod/loss ("CHEM-L=$")
+#=============================================================================
+OH     OH Chemical Diagnostic             17.e0  1001 1001  1.0   1.0E+00 molec/cm3
+NO     NO Chemical Diagnostic              0.e0  1002 1002  1.0   1.0E+09 ppbv
+HO2    HO2 Chemical diagnostic             0.e0  1003 1003  1.0   1.0E+09 ppbv
+NO2    NO2 Chemical diagnostic             0.e0  1004 1004  1.0   1.0E+00 ppbv
+NO3    NO3 Chemical diagnostic            63.e0  1005 1005  1.0   1.0E+00 v/v
+#=============================================================================
+# OFFSET=1200: ND48 station time series ("TIME-SER")
+#=============================================================================
+O3     O3 Time Series (V/V)              48.e-3  1201 1201  1.0   1.0E+09 ppbv
+OH     OH Time Series (V/V)              17.e-3  1202 1202  1.0   1.0E+00 mol/cm3
+NOy    NOy Time Series (V/V)               0.e0  1203 1203  1.0   1.0E+09 ppbv
+NO2d   NO2 Drydep velocity (cm/s)          0.e0  1204 1204  1.0   1.0E+00 cm/s
+O3d    O3 Drydep velocity (cm/s)           0.e0  1205 1205  1.0   1.0E+00 cm/s
+PANd   PAN drydep velocity (cm/s)          0.e0  1206 1206  1.0   1.0E+00 cm/s
+HNO3d  HNO3 Drydep velocity (cm/s)         0.e0  1207 1207  1.0   1.0E+00 cm/s
+H2O2d  H2O2 Drydep velocity (cm/s)         0.e0  1208 1208  1.0   1.0E+00 cm/s
+NO     NO Time Series (V/V)                0.e0  1209 1209  1.0   1.0E+09 ppbv
+PBLTOP PBL top (PS - PBL) (hPa)            0.e0  1210 1210  1.0   1.0E+00 hPa
+LT     Local Time at Station               0.e0  1211 1211  1.0   1.0E+00 h
+ISOPf  Isoprene em flux (mol/cm2/s)        0.e0  1212 1212  1.0   1.0E+00 mol/cm2/s
+MOLEN  Monin-Obhukov Length                0.e0  1213 1213  1.0   1.0E+00 m
+NO3    NO3 concentration                  62.e0  1214 1214  1.0   1.0E+09 ppbv
+PS     Surface Pressure                    0.e0  1215 1215  1.0   1.0E+00 hPa
+AVGW   Water Vapor Mixing Ratio            0.e0  1216 1216  1.0   1.0E+09 ppbv
+RH     Relative Humidity                   0.e0  1217 1217  1.0   1.0E+09 %
+HCNcol HCN Column Density                 27.e0  1218 1218  1.0   1.0E+00 mol/cm2
+CF     Cloud Fraction                      0.e0  1219 1219  1.0   1.0E+00 Fraction
+COpD   Cloud Optical Thickness             0.e0  1220 1220  1.0   1.0E+00 unitless
+CTHgt  Cloud Top Height                    0.e0  1221 1221  1.0   1.0E+00 hPa  
+AIRDEN Air Density                         0.e0  1222 1222  1.0   1.0E+00 molec/cm3/s
+#=============================================================================
+# OFFSET=1300: ND67 DAO surface fields ("DAO-FLDS")
+#=============================================================================
+HFLUX  DAO Sensible Heat Flux              0.e0  1301 1301  1.0   1.0E+00 W/m2
+RADSWG DAO Insolation @ Surface            0.e0  1302 1302  1.0   1.0E+00 W/m2
+PREACC DAO Accum Precip @ Surface          0.e0  1303 1303  1.0   1.0E+00 mm/day
+PRECON DAO Conv Precip @ Surface           0.e0  1304 1304  1.0   1.0E+00 mm/day
+TS     DAO Surface Air Temperature         0.e0  1305 1305  1.0   1.0E+00 K
+RADSWT DAO Insolation @ Top of Atm         0.e0  1306 1306  1.0   1.0E+00 W/m2
+USTAR  DAO Friction Velocity               0.e0  1307 1307  1.0   1.0E+00 m/s
+Z0     DAO Roughness Height                0.e0  1308 1308  1.0   1.0E+00 m
+PBL    DAO PBL depth                       0.e0  1309 1309  1.0   1.0E+00 hPa
+CLDFRC DAO Cloud Fraction                  0.e0  1310 1310  1.0   1.0E+00 none
+U10M   DAO U-wind @ 10 m                   0.e0  1311 1311  1.0   1.0E+00 m/s
+V10M   DAO V-wind @ 10 m                   0.e0  1312 1312  1.0   1.0E+00 m/s
+PS-PBL DAO Boundary Layer Top Pressure     0.e0  1313 1313  1.0   1.0E+00 hPa
+ALBD   DAO Surface Albedo                  0.e0  1314 1314  1.0   1.0E+00 none
+PHIS   DAO Geopotential Heights            0.e0  1315 1315  1.0   1.0E+00 m
+CLDTOP DAO Cloud Top Heights               0.e0  1316 1316  1.0   1.0E+00 hPa
+PS     DAO Surface Pressure                0.e0  1317 1317  1.0   1.0E+00 hPa
+LWI    DAO Land-Water Indices              0.e0  1318 1318  1.0   1.0E+00 unitless
+TROPP  DAO Troposphere Pressure            0.e0  1319 1319  1.0   1.0E+00 hPa
+WINDS  DAO Surface Wind Speed              0.e0  1320 1320  1.0   1.0E+00 m/s
+SLP    DAO Sea Level Pressure              0.e0  1321 1321  1.0   1.0E+00 hPa
+CLDTMP DAO Cloud Top Temperature           0.e0  1322 1322  1.0   1.0E+00 K
+TPW    DAO Total Precipitable Water        0.e0  1323 1323  1.0   1.0E+00 g/cm2
+TAULOW DAO Optical Depth 1000-700 hPa      0.e0  1324 1324  1.0   1.0E+00 unitless
+TAUMID DAO Optical Depth 700-400 hPa       0.e0  1325 1325  1.0   1.0E+00 unitless
+TAUHI  DAO Optical Depth 400- hPa          0.e0  1326 1326  1.0   1.0E+00 unitless
+GWET   DAO Soil Wetness (fraction)         0.e0  1327 1327  1.0   1.0E+00 unitless
+#=============================================================================
+# OFFSET=1400: ND21 optical depths ("OD-MAP-$")
+#=============================================================================
+OPTD   Cloud Optical Depth                 0.e0  1401 1401  1.0   1.0E+00 unitless
+CLMO   Maximum Overlap Cloud Fraction      0.e0  1402 1402  1.0   1.0E+00 unitless
+CLRO   Random  Overlap Cloud Fraction      0.e0  1403 1403  1.0   1.0E+00 unitless
+MOPD   Mineral Dust Opt Depth (400 nm)     0.e0  1404 1404  1.0   1.0E+00 unitless
+MSA    Mineral Dust Surface Area           0.e0  1405 1405  1.0   1.0E+00 cm2/cm3
+OPSO4  Sulfate Optical Depth (400 nm)      0.e0  1406 1406  1.0   1.0E+00 unitless
+HGSO4  Hygroscopic growth of SO4           0.e0  1407 1407  1.0   1.0E+00 unitless
+SSO4   Sulfate Surface Area                0.e0  1408 1408  1.0   1.0E+00 cm2/cm3
+OPBC   Black Carbon Opt Depth (400 nm)     0.e0  1409 1409  1.0   1.0E+00 unitless
+HGBC   Hygroscopic growth of BC            0.e0  1410 1410  1.0   1.0E+00 unitless
+SBC    Black Carbon Surface Area           0.e0  1411 1411  1.0   1.0E+00 cm2/cm3
+OPOC   Organic C Opt Depth (400 nm)        0.e0  1412 1412  1.0   1.0E+00 unitless
+HGOC   Hygroscopic growth of OC            0.e0  1413 1413  1.0   1.0E+00 unitless
+SOC    Organic Carbon Surface Area         0.e0  1414 1414  1.0   1.0E+00 cm2/cm3
+OPSSa  Sea Salt (accum) OD (400 nm)        0.e0  1415 1415  1.0   1.0E+00 unitless
+HGSSa  Hygroscopic growth of SSa           0.e0  1416 1416  1.0   1.0E+00 unitless
+SSSa   Sea Salt (accum) Surface Area       0.e0  1417 1417  1.0   1.0E+00 cm2/cm3
+OPSSc  Sea Salt (coarse) OD (400 nm)       0.e0  1418 1418  1.0   1.0E+00 unitless
+HGSSc  Hygroscopic growth of SSc           0.e0  1419 1419  1.0   1.0E+00 unitless
+SSSc   Sea Salt (coarse) Surface Area      0.e0  1420 1420  1.0   1.0E+00 cm2/cm3
+#=============================================================================
+# OFFSET=1700: ND66 DAO 3-D Fields ("DAO-3D-$")
+#=============================================================================
+UWND   DAO zonal winds                     0.e0  1701 1701  1.0   1.0E+00 m/s
+VWND   DAO meridional winds                0.e0  1702 1702  1.0   1.0E+00 m/s
+TMPU   DAO temperatures                    0.e0  1703 1703  1.0   1.0E+00 K
+SPHU   DAO specific humidities             0.e0  1704 1704  1.0   1.0E+00 g/kg
+KZZ    DAO turbulent mixing coefficients   0.e0  1705 1705  1.0   1.0E+00 ?
+MOISTQ DAO change from moist processes     0.e0  1706 1706  1.0   1.0E+00 g/kg/day
+CLDMAS DAO cloud mass flux                 0.e0  1707 1707  1.0   1.0E+00 kg/m2/600s
+DTRAIN DAO detrainment flux                0.e0  1708 1708  1.0   1.0E+00 kg/m2/600s
+CLMOLW DAO maximum overlap cloud frac      0.e0  1709 1709  1.0   1.0E+00 unitless
+CLROLW DAO random overlap cloud frac       0.e0  1710 1710  1.0   1.0E+00 unitless
+RH     DAO relative humidity               0.e0  1711 1711  1.0   1.0E+00 %
+TAUCLD DAO cloud optical depths            0.e0  1712 1712  1.0   1.0E+00 unitless
+OPTDEP DAO grid box optical depth          0.e0  1713 1713  1.0   1.0E+00 unitless 
+CLDTOT DAO 3-D cloud fraction              0.e0  1714 1714  1.0   1.0E+00 unitless
+TKE    DAO turbulent kinetic energy        0.e0  1715 1715  1.0   1.0E+00 m2/s2
+KH     DAO eddy diffusion coefficient      0.e0  1716 1716  1.0   1.0E+00 unitless
+DELP   fvDAS pressure thickness            0.e0  1717 1717  1.0   1.0E+00 hPa
+CMFDTR Hack detrainment mass flux          0.e0  1718 1718  1.0   1.0E+00 Pa/s 
+CMFETR Hack entrainment mass flux          0.e0  1719 1719  1.0   1.0E+00 Pa/s
+ZMDU   Zhang updraft detrainment flux      0.e0  1720 1720  1.0   1.0E+00 Pa/s
+ZMED   Zhang conv downdraft entrain.       0.e0  1721 1721  1.0   1.0E+00 Pa/s
+ZMEU   Zhang updraft entrainment           0.e0  1722 1722  1.0   1.0E+00 Pa/s
+ZMMD   Zhang downdraft mass flux           0.e0  1723 1723  1.0   1.0E+00 Pa/s
+ZMMU   Zhang updraft mass flux             0.e0  1724 1724  1.0   1.0E+00 Pa/s
+LWC    Liquid water content (sulfate_mod)  0.e0  1725 1725  1.0   1.0E+00 m3/m3
+#=============================================================================
+# OFFSET=1800: ND29 CO sources: ("CO--SRCE")
+#=============================================================================
+COanth CO from Anthro Sources            28.e-3  1801 1801  1.0   1.0E+00 mol/cm2/s
+CObb   CO from Biomass Burning           28.e-3  1802 1802  1.0   1.0E+00 mol/cm2/s
+CObf   CO from Wood Burning              28.e-3  1803 1803  1.0   1.0E+00 mol/cm2/s
+COmeth CO from Methanol (CH3OH)          28.e-3  1804 1804  1.0   1.0E+00 mol/cm2/s
+COmono CO from Monoterpenes              28.e-3  1805 1805  1.0   1.0E+00 mol/cm2/s
+###### METHANE EMISSIONS (jsw/xyp) ----------------------------------------------
+#CH4ani CH4 from Animals                  16.e-3  1806 1806  1.0   1.0E+00 mol/cm2/s
+#CH4lf  CH4 from Landfills                16.e-3  1807 1807  1.0   1.0E+00 mol/cm2/s
+#CH4gv  CH4 from Gas Venting              16.e-3  1808 1808  1.0   1.0E+00 mol/cm2/s
+#CH4gl  CH4 from Gas Leakage              16.e-3  1809 1809  1.0   1.0E+00 mol/cm2/s
+#CH4clp CH4 from Coal Production          16.e-3  1810 1810  1.0   1.0E+00 mol/cm2/s
+#CH4tm  CH4 from Termites                 16.e-3  1811 1811  1.0   1.0E+00 mol/cm2/s
+#CH4hv  CH4 from Soviet hydrates          16.e-3  1812 1812  1.0   1.0E+00 mol/cm2/s
+#CH4hz  CH4 from Zonally symm hydrates    16.e-3  1813 1813  1.0   1.0E+00 mol/cm2/s
+#CH4sa  CH4 loss from soil absorption     16.e-3  1814 1814  1.0   1.0E+00 mol/cm2/s
+#CH4ric CH4 from Rice Paddies             16.e-3  1815 1815  1.0   1.0E+00 mol/cm2/s
+#CH4w1  CH4 from Total Wetlands           16.e-3  1816 1816  1.0   1.0E+00 mol/cm2/s
+#CH4wb  CH4 from Bogs                     16.e-3  1817 1817  1.0   1.0E+00 mol/cm2/s
+#CH4ws  CH4 from Swamps                   16.e-3  1818 1818  1.0   1.0E+00 mol/cm2/s
+#CH4wt  CH4 from Tundra                   16.e-3  1819 1819  1.0   1.0E+00 mol/cm2/s
+#CH4bb  CH4 from Biomass burning          16.e-3  1820 1820  1.0   1.0E+00 mol/cm2/s
+#=============================================================================
+# OFFSET=2000: ND68 Box Height & Air Mass quantities ("BXHGHT-$")
+#=============================================================================
+BXHGHT Box height (m)                    0.0e-0  2001 2001  1.0   1.0E+00 m
+AIRMAS Air mass (kg)                    28.9e-3  2002 2002  1.0   1.0E+00 kg
+AVGW   Water vapor mixing ratio         18.0e-3  2003 2003  1.0   1.0E+09 ppbv
+N(AIR) Number density of air             0.0e-0  2004 2004  1.0   1.0E+00 m-3 
+# Ocean mixed layer depth
+OCMLD  Ocean mixed layer depth           0.0e0   2091    0  1.0   1.0E+00 m
+#=============================================================================
+# OFFSET=2100: ND69 CTM surface area ("DXYP")
+#=============================================================================
+DXYP   Surface area (m2)                 0.0e-0  2101 2101  1.0   1.0E+00 m2
+#=============================================================================
+# OFFSET=2200: ND65, ND05: Chemical Prod/Loss ("PORL-L=$", "PL-SUL-$")
+#=============================================================================
+POx    P(Ox)                             48.e-3  2201 2201  1.0   1.0E+00 mol/cm3/s
+LOx    L(Ox)                             48.e-3  2202 2202  1.0   1.0E+00 mol/cm3/s
+PCO    P(CO)                             28.e-3  2203 2203  1.0   1.0E+00 mol/cm3/s
+LCO    L(CO)                             28.e-3  2204 2204  1.0   1.0E+00 mol/cm3/s
+LCH4   L(CH4)                            16.e-3  2205 2205  1.0   1.0E+00 mol/cm3/s
+PMOH   P(MOH)                            32.e-3  2206 2206  1.0   1.0E+00 mol/cm3/s
+LMOH   L(MOH)                            32.e-3  2207 2207  1.0   1.0E+00 mol/cm3/s
+PLOx   P(Ox) - L(Ox)                     48.e-3  2208 2208  1.0   1.0E+00 mol/cm3/s
+P(CO)  Production of CO (bnd)            28.e-3  2209 2209  1.0   1.0E+00 v/v/s
+L(CO)  Loss of CO (bnd)                  28.e-3  2210 2210  1.0   1.0E+00 s-1
+PHNO3  P(HNO3)                           48.e-3  2211 2211  1.0   1.0E+00 mol/cm3/s
+LHNO3  L(HNO3)                           48.e-3  2212 2212  1.0   1.0E+00 mol/cm3/s
+PNN    P(NN)                             48.e-3  2213 2213  1.0   1.0E+00 mol/cm3/s
+LNN    L(NN)                             48.e-3  2214 2214  1.0   1.0E+00 mol/cm3/s
+###### OFFLINE SULFATE SIMULATION --------------------------------------------
+PH2O2  P(H2O2) for sulfate sim           34.e-3  2220 2220  1.0   1.0E+00 molec/cm3/s
+SO2oh  P(SO2)  from DMS + OH              0.e+0  2251 2251  1.0   1.0E+00 kg S
+SO2no3 P(SO2)  from DMS + NO3             0.e+0  2252 2252  1.0   1.0E+00 kg S
+SO2dms P(SO2)  from DMS (total)           0.e+0  2253 2253  1.0   1.0E+00 kg S
+MSAdms P(MSA)  from DMS                   0.e+0  2254 2254  1.0   1.0E+00 kg S
+SO4gas P(SO4)  from gas oxidation         0.e+0  2255 2255  1.0   1.0E+00 kg S
+SO4aq  P(SO4)  from aqueous phase         0.e+0  2256 2256  1.0   1.0E+00 kg S
+SO4tot P(SO4)  total                      0.e+0  2257 2257  1.0   1.0E+00 kg S
+LOH    L(OH)   by DMS                     0.e+0  2258 2258  1.0   1.0E+00 kg OH
+LNO3   L(NO3)  by DMS                     0.e+0  2259 2259  1.0   1.0E+00 kg NO3
+LH2O2  L(H2O2) by SO2                     0.e+0  2260 2260  1.0   1.0E+00 kg H2O2
+###### METHYL IODIDE ---------------------------------------------------------
+#CH3Ioc Methyl Iodide (oceanic source)   142.e-3  2271 2271  1.0   1.0E+00 kg/s
+#CH3Ibb Methyl Iodide (biomass burning)  142.e-3  2272 2272  1.0   1.0E+00 kg/s
+#CH3Iwb Methyl Iodide (wood burning)     142.e-3  2273 2273  1.0   1.0E+00 kg/s
+#CH3Irc Methyl Iodide (rice paddies)     142.e-3  2274 2274  1.0   1.0E+00 kg/s
+#CH3Iwl Methyl Iodide (wetlands)         142.e-3  2275 2275  1.0   1.0E+00 kg/s
+#CH3Iaq CH3I Total                       142.e-3  2276 2276  1.0   1.0E+00 kg/s
+###### TAGGED CO -------------------------------------------------------------
+LCO    Loss of CO by OH                  28.e-3  2285 2285  1.0   1.0E+00 mol/cm3/s 
+PCOeur CO from Europe                    28.e-3  2286 2286  1.0   1.0E+00 mol/cm3/s 
+PCOas  CO from Asia                      28.e-3  2287 2287  1.0   1.0E+00 mol/cm3/s
+PCObaf CO from biomass burning -- Af     28.e-3  2288 2288  1.0   1.0E+00 mol/cm3/s 
+PCObas CO from biomass burning -- As     28.e-3  2289 2289  1.0   1.0E+00 mol/cm3/s 
+PCOiso P(CO) from Isoprene               28.e-3  2290 2290  1.0   1.0E+00 mol/cm3/s
+PCOCH4 P(CO) from CH4                    28.e-3  2291 2291  1.0   1.0E+00 mol/cm3/s
+PCOmet P(CO) from CH3OH (methanol)       28.e-3  2292 2292  1.0   1.0E+00 mol/cm3/s
+PCOmon P(CO) from MONOTERPENES           28.e-3  2293 2293  1.0   1.0E+00 mol/cm3/s
+PCOmon P(CO) from ACETONE                28.e-3  2294 2294  1.0   1.0E+00 mol/cm3/s
+###### GEOS-CHEM TAGGED CO (bnd) ---------------------------------------------
+#LCO    Loss of CO by OH                  28.e-3  2282 2282  1.0   1.0E+00 mol/cm3/s
+#PCOus  CO from North America             28.e-3  2283 2283  1.0   1.0E+00 mol/cm3/s
+#PCOeur CO from Europe                    28.e-3  2284 2284  1.0   1.0E+00 mol/cm3/s
+#PCOas  CO from Asia                      28.e-3  2285 2285  1.0   1.0E+00 mol/cm3/s
+#PCOoth CO from elsewhere                 28.e-3  2286 2286  1.0   1.0E+00 mol/cm3/s
+#PCObAm CO from biomass burning -- S.Am   28.e-3  2287 2287  1.0   1.0E+00 mol/cm3/s
+#PCObAf CO from biomass burning -- Af     28.e-3  2288 2288  1.0   1.0E+00 mol/cm3/s
+#PCObAs CO from biomass burning -- As     28.e-3  2289 2289  1.0   1.0E+00 mol/cm3/s
+#PCObOc CO from biomass burning -- Oce    28.e-3  2290 2290  1.0   1.0E+00 mol/cm3/s
+#PCObEu CO from biomass burning -- Eur    28.e-3  2291 2291  1.0   1.0E+00 mol/cm3/s
+#PCObNA CO from biomass burning -- N.Am   28.e-3  2292 2292  1.0   1.0E+00 mol/cm3/s
+#PCOch  CO from CH4 oxidation             28.e-3  2293 2293  1.0   1.0E+00 mol/cm3/s
+#PCObio CO from biofuels                  28.e-3  2294 2294  1.0   1.0E+00 mol/cm3/s
+#PCOiso CO from ISOP oxidation            28.e-3  2295 2295  1.0   1.0E+00 mol/cm3/s
+#PCOmon CO from MONO oxidation            28.e-3  2296 2296  1.0   1.0E+00 mol/cm3/s
+#PCOmeo CO from MeOH oxidation            28.e-3  2297 2297  1.0   1.0E+00 mol/cm3/s
+#PCOace CO from ACET oxidation            28.e-3  2298 2298  1.0   1.0E+00 mol/cm3/s
+#=============================================================================
+# OFFSET = 2500: O3 Columns in DU ("O3COLMAP", "O3CLIM-$") 
+#=============================================================================
+O3     O3                                48.e-3  2525 2525  1.0   1.0E+00 DU
+#=============================================================================
+# OFFSET=2700: ND55 tropopause diagnostics ("TR-PAUSE")
+#=============================================================================
+TP-L    Tropopause Level                  0.e+0  2701 2701  1.0   1.0E+00 level
+TP-H    Tropopause Height                 0.e+0  2702 2702  1.0   1.0E+00 km
+TP-P    Tropopause Pressure               0.e+0  2703 2703  1.0   1.0E+00 hPa
+TP-F    Tropopause Flux Flags             0.e+0  2704 2704  1.0   1.0E+00 unitless
+#=============================================================================
+# OFFSET=2800 ND41 PBL depth ("PBLDEPTH")
+#=============================================================================
+PBL-M   PBL depth                         1.0e+0 2801 2801  0.0   1.0E+00 m
+PBL-L   PBL depth in # of layers          1.0e+0 2802 2802  0.0   1.0E+00 level
+#=============================================================================
+# OFFSET=2900: Net primary productivity ("GLOB-NPP")
+#=============================================================================
+NPP     GLOB-NPP                          0.e+0  2901 2901  1.0   1.0E+00 g/m2
+#=============================================================================
+# OFFSET=3000: GISS CTM diagnostics: OFFSET = 3000
+#=============================================================================
+LNDCOV  LAND COV                          0.e+0  3000 3000  1.0   1.0E+00 none
+ICE/LAN LAND ICE COV/LAND COV             0.e+0  3001 3001  1.0   1.0E+00 ratio
+OCN TMP OCEAN TEMP                        0.e+0  3002 3002  1.0   1.0E+00 deg C
+ICE/WTR OCEAN ICE COV/WATER COV           0.e+0  3003 3003  1.0   1.0E+00 ratio
+OICE-L2 OCEAN ICE AMOUNT L2               0.e+0  3004 3004  1.0   1.0E+00 kg/m2
+OCN SNW OCEAN ICE SNOW AMOUNT             0.e+0  3005 3005  1.0   1.0E+00 kg/m2
+ERT SNW EARTH SNOW AMOUNT                 0.e+0  3006 3006  1.0   1.0E+00 kg/m2
+OTMP-L1 OCEAN ICE TEMP L1                 0.e+0  3007 3007  1.0   1.0E+00 deg C
+ETMP-L1 EARTH ICE TEMP L1                 0.e+0  3008 3008  1.0   1.0E+00 deg C
+EWTR-L1 EARTH WATER L1                    0.e+0  3009 3009  1.0   1.0E+00 kg/m2
+EICE-L1 EARTH ICE L1                      0.e+0  3010 3010  1.0   1.0E+00 kg/m2
+OTMP-L2 OCEAN ICE TEMP L2                 0.e+0  3011 3011  1.0   1.0E+00 deg C
+LND SNW LAND ICE SNOW AMOUNT              0.e+0  3012 3012  1.0   1.0E+00 kg/m2
+LTMP-L1 LAND ICE TEMP L1                  0.e+0  3013 3013  1.0   1.0E+00 deg C
+LTMP-L2 LAND ICE TEMP L2                  0.e+0  3014 3014  1.0   1.0E+00 deg C
+WCAP-L1 WATER FIELD CAPACITY L1           0.e+0  3015 3015  1.0   1.0E+00 kg/m2
+WCAP-L2 WATER FIELD CAPACITY L2           0.e+0  3016 3016  1.0   1.0E+00 kg/m2
+WCAP-L1 WATER FIELD CAPACITY L1           0.e+0  3017 3017  1.0   1.0E+00 kg/m2
+WCAP-L2 WATER FIELD CAPACITY L2           0.e+0  3018 3018  1.0   1.0E+00 kg/m2
+#=============================================================================
+# OFFSET=3100: GISS CTM Diagnostics 
+#=============================================================================
+DEEPCO NUMBER OF DEEP CONVECTIO           0.e+0  3101 3101  1.0   1.0E+00 unitless
+#=============================================================================
+# OFFSET=3200: Aerosol emissions ("ARSL-L=$")
+#=============================================================================
+SO4    Sulfate Aerosol                    0.e+0  3201 3201  1.0   1.0E+00 kg/m3
+BC1    Hydrophobic Black Carbon           0.e+0  3202 3202  1.0   1.0E+00 kg/m3
+BC2    Hydrophilic Black Carbon           0.e+0  3203 3203  1.0   1.0E+00 kg/m3
+OC1    Hydrophobic Organic Carbon         0.e+0  3204 3204  1.0   1.0E+00 kg/m3
+OC2    Hydrophilic Organic Carbon         0.e+0  3205 3205  1.0   1.0E+00 kg/m3
+SS1    Sea Salt 0.1 -  0.5 um             0.e+0  3206 3206  1.0   1.0E+00 kg/m3
+SS2    Sea Salt 0.5 -  1.5 um             0.e+0  3207 3207  1.0   1.0E+00 kg/m3
+SS3    Sea Salt 1.5 -  5.0 um             0.e+0  3208 3208  1.0   1.0E+00 kg/m3
+SS4    Sea Salt 5.0 - 10.0 um             0.e+0  3209 3209  1.0   1.0E+00 kg/m3
+#=============================================================================
+# OFFSET=3300: ND39 loss from wetscav & wetdep ("WETDCV-$", "WETDLS-$")
+#=============================================================================
+HNO3   HNO3                              63.e-3  3301 3301  1.0   1.0E+00 kg/s
+H2O2   H2O2                              34.e-3  3302 3302  1.0   1.0E+00 kg/s
+CH2O   HCHO                              30.e-3  3303 3303  1.0   1.0E+00 kg/s
+MP     CH3OOH                            24.e-3  3304 3304  1.0   1.0E+00 kg/s
+210Pb  Lead 210                         210.e-3  3361 3361  1.0   1.0     kg/s
+7Be    Beryllium 7                        7.e-3  3362 3362  1.0   1.0     kg/s
+#=============================================================================
+# OFFSET=3400: EDGAR emissions ("EDGR-B10", "EDGR-B40", etc...)
+#=============================================================================
+C2H6   EDGAR Ethane                      12.e-3  3401 3401  2.0   1.0E+00 kg
+C3H8   EDGAR Propane                     12.e-3  3402 3402  3.0   1.0E+00 kg
+C2H2   EDGAR Acetylene                   12.e-3  3403 3403  2.0   1.0E+00 kg
+BUTN   EDGAR Butanes                     12.e-3  3404 3404  4.0   1.0E+00 kg
+PENT   EDGAR Pentanes                    12.e-3  3405 3405  5.0   1.0E+00 kg
+HEXN   EDGAR Hexanes                     12.e-3  3406 3406  6.0   1.0E+09 kg
+C3H6   EDGAR Propene                     12.e-3  3407 3407  3.0   1.0E+09 kg
+ALK4   Lumped Alkanes(>C4)               12.e-3  3408 3408  4.0   1.0E+00 kg
+PRPE   Propene                           12.e-3  3409 3409  3.0   1.0E+00 kg
+ALKE   Lumped Higher Alkenes             12.e-3  3410 3410  4.7   1.0E+00 kg
+#=============================================================================
+# OFFSET=3500: P(NOY), HNO3, O3, NO, NO2 for stratosphere ("PNOY-L=$")
+#=============================================================================
+P(NOY) Production of NOY                 14.e-3  3501 3501  1.0   1.0E+09 ppbv/s
+HNO3   HNO3 concentration                63.e-3  3502 3502  1.0   1.0E+09 ppbv
+O3     O3 concentration                  48.e-3  3503 3503  1.0   1.0E+06 ppmv
+NO     NO concentration                  30.e-3  3504 3504  1.0   1.0E+09 ppbv
+NO2    NO2 concentration                 46.e-3  3505 3505  1.0   1.0E+09 ppbv
+P(NOy) P(NOy) above 10 hPa               14.e-3  3506 3506  1.0   1.0E+00 mol/cm3/s
+#=============================================================================
+# OFFSET=3600: Columns in DU ("COLMAP")
+#=============================================================================
+Ox     Ox                                48.e-3  3602 3602  1.0   1.0E+00 DU
+CH2O   HCHO                              30.e-3  3620 3620  1.0   1.0E+00 DU
+O3     O3                                48.e-3  3625 3625  1.0   1.0E+00 DU
+###### TRACE-P TAGGED CO -----------------------------------------------------
+CO     CO                                28.e-3  3685 3685  1.0   1.0E+00 mol/cm2
+COeur  CO from Europe                    28.e-3  3686 3686  1.0   1.0E+00 mol/cm2
+COasia CO from Asia                      28.e-3  3687 3687  1.0   1.0E+00 mol/cm2
+CObbAf CO from biomass burning -- Af     28.e-3  3688 3688  1.0   1.0E+00 mol/cm2
+CObbAs CO from biomass burning -- As     28.e-3  3689 3689  1.0   1.0E+00 mol/cm2
+###### RADON-LEAD-BERYLLIUM --------------------------------------------------
+Rn     Radon                            222.e-3  3690 3690  1.0   1.0E+00 mol/cm2
+#=============================================================================
+# OFFSET=3700: UV albedos ("UVALBEDO")
+#=============================================================================
+UVALBD UV Albedo                          0.e+0  3701 3701  1.0   1.0E+00 %
+#=============================================================================
+# OFFSET=3800: ND16 fraction of grid box precipitating ("WD-FRC-$")
+#=============================================================================
+LS-f   Large scale fraction               0.e+0  3801 3801  1.0   1.0E+00 unitless
+CV-f   Convective fraction                0.e+0  3802 3802  1.0   1.0E+00 unitless 
+#=============================================================================
+# OFFSET=3900: ND17 F/f values ("WD-LSR-$", "WD-CVR-$", "WS-LSW-$", "WD-CVW-$")
+#=============================================================================
+FfHNO3 HNO3                              63.e-3  3901 3901  1.0   1.0E+00 unitless
+FfH2O2 H2O2                              34.e-3  3902 3902  1.0   1.0E+00 unitless
+FfCH2O HCHO                              30.e-3  3903 3903  1.0   1.0E+00 unitless
+FfMP   CH3OOH                            24.e-3  3904 3904  1.0   1.0E+00 unitless
+###### RADON-LEAD-BERYLLIUM --------------------------------------------------
+FfPb   Lead 210                         210.e-3  3961 3961  1.0   1.0E+00 unitless
+FfBe   Beryllium 7                        7.e-3  3962 3962  1.0   1.0E+00 unitless
+#=============================================================================
+# OFFSET=4000: Fraction of tracer lost in convective updrafts 
+#=============================================================================
+F-HNO3 HNO3                              63.e-3  4001 4001  1.0   1.0E+00 unitless
+F-H2O2 H2O2                              34.e-3  4002 4002  1.0   1.0E+00 unitless
+F-CH2O HCHO                              30.e-3  4003 4003  1.0   1.0E+00 unitless
+F-MP   CH3OOH                            24.e-3  4004 4004  1.0   1.0E+00 unitless
+###### RADON-LEAD-BERYLLIUM --------------------------------------------------
+F-Pb   Lead 210                         210.e-3  4061 4061  1.0   1.0E+00 unitless
+F-Be   Beryllium 7                        7.e-3  4062 4062  1.0   1.0E+00 unitless
+#=============================================================================
+# OFFSET=4100: Mineral dust concentrations ("MDUST-$")
+#=============================================================================
+MD1    Mineral Dust 0.009 um               0.e0  4101 4101  1.0   1.0E+00 kg/m3
+MD2    Mineral Dust 0.081 um               0.e0  4102 4102  1.0   1.0E+00 kg/m3
+MD3    Mineral Dust 0.23 um                0.e0  4103 4103  1.0   1.0E+00 kg/m3
+MD4    Mineral Dust 0.67 um                0.e0  4104 4104  1.0   1.0E+00 kg/m3
+MD5    Mineral Dust 1.5 um                 0.e0  4105 4105  1.0   1.0E+00 kg/m3
+MD6    Mineral Dust 2.5 um                 0.e0  4106 4106  1.0   1.0E+00 kg/m3
+MD7    Mineral Dust 4.0 um                 0.e0  4107 4107  1.0   1.0E+00 kg/m3
+#=============================================================================
+# OFFSET=4200: Soil precipitation ("SOILPREC")
+#=============================================================================
+SOILPR Soil precipitation                  0.e0  4201 4201  1.0   1.0E+00 mm/da
+#=============================================================================
+# OFFSET=4300: CH4 emissions ("CH4-EMIS")
+#=============================================================================
+CH4ric CH4 Emissions from Rice Paddies   16.e-3  4301 4301  1.0   1.0E+00 kg/m2/s
+CH4wet CH4 Emissions from WetLands       16.e-3  4302 4302  1.0   1.0E+00 kg/m2/s
+#=============================================================================
+# OFFSET=4400: Dead organic matter source ("DOC-SRCE")
+#=============================================================================
+DOC-S  Short-Lived DOC                     0.e0  4401 4401  1.0   1.0E+00 ng/L
+DOC-L  Long-Lived DOC                      0.e0  4402 4402  1.0   1.0E+00 ng/L
+MLT    Mixed-Layer Temperature             0.e0  4403 4403  1.0   1.0E+00 C
+#=============================================================================
+# OFFSET=4500: CO budget ("COBUDGET")
+#=============================================================================
+COinit Initial CO                        28.e-3  4501 4501  1.0   1.0E+09 Tg
+COfin  Final CO                          28.e-3  4502 4502  1.0   1.0E+09 Tg
+COsink CO sink                           28.e-3  4503 4503  1.0   1.0E+09 Tg
+COmeth CO production                     28.e-3  4504 4504  1.0   1.0E+09 Tg
+COisop CO from isoprenee                 28.e-3  4505 4505  1.0   1.0E+09 Tg
+CObiom CO from biomass burning           28.e-3  4506 4506  1.0   1.0E+09 Tg
+CObiof CO from biofuel burning           28.e-3  4507 4507  1.0   1.0E+09 Tg
+COfoss CO from fossil fuel               28.e-3  4508 4508  1.0   1.0E+09 Tg
+COmono CO from monoterpenes              28.e-3  4509 4509  1.0   1.0E+09 Tg
+COmeoh CO from methanol                  28.e-3  4510 4510  1.0   1.0E+09 Tg
+COacet CO from acetone                   28.e-3  4511 4511  1.0   1.0E+09 Tg
+COequa CO crossing the equator           28.e-3  4512 4512  1.0   1.0E+09 Tg
+#=============================================================================
+# OFFSET=4600: Methane budget ("CH4BUDGT")
+#=============================================================================
+CH4ini Initial CO                        16.e-3  4601 4601  1.0   1.0E+09 Tg
+CH4fin Final CO                          16.e-3  4602 4602  1.0   1.0E+09 Tg
+CH4sin CO sink                           16.e-3  4603 4603  1.0   1.0E+09 Tg
+CH4pro CO production                     16.e-3  4604 4604  1.0   1.0E+09 Tg
+CH4iso CO from isoprenee                 16.e-3  4605 4605  1.0   1.0E+09 Tg
+CH4bb  CO from biomass burning           16.e-3  4606 4606  1.0   1.0E+09 Tg
+CH4bf  CO from biofuel burning           16.e-3  4607 4607  1.0   1.0E+09 Tg
+CH4ff  CO from fossil fuel               16.e-3  4608 4608  1.0   1.0E+09 Tg
+CH4mon CO from monoterpenes              16.e-3  4609 4609  1.0   1.0E+09 Tg
+CH4equ CO crossing the equator           16.e-3  4610 4610  1.0   1.0E+09 Tg
+#=============================================================================
+# OFFSET=4700: ND46 biogenic emisssions ("BIOGSRCE")
+#=============================================================================
+ISOP   Isoprene                          12.e-3  4701 4701  5.0   1.0E+00 molC/cm2/s
+ACET   Acetone                           12.e-3  4702 4702  3.0   1.0E+00 molC/cm2/s
+PRPE   Propene                           12.e-3  4703 4703  3.0   1.0E+00 molC/cm2/s
+MONOT  Monoterpenes                      12.e-3  4704 4704  3.0   1.0E+00 molC/cm2/s
+###### COUPLED CHEMISTRY/AEROSOL ---------------------------------------------
+DMS    DMS                               62.e-3  4725 4725  1.0   1.0E+09 nmol/L
+#=============================================================================
+# OFFSET=4800: Acetone sources ("ACETSRCE")
+#=============================================================================
+ACETmo Acetone from MONOTERPENES         12.e-3  4801 4801  3.0   1.0E+00 molC/cm2/s
+ACETmb Acetone from METHYL BUTENOL       12.e-3  4802 4802  3.0   1.0E+00 molC/cm2/s
+ACETbg Acetone from DIRECT EMISSION      12.e-3  4803 4803  3.0   1.0E+00 molC/cm2/s
+ACETdl Acetone from DRY LEAF MATTER      12.e-3  4804 4804  3.0   1.0E+00 molC/cm2/s
+ACETgr Acetone from GRASSLANDS           12.e-3  4805 4805  3.0   1.0E+00 molC/cm2/s 
+ACETop Acetone source from OCEANS        12.e-3  4806 4806  3.0   1.0E+00 molC/cm2/s
+ACETol Acetone sink from OCEANS          12.e-3  4807 4807  3.0   1.0E+00 molC/cm2/s  
+#=============================================================================
+# OFFSET=4900: ND12 boundary layer fractions ("EMDIS-BL")
+#=============================================================================
+BLfrac Boundary layer Fraction            0.e0   4901 4901  3.0   1.0E+00 unitless
+#=============================================================================
+# OFFSET=5000: Crop land fraction ("CROPLANDS")
+#=============================================================================
+CRPLND Crop land fraction                 0.e0   5001 5001  3.0   1.0E+00 unitless
+#=============================================================================
+# OFFSET=5100: Heterotrophic Respiration ("HET-RESP")
+#=============================================================================
+RESP   Heterotrophic Respiration          0.e0   5101 5101  1.0   1.0E+00 gC/m2/month
+#=============================================================================
+# OFFSET=5200: CO2 sources ("CO2-SRCE")
+#=============================================================================
+CO2ff  Fossil Fuel CO2                   44.e-3  5201 5201  1.0   1.0E+00 molec/cm2/s
+CO2oc  Ocean CO2                         44.e-3  5202 5202  1.0   1.0E+00 molec/cm2/s
+CO2bg  Balanced Biosphere CO2            44.e-3  5203 5203  1.0   1.0E+00 molec/cm2/s
+CO2bb  Biomass Burning CO2               44.e-3  5204 5204  1.0   1.0E+00 molec/cm2/s
+CO2bf  Biofuel Burning CO2               44.e-3  5205 5205  1.0   1.0E+00 molec/cm2/s
+#=============================================================================
+# OFFSET=5300: CH4 emissions ("CH4-EMIS")
+#=============================================================================
+CH4an  CH4 from animals                  16.e-3  5301 5301  1.0   1.0E+00 molec/cm2/s
+CH4cl  CH4 from coal mining              16.e-3  5302 5302  1.0   1.0E+00 molec/cm2/s
+CH4gl  CH4 from gas leakage              16.e-3  5303 5303  1.0   1.0E+00 molec/cm2/s
+CH4gv  CH4 from gas venting              16.e-3  5304 5304  1.0   1.0E+00 molec/cm2/s
+CH4rh  CH4 from rice paddies             16.e-3  5305 5305  1.0   1.0E+00 molec/cm2/s
+CH4wb  CH4 from wetland bogs             16.e-3  5306 5306  1.0   1.0E+00 molec/cm2/s
+CH4ws  CH4 from wetland swamps           16.e-3  5307 5307  1.0   1.0E+00 molec/cm2/s
+CH4wt  CH4 from wetland tundra           16.e-3  5308 5308  1.0   1.0E+00 molec/cm2/s
+#=============================================================================
+# OFFSET=5400: Fossil fuel scale factors ("SCALFOSS")
+#=============================================================================
+NOx    Scale factor for NOx                0.e0  5401 5401  1.0   1.0E+00 unitless
+CO-HC  Scale factor for CO and HCs         0.e0  5402 5402  1.0   1.0E+00 unitless
+SOx    Scale factor for SOx                0.e0  5403 5403  1.0   1.0E+00 unitless
+#==============================================================================
+# OFFSET=5500: MOPITT stuff ("MOPAVG-$")
+#==============================================================================
+MOP1    Mopitt thing 1                    0.e+0  5501 5501  1.0   1.0E+00 ppb?
+MOP2    Mopitt thing 2                    0.e+0  5502 5502  1.0   1.0E+00 ppb?
+MOP3    Mopitt thing 3                    0.e+0  5503 5503  1.0   1.0E+00 ppb?
+MOP4    Mopitt thing 4                    0.e+0  5504 5504  1.0   1.0E+00 ppb?
+#=============================================================================
+# OFFSET=5600: ND05: Chemical Prod/Loss ("PL-SUL-$")
+#=============================================================================
+SO2dms P(SO2) from DMS+0H                32.e-3  5601 5601  1.0   1.0E+00 kg S
+SO2no3 P(SO2) from DMS+NO3               32.e-3  5602 5602  1.0   1.0E+00 kg S
+SO2    Total P(SO2)                      32.e-3  5603 5603  1.0   1.0E+00 kg S
+MSAdms P(MSA) from DMS                   32.e-3  5604 5604  1.0   1.0E+00 kg S
+SO4gas P(SO4) gas phase                  32.e-3  5605 5605  1.0   1.0E+00 kg S
+SO4aq  P(SO4) aqueous phase              32.e-3  5606 5606  1.0   1.0E+00 kg S
+SO4    Total P(SO4)                      32.e-3  5607 5607  1.0   1.0E+00 kg S
+LOH    L(OH) by DMS                      17.e-3  5608 5608  1.0   1.0E+00 kg OH
+LNO3   L(NO3) by DMS                     62.e-3  5609 5609  1.0   1.0E+00 kg NO3
+LH2O2  L(H2O2)                           34.e-3  5610 5610  1.0   1.0E+00 kg H2O2
+#=============================================================================
+# OFFSET=7100: ND44 drydep fluxes ("DRYD-FLX")
+#==============================================n===============================
+NO2df  NO2  drydep flux                   14.e0  7101 7101  1.0   1.0E+00 molec/cm2/s
+O3df   O3   drydep flux                   48.e0  7102 7102  1.0   1.0E+00 molec/cm2/s
+PANdf  PAN  drydep flux                  121.e0  7103 7103  1.0   1.0E+00 molec/cm2/s
+HNO3df HNO3 drydep flux                   63.e0  7107 7107  1.0   1.0E+00 molec/cm2/s
+H2O2df H2O2 drydep flux                   34.e0  7108 7108  1.0   1.0E+00 mol/cm2/s
+PMNdf  PMN  drydep flux                  147.e0  7115 7115  1.0   1.0E+00 molec/cm2/s
+PPNdf  PPN  drydep flux                  135.e0  7116 7116  1.0   1.0E+00 molec/cm2/s
+R4N2df R4N2 drydep flux                  119.e0  7117 7117  1.0   1.0E+00 molec/cm2/s
+CH2Odf CH2O drydep flux                  30.e0  7120 7120  1.0   1.0E+00 molec/cm2/s
+SO2df  SO2  drydep flux                   32.e0  7126 7126  1.0   1.0E+00 molec/cm2/s
+SO4df  SO4  drydep flux                   32.e0  7127 7127  1.0   1.0E+00 molec/cm2/s
+MSAdf  MSA  drydep flux                   32.e0  7128 7128  1.0   1.0E+00 molec/cm2/s
+NH3df  NH3  drydep flux                   14.e0  7129 7129  1.0   1.0E+00 molec/cm2/s
+NH4df  NH4  drydep flux                   14.e0  7130 7130  1.0   1.0E+00 molec/cm2/s
+NITdf  NIT  drydep flux                   14.e0  7131 7131  1.0   1.0E+00 molec/cm2/s
+###### OFFLINE SULFATE SIMULATIONS -------------------------------------------
+SO2df  SO2  drydep flux                   32.e0  7152 7152  1.0   1.0E+00 molec/cm2/s
+SO4Adf SO4  drydep flux                   32.e0  7153 7153  1.0   1.0E+00 molec/cm2/s
+SO4Bdf SO4  drydep flux                   32.e0  7154 7154  1.0   1.0E+00 molec/cm2/s
+SO4Cdf SO4  drydep flux                   32.e0  7155 7155  1.0   1.0E+00 molec/cm2/s
+SO4Ddf SO4  drydep flux                   32.e0  7156 7156  1.0   1.0E+00 molec/cm2/s
+MSAdf  MSA  drydep flux                   32.e0  7157 7157  1.0   1.0E+00 molec/cm2/s
+NH3df  NH3  drydep flux                   14.e0  7158 7158  1.0   1.0E+00 molec/cm2/s
+NH4df  NH4  drydep flux                   14.e0  7159 7159  1.0   1.0E+00 molec/cm2/s
+NITdf  NIT  drydep flux                   14.e0  7160 7160  1.0   1.0E+00 molec/cm2/s
+H2O2df H2O2 drydep flux                   34.e0  7161 7161  1.0   1.0E+00 molec/cm2/s
+SAL1df Seasalt fine                       58.e0  7162 7162  1.0   1.0E+00 molec/cm2/s
+SAL2df Seasalt coarse                     58.e0  7163 7163  1.0   1.0E+00 molec/cm2/s
+###### RADON-LEAD-BERYLLIUM --------------------------------------------------
+#210Pb  210Pb drydep flux                 210.e0  7162 7162  1.0   1.0E+00 kg/s
+#7Be    7Be   drydep flux                   7.e0  7163 7163  1.0   1.0E+00 kg/s
+#=============================================================================
+# OFFSET=7200: ND44 drydep velocities ("DRYD-VEL") 
+#=============================================================================
+NO2dv  NO2  drydep velocity                0.e0  7201 7201  1.0   1.0E+00 cm/s
+O3dv   O3   drydep velocity                0.e0  7202 7202  1.0   1.0E+00 cm/s
+PANdv  PAN  drydep velocity                0.e0  7203 7203  1.0   1.0E+00 cm/s
+HNO3dv HNO3 drydep velocity                0.e0  7207 7207  1.0   1.0E+00 cm/s
+H2O2dv H2O2 drydep velocity                0.e0  7208 7208  1.0   1.0E+00 cm/s
+PMNdv  PMN  drydep velocity                0.e0  7215 7215  1.0   1.0E+00 cm/s
+PPNdv  PPN  drydep velocity                0.e0  7216 7216  1.0   1.0E+00 cm/s
+R4N2dv R4N2 drydep velocity                0.e0  7217 7217  1.0   1.0E+00 cm/s
+CH2Odv CH2O drydep velocity                0.e0  7220 7220  1.0   1.0E+00 cm/s
+SO2dv  SO2  drydep velocity                0.e0  7226 7226  1.0   1.0E+00 cm/s
+SO4dv  SO4  drydep velocity                0.e0  7227 7227  1.0   1.0E+00 cm/s
+MSAdv  MSA  drydep velocity                0.e0  7228 7228  1.0   1.0E+00 cm/s
+NH3dv  NH3  drydep velocity                0.e0  7229 7229  1.0   1.0E+00 cm/s
+NH4dv  NH4  drydep velocity                0.e0  7230 7230  1.0   1.0E+00 cm/s
+NITdv  NIT  drydep velocity                0.e0  7231 7231  1.0   1.0E+00 cm/s
+###### OFFLINE SULFATE SIMULATIONS -------------------------------------------
+SO2dv  SO2  drydep velocity                0.e0  7252 7252  1.0   1.0E+00 cm/s
+SO4Adv SO4  drydep velocity                0.e0  7253 7253  1.0   1.0E+00 cm/s
+SO4Bdv SO4  drydep velocity                0.e0  7254 7254  1.0   1.0E+00 cm/s
+SO4Cdv SO4  drydep velocity                0.e0  7255 7255  1.0   1.0E+00 cm/s
+SO4Ddv SO4  drydep velocity                0.e0  7256 7256  1.0   1.0E+00 cm/s
+MSAdv  MSA  drydep velocity                0.e0  7257 7257  1.0   1.0E+00 cm/s
+NH3dv  NH3  drydep velocity                0.e0  7258 7258  1.0   1.0E+00 cm/s
+NH4dv  NH4  drydep velocity                0.e0  7259 7259  1.0   1.0E+00 cm/s
+NITdv  NIT  drydep velocity                0.e0  7260 7260  1.0   1.0E+00 cm/s
+H2O2dv H2O2 drydep velocity                0.e0  7261 7261  1.0   1.0E+00 cm/s
+SAL1dv Seasalt fine                        0.e0  7262 7262  1.0   1.0E+00 cm/s
+SAL2dv Seasalt coarse                      0.e0  7263 7263  1.0   1.0E+00 cm/s
+###### RADON-LEAD-BERYLLIUM --------------------------------------------------
+#210Pb  210Pb drydep velocity               0.e0  7262 7262  1.0   1.0E+00 cm/s
+#7Be    7Be   drydep velocity               0.e0  7263 7263  1.0   1.0E+00 cm/s

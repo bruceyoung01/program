@@ -1,0 +1,232 @@
+Tue Jan 28 21:20:44 CST 2014
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	DATE : 2012-8-1_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0720110_e0721352_b03943_c20120801134829639141_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0721364_e0723006_b03943_c20120801134829639141_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0723018_e0724260_b03943_c20120801134829639141_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0724272_e0725514_b03943_c20120801134829639141_noaa_ops.h5
+(0)	nmlat = 37nmlon = 46
+
+Variable: smrad (parameter)
+Type: float
+Total Size: 40000 bytes
+            10000 values
+Number of Dimensions: 2
+Dimensions and sizes:	[DIM_002 | 100] x [DIM_003 | 100]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0,0)	ji = 0
+(0,1)	ji = 1
+(0)	2012-8-1_7==131350002
+(0,0)	ji = 37
+(0,1)	ji = 46
+(0)	2012-8-1_7==130770002
+(0,0)	ji = 37
+(0,1)	ji = 0
+(0)	2012-8-1_7==131510002
+(0,0)	ji = 25
+(0,1)	ji = 29
+(0)	2012-8-1_7==131210055
+(0,0)	ji = 28
+(0,1)	ji = 19
+(0)	2012-8-1_7==130890002
+(0,0)	ji = 13
+(0,1)	ji = 27
+(0)	2012-8-1_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	13.825
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	13.825
+(0)	color = 64
+(0)	scolor = 64
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.3
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.3
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.65
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.65
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	12.05
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	12.05
+(0)	color = 64
+(0)	scolor = 64
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17
+(0)	color = 88
+(0)	scolor = 88
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	-9999

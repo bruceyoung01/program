@@ -1,0 +1,184 @@
+PRO Hw5program
+
+;(1)-------------------------------------------------------------------------------------
+;Reading the number of lines in the file.
+lines = FILE_LINES('JulyTemp.txt')
+
+;Arrays declared.
+MeanTemp = FltArr(lines)
+MaxTemp = FltArr(lines)
+
+;x = daily mean
+;y = daily max
+
+;Reading in the file
+OPENR, iunit, 'JulyTemp.txt', /GET_LUN
+
+For i = 0, lines-1 DO BEGIN
+	READF, iunit, A, M
+	;Seperate the columns of data.
+   	MeanTemp[i] = A
+	MaxTemp[i] = M
+ENDFOR
+
+
+Result = Regress(MeanTemp, MaxTemp, Sigma = sigma, Const = const)
+
+b = Result[*]
+
+Print, "a: ", const, " C"	;26.41
+Print, "b: ", b, " C/mb"	;0.79
+
+SST = 0
+SSR = 0
+FOR i = 0, lines-1 do begin
+	SST_add = (MaxTemp(i) - Mean(MeanTemp))^(2.0)
+	SST = SST + SST_add
+	SSR_add = (MeanTemp(i) - Mean(MaxTemp))^(2.0)
+	SSR = SSR + SSR_add
+ENDFOR
+
+SSR = SSR*(b^(2.0))
+S = (1.0/(lines-2.0)) * (SST - SSR)
+
+Print, SQRT(S) 
+
+sigma_b = SQRT(S)/SQRT(TOTAL((MeanTemp-Mean(MeanTemp))^(2.0)))
+
+Print, (b - 0)/sigma_b
+
+R = SSR/SST
+Print, "R = ", R
+
+;setting plot device to ps
+SET_PLOT, 'PS'
+
+;Here is the filename for the graph
+DEVICE, Filename ="JulyTemp.ps"
+
+x = (FindGen(50)/2) + 60
+y =  0.79 * x + 26.41
+
+Plot, MeanTemp, MaxTemp, psym = 1, xstyle = 1, ystyle = 1
+OPlot, x, y
+xyouts, 65, 95, "y = 0.79*x + 26.41"
+xyouts, 65, 94, "R^2 = 0.610298"
+
+;Closing device
+DEVICE, /CLOSE
+
+;(2.)------------------------------------------------------------------------------------
+MeanTempNorm = (MeanTemp - Mean(MeanTemp))/stddev(MeanTemp)
+MaxTempNorm = (MaxTemp - Mean(MaxTemp))/stddev(MaxTemp)
+
+asl = PERMUTEST(MeanTempNorm, MaxTempNorm, TD)
+
+ResultTD = Sort(TD)		;Sorting the values
+SortTD = TD[Sort(TD)]		;Putting the sorted values into an array
+SizeTD = Size(TD)		;Implementing the size function of the array
+n = SizeTD[1]			;Getting the size of the array
+
+;Compute the quantiles. We can round up and down by using ceiling and floor functions
+q025 = ((n-1)*0.25)+1.0
+quantile25 = (SortTD[Ceil(q025-1)] + SortTD[Floor(q025-1)])/2.
+
+q075 = ((n-1)*0.75)+1.0
+quantile75 = (SortTD[Ceil(q075-1)] + SortTD[Floor(q075-1)])/2.
+
+;Computing IQR
+IQR = quantile75 - quantile25
+
+c = 2.6
+h = (c * IQR)/(n^(0.33333))
+
+;----------------------------------------------------------------------------------------
+;setting plot device to ps
+SET_PLOT, 'PS'
+
+;Here is the filename for the graph
+DEVICE, Filename ="Permutation.ps"
+
+Plot, Histogram(TD, binsize = h), Psym = 10, $
+	xstyle = 1, title = "Permutest", $
+	xtitle = "Permutation", ytitle = "Difference Between Means"
+
+;Closing device
+DEVICE, /CLOSE
+
+END
+;----------------------------------------------------------------------------------------
+FUNCTION PERMUTEST,A,B, TD
+;+
+; NAME:  
+;	PERMUTEST
+; PURPOSE: 
+;	Apply Fisher's Permutation Test for the equality of the means of two
+;	samples. This method is non-parametric and exact--and slow.
+;
+; CALLING SEQUENCE:
+;	asl = PERMUTEST( sample1, sample2, [ TD] )
+; INPUT:	
+;	SAMPLE1, SAMPLE2 = vectors containing samples A and B
+;
+; OUTPUT:
+;	ASL - PERMUTEST returns the Achieved Significance Level, or the 
+;	probability the two distributions are the same. A fraction 0. to 1.0.
+;
+; OPTIONAL OUTPUT: 
+;	TD = the distribution of the difference of the means
+; NOTE: 
+;	This is a SLOW routine. It may not be appropriate for large (~N > 1000) 
+;	samples, depending on the user's patience and the speed of his machine.
+; REVISION HISTORY:
+;	H.T. Freudenreich, HSTX, 2/1/95
+;-
+
+NLOOP = 1000  ; draw a thousand samples
+
+M=N_ELEMENTS(A)  &  N=N_ELEMENTS(B)
+MN=M+N
+
+IF MN GT 32767 THEN BEGIN
+  PRINT,' PERMUTEST: Too much data! Maximum = 32767 values, total'
+  RETURN,0.
+ENDIF
+
+C=[A,B]
+
+; Get the random number seed:  
+SEED=SYSTIME(1)*2.+1.
+
+M_INDICES=INTARR(M)
+TD=FLTARR(NLOOP)
+FOR I=0,NLOOP-1 DO BEGIN
+; Select M numbers at random from the combined vector, repeating none.
+
+  ORDER=INDGEN(MN)
+  INDICES=ORDER
+
+  FOR K = 0, M-1 DO BEGIN
+    O=ORDER(WHERE( ORDER GE 0, NLEFT ))
+    J=RANDOMU(SEED,1)*NLEFT
+    INDX=O(J)
+    M_INDICES(K) = FIX(INDX)
+    ORDER( INDX ) = -1
+  ENDFOR
+  A1=C(M_INDICES)
+; The remaining elements go into B1:
+  INDICES(M_INDICES)=-1
+  B1=C(WHERE(INDICES GE 0))
+  
+; Now perform the test:
+  TD(I) = MEAN(A1) - MEAN(B1)
+ENDFOR
+
+; Compare the actual difference of means to the distribution.
+T0=MEAN(A)-MEAN(B)
+Q=WHERE( ABS(TD) GT ABS(T0), NPTS )
+Print, NPTS
+CONF=FLOAT(NPTS)/FLOAT(NLOOP)
+PCONF=CONF*100.
+PRINT,'The distribution means are the same at a confidence level of ',PCONF,'%'
+
+RETURN,CONF
+END

@@ -1,0 +1,31 @@
+;  $ID: convert_met_em_time.ncl V01 11/14/2012 09:01 BRUCE EXP$
+;
+;******************************************************************************
+;  PROCEDURE convert_met_em_time READS met_em FILE NAME AND CONVERTS IT TO TIME, 
+;  INCLUDING YEAR, MONTH, DAY, HOUR
+;
+;  VARIABLES:
+;  ============================================================================
+;  (1 )
+;
+;  NOTES:
+;  ============================================================================
+;  (1 ) ORGINALLY WRITTEN BY BRUCE. (11/14/2012)
+;******************************************************************************
+
+undef("convert_met_em_time")
+procedure convert_met_em_time \
+          (met_em_filename  :string,   ndim  :integer, \ ; INPUT
+           year             :integer,  month :integer, \ ; OUTPUT
+           day              :integer,  hour  :integer)   ; OUTPUT
+
+begin
+;  DO # OF FILE NAME LOOP TO GET DATE AND TIME
+   do i = 0, ndim-1
+    year(i)  = stringtoint(str_get_cols(met_em_filename(i), 11, 14))
+    month(i) = stringtoint(str_get_cols(met_em_filename(i), 16, 17))
+    day(i)   = stringtoint(str_get_cols(met_em_filename(i), 19, 20))
+    hour(i)  = stringtoint(str_get_cols(met_em_filename(i), 22, 23))
+   end do
+return
+end

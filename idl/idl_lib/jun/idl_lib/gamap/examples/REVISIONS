@@ -1,0 +1,57 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/examples/
+last updated : 07/17/2008 10:09
+
+===================
+CTM_EXAMPLES.PRO
+===================
+      mgs, 20 Aug 1998: INITIAL VERSION
+      mgs, 22 Oct 1998: - adapted for new use of CTM_GET_DATA
+                          some more comments
+      mgs, 26 Oct 1998: - attached a few more comments about extended 
+                          use of ctm_get_data at end
+      mgs, 18 Nov 1998: - added call to CTM_MAKE_DATAINFO
+      bmy, 06 Oct 2006: GAMAP VERSION 2.05
+                        - Updated examples w/ newest GAMAP routines
+                        - Added examples w/ CTM_OVERLAY and
+                          FIND_CELLS_BY_COUNTRY
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now uses FILE_WHICH to find ctm.bpch.examples
+
+===================
+EXAMPLE_ANIM_TS.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.11
+
+===================
+EXAMPLE_ND48_ND49.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.11
+
+===================
+EXAMPLE_OVERPLOT.PRO
+===================
+      mgs, 21 May 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+EXAMPLE_POLAR.PRO
+===================
+      mgs, 20 Aug 1998: INITIAL VERSION
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now uses FILE_WHICH to find ctm.bpch.examples
+                        - rewritten for clarity
+      bmy, 14 Mar 2008: GAMAP VERSION 2.12
+                        - Bug fix: save output from FILE_WHICH to
+                          FILE (instead of FILENAME)
+                              
+
+===================
+EXAMPLE_TVMAP.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.11
+
+===================
+EXAMPLES_MANIP_4D.PRO
+===================
+      phs, 6 Jun 2007: GAMAP VERSION 2.10
+                        - Initial version

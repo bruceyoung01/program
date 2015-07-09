@@ -1,0 +1,18 @@
+#!/bin/sh
+#SBATCH --job-name=write_emission
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=40240
+#SBATCH --time=23:00:00
+#SBATCH --error=write_emission_%J.out
+#SBATCH --output=write_emission_%J.stderr
+#SBATCH --partition=jwang7
+##SBATCH --qos=normal
+
+
+#change to job directory
+cd /lustre/work/jwang7/bruceyoung01/model/ncl/smoke_emission/write_emission
+
+#run program
+stdbuf -o0 -e0 ncl write_emission_part.ncl
+

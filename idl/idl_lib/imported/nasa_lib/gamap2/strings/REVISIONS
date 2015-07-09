@@ -1,0 +1,224 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/strings/
+last updated : 07/17/2008 10:09
+
+===================
+FORMSTRLEN.PRO
+===================
+      mgs, 27 Oct 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments 
+
+===================
+GET_DEFAULTFORMAT.PRO
+===================
+      mgs, 17 Mar 1999: VERSION 1.00
+      mgs, 25 Mar 1999: - added DEFAULTLEN keyword
+      mgs, 19 May 1999: - DEFAULTLEN now converted to string.
+                        - added THRESHOLD keyword
+      bmy, 27 Sep 2002: TOOLS VERSION 1.51
+                        - made default exponential format e12.2
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ISALGEBRAIC.PRO
+===================
+      bmy, 17 Nov 1998: VERSION 1.00
+      mgs, 17 Nov 1998: - removed INVERT keyword. It's 
+                          simply 1-isalgebraic
+                        - added test for '.'
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ISALNUM.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998  VERSION 1.10
+                        - now uses ISALPHA and ISDIGIT
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ISALPHA.PRO
+===================
+      bmy, 29 May 1998: VERSION 1.00
+      bmy, 01 Jun 1998: - now returns 0 for condition FALSE
+                        - fixed bug that allowed byte values from
+                          91-96 to be treated as letters
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998  VERSION 1.10
+                        - now uses ISUPPER and ISLOWER 
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ISDIGIT.PRO
+===================
+      bmy, 29 May 1998: VERSION 1.00
+      bmy, 01 Jun 1998: - now returns 0 for condition FALSE
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998  VERSION 1.10
+                        - now can analyze an entire string
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ISGRAPH.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998  VERSION 1.10
+                        - now can analyze an entire string
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ISLOWER.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998: VERSION 1.10
+                        - now can analyze entire strings
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ISPRINT.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998: VERSION 1.10
+                        - now uses ISGRAPH
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ISSPACE.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998: - now use BYTE function in where statement
+                          instead of hardwired constants (where
+                          possible)
+      bmy, 02 Jun 1998: VERSION 1.10
+                        - now can analyze an entire string 
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ISUPPER.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998: VERSION 1.10
+                        - now can analyze entire strings
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+REPLACE_TOKEN.PRO
+===================
+      bmy, 23 Sep 1998: VERSION 1.00
+      bmy, 24 Sep 1998: - added VERBOSE keyword and improved comments
+      mgs, 24 Sep 1998: - improved error handling
+                        - TOKEN and TEXT may now be arrays
+                        - *or* TOKEN may be a structure
+                        - TEXT is trimmed
+                        - added FORMAT and TFORMAT keywords
+      mgs, 23 Dec 1998: - added wildcard (isarray) functionality
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - updated comments
+
+===================
+RSEARCH.PRO
+===================
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+      bmy, 14 Apr 2005: TOOLS VERSION 2.04
+                        - Now uses CALL_FUNCTION to call STRPOS
+                          and RSTRPOS so as to avoid bugs at
+                          compile-time 
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+STR2BYTE.PRO
+===================
+      mgs, 24 Aug 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments
+
+===================
+STR_SIZE.PRO
+===================
+Written by: David Fanning, 17 DEC 96.
+Added a scaling factor to take into account the aspect ratio
+   of the window in determing the character size. 28 Oct 97. DWF
+
+===================
+STRBREAK.PRO
+===================
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+      bmy, 17 Jan 2003: TOOLS VERSION 1.52
+                        - now use CALL_FUNCTION to call both STRSPLIT 
+                          and STR_SEP functions for backwards compatibility
+      bmy, 14 Oct 2003: TOOLS VERSION 1.53
+                        - deleted obsolete code
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+STRCHEM.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      mgs, 02 Jun 1998: VERSION 1.10 - rewritten
+      mgs, 11 Jun 1998: - removed IS_ION keyword
+                        - changed default specialchars for SUPER
+      mgs, 22 Sep 1998: - added TRIM keyword
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments, cosmetic changes
+
+===================
+STRREPL.PRO
+===================
+      mgs, 02 Jun 1998: VERSION 1.00
+      mgs, 24 Feb 2000: - rewritten
+                        - now accepts character argument
+                        - added IGNORECASE keyword
+      mgs, 26 Aug 2000: - changed copyright to open source
+                        - added FOLD_CASE keyword
+      bmy, 28 Oct 2003: VERSION 1.01
+                        - Need to test if FROMCHAR is a character
+                          or a byte type.  This will allow STRREPL
+                          to replace non-printable ASCII characters
+                          such as Horizontal TAB ( BYTE(9B) ).  
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments
+
+===================
+STRRIGHT.PRO
+===================
+      mgs, 19 Nov 1997: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments
+
+===================
+STRSCI.PRO
+===================
+      bmy, 28 May 1998: INITIAL VERSION
+                        - now returns string of the form A x 10
+      mgs, 29 May 1998: - bug fix: now allows negative numbers
+                        - keyword MANTISSA_ONLY added
+                        - default format changed to f12.2
+      bmy, 02 Jun 1998: - renamed to STRSCI 
+                          ("STRing SCIentific notation")
+      mgs, 03 Jun 1998: - added TRIM keyword
+      mgs, 22 Sep 1998: - added SHORT keyword
+                        - modified handling of TRIM keyword
+      mgs, 24 Sep 1998: - bug fix with SHORT flag
+bmy & mgs, 02 Jun 1999: - now can handle DATA=0.0 correctly
+                        - updated comments
+      mgs, 03 Jun 1999: - can now also handle values lt 1 ;-)
+                        - and doesn't choke on arrays
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - updated comments
+
+===================
+STRWHERE.PRO
+===================
+      mgs, 02 Jun 1998: VERSION 1.00
+      bmy, 30 Jun 1998: - now returns COUNT, the number 
+                          of matches that are found (this is
+                          analogous to the WHERE command)
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10

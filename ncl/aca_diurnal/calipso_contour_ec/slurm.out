@@ -1,0 +1,242 @@
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-01T01-03-08ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-01T02-41-58ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-01T13-21-39ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-01T15-00-34ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-02T00-07-21ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-02T01-46-16ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-02T12-25-57ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-02T14-04-52ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-03T00-50-34ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-03T02-29-24ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-03T13-09-05ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-03T14-48-01ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-03T23-54-47ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-04T01-33-42ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-04T12-13-23ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-04T13-52-14ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-05T00-37-55ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-05T02-16-50ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-05T12-56-32ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-05T14-35-22ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-05T23-42-13ZN.hdf
+warning:ContourPlotInitialize: no valid values in scalar field; ContourPlot not possible:[errno=1101]
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-06T01-21-08ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-06T12-00-45ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-06T13-39-40ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-07T00-25-21ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-07T02-04-16ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-07T12-43-58ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-07T14-22-48ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-08T01-08-34ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-08T02-47-30ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-08T13-27-11ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-08T15-06-01ZD.hdf
+warning:ContourPlotInitialize: no valid values in scalar field; ContourPlot not possible:[errno=1101]
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-09T00-12-52ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-09T01-51-43ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-09T12-31-24ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-09T14-10-19ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-10T00-56-01ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-10T02-34-51ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-10T13-14-32ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-10T14-53-27ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-11T00-00-19ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-11T01-39-09ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-11T12-18-50ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-11T13-57-40ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-12T00-43-27ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-12T02-22-17ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-12T13-01-58ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-12T14-40-49ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-12T23-47-40ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-13T01-26-35ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-13T12-06-11ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-13T13-45-07ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-14T00-30-48ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-14T02-09-43ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-14T12-49-20ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-14T14-28-15ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-15T01-13-56ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-15T11-53-38ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-15T13-32-28ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-16T00-18-14ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-16T01-57-09ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-16T12-36-46ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-16T14-15-36ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-17T01-01-22ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-17T02-40-13ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-17T13-19-54ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-17T14-58-44ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-18T00-05-40ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-18T01-44-31ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-18T12-24-07ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-18T14-03-02ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-19T00-48-44ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-19T02-27-39ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-19T13-07-15ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-19T14-46-10ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-19T23-53-02ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-20T01-31-57ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-20T12-11-33ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-20T13-50-23ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-21T00-36-10ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-21T02-15-05ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-21T12-54-41ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-21T14-33-32ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-21T23-40-28ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-22T01-19-18ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-22T11-58-54ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-22T13-37-45ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-23T00-23-36ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-23T02-02-26ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-23T12-42-03ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-23T14-20-53ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-24T01-06-44ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-24T02-45-35ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-24T13-25-11ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-24T15-04-01ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-25T00-10-57ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-25T01-49-48ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-25T12-29-24ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-25T14-08-19ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-26T00-54-06ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-26T02-32-56ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-26T13-12-32ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-26T14-51-27ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-26T23-58-19ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-27T01-37-14ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-27T12-16-50ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-27T13-55-40ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-28T00-41-27ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-28T02-20-22ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-28T12-59-58ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-28T14-38-49ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-28T23-45-45ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-29T01-24-35ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-29T12-04-11ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-29T13-43-02ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-30T00-28-53ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-30T02-07-43ZN.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+(0)	Now Processing : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-09-30T12-47-20ZD.hdf
+warning:ContourPlotSetValues: Data values out of range of levels set by MANUALLEVELS mode
+

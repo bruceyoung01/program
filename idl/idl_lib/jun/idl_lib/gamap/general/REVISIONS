@@ -1,0 +1,222 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/general/
+last updated : 07/17/2008 10:09
+
+===================
+ADD_SEPARATOR.PRO
+===================
+      bmy, 03 May 2002: TOOLS VERSION 1.50
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CHOICE.PRO
+===================
+      mgs, 26 Sep 1997: VERSION 1.00
+      mgs, 17 Nov 1998: - added DEFAULT and NOABORT keywords
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CODE_TREE.PRO
+===================
+     99/5/18 Philip Cameron-Smith, Harvard 
+       Initial code.
+     99/5/21 Philip Cameron-Smith, Harvard 
+       Have included some of my utilities to allow easy distribution.
+       Added '1' to names to ensure no future conflicts.
+     99/5/24 Philip Cameron-Smith, Harvard 
+       Now removes tabs and strings.
+       Various other improvements.
+     99/5/25 Philip Cameron-Smith, Harvard 
+       Reversed order of path and filename arguments
+       Converted a "print" to a "printf,lun" to stop lines running
+       on when printing to a file.
+       Improved check for ENTRY before SUBROUTINE.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CONVERT_INDEX.PRO
+===================
+      bmy, 07 Oct 1998: VERSION 1.00
+      mgs, 07 Oct 1998: VERSION 1.20
+             - made result etc LONG arrays
+             - allow sany dimensions now
+             - added reverse operation if index is multidimensional
+             - added FORTRAN keyword 
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CONVERT_LON.PRO
+===================
+      mgs, 25 Aug 1998: VERSION 1.00
+      mgs, 19 May 1999: - now makes sure that longitude range does
+                          not exceed -180..180 or 0..360
+      mgs, 24 Jun 1999: - bug fix: choked at missing values 
+      bmy, 24 May 2007: TOOLS VERSION 2.06
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments
+      phs, 19 Nov 2007: GAMAP VERSION 2.11
+                        - now accept scalar
+
+===================
+DATATYPE.PRO
+===================
+      bmy, 26 Jul 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+DEFAULT_DIRS.PRO
+===================
+      mgs, 12 May 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+DEFAULT_GTE.PRO
+===================
+      mgs, 12 May 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+DEFAULT_RANGE.PRO
+===================
+      mgs, 29 Sep 1998: VERSION 1.00
+      mgs, 17 Nov 1998: - added string handling
+                        - added RANGE and NOSORT keywords
+      bmy, 13 Jul 2001: TOOLS VERSION 1.48
+                        - now uses new STRREPL function from mgs
+      bmy, 16 Jul 2001: - bug fix: only call STRREPL if there are
+                          non-algebraic characters to be replaced
+                        - eliminate call to obsolete STR_SEP function
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+                        - now call STRBREAK wrapper routine from
+                          the TOOLS subdirectory for backwards
+                          compatiblity for string-splitting
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+DISTRIBUTE.PRO
+===================
+      mgs, 16 Nov 1997: VERSION 1.00
+      mgs, 20 Nov 1997: - added OUTFILE and NO_IDL keywords
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now use IDL routine RESOLVE_ALL
+                        - Now use OPEN_FILE instead of OPENW
+                        - Updated comments, cosmetic changes
+
+===================
+EXTRACT_COMMENTS.PRO
+===================
+      mgs, 10 Nov 1997: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now use version-independent STRBREAK
+                          routine instead of older STR_SEP routine
+
+===================
+GETDATABLOCK.PRO
+===================
+      mgs, 22 Apr 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments, cosmetic changes
+
+===================
+IN_RANGE.PRO
+===================
+      bmy, 24 Sep 1997: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments
+
+===================
+IND_COMB.PRO
+===================
+      mgs, 04 Dec 1997: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - updated comments, cosmetic changes
+
+===================
+INV_INDEX.PRO
+===================
+      mgs, 10 May 1997: VERSION 1.00
+      mgs, 18 Aug 1997: - added template and check if n_elements(index) eq 0
+      mgs, 05 Apr 1999: - bug fix: needed to make sure result is type long
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+IS_DEFINED.PRO
+===================
+D.Fanning, 02 Jul 1998: INITIAL VERSION
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments, cosmetic changes
+
+===================
+IS_SELECTED.PRO
+===================
+      mgs, 19 Aug 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+LITTLE_ENDIAN.PRO
+===================
+R.Mallozi, 02 Jul 1998: INITIAL VERSION
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+LOOP.PRO
+===================
+      mgs, 05 Dec 1997: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+MAKE_SELECTION.PRO
+===================
+      mgs, 28 Aug 1998: VERSION 1.00
+      mgs, 29 Aug 1998: - changed behaviour and added ONLY_VALID keyword
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+N_UNIQ.PRO
+===================
+      bmy, 17 Nov 1998: VERSION 1.00
+      mgs, 17 Nov 1998: - little streamlining
+      mgs, 16 Mar 1999: - don't print out warning for empty argument
+                          and return 0 instead of -1
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+PAUSE.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+PWD.PRO
+===================
+      mgs, 23 Dec 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+RESOLVE_EVERY.PRO
+===================
+Written by:
+MS, RSI, January, 1995.
+MS, RSI, April, 1997, Added SKIP_ROUTINES keyword.
+     mgs, Harvard, 21 Apr 1998: use findfile before trying to resolve
+                                a routine
+     bmy, 28 May 2004: TOOLS VERSION 2.02 
+                        - Now use MFINDFILE which will call FILE_SEARCH
+                          for IDL 5.5+ or FINDFILE for IDL 5.4-
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+UNDEFINE.PRO
+===================
+     Written by David Fanning, 8 June 97, from an original program
+     given to me by Andrew Cool, DSTO, Adelaide, Australia.
+     Simplified program so you can pass it an 
+       undefined variable. :-) 17 May 2000. DWF
+     Simplified it even more by removing the 
+       unnecessary SIZE function. 28 June 2002. DWF.
+
+===================
+YESNO.PRO
+===================
+      mgs, 22 Jan 1999: VERSION 1.00
+      mgs, 23 Mar 1999: - added /QUIT option
+                        - bug fix: '0' was recognized as 'Y'
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10

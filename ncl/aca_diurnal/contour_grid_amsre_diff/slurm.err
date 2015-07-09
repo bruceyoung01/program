@@ -1,0 +1,2 @@
+/cm/local/apps/slurm/var/spool/job846813/slurm_script: line 8: 10776 Killed                  ncl contour_grid_amsre_diff.ncl
+slurmstepd: Exceeded step memory limit at some point. oom-killer likely killed a process.

@@ -1,0 +1,23 @@
+
+The pro in this directory is mainly used to calculate the results. It contains many pros for calculating grid data (daily, monthly)
+
+(1). daily_grid_LST : change MODIS LST resolution to 0.5*0.5 degree
+
+(2). daily_grid_LST_AOD : change MODIS LST resolution to 0.5*0.5 degree under the condition of AOD.
+(a), plot_LST_grid_daily_AODl5_v1.pro : AOD>0.5
+(b), plot_LST_grid_daily_AODs2_v1.pro : AOD<0.2
+(c), plot_LST_grid_daily_AODs5_v1.pro : AOD<0.5
+(d), select_data_fl.pro : select the same time(the same file) between MODIS LST products and MODIS AOD products
+(e), process_day.pro : read the time from LST, AOD, and fire products
+
+(3), daily_grid_LST_fire_AOD : change MODIS LST resolution to 0.5*0.5 degree under the condition of AOD and with fire pixel.
+(a), plot_LST_grid_daily_fire_AODl5_v1.pro : AOD>0.5
+(b), plot_LST_grid_daily_fire_AODs2_v1.pro : AOD<0.2
+(c), plot_LST_grid_daily_fire_AODs5_v1.pro : AOD<0.5
+
+(4), daily_grid_LST_fire_no : change MODIS LST resolution to 0.5*0.5 degree under the condition of without fire pixel
+(a), plot_LST_grid_daily_fire_v1.pro : main code
+(b), select_data_fl.pro : select the LST and fire produts with the same time
+
+
+Sept 15 2010

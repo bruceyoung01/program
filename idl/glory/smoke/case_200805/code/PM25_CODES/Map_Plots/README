@@ -1,0 +1,17 @@
+
+IDL codes in this directory:
+============================
+
+  (1) cut_data_v1.2.pro 
+      Cut the data "Simple_New_RD_501_88502_YYYY-0.txt" for each site, and store
+      those data as "EPAAIRS_PM_YYYY_AA_ST_CON_SITE.DAT", where
+      YYYY: year
+      AA:   class
+      ST:   Sate code
+      CON:  county code
+      SITE: site code
+
+  (2) avgPM_eachhour.pro
+      
+  
+  (3) avg_each_site.pro

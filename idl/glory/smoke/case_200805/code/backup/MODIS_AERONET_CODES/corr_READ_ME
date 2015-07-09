@@ -1,0 +1,5 @@
+;corr.pro reads in the data for the desired station for MODIS (both satellites)
+;and for AERONET.  It then finds the aqua/aeronet pairs and the terra/aeronet
+;pairs.  It interpolates the AERONET data to obtain a 550 nm band.  Then it 
+;computes the monthly means for all of the pairs.  Lastly, it prints out new
+;text files to be used for computing statistics in Excel.

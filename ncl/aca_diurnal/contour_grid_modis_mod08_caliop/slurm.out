@@ -1,0 +1,129 @@
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	Date : 2007-08-01
+(0)	Now Processing : MOD08_D3.A2007213.006.2015002081116.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-01T12-28-58ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-01T14-07-53ZD.hdf
+(0)	Date : 2007-08-02
+(0)	Now Processing : MOD08_D3.A2007214.006.2015002091418.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-02T13-12-11ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-02T14-51-02ZD.hdf
+(0)	Date : 2007-08-03
+(0)	Now Processing : MOD08_D3.A2007215.006.2015002090716.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-03T12-16-29ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-03T13-55-20ZD.hdf
+(0)	Date : 2007-08-04
+(0)	Now Processing : MOD08_D3.A2007216.006.2015002085225.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-04T12-59-38ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-04T14-38-33ZD.hdf
+(0)	Date : 2007-08-05
+(0)	Now Processing : MOD08_D3.A2007217.006.2015002101601.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-05T12-03-56ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-05T13-42-51ZD.hdf
+(0)	Date : 2007-08-06
+(0)	Now Processing : MOD08_D3.A2007218.006.2015002093406.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-06T12-47-09ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-06T14-26-04ZD.hdf
+(0)	Date : 2007-08-07
+(0)	Now Processing : MOD08_D3.A2007219.006.2015002101607.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-07T13-30-22ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-07T15-09-12ZD.hdf
+(0)	Date : 2007-08-08
+(0)	Now Processing : MOD08_D3.A2007220.006.2015002171541.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-08T12-34-40ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-08T14-13-30ZD.hdf
+(0)	Date : 2007-08-09
+(0)	Now Processing : MOD08_D3.A2007221.006.2015002201303.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-09T13-17-48ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-09T14-56-43ZD.hdf
+(0)	Date : 2007-08-10
+(0)	Now Processing : MOD08_D3.A2007222.006.2015002183705.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-10T12-22-06ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-10T14-01-01ZD.hdf
+(0)	Date : 2007-08-11
+(0)	Now Processing : MOD08_D3.A2007223.006.2015002172437.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-11T13-05-19ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-11T14-44-09ZD.hdf
+(0)	Date : 2007-08-12
+(0)	Now Processing : MOD08_D3.A2007224.006.2015002213412.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-12T12-09-37ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-12T13-48-27ZD.hdf
+(0)	Date : 2007-08-13
+(0)	Now Processing : MOD08_D3.A2007225.006.2015002213744.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-13T12-52-45ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-13T14-31-36ZD.hdf
+(0)	Date : 2007-08-14
+(0)	Now Processing : MOD08_D3.A2007226.006.2015002213859.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-14T11-57-03ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-14T13-35-54ZD.hdf
+(0)	Date : 2007-08-15
+(0)	Now Processing : MOD08_D3.A2007227.006.2015002223606.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-15T12-40-11ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-15T14-19-07ZD.hdf
+(0)	Date : 2007-08-16
+(0)	Now Processing : MOD08_D3.A2007228.006.2015002215641.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-16T13-23-25ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-16T15-02-15ZD.hdf
+(0)	Date : 2007-08-17
+(0)	Now Processing : MOD08_D3.A2007229.006.2015002213444.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-17T12-27-38ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-17T14-06-33ZD.hdf
+(0)	Date : 2007-08-18
+(0)	Now Processing : MOD08_D3.A2007230.006.2015003022916.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-18T13-10-51ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-18T14-49-41ZD.hdf
+(0)	Date : 2007-08-19
+(0)	Now Processing : MOD08_D3.A2007231.006.2015002231551.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-19T12-15-09ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-19T13-53-59ZD.hdf
+(0)	Date : 2007-08-20
+(0)	Now Processing : MOD08_D3.A2007232.006.2015002215641.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-20T12-58-17ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-20T14-37-12ZD.hdf
+(0)	Date : 2007-08-21
+(0)	Now Processing : MOD08_D3.A2007233.006.2015003000127.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-21T12-02-35ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-21T13-41-25ZD.hdf
+(0)	Date : 2007-08-22
+(0)	Now Processing : MOD08_D3.A2007234.006.2015003015528.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-22T12-45-38ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-22T14-24-33ZD.hdf
+(0)	Date : 2007-08-23
+(0)	Now Processing : MOD08_D3.A2007235.006.2015003014809.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-23T13-28-51ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-23T15-07-42ZD.hdf
+(0)	Date : 2007-08-24
+(0)	Now Processing : MOD08_D3.A2007236.006.2015003013214.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-24T12-33-04ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-24T14-12-00ZD.hdf
+(0)	Date : 2007-08-25
+(0)	Now Processing : MOD08_D3.A2007237.006.2015002234440.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-25T13-16-17ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-25T14-55-08ZD.hdf
+(0)	Date : 2007-08-26
+(0)	Now Processing : MOD08_D3.A2007238.006.2015003000726.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-26T12-20-30ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-26T13-59-26ZD.hdf
+(0)	Date : 2007-08-27
+(0)	Now Processing : MOD08_D3.A2007239.006.2015002231956.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-27T13-03-39ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-27T14-42-34ZD.hdf
+(0)	Date : 2007-08-28
+(0)	Now Processing : MOD08_D3.A2007240.006.2015002234650.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-28T12-07-57ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-28T13-46-52ZD.hdf
+(0)	Date : 2007-08-29
+(0)	Now Processing : MOD08_D3.A2007241.006.2015002233722.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-29T12-51-05ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-29T14-30-00ZD.hdf
+(0)	Date : 2007-08-30
+(0)	Now Processing : MOD08_D3.A2007242.006.2015002214021.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-30T11-55-23ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-30T13-34-18ZD.hdf
+(0)	Date : 2007-08-31
+(0)	Now Processing : MOD08_D3.A2007243.006.2015002200042.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-31T12-38-31ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmAPro-Prov-V3-01.2007-08-31T14-17-26ZD.hdf

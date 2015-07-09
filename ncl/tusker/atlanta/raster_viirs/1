@@ -1,0 +1,21 @@
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+fatal:syntax error: line 32 in file /work/jwang7/bruceyoung01/model/ncl/ncl_lib/procedure/atlanta/read_viirs_pickup.ncl before or near : 
+      rad(0:nrow-5, i)      = stringtofloat(str_get_field(data(i), 10:
+---------------------------------------------------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 35 in file /work/jwang7/bruceyoung01/model/ncl/ncl_lib/procedure/atlanta/read_viirs_pickup.ncl
+
+fatal:syntax error: line 61 in file raster_viirs.ncl before or near \n 
+     (dir, filename(i), date, rad)
+----------------------------------^
+
+fatal:syntax error: possibly an undefined procedure
+fatal:Syntax Error in block, block not executed
+fatal:error at line 68 in file raster_viirs.ncl
+
+

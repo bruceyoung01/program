@@ -1,0 +1,18 @@
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	NOW PROCESSING : 2010-01-01wrfem_00to12z_d01
+(0)	FLAMBE2010-01-01 1:00
+(0)	FINN2010-01-01 1:00
+(0)	GFED2010-01-01 1:00
+(0)	FEER_SEVIRI2010-01-01 1:00
+(0)	GFAS2010-01-01 1:00
+(0)	GBBEP2010-01-01 1:00
+fatal:The result of the conditional expression yields a missing value. NCL can not determine branch, see ismissing function
+fatal:["Execute.c":7743]:Execute: Error occurred at or near line 53 in file /work/jwang7/bruceyoung01/model/ncl/ncl_lib/procedure/smoke_emission/calculate_statistics.ncl
+
+fatal:["Execute.c":7743]:Execute: Error occurred at or near line 156 in file write_emission.ncl
+
+

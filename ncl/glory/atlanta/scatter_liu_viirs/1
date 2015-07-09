@@ -1,0 +1,359 @@
+Wed Feb  6 15:39:42 CST 2013
+Wed Feb  6 15:39:51 CST 2013
+Wed Feb  6 15:40:00 CST 2013
+Wed Feb  6 15:40:11 CST 2013
+Wed Feb  6 15:40:20 CST 2013
+Wed Feb  6 15:40:26 CST 2013
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+
+
+Variable: start_jd
+Type: integer
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	2456294
+(0)	DATE : 2013-1-1_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130101_t0751087_e0752329_b06114_c20130101142605946136_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130101_t0752341_e0753583_b06114_c20130101142605946136_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130101_t0753596_e0755237_b06114_c20130101142605946136_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130101_t0755250_e0756491_b06114_c20130101142605946136_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	DATE : 2013-1-2_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130102_t0732131_e0733373_b06128_c20130102140612616653_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130102_t0733385_e0735027_b06128_c20130102135502169872_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130102_t0735039_e0736281_b06128_c20130102135502169872_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130102_t0736293_e0737535_b06128_c20130102135502169872_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	DATE : 2013-1-3_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0713174_e0714416_b06142_c20130103134609643688_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0714428_e0716070_b06142_c20130103134609643688_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0716082_e0717324_b06142_c20130103134545880210_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0717336_e0718578_b06142_c20130103134545880210_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0718590_e0720232_b06142_c20130103134545880210_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	DATE : 2013-1-4_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0654218_e0655459_b06156_c20130104131938117232_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0655472_e0657114_b06156_c20130104131938117232_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0657126_e0658368_b06156_c20130104131938117232_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0658380_e0700022_b06156_c20130104132907258446_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	DATE : 2013-1-6_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130106_t0758561_e0800202_b06185_c20130106141611720137_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130106_t0800215_e0801457_b06185_c20130106142600394386_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130106_t0801469_e0803111_b06185_c20130106142600394386_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	9.295
+(0)	DATE : 2013-1-7_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130107_t0738350_e0739592_b06199_c20130107140440661185_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130107_t0740004_e0741246_b06199_c20130107140440661185_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130107_t0741258_e0742500_b06199_c20130107140440661185_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130107_t0742512_eWed Feb  6 15:40:35 CST 2013
+Wed Feb  6 15:40:44 CST 2013
+Wed Feb  6 15:40:53 CST 2013
+Wed Feb  6 15:41:00 CST 2013
+Wed Feb  6 15:41:05 CST 2013
+Wed Feb  6 15:41:14 CST 2013
+Wed Feb  6 15:41:23 CST 2013
+0744154_b06199_c20130107151207291977_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	9.523334
+(0)	DATE : 2013-1-8_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0719411_e0721053_b06213_c20130108134633369611_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0721065_e0722307_b06213_c20130108134633369611_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0722320_e0723561_b06213_c20130108134633369611_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0723574_e0725215_b06213_c20130108134633369611_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	17.41
+(0)	DATE : 2013-1-9_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130109_t0700455_e0702097_b06227_c20130109133547559255_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130109_t0702109_e0703351_b06227_c20130109133749190516_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130109_t0703363_e0705005_b06227_c20130109133749190516_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130109_t0705017_e0706259_b06227_c20130109133749190516_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	19.8525
+(0)	DATE : 2013-1-10_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130110_t0643152_e0644394_b06241_c20130110130149069111_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130110_t0644406_e0646048_b06241_c20130110130846522761_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130110_t0646061_e0647302_b06241_c20130110130846522761_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	19.25
+(0)	DATE : 2013-1-11_8
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130111_t0805198_e0806440_b06256_c20130111142941186288_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130111_t0806452_e0808094_b06256_c20130111142941186288_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	14.775
+(0)	DATE : 2013-1-12_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130112_t0744587_e0746229_b06270_c20130112142130713848_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130112_t0746241_e0747483_b06270_c20130112141045194527_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130112_t0747495_e0749137_b06270_c20130112141045194527_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130112_t0749149_e0750391_b06270_c20130112141045194527_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	18.91
+(0)	DATE : 2013-1-13_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130113_t0726031_e0727273_b06284_c20130113144740670820_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130113_t0727285_e0728527_b06284_c20130113144740670820_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130113_t0728539_e0730181_b06284_c20130113141146146419_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130113_t0730193_e0731435_b06284_c20130113141146146419_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	13.03167
+(0)	DATE : 2013-1-14_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130114_t0707074_e0708316_b06298_c20130114132730327407_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130114_t0708328_e07Wed Feb  6 15:41:32 CST 2013
+Wed Feb  6 15:41:39 CST 2013
+09570_b06298_c20130114132730327407_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130114_t0709582_e0711224_b06298_c20130114132730327407_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130114_t0711236_e0712478_b06298_c20130114133502999299_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	14.78917
+(0)	DATE : 2013-1-15_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130115_t0649389_e0651031_b06312_c20130115132342458963_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130115_t0651043_e0652285_b06312_c20130115132342458963_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130115_t0652298_e0653539_b06312_c20130115132342458963_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	8.891597
+(0)	DATE : 2013-1-17_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0751224_e0752466_b06341_c20130117142054549609_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0752478_e0754120_b06341_c20130117142054549609_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0754132_e0755374_b06341_c20130117142054549609_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0755386_e0757028_b06341_c20130117142133284648_noaa_ops.h5
+
+
+Variable: select_pm (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+
+
+Variable: select_aod
+Type: float
+Total Size: 112 bytes
+            28 values
+Number of Dimensions: 1
+Dimensions and sizes:	[28]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.2030196
+(1)	0.189502
+(2)	0.3556565
+(3)	2.829069
+(4)	0.1175827
+(5)	1.071459
+(6)	3.172587
+(7)	0.6723928
+(8)	0.6917453
+(9)	0.03891594
+(10)	0.3201024
+(11)	1.050965
+(12)	0.1039598
+(13)	0.226081
+(14)	0.1747826
+(15)	-999
+(16)	-999
+(17)	-999
+(18)	-999
+(19)	-999
+(20)	-999
+(21)	-999
+(22)	-999
+(23)	-999
+(24)	-999
+(25)	-999
+(26)	-999
+(27)	-999
+
+
+Variable: select_pm
+Type: float
+Total Size: 112 bytes
+            28 values
+Number of Dimensions: 1
+Dimensions and sizes:	[28]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(1)	-999
+(2)	-999
+(3)	-999
+(4)	9.295
+(5)	9.523334
+(6)	17.41
+(7)	19.8525
+(8)	19.25
+(9)	14.775
+(10)	18.91
+(11)	13.03167
+(12)	14.78917
+(13)	8.891597
+(14)	-999
+(15)	-999
+(16)	-999
+(17)	-999
+(18)	-999
+(19)	-999
+(20)	-999
+(21)	-999
+(22)	-999
+(23)	-999
+(24)	-999
+(25)	-999
+(26)	-999
+(27)	-999

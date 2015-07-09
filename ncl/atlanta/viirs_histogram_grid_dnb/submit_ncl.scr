@@ -1,0 +1,15 @@
+#!/bin/sh
+#PBS -N ncl3
+#PBS -l select=1
+#PBS -l walltime=72:00:00
+#PBS -l mem=6Gb
+#PBS -o ncl.stdout
+#PBS -e ncl.stderr
+#PBS -V
+
+#change to job directory
+cd /work/jwang7/bruceyoung01/model/ncl/atlanta/viirs_histogram_grid_dnb/
+#set up environmental variables
+
+#run program
+stdbuf -o0 -e0 ncl viirs_histogram_grid_dnb.ncl &>ncl_run.log

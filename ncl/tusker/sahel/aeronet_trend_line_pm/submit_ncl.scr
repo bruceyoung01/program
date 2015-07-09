@@ -1,0 +1,15 @@
+#!/bin/sh
+#PBS -N aeronet_pm
+#PBS -l select=1
+#PBS -l walltime=10:00:00
+#PBS -l mem=32Gb
+#PBS -o ncl.stdout
+#PBS -e ncl.stderr
+#PBS -V
+
+#change to job directory
+cd /work/jwang7/bruceyoung01/model/ncl/sahel/aeronet_trend_line_pm/
+#set up environmental variables
+
+#run program
+stdbuf -o0 -e0 ncl aeronet_trend_line_daily_pm.ncl &>ncl_run.log

@@ -1,0 +1,12 @@
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	Complete = FEER_SEVIRI
+(0)	Complete = FINN
+(0)	Complete = FLAMBE
+(0)	Complete = GBBEP
+(0)	Complete = GFAS
+(0)	Complete = GFED
+(0)	Complete = QFED

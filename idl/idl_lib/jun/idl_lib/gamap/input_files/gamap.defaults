@@ -1,0 +1,100 @@
+#==============================================================================
+# $Id: gamap.defaults,v 1.2 2007/11/21 18:23:11 bmy Exp $
+#
+# GAMAP v2-11 (26 Nov 2007)  Contact: yantosca@seas.harvard.edu
+#
+# "gamap.defaults".  This file lists default options for GAMAP v2-11+.
+# It is read into GAMAP by the routine "gamap_init.pro".
+#
+# NOTES:
+# (1) Lines beginning with '#' are comment lines.
+#==============================================================================
+
+#------------------------------------------------------------------------------
+# Default Modelname and Resolution 
+# (example: "GISS_II_PRIME 4x5   (23L)" )
+#------------------------------------------------------------------------------
+
+MODELNAME = GEOS4_30L 4x5 (30L)
+
+#------------------------------------------------------------------------------
+# File path for model output files
+# Unix      Format: /as1/scratch/bmy/*pch*
+# Windows   Format: C:\scratch\*pch*
+# Macintosh Format: hd:scratch:*pch*
+#------------------------------------------------------------------------------
+
+FILEMASK = ./*
+
+#------------------------------------------------------------------------------
+# GAMAP Debug Mode (0=off, 1=on)
+#------------------------------------------------------------------------------
+
+DEBUG = 0
+ 
+#------------------------------------------------------------------------------
+# PostScript File Options
+# (0 = never, 1 = always,*QUERY = ask user each time)
+#------------------------------------------------------------------------------
+
+# Create postscript file and postscript filename
+# default filename for *QUERY is "idl.ps"
+DO_POSTSCRIPT = *QUERY
+PS_FILENAME = *QUERY
+
+# Add user ID and time stamp to postscript file
+TIMESTAMP = 0
+
+
+#------------------------------------------------------------------------------
+# ANIMATION Options
+# (0 = never, 1 = always,*QUERY = ask user each time)
+#------------------------------------------------------------------------------
+
+# Create animation and save to MPEG file
+DO_MPEG = *QUERY
+MPEG_FILENAME = *QUERY
+
+
+#------------------------------------------------------------------------------
+# Graphic File Format Options
+# (0 = never, 1 = always, *QUERY = ask user each time)
+#
+# NOTES: 
+# (1) It is recommended to set your favorite file format to *QUERY
+#      and then turn all other file formats off.  That way you won't
+#      get asked repeatedly if you want to save into each file format.
+# (2) You can override these settings with the /DO_BMP, /DO_GIF, 
+#      /DO_JPEG, /DO_PNG, and /DO_TIFF keywords of "gamap.pro".
+# (3) GIF support was taken out of IDL 5.4 and higher due to proprietary
+#      reasons, but was restored in IDL 6.2.  
+#------------------------------------------------------------------------------
+
+# Save frames to BMP files
+# default filename for *QUERY is frame%NUMBER%.bmp
+DO_BMP = 0
+BMP_FILENAME = *QUERY
+
+
+# Save frames to GIF files
+# default filename for *QUERY is frame%NUMBER%.gif
+DO_GIF = *QUERY
+GIF_FILENAME = *QUERY
+
+
+# Save frames to JPEG files
+# default filename for *QUERY is frame%NUMBER%.jpg
+DO_JPEG = 0
+JPEG_FILENAME = *QUERY
+
+
+# Save frames to PNG files
+# default filename for *QUERY is frame%NUMBER%.png
+DO_PNG = 0
+PNG_FILENAME = *QUERY
+
+
+# Save frames to TIFF files
+# default filename for *QUERY is frame%NUMBER%.tif
+DO_TIFF = 0
+TIFF_FILENAME = *QUERY

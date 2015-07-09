@@ -1,0 +1,15 @@
+#!/bin/sh
+#PBS -N ncl_diff
+#PBS -l select=1
+#PBS -l walltime=72:00:00
+#PBS -l mem=6Gb
+#PBS -o ncl.stdout
+#PBS -e ncl.stderr
+#PBS -V
+
+#change to job directory
+cd /home/bruce/sshfs/tw/model/ncl/atlanta/viirs_contour_grid_dnb_epa_diff/
+#set up environmental variables
+
+#run program
+stdbuf -o0 -e0 ncl viirs_contour_grid_dnb_epa_diff.ncl &>ncl_run.log

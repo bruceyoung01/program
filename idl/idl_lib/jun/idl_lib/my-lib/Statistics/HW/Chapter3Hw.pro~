@@ -1,0 +1,46 @@
+PRO Chapter3_1Hw
+
+;20 values
+Temp = [26.1, 24.5, 24.8, 24.5, 24.1, 24.3, 26.4, 24.9, 23.7, 23.5, 24.0, $
+24.1, 23.7, 24.3, 26.6, 24.6, 24.8, 24.4, 26.8, 25.2]
+
+;19 values
+Precip = [43, 10, 4, 0, 2, 31, 0, 0, 0, 2, 3, 0, 4, 15, 2, 0, 1, 127, 2]
+
+;20 values
+Pres = [1009.5, 1010.9, 1010.7, 1011.2, 1011.9, 1011.2, 1009.3, 1011.1, 1012.0, $
+1011.4, 1010.9, 1011.5, 1011.0, 1011.2, 1009.9, 1012.5, 1011.1, 1011.8, 1009.3, 1010.6]
+
+;3.1 
+Print, "Problem #3.1"
+
+Print, "Median = ", Median(Precip), " mm"
+;----------------------------------------------------------------------------------------
+
+ResultPrecip = Sort(Precip)
+SortPrecip = Precip[Sort(Precip)]
+SizePrecip = Size(Precip)
+n = SizePrecip[1]
+
+q025 = ((n-1)*0.25)+1
+quantile25 = (SortPrecip[Ceil(q025-1)] + SortPrecip[Floor(q025-1)])/2.
+;Print, "       q_0.25 = ", q025, " Value = ", quantile25
+
+q050 = ((n-1)*0.50)+1
+quantile50 = (SortPrecip[Ceil(q050-1)] + SortPrecip[Floor(q050-1)])/2.
+;Print, "       q_0.50 = ", q050, " Value = ", quantile50
+
+q075 = ((n-1)*0.75)+1
+quantile75 = (SortPrecip[Ceil(q075-1)] + SortPrecip[Floor(q075-1)])/2.
+;Print, "       q_0.75 = ", q075, " Value = ", quantile75
+
+trimean = (quantile25 + 2*quantile50 + quantile75)/4
+
+Print, "Trimean  = ", trimean, " mm"
+;----------------------------------------------------------------------------------------
+
+Print, "Mean = ", Mean(Precip), " mm"
+;----------------------------------------------------------------------------------------
+
+
+END

@@ -1,0 +1,565 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/file_io/
+last updated : 07/17/2008 10:09
+
+===================
+BPCH2ASCII.PRO
+===================
+      bmy, 22 May 2002: GAMAP VERSION 1.50
+      bmy, 28 May 2002: GAMAP VERSION 1.51
+                        - Added FORMAT keyword
+      bmy, 03 Jun 2004: GAMAP VERSION 2.02
+                        - now pass extra keywords to CTM_GET_DATA
+                          via _EXTRA=e keyword
+      bmy, 03 Dec 2004: GAMAP VERSION 2.03
+                        - add CATEGORY keyword (passed to CTM_GET_DATA)
+                          in order to refine data block search
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+BPCH2COARDS.PRO
+===================
+rjp & bmy, 17 Mar 2005: GAMAP VERSION 2.03
+                        - Based on bpch2nc.pro
+      bmy, 21 Jul 2005: GAMAP VERSION 2.04
+                        - Bug fix: 
+      bmy, 13 Jul 2006: GAMAP VERSION 2.05
+                        - Remove call to PTR_FREE
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now count GCAP among the GEOS family
+                          for the purpose of converting the TAU
+                          date to a YYYY/MM/DD date.
+
+===================
+BPCH2GMI.PRO
+===================
+bmy & phs, 20 Aug 2007: GAMAP VERSION 2.10
+                        - Based on BPCH2NC
+      bmy, 19 Dec 2007: GAMAP VERSION 2.12
+                        - Now save sigma edges & centers or
+                          eta edges & centers to the file.
+                        - Extra error trap, if there is only one
+                          level in the file then set IS_3D=0.
+
+===================
+BPCH2HDF.PRO
+===================
+      bmy, 22 May 2002: GAMAP VERSION 1.50
+      bmy, 22 Oct 2002: GAMAP VERSION 1.52
+                        - bug fix: now do not write vertical layer 
+                          dim info to HDF file for 2-D grids
+      bmy, 22 May 2003: GAMAP VERSION 1.53
+                        - Make sure LONGNAME is not a null string
+      bmy, 18 Sep 2003: - Call PTR_FREE to free the pointer memory
+      bmy, 03 Jun 2004: GAMAP VERSION 2.02
+                        - now pass extra keywords to CTM_GET_DATA
+                          via _EXTRA=e keyword
+      bmy, 03 Sep 2004: GAMAP VERSION 2.03
+                        - now defines ETAC and ETAE variables
+                          for hybrid grids
+      bmy, 03 Dec 2004: GAMAP VERSION 2.03
+                        - add DIAGN keyword (passed to CTM_GET_DATA)
+                          in order to refine data block search
+      bmy, 19 May 2006: GAMAP VERSION 2.05
+                        - Now do not free the pointer memory
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now count GCAP among the GEOS family
+                          for the purpose of converting the TAU
+                          date to a YYYY/MM/DD date.
+
+===================
+BPCH2NC.PRO
+===================
+      bmy, 22 May 2002: GAMAP VERSION 1.50
+      bmy, 22 Oct 2002: GAMAP VERSION 1.52
+                        - bug fix: now do not write vertical layer 
+                          dim info to netCDF file for 2-D grids
+      bmy, 22 May 2003: GAMAP VERSION 1.53
+                        - Bug fix: LONGNAME cannot be a null string
+      bmy, 22 Sep 2003: - Now declare all variables first, then save
+                          data into them.  This is much more efficient!
+                        - Remove reference to NCDF_SET routine
+                        - Call PTR_FREE to free the pointer memory
+                        - Bug fix: now sort TAU0 values for call to UNIQ
+                        - added /VERBOSE keyword
+      bmy, 09 Oct 2003: - for IDL 6.0+, use '__' to separate category
+                          name from the tracer name
+      bmy, 21 Oct 2003: - Now uses function NCDF_Valid_Name to screen 
+                          out and replace invalid characters for netCDF 
+                          variable names
+      bmy, 06 Nov 2003: GAMAP VERSION 2.01
+                        - added extra global attributes to facilitate
+                          reading netCDF files created by BPCH2NC
+                          into GAMAP
+      bmy, 29 Mar 2004: GAMAP VERSION 2.02
+                        - Now saves ETA centers for hybrid grid
+                          instead of sigma centers
+      bmy, 17 Mar 2005: GAMAP VERSION 2.03
+                        - Bug fix: now prints ETAC properly 
+                          when the /VERBOSE keyword is set   
+      bmy, 03 Oct 2006: GAMAP VERSION 2.05
+                        - Bug fix: now do not call PTR_FREE
+                          to free the pointer memory
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now count GCAP among the GEOS family
+                          for the purpose of converting the TAU
+                          date to a YYYY/MM/DD date.
+      bmy, 21 Jan 2008: GAMAP VERSION 2.12
+                        - Now save sigma edges & centers or
+                          eta edges & centers to the file.
+                        - Extra error trap, if there is only one
+                          level in the file then set IS_3D=0.
+                        - Now error check for duplicate variable names
+
+===================
+BPCH2PCH.PRO
+===================
+      bmy, 08 Nov 1999: VERSION 1.00
+      bmy, 03 Jun 2004: GAMAP VERSION 2.02
+                        - now pass extra keywords to CTM_GET_DATA
+                          via _EXTRA=e keyword;
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+BPCH_LINK.PRO
+===================
+      bmy, 31 Jan 2003: VERSION 1.00
+      bmy, 09 Apr 2003: VERSION 1.01
+                        - now can save to nested grid 
+      bmy, 15 May 2003: VERSION 1.02
+                        - now can pass a list of files via INFILES
+      bmy, 20 Nov 2003: GAMAP VERSION 2.01
+                        - now gets the spacing between diagnostic
+                          offsets from CTM_DIAGINFO
+      bmy, 28 May 2004: GAMAP VERSION 2.02
+                        - Now use MFINDFILE to get INLIST regardless
+                          of the # of elements of INFILES 
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Now read/write bpch as big-endian
+
+===================
+BPCH_SEP.PRO
+===================
+      bmy, 18 Sep 2003: GAMAP VERSION 1.53
+      bmy, 20 Nov 2003: GAMAP VERSION 2.01
+                        - now gets the spacing between diagnostic
+                          offsets from CTM_DIAGINFO
+      bmy, 07 Jul 2005: GAMAP VERSION 2.04
+                        - minor bug fix; now can save out data
+                          blocks for more than one matching TAU0
+      phs, 24 Oct 2006: GAMAP VERSION 2.05
+                        - Added the II, JJ, LL keywords for
+                          selecting a smaller geographical area.  
+                          These must be index arrays.
+                        - Added the TRACERN keyword
+                        - Added SWAP_ENDIAN=LITTLE_ENDIAN() in 
+                          the call to OPEN_FILE
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Cosmetic changes
+
+===================
+BPCH_TEST.PRO
+===================
+      bmy, 10 Dec 1999: VERSION 1.00
+      bmy, 25 May 2000: GAMAP VERSION 1.45
+                        - allow user to quit after viewing 
+                          each data block header
+                        - add FILENAME keyword, so that the filename  
+                          can be passed as a parameter or a keyword
+      bmy, 21 Jul 2000: GAMAP VERSION 1.46
+                        - now print locations of min, max data values
+                        - changed FILETYPE to reflect new definitions
+                          from CTM_OPEN_FILE 
+      bmy, 24 Aug 2004: GAMAP VERSION 2.03
+                        - Now recognizes bpch file containing
+                          GEOS-CHEM station timeseries data
+                        - Updated comments, cosmetic changes
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CONVERT_O3PL.PRO
+===================
+      bmy, 16 Jul 2002: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Now read input file as big-endian
+
+===================
+CREATE_TAGOX_RESTART.PRO
+===================
+      bmy, 18 Aug 2003: VERSION 1.01
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+EOS_GETGR.PRO
+===================
+      bmy, 18 Sep 2002: TOOLS VERSION 1.51
+      bmy, 19 Dec 2002: TOOLS VERSION 1.52
+                        - fixed typos
+      bmy, 04 Jun 2003: TOOLS VERSION 1.53
+                        - fixed more typos
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+EOS_GETSW.PRO
+===================
+      bmy, 18 Sep 2002: TOOLS VERSION 1.51
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+EXTRACT_FILENAME.PRO
+===================
+      mgs, 18 Nov 1997: VERSION 1.00
+      mgs, 21 Jan 1999: - added extra check for use of '/' path 
+                          specifiers in Windows OS;
+      bmy, 19 Jan 2000: TOOLS VERSION 1.44
+                        - replaced obsolete RSTRPOS( ) command with
+                          STRPOS( /REVERSE_SEARCH ) for IDL 5.3+
+                        - updated comments, few cosmetic changes
+      bmy, 13 Mar 2001: TOOLS VERSION 1.47
+                        - Add support for MacOS operating system
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+                        - now call RSEARCH for backwards compatibility
+                          with versions of IDL prior to v. 5.2
+                        - use FORWARD_FUNCTION to declare RSEARCH
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now use ADD_SEPARATOR
+                        - updated comments
+
+===================
+EXTRACT_PATH.PRO
+===================
+      mgs, 18 Nov 1997: VERSION 1.00
+      mgs, 21 Jan 1999: - added extra check for use of '/' path 
+                          specifiers in Windows OS
+      bmy, 19 Jan 2000: TOOLS VERSION 1.44
+                        - replaced obsolete RSTRPOS( ) command with
+                          STRPOS( /REVERSE_SEARCH ) for IDL 5.3+
+                        - updated comments, few cosmetic changes
+      bmy, 13 Mar 2001: TOOLS VERSION 1.47
+                        - Add support for MacOS operating system
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+                        - now call RSEARCH for backwards compatibility
+                          with versions of IDL prior to v. 5.2
+                        - use FORWARD_FUNCTION to declare RSEARCH
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now use ADD_SEPARATOR
+                        - Updated comments
+
+===================
+FILE_EXIST.PRO
+===================
+      mgs, 26 Sep 1997: VERSION 1.00
+      mgs, 28 Sep 1997: - added expand_path() in order to digest ~-pathnames
+                        - initializes FULL_PATH with a zero string
+      mgs, 06 Nov 1997: - replaced DIRNAMES by PATH and added 
+                          string seperation if PATH is a path
+                          string with multiple entries
+      mgs, 05 Feb 1998: - bug fix: use expand_path also if only 
+                          filename is given
+      bmy, 13 Mar 2001: TOOLS VERSION 1.47
+                        - now supports Windows, MacOS, and Unix
+                        - cosmetic change, updated comments
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+                        - now call STRBREAK wrapper routine from
+                          the TOOLS subdirectory for backwards
+                          compatiblity for string-splitting;
+      bmy, 03 Oct 2003: TOOLS VERSION 1.53
+                        - minor bug fix: FILE must be placed w/in
+                          the call to EXPAND_PATH for IDL 6.0+
+                        - deleted obsolete code from Jan 2002
+      bmy, 28 May 2004: TOOLS VERSION 2.02
+                        - now call MFINDFILE instead of FINDFILE,
+                          since MFINDFILE will call the new
+                          FILE_SEARCH program for IDL 5.5+
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now use ADD_SEPARATOR
+                        - Updated comments
+
+===================
+FUTURE2BPCH.PRO
+===================
+      bmy, 25 Jan 2006: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Now read bpch as big-endian
+
+===================
+GET_FREELUN.PRO
+===================
+      mgs, 17 Sep 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments, cosmetic changes
+
+===================
+HDF_GETSD.PRO
+===================
+      bmy, 05 Nov 2001: VERSION 1.00
+      bmy, 23 Apr 2002: TOOLS VERSION 1.50
+                        - updated documentation
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+HDF_GETSDATTR.PRO
+===================
+      bmy, 30 Apr 2002: TOOLS VERSION 1.50
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+HDF_GETVD.PRO
+===================
+      bmy, 05 Nov 2001: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+HDF_SETSD.PRO
+===================
+      bmy, 17 Apr 2002: TOOLS VERSION 1.50
+      bmy, 11 Sep 2002: TOOLS VERSION 1.51
+                        - Now call routine DATATYPE to determine
+                          the type of the data so that we can
+                          write all data types to the HDF file.
+                        - Don't add the RANGE attribute to
+                          the HDF file for a string type value.
+                        - Updated comments 
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+IS_DIR.PRO
+===================
+  R.Bauer, 26 Jan 1999: INITIAL VERSION
+                        - from Forschungszentrum Juelich GmbH ICG-1
+      bmy, 24 May 2007: TOOLS VERSION 2.06
+                        - updated comments
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+MAKE_RESTART.PRO
+===================
+      bmy, 19 Jul 2007: VERSION 1.00
+
+===================
+MFINDFILE.PRO
+===================
+      mgs, 14 Sep 1998: VERSION 1.00
+      bmy, 14 Oct 2003: TOOLS VERSION 1.53
+                        - Now use built-in FINDFILE() routine to
+                          return file listing for IDL 5.3 and higher
+      bmy, 06 Nov 2003: TOOLS VERSION 2.01
+                        - return to pre v1-53 algorithm
+      bmy, 28 May 2004: TOOLS VERSION 2.02
+                        - For IDL 5.5+, now use FILE_SEARCH to return
+                          a list of files corresponding to MASK
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+NCDF_GET.PRO
+===================
+      bmy, 22 May 2002: TOOLS VERSION 1.50
+      bmy, 21 Oct 2003: TOOLS VERSION 1.53
+                        - If we can't find a netCDF variable name,
+                          then try again using a "sanitized" name
+                          w/ all bad characters stripped out
+      bmy, 28 Jun 2007: TOOLS VERSION 2.06
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Added /VERBOSE keyword to reduce
+                          warning messages
+
+===================
+NCDF_READ.PRO
+===================
+      mgs, 18 Sep 1999: VERSION 1.00
+      mgs, 29 Feb 2000: - added variables keyword
+                        - added CATCH error handler
+      mgs, 21 Mar 2000: - bug fix for tag names
+      mgs, 09 May 2000: VERSION 2.00
+                        - now only reads dimensions as default
+                        - added ALL keyword to compensate
+                        - returns dimnames and attributes
+                          (makes ncdf_detail obsolete)
+                        - added COUNT, OFFSET and STRIDE keywords
+                        - added NO_DIMENSIONS and NO_DIALOG
+                          keywords and more
+      mgs, 22 Aug 2000: - added title keyword
+      bmy, 22 May 2002: GAMAP VERSION 1.50
+                        - Now replace ":", "=", "#" with "_" in
+                          structure tag names, so IDL won't choke
+      bmy, 21 Oct 2003: GAMAP VERSION 1.53
+                        - also replace "(" and ")" in tag names
+                        - replace "$" with "S" (close to dollar sign)
+                        - replace "*" with "A" (for Asterisk)
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+NCDF_SET.PRO
+===================
+      bmy, 19 Apr 2002: TOOLS VERSION 1.50
+      bmy, 10 Sep 2002: TOOLS VERSION 1.51
+                        - Now call routine DATATYPE to determine
+                          the type of the data so that we can
+                          write to the netCDF file appropriately
+                        - Don't add the RANGE attribute to
+                          the netCDF file for a string type value.
+                        - Updated comments 
+      bmy, 21 Oct 2003: TOOLS VERSION 1.53
+                        - now "sanitize" the netCDF variable name
+                          w/ routine NCDF_VALID_NAME.  The new netCDF
+                          library in IDL 6.0+ chokes on bad characters.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+NCDF_VALID_NAME.PRO
+===================
+      bmy, 21 Oct 2003: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+OPEN_FILE.PRO
+===================
+      mgs, 13 Aug 1998: VERSION 1.00
+                        - extracted from ctm_read3dp_header.pro and 
+                          modified
+      mgs, 14 Aug 1998: - small bug fix: handle empty filename
+                          string correctly
+      mgs, 22 Aug 1998: - added WRITE keyword to open writable files
+      mgs, 22 Oct 1998: - now always returns LUN=-1 in case of an error
+      mgs, 21 Jan 1999: - Added explicit F77_Unformatted keyword and set
+                          Swap_If_Little_Endian or Swap_If_Big_Endian  
+                          automatically
+      mgs, 10 Feb 1999: - bug fix: swap_if was wrong way round
+      mgs, 12 May 1999: - ok. finally got the hang of byte swapping! 
+                          It's the machine architecture not the operating
+                          system!  Now changed it so that !VERSION.ARCH is
+                          tested for 'x86'
+      mgs, 20 May 1999: - abandoned SWAP_IF completely and use explicit
+                          SWAP_ENDIAN keyword in users grace now.
+      bmy, 14 Oct 2003: TOOLS VERSION 1.53
+                        - For IDL 6.0+, if PATH is a null string, then
+                          manually reset it to './'.  This will avoid
+                          the contents of the !PATH variable from being
+                          listed in the dialog box. 
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+cdh & phs, 30 Jun 2008: GAMAP VERSION 2.12
+                        - declare dummy GET_LUN keyword. It
+                          prevents passing GET_LUN w/ _extra to
+                          openr/w, since LUN is already assigned in
+                          all cases.
+
+===================
+PROGRAM_DIR.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+READ_BDT0001.PRO
+===================
+      mgs, 24 Aug 1998: VERSION 1.00
+      mgs, 23 Dec 1998: VERSION 1.10:
+                        - DATA now undefined if unsuccessful
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Now read data as big-endian
+
+===================
+READ_BIN.PRO
+===================
+      mgs, 15 Jan 1999: VERSION 1.00
+      mgs, 15 Jun 1999: - added header
+                        - added PLOT keyword and _EXTRA
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Now read data as big-endian
+           
+
+===================
+READDATA.PRO
+===================
+       mgs  03/12/1997: - last update : 05/22/97
+       mgs 01 Aug 1997: - added template
+       mgs 15 Sep 1997: - added LINES option and removed some twitch in the
+                          handling of TRANSPOSE. Unfortunately,
+                          LINES does not improve the speed as
+                          desired, but you can restrict the reading to
+                          a smaller subset of the data.
+       mgs 26 Sep 1997: MAJOR REVIEW
+                        - bug fixes in noheader option
+                        - bug fixes in COLS and NCOL handling
+                        - removed units option and created comments 
+                          keyword instead.  program now reads in
+                          all header lines into a string array
+                          including the variable names line.
+                        - automatic generation of a header if 
+                          /NOHEADER is specified
+       mgs 06 Nov 1997: - Added AUTOSKIP option for easier reading 
+                          of e.g. NASA formatted files.
+       mgs 01 Dec 1997: added MAXCOMMENTS keyword and limit
+                        - skp1 now returns correct amount if
+                          autoskip is set
+       mgs 30 Dec 1997: added NODATA keyword
+       mgs 21 Aug 1998: now uses open_file routine to allow wildcards
+       bmy 12 May 2005: added /DOUBLE keyword to force double precision
+bmy & phs, 21 Aug 2007: GAMAP VERSION 2.10
+                        - Now use STRBREAK, which is version independent
+                        - Remove internal function USE_READDATA; we
+                          now call USAGE to display program options
+                          if the wrong # of arguments are passed
+                        - Updated comments
+
+===================
+ROUTINE_NAME.PRO
+===================
+      mgs, 27 Mar 1998: VERSION 1.00
+      mgs, 22 Apr 1998: - added FILENAME and CALLER keywords
+      mgs, 14 Jan 1998: - needed fix for filename when working on PC:
+                          $MAIN$ allows no str_sep
+      bmy, 07 Aug 2002: TOOLS VERSION 1.51
+                        - Now use routine STRBREAK to split the line
+                          instead of STR_SEP.  STR_SEP has been removed
+                          from the IDL distribution in IDL 5.4+.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+SCALEFOSS2BPCH.PRO
+===================
+      bmy, 15 Jan 2003: VERSION 1.00
+      bmy, 23 Dec 2003: VERSION 1.01
+                        - rewritten for GAMAP v2-01
+      bmy, 27 Jun 2006: VERSION 1.02
+                        - Use more robust algorithm for getting
+                          the year out of the file name
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Now read input file as big-endian
+
+===================
+TESTPATH.PRO
+===================
+      mgs, 16 Jun 1998: VERSION 1.00
+      mgs, 02 Nov 1998: - changed IDL path from idl5 to idl
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+WRITE_BDT0001.PRO
+===================
+      mgs, 24 Aug 1998: VERSION 1.00
+      mgs, 28 Aug 1998: - changed specs to allow comments
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Now write data as big-endian
+
+===================
+WRITE_BIN.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 02 Apr 2008: GAMAP VERSION 2.12
+                        - Now write data as big-endian
+
+===================
+WRITEDATA.PRO
+===================
+      mgs, 25 Nov 1997: VERSION 1.00
+      mgs, 05 Apr 1999: - now uses formatted write statement
+               (looks like a bug in IDL for windows: sometimes no space
+                is printed between numbers if you simply print,data)
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10

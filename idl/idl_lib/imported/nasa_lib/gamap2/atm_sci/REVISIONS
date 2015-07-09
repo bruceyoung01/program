@@ -1,0 +1,159 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/atm_sci/
+last updated : 07/17/2008 10:09
+
+===================
+ADD_DATA.PRO
+===================
+      mgs, 05 Nov 1997: VERSION 1.00
+          extracted from CREATE_MASTER.PRO, added flexibility for
+          optional parameters
+      mgs, 06 Nov 1997: - added FIRST keyword
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+AIRDENS.PRO
+===================
+      mgs, 12 Nov 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+E_H2O.PRO
+===================
+      mgs, 23 Feb 1997: VERSION 1.00
+      mgs, 03 Aug 1997: split e_h2o and rh, renamed, added template
+      mgs, 23 May 1998: changed default behaviour to set reference
+             temperature to given TD value
+      mgs, 29 Aug 1998: VERSION 2.00
+        - much simpler and more logical interface
+        - no automatic detection of dew- or frostpoint any longer
+        - can now accomodate arrays
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+FORMAT_INP.PRO
+===================
+      mgs, 18 Dec 1997: VERSION 1.00
+      mgs, 11 Jun 1998: - added SIMPLE and SKP2 keyword
+      mgs, 30 Oct 1998: - bug fix with units and scale
+                        - improved formatting for large numbers
+                          (allows display of chem1d output files)
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments
+
+===================
+GET_RANGE.PRO
+===================
+      mgs, 24 Aug 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+HYSTAT.PRO
+===================
+      mgs, 21 Aug 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments
+
+===================
+KNMHC.PRO
+===================
+      mgs, 1998?        INITIAL VERSION
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - added std doc header
+                        - updated comments, cosmetic changes
+
+===================
+KTROE.PRO
+===================
+      mgs, 20 Mar 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+NUMDEN.PRO
+===================
+      dbm, 30 Jul 2007: GAMAP VERSION 2.10
+
+===================
+PEDGE.PRO
+===================
+      bmy, 17 Jun 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+PHYSCONST.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments, cosmetic changes
+
+===================
+PMID.PRO
+===================
+      bmy, 17 Jun 1999: VERSION 1.00
+      bmy, 22 Oct 1999: VERSION 1.44
+                        - Now use SHIFT to compute the average
+                          between successive edges
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+READ_SONDE.PRO
+===================
+      mgs, 29 Oct 1998: VERSION 1.00
+      mgs, 02 Nov 1998: - added call to read_sondestations
+                          (i.e. can now return LAT, LON, ALT of station)
+                        - improved comments
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+READ_SONDESTATIONS.PRO
+===================
+      mgs, 02 Nov 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+RH.PRO
+===================
+      mgs, 23 Feb 1997: VERSION 1.00
+      mgs, 03 Aug 1997: split e_h2o and rh, renamed, added template
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+SCHMIDT.PRO
+===================
+pip & bmy, 27 Jun 2003: VERSION 1.00
+                        - Written by Paul Palmer
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+USSA_ALT.PRO
+===================
+      bmy, 17 Jun 1998: VERSION 1.00
+                        - removed section of code from 
+                          CTM_GRID.PRO by mgs
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+USSA_PRESS.PRO
+===================
+      mgs, 23 May 1998: VERSION 1.00
+          (designed from USSA_TEMP.PRO)
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+USSA_TEMP.PRO
+===================
+      mgs, 16 May 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ZMID.PRO
+===================
+      bmy, 21 Jun 1999: VERSION 1.00
+      bmy, 22 Oct 1999: VERSION 1.44
+                        - Now use SHIFT to compute the average
+                          between successive edges
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ZSTAR.PRO
+===================
+      bmy, 21 Jun 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10

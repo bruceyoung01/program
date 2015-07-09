@@ -1,0 +1,129 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/graphics/
+last updated : 07/17/2008 10:09
+
+===================
+CLOSE_DEVICE.PRO
+===================
+      bmy, 18 Aug 1997: VERSION 1.00
+      bmy, 19 Aug 1997: VERSION 1.01
+      mgs, 20 Aug 1997: VERSION 1.02
+      mgs, 08 Apr 1998: VERSION 2.00 
+                        - automatic filename detection
+                        - default device depending on OS_FAMILY
+      mgs, 21 May 1998: 
+                        - added L.. keywords to control label 
+                          and timestamp output
+      mgs, 18 Nov 1998:
+                        - added output of username as default in timestamp
+      bmy, 28 Jul 2000: TOOLS VERSION 1.46
+                        - cleaned up a few things
+      bmy, 24 May 2007: TOOLS VERSION 2.06
+                        - Updated comments
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+GIF2PS.PRO
+===================
+      bmy, 28 Jan 2000: VERSION 1.45
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+JPEG2PS.PRO
+===================
+      bmy, 28 Jan 2000: VERSION 1.45
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+OPEN_DEVICE.PRO
+===================
+      bmy  15 Aug 1997: VERSION 1.00
+      bmy, 19 Aug 1997: VERSION 1.01
+      mgs, 20 Aug 1997: VERSION 1.02
+      mgs, 09 Apr 1998: VERSION 1.10 
+                        - added 2 more parameters for WINPARAM
+                          and TITLE keyword
+      bmy, 28 Jul 2000: VERSION 1.46   
+                        - now make XSIZE, XOFFSET, YSIZE, YOFFSET keywords
+                        - cosmetic changes, updated comments
+      bmy, 30 Jan 2001: VERSION 1.47
+                        - added /Z and NCOLORS keywords for the Z-buffer
+                        - updated comments
+      bmy, 26 Jul 2001: VERSION 1.48
+                        - use default window size of 640 x 512 for
+                          the Z-buffer, if WINPARAM isn't specified.
+      bmy, 27 Aug 2001: - now call DEVICE with XSIZE, YSIZE,
+                          XOFFSET, YOFFSET for /LANDSCAPE plots
+                        - Updatedd comments
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+SCREEN2BMP.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - adapted from SCREEN2GIF
+
+===================
+SCREEN2GIF.PRO
+===================
+      bmy, 24 Jul 2001: TOOLS VERSION 1.49
+      bmy, 02 Dec 2002: TOOLS VERSION 1.52
+                        - now uses TVREAD function from D. Fanning
+                          which works on both PC's & Unix terminals
+      bmy, 30 Apr 2003: TOOLS VERSION 1.53
+                        - Bug fix in passing file name to TVREAD
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now pass _EXTRA=e to TVREAD
+                        - now call TVREAD correctly if we omit FILENAME
+                        - updated comments
+
+===================
+SCREEN2JPG.PRO
+===================
+      bmy, 25 Sep 2003: TOOLS VERSION 1.53
+                        - Bug fix in passing file name to TVREAD
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now pass _EXTRA=e to TVREAD
+                        - updated comments
+
+===================
+SCREEN2PNG.PRO
+===================
+      bmy, 25 Sep 2003: TOOLS VERSION 1.53
+                        - Bug fix in passing file name to TVREAD
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now pass _EXTRA=e to TVREAD
+                        - updated comments
+
+===================
+SCREEN2TIFF.PRO
+===================
+      bmy, 25 Sep 2003: TOOLS VERSION 1.53
+                        - Bug fix in passing file name to TVREAD
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now pass _EXTRA=e to TVREAD
+                        - updated comments
+
+===================
+TVREAD.PRO
+===================
+     Written by David W. Fanning, 9 AUG 2000.
+     Added changes to make the program more device independent. 16 SEP 2000. DWF.
+     Removed GIF file support for IDL 5.4 and above. 18 JAN 2001. DWF.
+     Added NODIALOG keyword. 28 MAR 2001. DWF.
+     Added an output CANCEL keyword. 29 AUG 2001. DWF.
+     Added ERROR_MESSAGE code to file. 17 DEC 2001. DWF.
+     Added ORDER keyword. 25 March 2002. DWF.
+     Now create 24-bit PNG files if reading from a 24-bit display. 11 May 2002. DWF.
+     Now create 24-bit BMP files if reading from a 24-bit display. 23 May 2002. DWF.
+     Removed obsolete STR_SEP and replaced with STRSPLIT. 27 Oct 2004. DWF.
+     Unleashed the GIF code for IDL 6.2 and above. 10 Nov 2005. DWF.
+     Rolled back previous change to IDL 6.1. 24 Jan 2006. DWF.
+     Fixed a problem in which 16-bit displays were treated as 24-bit displays,
+       and as a result could not produce WHITE colors. Now all 16-bit displays
+       are treated as 8-bit displays. It is an ugly trade-off. 24 Jan 2006. DWF.
+     Added TYPE keyword 27 Sep 2006. DWF.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Removed /NODIALOG keyword
+                        - Only pop up a dialog box if FILENAME
+                          isn't passed and we are writing a file
+                        - Updated comments, cosmetic changes

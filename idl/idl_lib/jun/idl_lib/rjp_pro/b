@@ -1,0 +1,123 @@
+animate_source.pro:      plot_region, conc, limit=limit, title=title, /cbar, $
+animation.pro:      plot_region, diff, limit=limit, title=title, /cbar, $
+animation.pro:;      plot_region, omc, limit=limit, title=title, /cbar, $
+annual_mean.pro:  fld = region_only(fld, region='US')
+annual_mean.pro:   plot_region, fld, /sample, /cbar, divis=5, title=spec, $
+carb_2dplot.pro:   plot_region, geos2d, /sample, divis=Ndiv, unit=unit, $
+carb_2dplot.pro:   Plot_region, fd2d_impr.obs, /sample, divis=Ndiv, unit=unit, $
+carb_2dplot.pro:   Plot_region, fd2d_cast.obs, /sample, divis=Ndiv, unit=unit, $
+carb_2dplot.pro:   plot_region, geos2d, /sample, divis=Ndiv, unit=unit, $
+carb_bkgn_2dplot.pro:   plot_region, nat_glb, /sample, divis=Ndiv, unit=unit, $
+carb_bkgn_2dplot.pro:   plot_region, bkg_glb, /sample, divis=Ndiv, unit=unit, $
+carb_poa_soa.pro:   plot_region, geos2d, /sample, divis=Ndiv, unit=unit, $
+carb_poa_soa.pro:   Plot_region, fd2d_impr.obs, /sample, divis=Ndiv, unit=unit, $
+carb_poa_soa.pro:   Plot_region, fd2d_cast.obs, /sample, divis=Ndiv, unit=unit, $
+carb_scatterplot.pro:   region  = ['West','East']
+carb_scatterplot.pro:          result = create_struct('Obs_'+sea_str[D]+'_'+region[L], X, $
+carb_scatterplot.pro:                                 'Cal_'+sea_str[D]+'_'+region[L], Y  ) else $
+carb_scatterplot.pro:                                 'Obs_'+sea_str[D]+'_'+region[L], X, $
+carb_scatterplot.pro:                                 'Cal_'+sea_str[D]+'_'+region[L], Y  )
+carb_scatterplot.pro:                              'Obs_annual_'+region[L], X, $
+carb_scatterplot.pro:                              'Cal_annual_'+region[L], Y  )
+castnet_scatterplot.pro:   region  = ['West','East']
+castnet_scatterplot.pro:          result = create_struct('Obs_'+sea_str[D]+'_'+region[L], X, $
+castnet_scatterplot.pro:                                 'Cal_'+sea_str[D]+'_'+region[L], Y  ) else $
+castnet_scatterplot.pro:                                 'Obs_'+sea_str[D]+'_'+region[L], X, $
+castnet_scatterplot.pro:                                 'Cal_'+sea_str[D]+'_'+region[L], Y  )
+castnet_scatterplot.pro:                              'Obs_annual_'+region[L], X, $
+castnet_scatterplot.pro:                              'Cal_annual_'+region[L], Y  )
+comp_biomass.pro:    us_clim = region_only(clim, region='UScont')
+comp_biomass.pro:    us_2001 = region_only(b2001,region='UScont')
+comp_biomass.pro:  plot_region, us_clim*1000., /sample, maxdata=maxdata, mindata=mindata, $
+comp_biomass.pro:  plot_region, us_2001*1000., /sample, maxdata=maxdata, mindata=mindata, $
+comp_biomass.pro:;  plot_region, us_2001-us_clim, /sample, divis=4, /cbar
+data_sites.pro:  plot_region, annual_toc, /conti, /sample, divis=4, /rjpmap, $
+del_aero.pro:;    diff = region_only(diff, region='UScont')
+del_aero.pro:    plot_region, diff, limit=limit, title=title, /cbar, $
+del_gas.pro:;    diff = region_only(diff, region='UScont')
+del_gas.pro:    plot_region, diff, limit=limit, title=title, /cbar, $
+diag_nh3.pro:;  pro diag_source, File=file, region=region, Saveout=saveout, $
+diag_nh3.pro:;  region = 'UScont'
+diag_nh3.pro:      Data = region_only(Data, region=region)
+diag_nh3.pro:  If N_elements(region) ne 0 then $
+diag_nox.pro:;  pro diag_source, File=file, region=region, Saveout=saveout, $
+diag_nox.pro:   Undefine, region
+diag_nox.pro:;  region = 'NAMERICA'
+diag_nox.pro:;  region = 'US'
+diag_nox.pro:  region = 'MEXICO'
+diag_nox.pro:;  region = 'CANADA'
+diag_nox.pro:      Data = region_only(Data, region=region)
+diag_nox.pro:  If N_elements(region) ne 0 then $
+diag_source.pro:;  pro diag_source, File=file, region=region, Saveout=saveout, $
+diag_source.pro:  region = 'UScont'
+diag_source.pro:      Data = region_only(Data, region=region)
+diag_source.pro:      Data = region_only(Data, region=region)
+diag_source.pro:      Data = region_only(Data, region=region)
+diag_source.pro:      Data = region_only(Data, region=region)
+diag_source.pro:  If N_elements(region) ne 0 then $
+diag_sulfur.pro:;  pro diag_source, File=file, region=region, Saveout=saveout, $
+diag_sulfur.pro:   Undefine, region
+diag_sulfur.pro:;  region = 'NAMERICA'
+diag_sulfur.pro:;  region = 'UScont'
+diag_sulfur.pro:;  region = 'MEXICO'
+diag_sulfur.pro:  region = 'CANADA'
+diag_sulfur.pro:      Data = region_only(Data, region=region)
+diag_sulfur.pro:  If N_elements(region) ne 0 then $
+ext_model_us.pro:   lon = region_only(lon, region='USCONT')
+ext_model_us.pro:   lat = region_only(lat, region='USCONT')
+fig01.pro:   plot_region, geos2d, /sample, divis=Ndiv, unit=unit, $
+fig01.pro:   Plot_region, fd2d_impr.obs, /sample, divis=Ndiv, unit=unit, $
+fig01.pro:   Plot_region, fd2d_cast.obs, /sample, divis=Ndiv, unit=unit, $
+fig01.pro:   plot_region, geos2d, /sample, divis=Ndiv, unit=unit, $
+fig04.pro:   region  = ['West','East']
+fig04.pro:          result = create_struct('Obs_'+sea_str[D]+'_'+region[L], X, $
+fig04.pro:                                 'Cal_'+sea_str[D]+'_'+region[L], Y  ) else $
+fig04.pro:                                 'Obs_'+sea_str[D]+'_'+region[L], X, $
+fig04.pro:                                 'Cal_'+sea_str[D]+'_'+region[L], Y  )
+fig04.pro:                              'Obs_annual_'+region[L], X, $
+fig04.pro:                              'Cal_annual_'+region[L], Y  )
+fig07.pro:   plot_region, nat_glb, /sample, divis=Ndiv, unit=unit, $
+fig07.pro:   plot_region, bkg_glb, /sample, divis=Ndiv, unit=unit, $
+fig08.pro:   plot_region, nat_glb, /sample, divis=Ndiv, unit=unit, $
+fig08.pro:   plot_region, bkg_glb, /sample, divis=Ndiv, unit=unit, $
+get_fire_omc.pro:  plot_region, array, /sample, min_valid=1.e-10, /cbar, $
+grid_maps.pro: plot_region, d4x5, /conti, /sample, position=[0.,0.,1.,1.], margin=margin, $$
+grid_maps.pro: plot_region, d2x25, /conti, /sample, position=[0.,0.,1.,1.], margin=margin, $$
+grid_maps.pro: plot_region, d1x1, /conti, /sample, position=[0.,0.,1.,1.], margin=margin, $$
+grid_maps.pro: plot_region, map, /conti, /sample, position=[0.,0.,1.,1.], margin=margin, $
+grid_maps.pro: plot_region, map, /conti, /sample, position=[0.,0.,1.,1.], margin=margin
+ioa_2dplot.pro:   plot_region, geos2d, /sample, divis=Ndiv, unit=unit, $
+ioa_2dplot.pro:   Plot_region, fd2d_impr.obs, /sample, divis=Ndiv, unit=unit, $
+ioa_2dplot.pro:   Plot_region, fd2d_cast.obs, /sample, divis=Ndiv, unit=unit, $
+ioa_2dplot.pro:   plot_region, geos2d, /sample, divis=Ndiv, unit=unit, $
+ioa_bkgn_2dplot.pro:   plot_region, nat_glb, /sample, divis=Ndiv, unit=unit, $
+ioa_bkgn_2dplot.pro:   plot_region, bkg_glb, /sample, divis=Ndiv, unit=unit, $
+ioa_scatterplot.pro:   region  = ['West','East']
+ioa_scatterplot.pro:          result = create_struct('Obs_'+sea_str[D]+'_'+region[L], X, $
+ioa_scatterplot.pro:                                 'Cal_'+sea_str[D]+'_'+region[L], Y  ) else $
+ioa_scatterplot.pro:                                 'Obs_'+sea_str[D]+'_'+region[L], X, $
+ioa_scatterplot.pro:                                 'Cal_'+sea_str[D]+'_'+region[L], Y  )
+ioa_scatterplot.pro:                              'Obs_annual_'+region[L], X, $
+ioa_scatterplot.pro:                              'Cal_annual_'+region[L], Y  )
+mexico_so2_comp.pro:    plot_region, bravo*1.e-6, limit=limit, /conti, /sample, $
+oc_ems.pro:   ems = region_only(t, region='USCONT')
+oc_ems.pro:   plot_region, clim
+oc_ems.pro:   plot_region, yr01
+p_stat_k_omc.pro:  plot_region, array, /sample, min_valid=1.e-10, /cbar, $
+p_stat_k_omc.pro:   Plot_region, FD2D, /sample, /cbar, divis=4, margin=margin, $
+plot_improve.pro:  plot_region, array, /sample, min_valid=1.e-10, /cbar, $
+plot_improve.pro:   Plot_region, FD2D, /sample, /cbar, divis=4, margin=margin, $
+plot_model_diff.pro: fus = region_only(fld, region='USCONT')
+plot_model_diff.pro: plot_region, fld, /sample, /cbar, divis=5, $
+plot_model_diff.pro: fus = region_only(fld, region='USCONT')
+plot_model_diff.pro: plot_region, fld, /sample, /cbar, divis=4, $
+rd_wildfires.pro:     str = create_struct( 'region',region[D],      $
+rd_wildfires.pro:     str = create_struct( 'region',region[D],      $
+rd_wildfires.pro: reg = us.region
+so4_dist.pro:   plot_region, fd2d, /sample, /cbar, divis=4, unit=unit, maxdata=maxdata,    $
+so4_dist_may19.pro:   plot_region, fd2d, /sample, /cbar, divis=4, unit=unit, maxdata=maxdata,    $
+source_carb.pro:na = region_only(data, region='NAMERICA')
+tc_nsk_slope.pro:  plot_region, array, /sample, min_valid=1.e-10, /cbar, $
+tc_nsk_slope.pro:   Plot_region, FD2D, /sample, /cbar, divis=4, margin=margin, $
+test.pro: plot_region, flag, /conti, /sample
+test.pro: plot_region, temp, /conti, $

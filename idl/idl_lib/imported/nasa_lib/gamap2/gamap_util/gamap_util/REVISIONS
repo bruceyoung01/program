@@ -1,0 +1,1940 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/gamap_util/
+last updated : 07/17/2008 10:09
+
+===================
+COMPARE_FLIGHT.PRO
+===================
+    mgs, 21 Apr 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_BOXSIZE.PRO
+===================
+      bmy, 27 Mar 1998: VERSION 1.00 (algorithm from mgs)
+      mgs, 27 Mar 1998: - added NO_2D keyword
+      mgs, 07 May 1998: VERSION 1.10
+                        - added IJ, IL, JL, LATIND, XLEN, 
+                          YLEN, and ZLEN keywords
+                        - corrected polar box sizes 
+                          (now uses gridinfo information)
+      mgs, 08 May 1998: - corrected latindex, now uses FORTRAN convention
+      mgs, 24 May 1998: - changed IL so it computes area of 
+                          southern boundary
+      mgs, 17 Nov 1998: - changed keywords GISS and GEOS to .._RADIUS
+      bmy, 27 Jul 1999: VERSION 1.42
+                        - updated comments
+      bmy, 27 Jan 2000: VERSION 1.45
+                        - added /CM and /M keywords,
+                          deprecated /CM2 and /M2 keywords.
+                        - now return a 3-D array for grid box volumes
+                        - updated comments
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now call USAGE to display doc header
+                          if wrong # of arguments are passed.
+                        - Deleted internal routine USE_CTM_BOXSIZE
+
+===================
+CTM_CLEANUP.PRO
+===================
+      mgs, 05 Oct 1998: VERSION 1.00
+      mgs, 08 Oct 1998: - fixed DATA_ONLY part so that status is
+                          reset to zero and derived data records 
+                          are removed
+      bmy, 21 Nov 2000: - Updated comments 
+      bmy, 04 Oct 2004: GAMAP VERSION 2.03
+                        - added /NO_GC keyword
+                        - now call HEAP_GC to do garbage collection
+                          of heap variables & pointers
+      bmy, 23 Mar 2007: GAMAP VERSION 2.06
+                        - Now add /NO_FILE_CLOSE keyword so as not
+                          to close open files
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - close only files opened with GAMAP
+
+===================
+CTM_COLUMN_DU.PRO
+===================
+      bmy, 26 Jul 1999: VERSION 1.00
+      bmy, 20 Apr 2000: GAMAP VERSION 1.45
+                        - renamed from "rvm_o3col"
+                        - removed hardwiring, added comments
+                        - added internal subroutine "CCD_Consistency_Check
+                        - now can sum up to the annual mean tropopause
+                          for GEOS model data blocks
+      bmy, 30 Jul 2001: GAMAP VERSION 1.48
+                        - bug fix: make sure to extract the same
+                          lat/lon region for PS, tropopause heights
+                          as we do for tracers
+                        - added XMID, YMID, ZMID keywords to return
+                          XMID, YMID, ZMID arrays from CTM_GET_DATABLOCK
+                          to the calling program
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Rewritten for hybrid grids, and to compute 
+                          DU for a data block of less than global size
+
+===================
+CTM_CONVERT_UNIT.PRO
+===================
+      bmy, 29 Sep 1998: VERSION 1.00
+      bmy, 07 Oct 1998: VERSION 1.01
+                        - Added unit conversion for mol/cm2 -> kg etc.. 
+      mgs, 11 Nov 1998: - bug fix if seconds not passed
+      bmy, 21 Jun 2002: GAMAP VERSION 1.51
+                        - now recognize string "molec/cm2/s"
+                        - updated comments, cosmetic changes
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_DATAINFO.PRO
+===================
+      mgs, 07 Oct 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_DIAGINFO.PRO
+===================
+      bmy, 19 May 1998: VERSION 1.00
+                        - developed from CTM_TRACERINFO.PRO v. 2.0 by
+                          Martin Schultz (08 May 1998)
+                          see comments to CTM_TRACERINFO.PRO for 
+      bmy, 20 May 1998: - removed SCALE and UNIT structure tags & keywords
+                        - added OFFSET structure tag & keyword
+      bmy, 27 May 1998: - changed "tracers" to "diagnostics" in 
+                          print statement.
+      mgs, 13 Aug 1998: - now returns only first diagnostics for a
+                          given number.  This permits to keep old
+                          and new diagnostics in one file and use
+                          the old diagnostics by name.
+                        - introduced extra search one level above 
+                          current dir.
+      mgs, 17 Aug 1998: - changed defaults vor void return
+                        - diaginfo.dat: MAXTRACER meaning changed!
+      bmy, 17 Nov 2003: GAMAP VERSION 2.01
+                        - Removed INDEX and TYPE, they're obsolete
+                        - Now use new file format for "diaginfo.dat"
+                          which allows for 8-digit offset numbers
+                        - Added internal function CD_IS_MAXTRACER
+                        - No longer read defaults from internal datablock
+                        - Added SPACING keyword
+                        - Updated comments 
+      bmy, 09 Mar 2006: GAMAP VERSION 2.05
+                        - Use "./diaginfo.dat" as default in
+                          order to facilitate reading in IDL 5.5-
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now use the FILE_WHICH routine to
+                          locate the "diaginfo.dat" file
+      phs, 17 Jul 2008: GAMAP VERSION 2.12
+                        - Bug fix: only use FILE_WHICH if the 
+                          FILENAME keyword isn't passed.
+
+===================
+CTM_DIFF.PRO
+===================
+      bmy, 23 Apr 1999: VERSION 1.00
+      mgs, 18 May 1999: - some bug fixes in error checks.
+                        - regridding still not tested !!
+      mgs, 10 Jun 1999: - bug fix for percent diference (indexing)
+      bmy, 15 Sep 1999: GAMAP VERSION 1.43
+                        - now use the GRIDINFO structure from the
+                          global FILEINFO structure, if it exists.
+                        - bug fix in call to CTM_GET_DATABLOCK
+                        - updated comments
+      bmy, 14 Jan 2000: GAMAP VERSION 1.44
+                        - now allow comparision of two different
+                          tracer numbers (e.g. for comparing two
+                          simulations w/ different tracer indices)
+                        - added error checking for size of the
+                          FILE, ILUN, TAU0, TRACER keywords
+                        - deleted obsolete code
+      bmy, 26 Jan 2000: GAMAP VERSION 1.45
+                        - now allow TAU0, FILE, ILUN, TRACER to have 
+                          0 elements w/o generating an error message
+      bmy, 15 Nov 2001: GAMAP VERSION 1.49
+                        - Now make sure that NEWTRACER is not a 
+                          multiple of 100, so that the tracer #
+                          will be saved correctly to the global 
+                          DATAINFO structure 
+      bmy, 22 Apr 2002: GAMAP VERSION 1.50
+                        - updated comments
+      bmy, 19 Nov 2003: GAMAP VERSION 2.01
+                        - Now get spacing between diagnostic
+                          offsets from CTM_DIAGINFO
+      bmy, 29 Jan 2004: - Added LEV keyword so that you can
+                          select just a single level
+                        - If we are just comparing a single level,
+                          then do not test altitude dimensions
+                          of the two data blocks.
+      bmy, 16 Feb 2005: GAMAP VERSION 2.03
+                        - now pass _EXTRA=e to CTM_GET_DATA 
+      phs, 24 Oct 2006: GAMAP VERSION 2.05
+                        - replace CTM_REGRID with CTM_REGRIDH
+                        - pass _EXTRA=e to CTM_REGRIDH
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - added RANGE keyword for sending min/max
+                          difference values to the calling program
+
+===================
+CTM_EXTRACT.PRO
+===================
+      bmy, 16 Sep 1998: VERSION 1.00
+      bmy, 17 Sep 1998: - now extracts data from data cube one 
+                          dimension at a time to avoid errors
+      bmy, 18 Sep 1998: VERSION 1.01
+                        - INDEX, SN, WE, UP keywords added
+                        - LATRANGE, LONRANGE, LEVRANGE renamed
+                          to LAT, LON, LEV (since they may now 
+                          contain arrays and not just ranges).
+      mgs, 21 Sep 1998: - some more error checking
+                        - removed MinData and MaxData 
+      bmy and mgs, 22 Sep 1998: VERSION 1.02
+                        - added AVERAGE and TOTAL keywords
+      bmy, 24 Sep 1998: VERSION 1.03
+                        - Now returns original values of LAT, LON, 
+                          LEV, ALTRANGE, and PRANGE if those keywords
+                          are specified.  Otherwise returns
+                          defaults.
+      MGS, 29 SEP 1998: - Introduced new DEFAULT_RANGE function.
+      bmy, 06 Oct 1998: - fixed bug: now S = size( NEWDATA )
+      bmy, 08 Oct 1998: VERSION 1.04
+                        - MODELINFO and GRIDINFO are now keywords
+                        - added X, Y, and Z as parameters
+      bmy, 11 Feb 1999: - updated comments
+      bmy, 19 Feb 1999: VERSION 1.05
+                        - added FIRST keyword so that the values of
+                          THISDATAINFO.FIRST can be passed from the
+                          calling routine.
+                        - now call ADJ_INDEX to adjust the WE,
+                          SN, and UP index arrays for data blocks
+                          that are less than global size.
+                        - added DEBUG keyword
+      mgs, 16 Mar 1999: - cosmetic changes
+      mgs, 02 Apr 1999: - bug fixes that prevented use with 2D fields
+                          (e.g. EPTOMS data)
+      mgs, 21 May 1999: - now catches error in multitracer diagnostics
+                          when user requests a level beyond LMX.
+      qli, 26 May 1999: - "max(newlev) ge" corrected to "gt"
+      bmy, 15 Sep 1999: VERSION 1.43
+                        - removed bugs that caused data blocks to
+                          always have MODELINFO.NTROP vertical
+                          layers
+      bmy, 04 Dec 2000: GAMAP VERSION 1.47
+                        - add code for future bug fix
+      bmy, 24 Apr 2001: - bug fix: now can handle longitudes
+                          greater than 180 degrees
+      bmy, 06 Jun 2001: - bug fix: Test if LON exists before
+                          assigning it to NEWLON.
+      bmy, 30 Jul 2001: GAMAP VERSION 1.48
+                        - bug fix: now extract proper latitude range
+                          for data blocks smaller than global size
+      bmy, 26 Jun 2002: GAMAP VERSION 1.51
+                        - Default value of FIRST is now [1,1,1], 
+                          since this has to be in Fortran notation.
+                        - also do error checking on FIRST near
+                          the beginning of the program.
+      bmy, 15 Nov 2002: GAMAP VERSION 1.52
+                        - now can handle total/average for MOPITT grid
+      bmy, 23 Aug 2004: GAMAP VERSION 2.03
+                        - now can handle single-point data blocks
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 19 Nov 2007: GAMAP VERSION 2.11
+                        - Updated comments
+      bmy, 10 Dec 2007: GAMAP VERSION 2.12
+                        - Now pad ALTRANGE and PRANGE to 2 elements
+                          if they are passed w/ one element
+
+===================
+CTM_GET_DATA.PRO
+===================
+      mgs, 20 Aug 1998: VERSION 1.00
+      mgs, 21 Sep 1998: - changed gamap.cmn to gamap_cmn.pro
+      mgs, 22 Sep 1998: - changed to accomodate usage of 
+                          tracer information
+      mgs, 22 Oct 1998: - old FILEINFO and DATAINFO parameters now
+                          keywords USE_..., new DATAINFO parameter
+                          returns selected subset of records.
+                        - print statements replaced with message
+                        - DEBUG messages improved
+                        - catch cancelled file open dialog
+      mgs, 26 Oct 1998: - datainfo now undefined at start
+                        - allows for multiple categories
+                        - ilun, tracer, tau0 keyword variables renamed
+                          as sel_... in order to preserve them
+      mgs, 04 Nov 1998: - sel_tracer now expanded to include offsets
+      mgs, 10 Nov 1998: VERSION 3.0 
+                        - major update! Program structure much more
+                          straightforward!
+      mgs, 12 Nov 1998: - bug fixes for simple diagnostics (line 732)
+                          and finding offset tracers (in update_...)
+                          replaced tracer by (tracer mod 100) in 3 places
+      mgs, 19 Nov 1998: - bug fix with scale factor. Didn't get globally
+                          updated because it was linked to unit. Need a
+                          more generic global update procedure !
+      mgs, 03 Dec 1998: - yet another bug fix in reopen files: needed
+                          to test for negative ilun before fstat
+      bmy, 21 Jan 1999: - added outer parentheses to the FORMAT
+                          descriptor (255(I4,1x)) to avoid errors
+      mgs, 17 Feb 1999: - bug fix for simple diagnostics: needed
+                          to add dummy value to compound array.
+      mgs, 16 Mar 1999: - catch error in tracerinfo.dat (more than one
+                          tracer with same number)
+                        - error in update_tracer... should have been
+                          fixed. Some more debug output added for 
+                          testing.
+      mgs, 23 mar 1999: - set vertical dimension to -1 for new compound
+                          datainfo records
+      mgs, 24 May 1999: - updated filetype info
+      mgs, 02 Jun 1999: - added retall statement after error
+                          message
+      bmy, 23 Nov 1999: - added /SMALLCHEM keyword for CTM_TRACERINFO
+      bmy, 27 Sep 2001: GAMAP VERSION 1.49
+                        - Set F77=1 for filetype 4 (DAO met fields)
+                        - Now reference function LITTLE_ENDIAN
+                        - Swap endian in OPEN_FILE if reading data
+                          on a little-endian machine (e.g. PC) 
+      bmy, 19 Nov 2003: GAMAP VERSION 2.01
+                        - now test valid diagnostics using 
+                          DIAGSTRU[*].CATEGORY and not DIAGSTRU[*].INDEX
+                        - removed /SMALLCHEM keyword, it's obsolete
+                        - Now recognizes binary files as having
+                          FILETYPE values between 100 and 200
+                        - Removed /SMALLCHEM flag, it's obsolete
+                        - Now uses diagnostic spacing from CTM_DIAGINFO
+                          and pass this to UPDATE_TRACER_DIAGINFO
+      bmy, 11 Feb 2004: GAMAP VERSION 2.01a
+                        - Internal routine MAKE_COMPOUND_DATAINFO
+                          now passes SPACING from CTM_DIAGINFO
+                          to routine CTM_DOSELECT_DATA
+      bmy, 27 Oct 2004: GAMAP VERSION 2.03
+                        - added QUIET keyword to suppress printing
+                          information about retrieved tracers
+      bmy, 06 Feb 2006: GAMAP VERSION 2.04
+                        - Bug fix: use DIALOG_PICKFILE to get file name
+                          before calling CTM_OPEN_FILE.  This is necessary
+                          because the tests for certain file types requires
+                          the file name to be known ahead of time.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now passes _EXTRA keyword to
+                          CTM_OPEN_FILE. This allows to read nested 
+                          met (GMAO) files by using /NA or /CHINA
+bmy & phs, 20 Nov 2007: GAMAP VERSION 2.11
+                        - If FILENAME is not defined, then the value
+                          of the filename selected via dialog box
+                          will be passed back to the calling program.
+NOWN BUGS OR WEAKNESSES:
+      - handling of USE_DATAINFO and USE_FILEINFO is not carried 
+        through all lower level subroutines, i.e. they may be replaced
+        by *pGlobal... in some occasions. Since USE_... should always
+        be a subset of *pGlobal..., no serious errors are expected
+        from this weakness. 
+      - known bug in update_tracer_datainfo, see comment in routine.
+
+===================
+CTM_GET_DATABLOCK.PRO
+===================
+      bmy, 16 Sep 1998: VERSION 1.00
+      bmy, 17 Sep 1998: - added FILENAME keyword, so that the file
+                          name can be passed back to the calling
+                          program. 
+      bmy, 18 Sep 1998: VERSION 1.01
+                        - now compatible with CTM_EXTRACT v. 1.01
+                        - INDEX, SN, WE, UP keywords added
+                        - LATRANGE, LONRANGE, LEVRANGE renamed
+                          to LAT, LON, LEV (since they may now 
+                          contain arrays and not just ranges).
+      mgs, 21 Sep 1998: VERSION 1.02
+                        - more error checking
+                        - added PSurf keywords
+                        - frees gridinfo pointer before re-assignment
+                        - removed MinData and MaxData
+      bmy, 22 Sep 1998: - Now pass AVERAGE and TOTAL keywords to
+                          CTM_EXTRACT
+      mgs, 22 Sep 1998: - added THISDATAINFO keyword
+      bmy, 24 Sep 1998: - added FORWARD_FUNCTION for CTM_GRID
+                          and CTM_EXTRACT
+      bmy, 08 Oct 1998: VERSION 1.03
+                        - FILEINFO and DATAINFO are now keywords
+                        - now returns X, Y, and Z as parameters
+      bmy, 03 Nov 1998: VERSION 1.04
+                        - compatible with new CTM_GET_DATA routine
+                        - now pass FILEINFO and DATAINFO structures 
+                          via USE_FILEINFO and USE_DATAINFO keywords
+      mgs, 10 Nov 1998: - once more adapted to changes in CTM_GET_DATA
+                        - now extracts locally used FILEINFO structure
+      bmy, 11 Feb 1999: VERSION 1.05
+                        - updated comments
+      bmy, 19 Feb 1999: - Renamed XIND, YIND, ZIND to XMID, YMID,
+                          and ZMID, since these are not index
+                          arrays, but the actual longitude,
+                          latitude, or altitude values for each
+                          dimension of the DATA array.
+                        - added DEBUG keyword
+                        - eliminate obsolete XARR, YARR, ZARR keywords
+                        - added NOPRINT keyword to suppress
+                          call to CTM_PRINT_DATAINFO
+      mgs, 02 Apr 1999: - replace gridinfo in fileinfo only if new
+                          surface pressure is requested. Necessary 
+                          for 2D fields (e.g. EPTOMS)
+                        - deactivated SMALLCHEM flag
+                        - added error checking for FILEINFO
+      bmy, 28 Apr 1999: - return THISFILEINFO as a keyword
+      mgs, 30 Jun 1999: - Specification of PSURF finally works.
+      bmy, 13 Dec 1999: - now use CHKSTRU instead of N_ELEMENTS  
+                          to diagnose undefined GRIDINFO structure
+      bmy, 04 Dec 2000: GAMAP VERSION 1.47
+                        - eliminated obsolete code from 12/31/99
+      bmy, 03 Jun 2001: GAMAP VERSION 1.48
+                        - bug fix: also create GRIDINFO structure
+                          for grids with no vertical layers
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_GRID.PRO
+===================
+      bmy, 19 Aug 1997: VERSION 1.00
+      bmy, 24 Sep 1997: VERSION 1.01
+      mgs, 26 Feb 1998: Version 2.00  - rewritten as a function
+      mgs, 27 Feb 1998: - added vertical information
+      mgs, 02 Mar 1998: - better defined interface with CTM_MODEL_TYPE
+      bmy, 07 Apr 1998: - Renamed 
+      mgs, 24 Apr 1998: - changed structure to named structure
+      mgs, 04 May 1998: - changed back because of conflicting sizes
+      mgs, 07 May 1998: - Renamed to CTM_GRID
+                        - x coordinates now start with -182.5 for 
+                          center180 grids
+      bmy, 19 Jun 1998: - now uses USSA_ALT to compute altitudes
+                          from pressure coordinates
+                        - fixed some comments
+                        - added FORWARD_FUNCTION statement
+      mgs, 30 Jun 1999: - added PSURF keyword
+      bmy, 27 Jul 1999: GAMAP VERSION 1.42
+                        - now can compute pressure levels and
+                          edges for hybrid sigma-pressure grids
+                        - a few cosmetic changes
+      bmy, 03 Jan 2000: - more cosmetic changes
+      bmy, 20 Apr 2000: GAMAP VERSION 1.45
+                        - now returns correct YMID values for FSU grid
+      bmy, 15 Sep 2000: GAMAP VERSION 1.46
+                        - fixed bug for computing YMID for grids
+                          w/o halfpolar boxes.  This also fixes the
+                          previous problem w/ the FSU grid.
+      bmy, 03 Jul 2001: GAMAP VERSION 1.48
+                        - If MTYPE.NLAYERS = 0, then create a
+                          return structure w/o vertical level info
+      bmy, 06 Nov 2001: GAMAP VERSION 1.49
+                        - added ETAMID, ETAEDGE keywords
+                        - added ETAMID, ETAEDGE tags to return structure
+                        - now calls GETETA to return ETA coordinates
+                          for hybrid models (such as GEOS-4/fvDAS)
+                        - updated comments
+      bmy, 18 Oct 2002: GAMAP VERSION 1.52
+                        - deleted obsolete commented-out code
+      bmy, 04 Nov 2003: GAMAP VERSION 2.01
+                        - Use STRPOS to test for GEOS4 or 
+                          GEOS4_30L model names
+                        - Now treat GISS_II_PRIME 23-layer model
+                          as a hybrid grid instead of using the
+                          obsolete "fake" formulation.
+      bmy, 28 Jun 2006: GAMAP VERSION 2.05
+                        - bug fix for multi-level GENERIC grids
+bmy & phs, 16 Aug 2007: GAMAP VERSION 2.10
+                        - now compute mXEDGE, mXMID, mYEDGE, mYMID
+                          as double precision, and cast back to
+                          float, so that we get correct values for
+                          high-res grids like 0.5 x 0.666,
+                        - cosmetic changes
+                        - Special handling for GEOS-5 
+                        - Now use USAGE, ROUTINE_NAME() instead of
+                          function USE_CTM_GRID to display options
+                        - Now return IMX, JMX as type LONG
+
+===================
+CTM_INDEX.PRO
+===================
+      mgs, 04 May 1998: VERSION 1.00
+      mgs, 07 May 1998: - added MAPCENTER and _EXTRA keywords, 
+                          fixed bug with lon index
+                        - actually substantially rewritten
+      mgs, 08 May 1998: VERSION 1.10
+                        - CENTER and EDGE keywords now MAP_SET compatible
+                        - added WE_INDEX and SN_INDEX keywords
+                        - improved documentation
+                        - bug fix for display of polar grid boxes
+      mgs, 09 Jun 1998: - added COUNTRIES keyword
+      mgs, 15 Jun 1998: - bug fix for WE
+      mgs, 07 Oct 1998: - added interactive selection of model
+      mgs, 22 Feb 1999: - added DATA, SHELLS and WINDOW keywords
+      mgs, 23 Feb 1999: - can now use either minfo or ginfo as parameter
+      bmy, 24 Jan 2001: GAMAP VERSION 1.47
+                        - commented out annoying & useless warning msg
+                        - updated comments
+      bmy, 12 Mar 2003: GAMAP VERSION 2.02
+                        - updated comments
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - now pass DEFAULTMODEL from @GAMAP_CMN
+                          common block to SELECT_MODEL
+
+===================
+CTM_LABEL.PRO
+===================
+       bmy, 23 Sep 1998: VERSION 1.00
+       bmy, 24 Sep 1998: - now ensure that RES is a scalar string
+                         - place TAU2YYMMDD in FORWARD_FUNCTION call
+       bmy, 28 Sep 1998: VERSION 1.01
+                         - formats for LatStr, LonStr, LevStr
+                           changed to be more consistent.
+       mgs, 29 Sep 1998: - changed a few comments and fixed bug in 
+                           MinLon/MaxLon
+       bmy, 03 Nov 1998: - changed NAME to TRACERNAME for
+                           the sake of consistency
+       bmy, 12 Nov 1998: - added LABELSTRU structure tags: YEAR0,
+                           YEAR1, MONTH0, MONTH1, DAY0, DAY1, and DATE
+                         - now reports lats as S/N instead of -/+ 
+                           and reports lons as W/E instead of -/+
+       bmy, 17 Nov 1998: - now use function N_UNIQ to test for
+                           the number of unique elements in
+                           LAT, LON, LEV, ALT, PRS
+                         - Added FORMAT keyword to specify 
+                           format for LAT and LON strings
+                         - updated comments
+       bmy, 15 Jan 1999: - added NO_SPECIAL keyword
+       bmy, 17 Feb 1999: - Now add GMT to date string for timeseries
+                           animation plots (interval < 1 day)
+                         - make sure that HMS0STR and HMS1STR have
+                           string lengths of 6 characters
+       bmy, 18 Feb 1999: - fix default DATE string for February
+       mgs, 16 Mar 1999: - cosmetic changes
+                         - removed SUBTRACT_ONE keyword and improved
+                           choice of date format
+       bmy, 13 Jul 2001: GAMAP VERSION 1.48
+                         - Use updated version of STRREPL.PRO from mgs 
+       bmy, 07 Nov 2001: GAMAP VERSION 1.49
+                         - now use 8-digit YYYYMMDD format for
+                           date variables YMD0, YMD1
+       bmy, 02 Oct 2002: GAMAP VERSION 1.53
+                         - now write GEOS3 instead of GEOS3_30L
+       bmy, 05 Nov 2003: GAMAP VERSION 2.01
+                         - now write GEOS4 instead of GEOS3_30L
+                         - now use the proper time epoch for each
+                           model family in call to TAU2YYMMDD
+                         - updated comments
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_LOCATEDIFF.PRO
+===================
+      bmy, 24 Feb 2003: VERSION 1.00
+      bmy, 19 Nov 2003: GAMAP VERSION 2.01
+                        - Now get spacing between diagnostic
+                          offsets from CTM_DIAGINFO
+      bmy, 27 Feb 2004: GAMAP VERSION 2.02
+                        - Rewritten to also print out locations in
+                          FORTRAN notation where differences occur
+                        - added DIAGN keyword to specify category name
+                        - added OUTFILENAME to specify output file
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_MAKE_DATAINFO.PRO
+===================
+      mgs, 09 Oct 1998: VERSION 1.00
+      mgs, 19 Nov 1998: - bug fix. ILUN now always negative!
+                        - unit now "required" parameter, i.e.
+                          interactively asked for
+      bmy, 11 Feb 1999: VERSION 1.01
+                        - added OFFSET keyword so that I0, J0, and
+                          L0 offsets can be stored in DATAINFO
+                        - DATAINFO.TAU0 and DATAINFO.TAU1 are now
+                          stored as double precision
+                        - updated comments
+      mgs, 16 Mar 1999: - cosmetic changes
+                        - OFFSET changed into FIRSTBOX
+      mgs, 30 Mar 1999: - added _EXTRA keyword for ctm_grid
+                          (use for /NO_VERTICAL)
+      bmy, 29 Jun 2001: GAMAP VERSION 1.48
+                        - bug fix: now pass CTM_TRACERINFO the
+                          tracer number plus diagnostic offset
+      bmy, 06 Mar 2002: GAMAP VERSION 1.50
+                        - now take TRACER mod 100L before 
+                          adding the diagnostic offset to it
+                          in call to CTM_TRACERINFO
+      bmy, 26 Nov 2003: GAMAP VERSION 2.01
+                        - added /NO_GLOBAL keyword
+                        - rewrote for clarity; updated comments
+                        - Now get diagnostic spacing from CTM_DIAGINFO
+                        - added ILUN, FILENAME, FILETYPE keywords
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      phs, 30 May 2008: GAMAP VERSION 2.12
+                        - Minor fix to restrict FIRSTBOX to 3 elements
+
+===================
+CTM_MAPGRID.PRO
+===================
+      bmy, 03 Nov 1999: VERSION 1.00
+      bmy, 24 Mar 2000: VERSION 1.45
+                        - now prints map labels 
+                        - added /NOBORDER to MAP_SET call
+      bmy, 27 May 2003: GAMAP VERSION 1.53
+                        - now plots continent lines after grid lines
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_MASS_CHECK.PRO
+===================
+bdf & bmy, 26 Jun 2003: GAMAP VERSION 2.03
+      bmy, 06 Mar 2007: GAMAP VERSION 2.06
+                        - make FILENAME an input rather than
+                          a keyword argument.
+                        - now pass _EXTRA=e to the PLOT command
+                        - Added WINPARAM keyword
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_NAMEXT.PRO
+===================
+      bmy, 30 Jun 2000: GAMAP VERSION 1.46
+      bmy, 02 Jul 2001: GAMAP VERSION 1.48
+                        - added GENERIC as a return option
+      bmy, 02 Oct 2003: GAMAP VERSION 1.53
+                        - now add GEOS3_30L to the CASE statement
+      bmy, 16 Oct 2003: - now add GEOS4 to the CASE statement
+      bmy, 12 Feb 2004: GAMAP VERSION 2.01a
+                        - added GEOS4_30L to the CASE statement
+      bmy, 05 Aug 2004: GAMAP VERSION 2.02
+                        - added GCAP to the CASE statement
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - added GEOS5, GEOS5_47L to the CASE statement
+
+===================
+CTM_NOYBUDGET.PRO
+===================
+      bmy, 28 Jan 2000: VERSION 1.00
+                        - adapted original code from Isabelle Bey
+      bmy, 25 May 2000: VERSION 1.45
+                        - now allow the user to specify diagnostic
+                          category names in the batch file
+                        - added internal function "TruncateAndWrapForNOy"
+                          to wrap arrays around the date line
+                        - added internal procedure "ErrorNOy"
+                          to do error checking for CTM_GET_DATABLOCK
+                        - now can create budgets for more than one
+                          diagnostic interval
+                        - now allow user not to compute chemical 
+                          production data for given families
+      acs, 26 May 2000: - bug fixes: now do not stop the run if 
+                          data blocks are not found
+      bmy, 01 Aug 2000: VERSION 1.46
+                        - use abs( Total( X ) ) > 0 when testing if 
+                          transport fluxes are all nonzero
+      bmy, 24 Jan 2001: GAMAP VERSION 1.47
+                        - now no longer require all types of emissions
+                          to be nonzero in order to sum them
+                        - now no longer require both HNO3 LS and
+                          convective wetdep to be zero in order to 
+                          sum them
+      bmy, 17 Jan 2002: GAMAP VERSION 1.50
+                        - now call STRBREAK wrapper routine from
+                          the TOOLS subdirectory for backwards
+                          compatiblity for string-splitting
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_OVERLAY.PRO
+===================
+      bmy, 05 Oct 2006: GAMAP VERSION 2.05
+                        - Modified from CTM_OVERLAY_FLIGHT and
+                          renamed to CTM_OVERLAY
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+dbm & bmy, 06 Nov 2007: - Modified to allow filled contour plots
+
+===================
+CTM_OVERLAY_WIND.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_OXBUDGET.PRO
+===================
+      bmy, 28 Jan 2000: VERSION 1.00
+                        - adapted original code from Isabelle Bey
+      bmy, 25 May 2000: GAMAP VERSION 1.45
+                        - now allow the user to specify diagnostic
+                          category names in the batch file
+                        - added internal function "TruncateAndWrapForOx"
+                          to wrap arrays around the date line
+                        - added internal procedure "ErrorOx"
+                          to do error checking for CTM_GET_DATABLOCK
+                        - now can create budgets for more than one
+                          diagnostic interval  
+                        - now allow user not to compute chemical 
+                          production data for given families
+      acs, 26 May 2000: - bug fixes: now do not stop the run if 
+                          data blocks are not found.  
+      bmy, 01 Aug 2000: GAMAP VERSION 1.46
+                        - use abs( Total( X ) ) > 0 when testing if 
+                          transport fluxes are all nonzero
+      bmy, 13 Dec 2001: GAMAP VERSION 1.49
+                        - Now do not require all transport fluxes
+                          to be nonzero in order to compute budgets
+                        - now truncate data blocks correctly for
+                          E/W and N/S transport fluxes
+                        - Now compute the total number of seconds
+                          over the entire diagnostic interval
+                        - Now divide fluxes by the number of diagnostic
+                          time intervals in order to get average fluxes
+      bmy, 17 Jan 2002: GAMAP VERSION 1.50
+                        - now call STRBREAK wrapper routine from
+                          the TOOLS subdirectory for backwards
+                          compatiblity for string-splitting;
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      bmy, 23 Mar 2008: GAMAP VERSION 2.12
+
+===================
+CTM_PLOT.PRO
+===================
+      bmy, 21 Sep 1998: VERSION 1.00
+      bmy, 22 Sep 1998: VERSION 1.01
+                        - added AVERAGE and TOTAL keywords
+      bmy, 22 Sep 1998: VERSION 1.10
+                        - Modified for use with new versions of
+                          CTM_GET_DATABLOCK, CTM_EXTRACT,
+                          CTM_LABEL, REPLACE_TOKEN, and TVMAP
+      bmy, 25 Sep 1998: VERSION 1.11
+                        - modified for TVMAP v. 2.0
+      bmy, 28 Sep 1998: VERSION 2.00
+                        - modified for TVMAP v. 2.01
+                        - renamed LONSHIFT to LSHIFT
+      bmy, 29 Sep 1998: - added ALTRANGE and PRANGE keywords
+                          (which had been previously omitted)
+      bmy, 30 Sep 1998: VERSION 2.01
+                        - added call to CTM_CONVERT_UNIT
+                        - added LABELSTRU keyword 
+      bmy, 07 Oct 1998  VERSION 2.02
+                        - now works with TVMAP 3.0
+                        - added /CONTOUR, /FCONTOUR, and 
+                          /COLORBAR keywords
+                        - removed I/O error handling (that 
+                          is already done in CTM_GET_DATABLOCK)
+      bmy, 08 Oct 1998: VERSION 2.03
+                        - now works with CTM_GET_DATABLOCK v. 1.03
+                          and CTM_EXTRACT v. 1.04
+                        - added DATA and THISDATAINFO keywords so
+                          that an external data block can be
+                          passed.
+                        - another bug fix for UNITSTR
+      bmy, 03 Nov 1998: VERSION 2.04
+                        - works with new CTM_GET_DATA, 
+                          CTM_GET_DATABLOCK and CTM_LABEL routines
+                        - Now pass the FILEINFO and DATAINFO
+                          structures via USE_FILEINFO and
+                          USE_DATAINFO keywords
+                        - removed DATA keyword   
+                        - changed %NAME% token to %TRACERNAME%
+                        - Now can pass an explicit unit string
+                          via the USTR keyword
+      mgs, 10 Nov 1998: - adapted for use with new CTM_GET_DATABLOCK
+                        - changed keyword Erase to NoErase
+                        - defaults set to produce an OX surface map
+                          from IJ-AVG-$ diagnostics 
+                        - allow for vertical cross section plots
+                          (interface to TVPLOT) : ** still needs work! **
+                        - changed CBAR to NOCBAR
+      bmy, 12 Nov 1998: - TRACER is now a keyword instead of
+                          an argument
+                        - Changed keyword CONTINENTS to
+                          NOCONTINENTS and GRID to NOGRID
+                        - added NOISOTROPIC, SAMPLE and
+                          keywords
+      bmy, 13 Nov 1998: - VERSION 3.00
+                        - ***** RENAMED to CTM_PLOT *****
+                        - updated documentation header
+                        - renamed C_LABELS to C_ANNOTATION to
+                          prevent keyword name confusion
+                        - added NOLINES, NOLABELS, C_LABELS,
+                          and OVERLAYCOLOR keywords for tvmap
+                        - now gets default colors from 
+                          DEFAULT_COLORS.PRO
+                        - Error checking for LIMIT keyword
+                          (OK for now...fix this later on...)
+      bmy, 16 Nov 1998: - Now use %DATE% instead of %YMD1% for
+                          all default plot titles
+                        - now enhanced for TVPLOT v. 2.0
+                        - now only convert units for a tracer 
+                          if the default unit is different from
+                          the desired unit!!
+      bmy, 17 Nov 1998: - added /PRESSURE keyword to plot pressure
+                          instead of altitude on the left Y-axis
+      mgs, 17 Nov 1998: - messed around quite a bit, because of 
+                          (unfortunate) changes in default_range !@#$!@
+                        - added CBFormat keyword
+      bmy, 23 Nov 1998: - eliminated %SCALE% token from UNITSTR,
+                          to be consistent with the latest
+                          upgrade to COLORBAR.PRO. 
+                        - now pass SECONDS to CTM_CONVERT_UNIT
+      bmy, 13 Jan 1999: - add support for line plots.  Also, if
+                          the DATA array is averaged down to a
+                          single point, will print the value of
+                          that point and exit.
+                        - use NEWXTITLE and NEWYTITLE as token-replaced
+                          strings for XTITLE and YTITLE
+      bmy, 15 Jan 1999: - add support for 3-D visualization plots
+                        - added unit string for contour plots
+                        - now place CTM_LABEL call after the case
+                          statement for PLOTTYPE, so that we can
+                          suppress printing of special characters
+                          in plot titles.
+      bmy, 19 Jan 1999: - improve 0-D output
+                        - fixed [XY]Titles for line plots
+                        - "unitless" is now a unit string option
+                        - now use new default color names from
+                          DEFAULT_COLORS.PRO
+      bmy, 20 Jan 1999: - Updated comments
+      mgs, 22 Jan 1999: - couple bug fixes, some code cleaning
+                        - added OverPlot keyword to allow multiple
+                          line plots
+      bmy, 19 Feb 1999: - now pass DEBUG (from GAMAP_CMN) to 
+                          CTM_GET_DATABLOCK via DEBUG keyword
+                        - Rename XIND, YIND, ZIND keywords to
+                          XMID, YMID, ZMID, in call to CTM_GET_DATABLOCK
+      bmy, 23 Feb 1999: - Add XTICKNAME, XTICKS, XTICKV in call to
+                          TVPLOT...fix for map regions smaller than 
+                          the globe
+                        - bug fix.../NOGRID was listed as GRID!!!
+                        - added keyword /NOGLABELS, which
+                          suppresses grid line labels in MAP_SET 
+                        - updated comments
+      bmy, 26 Feb 1999: - now calls MAP_LABELS to get latitude labels
+                          for X, XZ, Y, YZ plot types.
+                        - updated comments
+      bmy, 04 Mar 1999: - now pass DEBUG keyword to TVMAP
+                        - now use GRIDINFO.XEDGE, GRIDINFO.YEDGE
+                          to compute the LIMIT keyword for MAP_SET
+      mgs, 18 Mar 1999: - minor cleaning
+      mgs, 23 Mar 1999: - added ILun to keyword list to prevent retrieval
+                          of two otherwise identical records from two
+                          different files
+      bmy, 25 Mar 1999: - now line plots use MULTIPANEL
+                        - if NPANELS >=2 then place the plot title
+                          higher above the window, to allow for 
+                          carriage-returned lines
+                          for X, Y, Z, XY, XZ, YZ plots
+      mgs, 25 Mar 1999: - no unit conversion if not necessary
+                        - small fix to allow for 2D fields (e.g. EPTOMS)
+      bmy, 14 Apr 1999: - now prints unit string at lower right of
+                          XZ or YZ plots, if the colorbar is not
+                          plotted
+      bmy, 26 Apr 1999: - rename YRANGE to YYRANGE internally, so as
+                          to avoid confusion with YRANGE plot keywords   
+      mgs, 19 May 1999: - removed a few too explicit keyword settings
+                          for 1D plots and fixed OverPlot option.
+                          Now stores !X, !Y, and !P from last 1D plot
+                          in a local common block.
+      mgs, 21 May 1999: - restore !X, !Y, and !P at the end of each
+                          1-D plot to allow overplotting of data.
+      mgs, 25 May 1999: - needed to mess around with lonrange to get
+                          it right.
+      mgs & bmy, 26 May 1999: - added POLAR keyword
+      bmy, 27 May 1999: - bug fix: CBUnit keyword wasn't honored
+                        - neither was NoIsotropic
+      mgs, 27 May 1999: - changed default behaviour for filled contours:
+                          now plots no lines and colorbar. Keyword
+                          NoLines changed to C_Lines.
+      mgs, 28 May 1999: - added RESULT keyword to return data as plotted
+                        - bug fix with wrapping round data: shouldn't be
+                          done for vertical cross sections.
+      mgs, 02 Jun 1999: - small bug fix for 0D results.
+      mgs, bmy 03 Jun 1999: - removed "Unit:" from output
+      bmy, 07 Jul 1999: - added PLOTCSFAC scale factor for multipanel
+                          plots
+                        - small fixes for line plots
+      bmy, 02 Nov 1999: GAMAP VERSION 1.44
+                        - return if THISDATAINFO contains
+                          information for more than one data block
+      bmy, 24 Nov 1999: - now pass _EXTRA=e to CTM_TRACERINFO
+                          so that /SMALLCHEM will be passed
+      bmy, 13 Dec 1999: - if GRIDINFO is undefined after returning from
+                          CTM_GET_DATABLOCK, rebuild it w/ CTM_TYPE
+      bmy, 03 Feb 2000: GAMAP VERSION 1.45
+                        - NOTE: /INDEX does not work with lon range
+                          shifting anymore.  Will fix later.
+                        - also make sure LON, LAT have two elements 
+                        - added X_FORMAT, Y_FORMAT keywords for line plots
+                        - updated comments 
+      bmy, 06 Apr 2000: - bug fix: restrict X or Y axis range for line
+                          plots using the value passed from YYRANGE.
+                        - cosmetic changes, updated comments
+      bmy, 23 Jan 2001: GAMAP VERSION 1.47
+                        - now call "isopleth_map.pro" to plot a 3-D
+                          isosurface.  3-D visualization via
+                          routine "ctm_draw_cube.pro" is obsolete.
+                        - added ISOPLETH keyword as pass-thru to 
+                          ISOPLETH_MAP
+      bmy, 23 Jul 2001: GAMAP VERSION 1.48
+                        - replaced call to DEFAULT_COLORS with 
+                          call to MYCT_DEFAULTS() to specify
+                          MYCT color table information
+                        - deleted obsolete code from 1998 and 1999
+      bmy, 09 Aug 2001: - bug fix: remove reference to BLACK from
+                          the old "default_colors.pro"
+      bmy, 24 May 2002: GAMAP VERSION 1.50
+                        - Now use SI unit hPa instead of mb in axis titles
+                        - delete obsolete, commented-out code
+      bmy, 28 Sep 2002: GAMAP VERSION 1.51
+                        - now get default NCOLORS, BOTTOM, BLACK values
+                          from !MYCT system variable instead of from
+                          the MYCT_DEFAULTS function
+      bmy, 16 Apr 2004: GAMAP VERSION 2.02
+                        - Also need to convert the units of YYRANGE
+                          accordingly so that /AUTORANGE will work
+      bmy, 16 Jun 2004: - Bug fix: if we do unit conversion, do not
+                          let the converted value of YRANGE get
+                          passed back to the main program
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Modified for GEOS-5 fields that are
+                          defined on level edges
+      phs, 19 Mar 2008: GAMAP VERSION 2.12
+                        - Bug fix for working with new map_labels
+      phs, 02 Apr 2008: - Bug fix for XZ and YZ pixel plots
+
+===================
+CTM_PLOT_TIMESERIES.PRO
+===================
+      bmy, 16 Apr 2004: GAMAP VERSION 2.03
+                        - Initial version
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_PLOTDIFF.PRO
+===================
+      bmy, 17 Apr 2002: GAMAP VERSION 1.50
+      bmy, 17 Jul 2002: GAMAP VERSION 1.51
+                        - added TAU0 keyword
+      bmy, 16 Dec 2002: GAMAP VERSION 1.52
+                        - now can handle 2 different tracer numbers
+                        - now can handle 2 different TAU0 values
+      bmy, 29 Jan 2004: GAMAP VERSION 2.01
+                        - Now pass LEV keyword to CTM_DIFF
+                        - Now plot both DATA1 and DATA2 on
+                          the same scale for easier comparison
+      bmy, 16 Feb 2005: GAMAP VERSION 2.03
+                        - Now use /QUIET and /NOPRINT keywords in
+                          CTM_GET_DATA and CTM_GET_DATABLOCK to
+                          suppress screen output
+      phs, 24 Oct 2006: GAMAP VERSION 2.05
+                        - Now use YRANGE if it is passed.  
+                        - Also use DIFFRANGE (for range of the 
+                          abs difference plot) if it is passed.
+                        - Now use PCRANGE (for range of the
+                          %age difference plot) if it is passed.
+      bmy, 15 Nov 2006: GAMAP VERSION 2.06
+                        - Now use blue-white-red color table
+                          for abs diff and % diff plots
+bmy & phs, 04 Oct 2007: GAMAP VERSION 2.10
+                        - Added DIVISIONS keyword (default=5) 
+                        - Now make the default DIFFRANGE and
+                          PCRANGE symmetric around zero
+                        - Added DIFFDIV, DIFFNCOLORS keywords
+                        - Also restore original !MYCT structure
+                        - restore initial Color Table and !MyCt,
+                          and return, when crashes.
+                        - Now skip plotting % difference if
+                          DATA1 is zero everywhere
+                        - Add error trapping with CATCH
+      bmy, 16 Jan 2008: GAMAP VERSION 2.12
+                        - add _EXTRA=e to calls to CTM_PLOT, in order
+                          to pass extra variables to that routine
+      phs, 31 Jan 2008: - Add NODEVICE keyword, so device (like PS
+                          file) can be open outside this routine,
+                          allowing for multiple pages in a PS file
+                          for example.
+                        - Clipping of percentage difference range
+                          is indicated with triangle.
+      phs, 25 Feb 2008: - Improved error catcher
+
+===================
+CTM_PLOTRATIO.PRO
+===================
+      bmy, 24 Apr 2002: GAMAP VERSION 1.50
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_PRINTDIFF.PRO
+===================
+      bmy, 04 Apr 2002: GAMAP VERSION 1.50
+      bmy, 22 Apr 2002: - now takes diff of DATA2 - DATA1, in order
+                          to be consistent with CTM_PLOTDIFF.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_READ_PLANEFLIGHT.PRO
+===================
+      bmy, 23 Mar 2005: GAMAP VERSION 2.03
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_RESEXT.PRO
+===================
+      bmy, 30 Jun 2000: GAMAP VERSION 1.46
+      bmy, 08 Aug 2000: - Added string for 0.5 x 0.5
+      bmy, 08 Feb 2006: GAMAP VERSION 2.04
+                        - Added strings for 1.0 x 1.25 and 
+                          0.5 x 0.625
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - added string for 0.5 x 0.667
+
+===================
+CTM_RESTART_O3.PRO
+===================
+      bmy, 17 Feb 2000: VERSION 1.45
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CTM_SUM.PRO
+===================
+      mgs, 18 May 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Added FILENAME keyword as an 
+                          alternative to ILUN
+                        - Updated comments, cosmetic changes
+
+===================
+CTM_SUM_EMISSIONS.PRO
+===================
+      bmy, 26 Apr 2001: GAMAP VERSION 1.47
+      bmy, 08 Jun 2001: - now uses correct tracer name, unit,
+                          and molecular weight for CO--SRCE
+      bmy, 19 Jun 2001: GAMAP VERSION 1.48
+                        - added internal function CSE_GETUNIT
+                          to return the proper unit string
+                          ("Tg N", "Tg C", or "Tg").
+                        - added internal function CSE_GETAREACM2
+                          which gets the proper surface area
+                          for each data block
+                        - removed MODELNAME, RESOLUTION keywords
+      bmy, 03 Jul 2001: - now can sum emissions from GENERIC grids
+      bmy, 16 Aug 2001: - added /NO_SECONDS and /KG keywords
+      bmy, 26 Sep 2001: GAMAP VERSION 1.49
+                        - set XNUMOL = 1d-3 if /KG is set; this
+                          will convert from g/cm2 to Tg correctly
+      bmy, 21 Nov 2001: - added internal routine CSE_GETINFO
+                        - now call CTM_EXTRACT to restrict the
+                          totaling to any arbitrary lat/lon rectangle
+      bmy, 10 Jan 2002: GAMAP VERSION 1.50
+                        - Bug fix: Don't call CTM_EXTRACT if /KG is, 
+                          set, since AREACM2 will be 1 in that case 
+      bmy, 31 Jan 2002: - change output format from f10.4 to f12.4
+      bmy, 10 Jun 2002: GAMAP VERSION 1.51
+                        - added "kludge" for biomass burning files
+                          if /NO_SECONDS is set; will use proper
+                          mol wts & units for ACET, C3H8, C2H6
+      bmy, 14 Jan 2003: GAMAP VERSION 1.52
+                        - added another quick fix to get the unit strings
+                          correct for sulfate and nitrogen tracers for ND13
+      bmy, 19 Sep 2003: GAMAP VERSION 1.53
+                        - now call PTR_FREE to free the pointer memory
+      bmy, 19 Nov 2003: GAMAP VERSION 2.01
+                        - now get the spacing between diagnostic
+                          offsets from CTM_DIAGINFO
+      bmy, 26 Mar 2004: GAMAP VERSION 2.02
+                        - added FORMAT keyword
+      bmy, 03 Dec 2004: GAMAP VERSION 2.03
+                        - now pass /QUIET to CTM_GET DATA which
+                          reduces a lot of printing to the screen
+      bmy, 15 Mar 2005: - Added /TO_Gg and TO_Mg keywords, which
+                          will print totals in either Gg or Mg
+                          instead of the default unit of Tg
+                        - Now pass _EXTRA=e to CTM_GET_DATA so that
+                          we can restrict to a given time 
+      bmy, 07 Apr 2006: GAMAP VERSION 2.05
+                        - Added /SHORT keyword
+      bmy, 29 Sep 2006: - Bug fix: now test for molec wt in kg/mole
+                          in internal function CSE_GETUNIT
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      phs, 20 Mar 2008: GAMAP VERSION 2.12
+                        - updated to work with nested grid
+
+===================
+CTM_TRACERINFO.PRO
+===================
+      mgs, 22 Apr 1998: VERSION 1.00
+      mgs, 24 Apr 1998: - added NAME keyword
+      bmy, 07 May 1998: - added MOLC structure field to store 
+                          carbon number for NMHC
+      mgs, 07 May 1998: VERSION 2.00
+                        - substantially revised
+      mgs, 08 May 1998: - added SCALE and UNIT tags, made them optional
+      mgs, 28 May 1998: - bug fix with on_ioerror
+      mgs, 09 Oct 1998: - bug fix for tracern=0, changed CALLING SEQ. entry
+      mgs, 12 Nov 1998: - unit string now defaulted to 'UNDEFINED' 
+      bmy, 03 Jan 2001: GAMAP VERSION 1.47
+                        - skip tracer lines beginning with '#' character
+      bmy, 17 Nov 2003: GAMAP VERSION 2.01
+                        - Removed FULLI, SMALLI, they're obsolete
+                        - now use INDEX for tracer number
+                        - Now use new file format for "tracerinfo.dat"
+                          which allows for 8-digit offset numbers
+                        - No longer read defaults from internal datablock
+                        - Updated comments 
+      bmy, 06 Apr 2004: GAMAP VERSION 2.02
+                        - added /VERBOSE keyword
+      bmy, 09 Mar 2006: GAMAP VERSION 2.05
+                        - Use "./tracerinfo.dat" as default in
+                          order to facilitate reading in IDL 5.5-
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Add IS_EDGED tag to TRACERINFO structure
+                          to denote whether the tracer is defined
+                          on level centers or level edges
+                        - Implement temporary fix: call GET_IS_EDGED
+                          to determine if a tracer is defined on
+                          level edges.  There is probably a better way
+                          to do this, work on that later.
+                        - Now use FILE_WHICH to locate the
+                          "tracerinfo.dat" file.
+      phs, 30 Jun 2008: GAMAP VERSION 2.12
+                        - bug fix to account for FILENAME
+
+===================
+CTM_TYPE.PRO
+===================
+      mgs, 02 Mar 1998: VERSION 1.00
+      bmy, 07 Apr 1998: - Renamed to CTM_TYPE to keep
+                          consistent with other CTM subroutines.
+      mgs, 24 Apr 1998: - made structure named
+      mgs, 19 May 1998: - added NTROP tag and keyword
+      bmy, 19 Jun 1998: - now computes FSU model parameters
+                        - GEOS_STRAT and GEOS-1 troposphere tops
+                          are now computed separately
+                        - added small bug fix for fullchem from mgs
+      mgs, 14 Aug 1998: - added DUMMY name
+      mgs, 15 Aug 1998: - added GEOS-1 as variant of GEOS1
+      bmy, 21 Dec 1998: - changed NLAYERS for GEOS STRAT
+      mgs, 22 Dec 1998: - small bug fix for GEOS family NTROP
+      mgs, 22 Feb 1999: - added GENERIC (same as DUMMY) and allow
+                          keyword settings for this name
+      bmy, 23 Feb 1999: - Implemented FSU grid information
+      mgs, 16 Mar 1999: VERSION 1.21 
+                        - cosmetic changes
+                        - changed function name yesno into yesno_val to
+                          avoid conflicts.
+                        - removed online tag because it's never
+                          used
+      bmy, 26 Jul 1999: VERSION 1.42
+                        - added HYBRID keyword and tag name
+                        - cosmetic changes 
+      bmy, 15 Sep 1999: VERSION 1.43
+                        - fixed bug for NTROP in GISS-II-PRIME, 9L
+      bmy, 15 Oct 1999: VERSION 1.44
+                        - now reset model names "GEOS-STRAT" and 
+                          "GEOS-2" to "GEOS_STRAT" and "GEOS2"
+      bmy, 03 Jan 2000: - added GEOS-2 model parameters
+                        - changed NTROP to 16 for GEOS1
+                        - changed NTROP to 22 for GEOS_STRAT
+      bmy, 16 May 2000: VERSION 1.45
+                        - reset NTROP to 19 for GEOS-STRAT    
+                        - now use GEOS-2 47 layer grid    
+      bmy, 01 Aug 2000: VERSION 1.46          
+                        - added GEOS-3 48-layer grid
+                        - added internal function CHECKRESOLUTION
+                        - cosmetic changes, updated comments
+      bmy, 26 Jun 2001: GAMAP VERSION 1.48
+                        - fixed NTROP for GEOS-3 met fields
+                        - for generic grids, return "GENERIC" in
+                          uppercase as model name and family name
+      bmy, 09 Oct 2001: GAMAP VERSION 1.49
+                        - now accepts modelname "GEOS3_30L", and
+                          returns a structure for 30-layer GEOS-3 grid
+      bmy, 06 Nov 2001: - now recognizes "GEOS-4" as a modelname
+                        - changed default PSURF from 986 mb to 984 mb
+clh & bmy, 18 Oct 2002: GAMAP VERSION 1.52:
+                        - Now supports 7-layer MOPITT grid
+      bmy, 12 Dec 2003: GAMAP VERSION 2.01
+                        - Now supports "GEOS4_30L" grid
+                        - Set NTROP=18 for GEOS-4 grid   
+                        - Now set CENTER180=1 for GISS_II_PRIME 
+                        - Now supports 52-layer NCAR-MATCH model 
+                        - Cleaned up code and straightened out logic
+                        - Removed SMALLCHEM, HELP keywords
+      bmy, 18 Feb 2004: GAMAP VERSION 2.01a
+                        - The actual NTROP from the GEOS-4 annual
+                          mean tropopause is 17, not 18
+      bmy, 17 Jun 2004: GAMAP VERSION 2.02a
+                        - added GCAP model type for the 23L hybrid
+                          GCAP grid (which is the same grid as the
+                          winds for the GISS-II-PRIME)
+      bmy, 01 Jun 2006: GAMAP VERSION 2.05
+                        - Bug fix: GISS-II model needs CENTER180=0
+bmy & phs, 16 Aug 2007: GAMAP VERSION 2.10
+                        - Modified for 47 layer GEOS-5 grid
+                        - Now return NLAYERS, NTROP, HALFPOLAR,
+                          CENTER180, FULLCHEM, HYBRID as type long
+
+===================
+CTM_WRITEBPCH.PRO
+===================
+      mgs, 20 May 1999: VERSION 1.00
+                        - stores binary files version 1
+      mgs, 24 May 1999: VERSION 2.00
+                        - stores binary files version 2
+      bmy, 26 Jul 1999: VERSION 2.01
+                        - now call function DATATYPE
+                        - make sure only floating point data gets
+                          written to binary punch file v. 2.0
+      bmy, 19 Jan 2000: - updated commetns
+      bmy, 07 Jun 2000: GAMAP VERSION 1.45
+                        - Save TRACER mod 100L to the punch file 
+                        - updated comments
+      bmy, 02 Mar 2001: GAMAP VERSION 1.47
+                        - added FILEINFO as an argument; will use
+                          PGLOBALFILEINFO structure if not passed
+                        - removed obsolete comments
+      bmy, 13 Mar 2001: - now supports Windows, MacOS, and Unix/Linux
+      bmy, 07 Jun 2001: - removed obsolete code from 7/26/99
+mje & bmy, 17 Dec 2001: GAMAP VERSION 1.49
+                        - added /APPEND keyword in order to
+                          append to an existing binary punch file
+                        - updated comments
+      bmy, 15 Oct 2002: GAMAP VERSION 1.52
+                        - added LEVELSAVE keyword to define certain
+                          levels which to save to disk
+                        - Updated comments, cosmetic changes
+      bmy, 19 Nov 2003: GAMAP VERSION 2.01
+                        - now get diagnostic spacing from CTM_DIAGINFO
+                          and write TRACER mod SPACING to the BPCH file.
+      bmy, 27 May 2004: GAMAP VERSION 2.02
+                        - Bug fix: Don't call CTM_GET_DATA to initialize
+                          data pointers if this has been done already
+                        - removed LEVELSAVE keyword
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Now save 4D datablock if the tag
+                          of FILEINFO[0].FILETYPE = 106;
+
+===================
+CTM_WRITENC.PRO
+===================
+      mgs, 20 May 1999: GAMAP VERSION 1.47
+                        - adapted from "ctm_writebpch.pro"
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+FIND_CELLS_BY_COUNTRY.PRO
+===================
+tmf & bmy, 01 Jul 2006: GAMAP VERSION 2.05
+                        - Initial version
+bmy & phs, 27 Jul 2007: GAMAP VERSION 2.10
+                        - Use FILE_WHICH to find countries.table
+                        - Use FILE_WHICH to find countries.gif 
+
+===================
+GAMAP.PRO
+===================
+      mgs, 12 Nov 1998: VERSION 1.00
+      bmy, 16 Nov 1998: - added defaults for LAT, LEV, LON, PTYPE
+                        - now prompts for PS
+                        - now prompts user for /PS output
+      bmy, 17 Nov 1998: - now call DEFAULT_RANGE to ensure that
+                          that LAT, LON, LEVEL have two elements,
+                          even if there is only one unique value.
+                        - now uses N_UNIQ.PRO to test for the number
+                          of unique elements in LON, LAT, and LEVEL.
+      mgs, 17 Nov 1998: - finishing touches for first release.
+                        - added NOFILE keyword
+                        - added plot type b/w contours
+      mgs, 18 Nov 1998: - added timestamp as default when closing
+                          postscript files
+      bmy, 08 Jan 1999: - Will also prompt for totaling (if
+                          averaging is not selected)
+      bmy, 13 Jan 1999: - now prompt user for OUTFILENAME
+      bmy, 15 Jan 1999: VERSION 1.02
+                        - add support for 3-D data slices
+                        - clean up user interface so that the user
+                          menu of plotting options is only invoked
+                          when plotting a 2-D map.
+      bmy, 19 Jan 1999: - added binary flag masking
+                        - added defaults for averaging and selection
+                        - improved echoback of information to user
+      bmy, 20 Jan 1999: - prompts user again if data block selection
+                          or averaging selection is out of range
+                        - fixed bug: now default data block
+                          selection is saved.
+                        - Reset PS to 0 and OUTFILENAME to '' if we
+                          are plotting a 0-D or 3-D data block
+                        - updated comments
+      mgs, 21 Jan 1999: - dimensional information now in subroutine
+                        - improved binary masking
+                        - added several Quit options
+                        - Postscript options now controlled from
+                          gamap.defaults
+                        - removed NoTimeStamp keyword (now set in
+                          gamap.defaults)
+      bmy, 12 Feb 1999: VERSION 1.03
+                        - now works with data blocks that are
+                          sub-regions of the globe
+                        - added functions GAMAP_GetDataBlockRanges
+                          GAMAP_SelectDataBlock, and
+                          GAMAP_QueryAverageOrTotal
+                        - updated comments
+      bmy, 17 Feb 1999: VERSION 1.20
+                        - Replace DATAINFO.OFFSET by DATAINFO.FIRST,
+                          which contains the I, J, L indices of
+                          the first grid box
+                        - Animation facility added
+                        - added functions GAMAP_GetModelInfo,
+                          GAMAP_CheckDataBlockConsistency,
+                          GAMAP_SelectPlotType, and
+                          GAMAP_QueryPostScriptOptions.
+                        - Also renamed function GAMAP_SelectDataBlock to
+                          GAMAP_SelectDataBlocks, since one can now
+                          select multiple data blocks
+      bmy, 18 Feb 1999: - added /RESETDEFAULTS keyword
+                        - removed /ANIMATE keyword
+      bmy, 19 Feb 1999: - added NOAUTOYRANGE keyword
+                        - added function GAMAP_AutoYRange
+                        - added GIFFILENAME keyword
+                        - added GIF_SAV to common block SAVEVALUES
+                        - call REPLACE_TOKEN to replace token text
+                          in DEFAULTGIFFILENAME
+      bmy, 22 Feb 1999: - added more animation options
+                        - added DO_GIF, DO_MPEG, DO_ANIMATE, and
+                          MPEGFILENAME keywords
+                        - added GAMAP_QueryAnimationOptions routine
+      bmy, 23 Feb 1999: - small bug fixes
+      bmy, 04 Mar 1999: - added internal routines GAMAP_FindNearestEdges
+                          and GAMAP_GetDefaultRanges
+                        - now force lat/lon ranges to coincide with
+                          grid box edges
+                        - warn user if lat range contains half-polar
+                          boxes, since TVIMAGE will treat them as
+                          whole boxes and the map overlay will be
+                          inaccurate!
+      bmy, 05 Mar 1999: - Clean up FILEINFO/DATAINFO matching process
+                        - renamed/reorganized internal functions\
+      bmy, 20 Mar 1999: - bug fix for default ranges (may need more
+                          fixing later on)
+      mgs, 22 Mar 1999: - added ALREADY_PS flag for multi-panel use
+                        - animation now only if !p.multi does not
+                          have more than 1 panel to display
+      mgs, 23 Mar 1999: - improved comments and examples
+                        - removed unnecessary function MatchFileInfo...
+                          (easier with make_selection)
+                        - changed all "string booleans" to booleans
+                        - Do_Animation now an entirely local variable
+      mgs, 25 Mar 1999: - few minor bug fixes
+                        - improved handling of default ranges
+                        - detect out of range in record selection
+                        - now allows for 2D field plots
+      bmy, 17 May 1999: - now resolve DEFAULT_RANGE explicitly and
+                          call DEFRANGE_STR2NUM separately
+                        - few minor fixes in GAMAP_UserRangeEntry for
+                          data blocks that straddle the date line.
+      mgs, 19 May 1999: - some more cleaning
+                        - implemented SAVE option after data record
+                          selection
+                        - user selection for longitudes greatly improved
+                        - some adjustments in FindNearestEdges, notably
+                          for range 0..360. Unfortunately, the 0 meridian
+                          gridline will be omitted in such plots. If we
+                          wanted to include it we would need to carry
+                          an extra GLOBAL flag because lower and upper
+                          edges (grid box indices) are identical.
+      mgs, 20 May 1999: - added option to save record seelction to file.
+      mgs, 24 May 1999: - yet more work had to be done to make lon/lat
+                          selection as user would expect it to work.
+                        - renamed FindNearestEdges to ..Centers
+      mgs, 25 May 1999: - still more fiddling. Yuck!
+                        RELEASE OF GAMAP VERSION 1.40
+      bmy, 26 May 1999: - Added polar plot capabilities
+                        - fixed reset of plot ranges when latitude is +-90
+      mgs, 27 May 1999: - already_ps flag now also prevents user query.
+                        - default lat range for global fields now back
+                          to -88..88 only for "reset" conditions. Otherwise
+                          -90..90 is recognized and remembered.
+      mgs, 28 May 1999: - added RESULT keyword.
+                        - added TOPTITLE keyword.
+      bmy, 28 May 1999: - restrict plot type menu for polar plots
+bmy & mgs, 02 Jun 1999: - add /NOERASE to MULTIPANEL call when
+                          testing for last plot on page
+                        - updated some comments
+      mgs, 30 Jun 1999: - make sure to return only one lat/lon box
+                          if user enters single value (even on edges).
+      bmy, 07 Jul 1999: - small bug fixes
+      bmy, 15 Sep 1999: GAMAP VERSION 1.43
+                        - changes for 23L GISS-II-PRIME model
+                        - minor bug fixes
+      bmy, 25 Oct 1999: GAMAP VERSION 1.44
+                        - added /MULTIPLE keyword -- option to
+                          write to a GIF file w/ multiple frames
+      bmy, 23 Nov 1999: - /SMALLCHEM now works correctly!
+      bmy, 26 Apr 2000: GAMAP VERSION 1.45
+                        - now make sure tracer numbers are mod 100L
+                          when saving data blocks to disk
+      bmy, 19 Jun 2000: - now create NS string array by concatenating 
+                          smaller arrays of < 1024 elements
+      bmy, 20 Jun 2000: - bug fix -- set NS[0] blank for string output
+      bmy, 03 Oct 2000: GAMAP VERSION 1.46
+      bmy, 22 Jan 2001: GAMAP VERSION 1.47
+                        - removed obsolete code
+                        - now produce a 3-D isopleth map instead of
+                          calling the volume slicer routine
+                        - added ISOPLETH keyword
+                        - added internal subroutine GAMAP_QueryIsopleth
+                        - allow PostScript output for 3-D maps, and
+                          suppress animation for 3-D maps.
+      bmy, 13 Mar 2001: - remove a couple more instances of the 
+                          obsolete STR_SEP routine.  Replaced with
+                          STRSPLIT( /EXTRACT ).  
+      bmy, 28 Jun 2001: GAMAP VERSION 1.48
+                        - bug fix in GAMAP_StoreDataInfo: for
+                          GENERIC grids with NLAYERS=0, be sure to
+                          call CTM_GRID with the /NO_VERTICAL flag.
+      bmy, 29 Aug 2001: - added XSIZE, YSIZE, XOFFSET, YOFFSET 
+                          keywords to pass to OPEN_DEVICE 
+mje & bmy, 17 Dec 2001: GAMAP VERSION 1.49
+                        - add _EXTRA=e in call to CTM_WRITEBPCH, 
+                          so that we can pass the /APPEND keyword 
+      bmy, 17 Jan 2002: GAMAP VERSION 1.50
+                        - now call STRBREAK wrapper routine from
+                          the TOOLS subdirectory for backwards
+                          compatiblity for string-splitting
+                        - use FORWARD_FUNCTION to declare STRBREAK
+      bmy, 24 Jan 2002: - deleted obsolete code
+      bmy, 06 Dec 2002: GAMAP VERSION 1.52
+                        - removed /DO_MPEG and MPEGFILENAME keywords
+                        - now use D. Fanning's TVREAD for better
+                          device-independent screen capture
+                        - removed /MULTIPLE keyword for GIF output
+                        - added /DO_PNG, /DO_BMP, /DO_JPEG,
+                          /DO_TIFF keywords
+                        - added internal function GAMAP_GetFrameFileName
+      bmy, 13 Nov 2003: GAMAP VERSION 2.01
+                        - comment out XINTERANIMATE options
+      bmy, 27 Aug 2004: GAMAP VERSION 2.03
+                        - now call CTM_PLOT_TIMESERIES to plot data
+                          from bpch files containing GEOS-CHEM station
+                          timeseries output (e.g. ND48 diagnostic)
+      bmy, 27 Oct 2004: - now pass /QUIET keyword to GAMAP_AUTOYRANGE,
+                          CTM_PLOT_TIMESERIES, and CTM_PLOT
+                        - hardwire QUIET=1 in to suppress extra printing
+      bmy, 28 Jun 2005: GAMAP VERSION 2.04
+                        - Strip white spaces in FILENAME, if present
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+bmy & phs, 20 Nov 2007: GAMAP VERSION 2.11
+                        - If any 4D data blocks are encountered,
+                          then only use the first 3 dimensions
+
+===================
+GETMODELANDGRIDINFO.PRO
+===================
+      bmy, 24 Apr 2002: GAMAP VERSION 1.50
+      bmy, 28 Jun 2006: GAMAP VERSION 2.05
+                        - Bug fix for multi-level GENERIC grids
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      phs, 13 May 2008: GAMAP VERSION 2.12
+                        - Added LON and LAT keyword to return data
+                        (not global grid) longitude and latitude centers.
+
+===================
+ISOPLETH_MAP.PRO
+===================
+      bmy, 23 Jan 2001: GAMAP VERSION 1.47
+                        - based on example code by David Fanning
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      phs, 17 Jul 2008: GAMAP VERSION 2.12
+                        - Now set N_COLORS to !D.TBLE_SIZE 
+
+===================
+PLANE_PLOT.PRO
+===================
+      bmy, 23 Apr 2004: GAMAP VERSION 2.03
+      bmy, 13 Mar 2006: GAMAP VERSION 2.05
+                        - Slight modifications for new version
+                          of ctm_read_planeflight.pro
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+PLOTSIGMA.PRO
+===================
+      bmy, 15 Aug 1997: VERSION 1.00
+      bmy, 30 Oct 1997: VERSION 1.01
+      bmy, 15 Jun 1998: VERSION 1.10
+                        - now uses CTM_TYPE, CTM_GRID
+      bmy, 17 Jun 1998: GAMAP VERSION 1.20
+      bmy, 19 Jun 1998: - add array for color indices
+                        - also supports FSU model
+      bmy, 03 Jan 2000: GAMAP VERSION 1.44
+                        - eliminate call to MYCT and keywords
+                        - cosmetic changes
+      bmy, 06 Sep 2000: GAMAP VERSION 1.46
+                        - added text string for GEOS-3     
+      bmy, 26 Jun 2001: GAMAP VERSION 1.48
+                        - now pass _EXTRA=e to PLOT command
+                        - added extra error checking
+      bmy, 23 Jul 2001: - now use MYCT_DEFAULTS() to set up
+                          MYCT color information
+      bmy, 28 Sep 2002: GAMAP VERSION 1.51
+                        - now gets color information from the 
+                          !MYCT system variable
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Modified for GEOS-4 and GEOS-5
+
+===================
+READ_EPTOMS.PRO
+===================
+      mgs, 02 Apr 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+READ_MLD.PRO
+===================
+      mgs, 30 Jun 1999: VERSION 1.00 (derived from read_eptoms)
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+TEST_MET.PRO
+===================
+      bmy, 24 May 2005: GAMAP VERSION 2.04
+                        - now renamed from "test_dao.pro"
+                        - added fields for GISS/GCAP model
+                        - now looks for an IDENT string 
+      bmy, 12 Dec 2006: GAMAP VERSION 2.06
+                        - Modifications for GEOS-5 met fields
+                        - Added XINDEX, YINDEX keywords
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Added extra GEOS-5 fields
+      bmy, 21 Feb 2008: GAMAP VERSION 2.12
+                        - Now be sure to swap the endian when 
+                          opening the file on little-endian 
+                          machines
+
+===================
+TSDIAG.PRO
+===================
+      bmy, 06 May 1998: VERSION 1.00
+      bmy, 07 May 1998: VERSION 1.01
+                        - added PPBC and INTERVAL keywords
+                        - now calls FILE_EXIST to make sure
+                          the input file exists 
+      bmy, 27 May 1998  - now uses CTM_DIAGINFO to return
+                          the proper tracer offset
+      bmy, 28 May 1998  - now uses SCALE, UNIT, and MOLC information
+                          as returned by CTM_TRACERINFO.
+                        - now uses EXP_STR to compute a 
+                          power-of-ten string for the plot title
+      bmy, 29 May 1998  - now calls CLEANPLOT to initialize
+                          all system variables
+      bmy, 02 Jun 1998  - now uses STRSCI and STRCHEM string
+                          formatting functions
+      mgs, 11 Jun 1998: - couple of bug fixes
+      mgs, 15 Jun 1998: - default tick interval now 48 h
+      mgs, 22 Jun 1998: - added Data and CSTEPS keywords
+      mgs, 20 Nov 1998: - now uses convert_unit 
+      hsu, 22 Mar 1999: - increased MAXSTEPS and changed input format
+      mgs, 04 May 1999: - added MS as a tracer offset (100*MS)
+      mgs, 05 May 1999: - ... and a little bug fix
+      mgs, 19 May 1999: - updated comments
+                        - default SCALE factor now 1 instead of 1.E-12
+                        - CLEANPLOT no longer called
+      mgs, 24 May 1999: - added VERBOSE keyword
+                        - fixed at least two bugs
+                        - improved output. Now need to say /VERBOSE in
+                          order to get details.
+      mgs, 25 May 1999: - new format had MS and N swapped.
+      bmy, 27 Jul 1999: GAMAP VERSION 1.42
+                        - updated comments
+      bmy, 30 Jan 2002: GAMAP VERSION 1.50
+                        - Now use STRBREAK to split each line into 
+                          elements of data
+                        - Also no longer restrict data to be > 0
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+TSPLOT.PRO
+===================
+      mgs, 30 Jun 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+TVMAP.PRO
+===================
+      bmy, 13 Apr 1998: VERSION 1.00
+      bmy, 11 Jun 1998: - now returns if there is
+                          nothing to plot
+      mgs, 15 Jun 1998: - bug fix: n_elements instead of
+                          keyword_set
+      bmy, 22 Sep 1998: VERSION 1.10
+                        - Now use _EXTRA=e to pass keywords to
+                          BYTSCL, TVIMAGE, MAP_SET, and COLORBAR
+                        - added MAPTITLE and UNIT keywords to
+                          avoid keyword name duplication in
+                          _EXTRA=e.
+      bmy, 25 Sep 1998: VERSION 2.00
+                        - now calls MAP_CONTINENTS and MAP_GRID
+                        - keywords renamed for consistency
+                        - reduced default size for CBPOSITION
+      bmy, 28 Sep 1998: VERSION 2.01
+                        - MPOSITION renamed to POSITION, MCOLOR to
+                          COLOR, MTITLE to TITLE for consistency
+                        - LONSHIFT renamed to LSHIFT to avoid
+                          problems with ambiguous keyword names
+      bmy, 07 Sep 1998: VERSION 3.00
+                        - now can plot contour map or color-pixel
+                          map (added CONTOUR and FCONTOUR keywords,
+                          and XARR and YARR parameters)
+                        - The colorbar is now optional, and is
+                          turned on via the /COLORBAR switch.
+      bmy, 12 Nov 1998: VERSION 3.01
+                        - added ISOTROPIC, SAMPLE, KEEP_ASPECT_RATIO,
+                          C_LABELS, and C_FORMAT keywords
+                        - now isotropic-scale color-image plots
+                          and isotropic-scale contour plots are
+                          handled correctly
+                        - Use mgs-style default levels & colors for
+                          contour and filled-contour maps.
+      bmy, 13 Nov 1998: - updated comments
+                        - renamed C_LEVELS to C_ANNOTATION to
+                          prevent keyword name confusion
+                        - added NOLINES, NOLABELS, C_LABELS,
+                          and OVERLAYCOLOR keywords
+                        - contour lines and labels can be
+                          suppressed correctly
+                        - added mgs fix so that PostScript
+                          pixel-maps appear smoother
+                        - a border is now plotted around the
+                          map window, without inserting any of that
+                          annoying "cushion" space.
+                        - added LOG keyword for logarithmic
+                          contours and/or pixel colors
+                        - use KEYWORD_SET more often
+      mgs, 17 Nov 1998: - re-arranged calls to map_set and tvimage
+                          in order to maximize size
+                        - output of title now seperate from map_set
+                        - added CBFormat keyword
+      mgs, 19 Nov 1998: - CBFormat now handled in colorbar.pro
+      mgs, 20 Nov 1998: - bug fix for map_set for contour plots
+      mgs, 03 Dec 1998: - filled continents now added before contours
+                        - CFILL keyword checked for consistency
+      bmy, 08 Feb 1999: - If /LOG is set, make sure that we don't
+                          take the log of zero and incur a math error
+                        - add call to function INV_INDEX
+      bmy, 23 Feb 1999: - added /GLABELS keyword to turn on/off printing
+                          of labels for each grid line on the map
+                        - added call to CONVERT_LON for longitudes
+                          that straddle the date line
+      bmy, 26 Feb 1999: - added LIMIT as an explicit keyword
+                        - now uses MAP_LABELS to construct grid labels
+                        - updated comments
+      bmy, 04 Mar 1999: - added DEBUG keyword for debug output
+      mgs, 17 Mar 1999: - some cleaning:
+                        - LSHIFT, DLON, and GLABELS made obsolete
+                        - new keyword NOGLABELS
+                        - P0Lon now computed from LIMIT information.
+                        - Updated call to map_labels
+                        - For contour plots: XArr, YArr no longer
+                          mandatory (although they should be provided)
+                        - much smarter default contour levels
+      mgs, 22 Mar 1999: - added multi-panel ability through use of
+                          the new MULTIPANEL routine. This alters the
+                          meaning of MPosition and CB_Position: they now
+                          refer to positions in the current plot panel!
+      mgs, 23 Mar 1999: - fixed a few minor things
+                        - charsize is now adjusted according to number
+                          of panels on page
+      bmy, 25 Mar 1999: - If CBAR=0, then print unit string below
+                          plot (formerly was done in CTM_PLOT)
+                        - now use updated GET_DEFAULTFORMAT
+                        - updated comments
+                        - if NPANELS >=2 then place the plot title
+                          higher above the window, to allow for
+                          carriage-returned lines
+      mgs, 23 Apr 1999: - added CBMin and CBMax keywords for
+                          tighter colorbar control
+      mgs, 19 May 1999: - title shifted a little higher if it has
+                          more than 1 line.
+bmy & mgs, 26 May 1999: - added POLAR keyword and respective support.
+      bmy, 27 May 1999: - bug fix for isotropic contour plots
+      mgs, 27 May 1999: - added support for discrete colorbars and
+                          changed default behaviour for filled
+                          contour plots: now plots a colorbar and
+                          no lines.
+      bmy, 03 Jun 1999: - For polar plots, if the latitude range
+                          spans more than 60 degrees, only plot
+                          labels for [ 30, 60, 90 ] degrees.
+      mgs, 03 Jun 1999: - CFill now also allowed for filled contours
+                          or pixel plots (data will be overplotted)
+      bmy, 09 Jun 1999: - Set CBUnit to '' if nothing passed
+      bmy, 21 Jun 1999: - Added MIN_VALID keyword.
+      bmy, 06 Jul 1999: - bug fix for min_valid: ge replaces gt.
+      bmy, 07 Jul 1999: - Save C_COLORS in a temp variable.  Also
+                          define C_COLORS so that grayscales won't
+                          appear in Postscript plots
+                        - multi-panel plots are now well-separated
+                          from each other (for PostScript output)
+      bmy, 08 Jul 1999: - more minor fixes
+      bmy, 18 Nov 1999: - increase default left margin by a little
+      bmy, 31 Mar 2000: GAMAP VERSION 1.45
+                        - make CSFAC and TITLECSFAC into keywords
+      bmy, 10 May 2000: - make sure XARR and YARR (if passed) are 1D vectors
+                        - now use XARR, YARR to set default limits
+                        - rearranged keyword settings code for clarity
+                        - added more debug output (when /DEBUG is set)
+      bmy, 26 May 2000: - updated comments
+      bmy, 13 Jun 2000: - added /COUNTRIES and /COASTS keywords.
+                          Setting /COUNTRIES, /COASTS, or /CONTINENTS
+                          will now invoke routine MAP_CONTINENTS
+      bmy, 30 Jan 2001: GAMAP VERSION 1.47
+                        - if NOGLABELS=0 and GRID=0, will print out
+                          grid labels w/o printing out grid lines
+                        - added MARGIN keyword for MULTIPANEL
+                        - also allow coarse plots with /SAMPLE
+                          when using the Z-buffer device
+      bmy, 07 Jun 2001: - removed some obsolete code & comments
+      bmy, 02 Jul 2001: GAMAP VERSION 1.48
+                        - added /NOGXLABELS and /NOGYLABELS keywords
+                          to suppress printing either lon or lat
+                          grid labels, if so desired.
+      bmy, 13 Jul 2001: - bug fix: remove _EXTRA=e from MAP_SET call
+                          when making pixel plots.  This prevents extra
+                          grid lines from being drawn on the map.
+      bmy, 23 Jul 2001: - now call MYCT_DEFAULTS to specify default
+                          values for BLACK, BOTTOM, NCOLORS, etc
+                          if these keywords are not passed explicitly.
+      bmy, 31 Oct 2001: GAMAP VERSION 1.49
+                        - add /NOADVANCE keyword to prevent advancing
+                          to the next page (in case you want to overplot)
+      bmy, 08 May 2002: GAMAP VERSION 1.50
+                        - If the data array has more than 100,000 elements,
+                          then assign it a dithering factor of 1, so that
+                          we don't run out of memory when trying to plot it
+      bmy, 20 Jun 2002: GAMAP VERSION 1.51
+                        - added WINDOWPOSITION keyword to return
+                          the position vector of the plot window
+                          region to the calling program
+      bmy, 28 Sep 2002: - now gets MYCT default parameters from the
+                          !MYCT system variable
+      bmy, 10 Oct 2002: - bug fix: MCOLOR=!MYCT.BLACK setting has
+                          now been restored (was left commented out)
+      bmy, 14 Nov 2002: GAMAP VERSION 1.52
+                        - If GLABELS=0, then this also sets GXLABELS=0
+                          and GYLABELS=0.
+                        - Removed obsolete keywords
+                        - Removed reference to MYCT_DEFAULTS.
+      bmy, 02 Mar 2004: GAMAP VERSION 2.02
+                        - added OMARGIN keyword so that we can put
+                          an outer margin around all plot panels
+      bmy, 28 May 2004: - Now returns the modified value of
+                          C_COLORS to the calling program
+                        - added CBTICKLEN keyword to specify the
+                          color bar tick length
+      bmy, 23 Aug 2005: GAMAP VERSION 2.04
+                        - added MAX_VALID keyword
+                        - now adjust MINDATA to MIN_VALID and
+                          MAXDATA to MAX_VALID internally
+                        - Now pass _EXTRA=e to XYOUTS
+tmf & bmy, 04 Oct 2006: GAMAP VERSION 2.05
+                        - Replace /ERASE keyword with /NOERASE
+                          to facilitate manual positioning of
+                          plots.  Pass /NOERASE to MULTIPANEL.
+bmy & phs, 18 Sep 2007: GAMAP VERSION 2.10
+                        - Don't reset data below MIN_VALID to 
+                          MIN_VALID for contour plots
+                        - fix MAX_VALID for contour plots.
+                        - fix CBar behavior when C_LEVELS is passed
+dh/phs/bmy 26 Nov 2007: GAMAP VERSION 2.11
+                        - do not modify input DATA & X/YARR
+                        - add support for VERTICAL COLORBAR
+                        - add support for CONUS projection
+                        - now all map projections are supported for
+                          all 4 types of plots.
+                        - now data Latitudes and Longitudes (X/Yarr)
+                          are taken into account in Pixel
+                          plot: no more need to clip the data
+                          before plotting, TVMAP will do it, like
+                          it already does for Contour plots.
+                        - added Full Hemisphere Polar plot option,
+                          regardless of DATA range and LIMIT keyword
+                        - added RECTANGLE keyword to overwrite
+                          default behavior
+                        - map plotting coordinate system active at
+                          exit, allowing for easy oplot
+                        - default LIMIT for small data set corrected
+                        - various fixes for across-the-dateline plots
+                        - remove obsolete KEEP_ASPECT_RATIO keyword
+                        - add /HORIZON keyword to call MAP_HORIZON
+                        - updated comments
+      phs, 19 Dec 2007: - new default map limit in case of
+                          non-global smooth pixel and contour
+                          plots.
+                        - plots start and end at box edges in few 
+                          new cases.
+                        - replace /CENTER with /MINUS_ONE in call
+                          to CONGRID
+      phs, 12 Feb 2008: GAMAP VERSION 2.12
+                        - Fixes for MIN_VALID and MAX_VALID 
+                        - The test for the LIMIT keyword is now to check
+                          "if ( n_elements(limit) ne 4 )".  This allows you
+                          to disable the LIMIT keyword by also setting
+                          LIMIT=0.
+      phs, 28 Feb 2008: - Couple of small padding improvements
+                        - added SCALEMAPSET and SCALEMAPIMAGE to pass
+                          their respective SCALE keyword to MAP_SET and
+                          MAP_IMAGE.
+                        - LONS and LATS keyword added, so the grid can
+                          be specified. Work with DLAT and DLON, the
+                          grid spacings that can be passed to MAP_LABELS
+                          thru the _extra keyword.
+cdh & phs, 21 Mar 2008: - added minimum support for LIMIT input as
+                          8-elements vector
+      phs, 17 Apr 2008: - Added the TopOutOfRange and BotOutOfRange
+                          keywords, so default color (white) for Out-Of
+                          -Range data can be overwritten.
+      phs,  6 May 2008: - Added the GXLABELS and GYLABELS keywords
+                          to specify which grid line to label.
+      phs, 19 Jun 2008: - Set default SCALE value for MapImage
+                          (ScaleMapImage keyword) to 0.04 if PS device.
+
+===================
+TVPLOT.PRO
+===================
+      bmy, 27 Apr 1998:  VERSION 1.00
+      bmy, 04 Jun 1998:  - now can plot separate X or Y axes
+                           if [XY]STYLE = 4 or 8
+      mgs, 15 Jun 1998:  - bug fix n_elements instead of keyword_set
+                         - now does spline interpolation in the
+                           vertical in order to get correct
+                           altitudes
+      bmy, 21 Sep 1998:  - Rename EXTRA1, EXTRA2, etc, to names
+                           that have more meaning (e.g. E_BYT for
+                           BytScl, E_TV for TVImage, etc.)
+      bmy, 22 Sep 1998:  VERSION 1.10
+                         - now uses _EXTRA=e facility to pass extra
+                           keywords to BYTSCL, TVIMAGE, PLOT, and
+                           COLORBAR.
+                         - add PLOTTITLE (for PLOT) and UNIT (for
+                           COLORBAR) keywords to prevent keyword
+                           name duplication in _EXTRA=e.
+      mgs, 11 Nov 1998:  - added CBar keyword
+      bmy, 16 Nov 1998:  VERSION 2.00
+                         - now can produce line-contour and filled-
+                           contour plots as well as image plots
+                         - now calls REBIN to rebin the byte-scaled
+                           image array to higher resolution for
+                           PostScript output.
+                         - added the following keywords: /LOG,
+                           /SAMPLE, /CONTOUR, /FCONTOUR, C_ANNOTATION,
+                           C_LEVELS, C_LABELS, /NOLABELS, /NOLINES, 
+      bmy, 17 Nov 1998:  - For image plots, now only display plot axes
+                           AFTER the image plot has been made.  This
+                           reduces the "apparent" wait time for the 
+                           user.
+                         - renamed keywords to XA_TITLE, XA_RANGE, 
+                           XA_TICKNAME, etc to avoid keyword name
+                           duplication in the _EXTRA=e facility.
+      mgs, 17 Nov 1998:  - added CBFormat keyword
+      bmy, 18 Nov 1998:  - also added floating point format for 
+                           CBFORMAT when abs(max(Data)) < 10
+      mgs, 19 Nov 1998:  - CBFormat no whandled in colorbar.pro
+      bmy, 27 Jan 1999:  - added defaults for XRANGE and YRANGE
+      bmy, 08 Jan 1999:  - If /LOG is set, make sure that we don't
+                           take the log of zero and incur a math error
+                         - add call to function INV_INDEX  
+      mgs, 18 Mar 1999:  - cleaned up
+                         - now uses loglevels and has smarter default 
+                           contour levels
+      mgs, 22 Mar 1999:  - added multi-panel ability through use of
+                           the new MULTIPANEL routine. This alters the
+                           meaning of MPosition and CB_Position: they now
+                           refer to positions in the current plot panel!
+      mgs, 23 Mar 1999:  - fixed a few minor things
+                         - charsize is now adjusted according to number
+                           of panels on page
+      bmy, 25 Mar 1999:  - now use updated GET_DEFAULTFORMAT
+                         - if NPANELS >=2 then place the plot title
+                           higher above the window, to allow for 
+                           carriage-returned lines
+                         - updated comments
+      bmy, 27 Apr 1999:  - commented out !x.charsize=csfac and
+                           !y.charsize=csfac lines...these messed
+                           up the plot window sizes
+                         - updated comments
+      bmy, 28 Apr 1999:  - added CBMin and CBMax keywords for 
+                           tighter colorbar control
+      mgs, 19 May 1999: - title shifted a little higher if it has
+                          more than 1 line.
+      mgs, 21 May 1999: - variable name for TITLE now MTITLE as in
+                          TVMAP.
+      mgs, 27 May 1999: - changed default behaviour for filled contours:
+                          now plots "discrete" colorbar and no lines.
+                          Keyword NoLines changed to C_Lines.
+      bmy, 10 Jun 1999: - CBUnit defaults to '
+      mgs, 06 Jul 1999: - adjusted charsize for multipanel plots
+      bmy, 07 Jul 1999: - Save C_COLORS in a temp variable.  Also
+                          define C_COLORS so that grayscales won't
+                          appear in Postscript plots
+                        - multi-panel plots are now well-separated
+                          from each other (for PostScript output)
+      bmy, 08 Jul 1999: - more minor fixes
+      bmy, 18 Nov 1999: - increase default left margin by a little
+      bmy, 31 Mar 2000: GAMAP VERSION 1.45
+                        - made CSFAC a keyword
+      bmy, 23 Jul 2001: GAMAP VERSION 1.48
+                        - now call MYCT_DEFAULTS to specify default
+                          values for BLACK, BOTTOM, NCOLORS, etc
+                          if these keywords are not passed explicitly.
+      bmy, 07 Jul 2001: - removed obsolete code from 1998 and 1999
+      bmy, 31 Oct 2001: GAMAP VERSION 1.49
+                        - add /NOADVANCE keyword to prevent advancing
+                          to the next page (in case you want to overplot)
+      bmy, 28 Sep 2002: GAMAP VERSION 1.51
+                        - now gets MYCT default parameters from the
+                          !MYCT system variable
+      bmy, 15 Nov 2002: GAMAP VERSION 1.52
+                        - Added MIN_VALID keyword to skip missing
+                          data values for pixel plots
+      bmy, 18 Dec 2003: - For pixel plots, now linearly interpolate
+                          when creating NDATA instead of using a
+                          cubic spline.  This is more accurate.
+                        - Prevent NDATA from being extrapolated wildly
+                          due to the slope at the surface and top level
+                          of the plot.  
+      bmy, 06 Jan 2003: - Now interpolate NDATA correctly when pressure
+                          or altitude is on the Y-axis.
+                        - Removed obsolete keywords XA_TITLE, YA_TITLE,
+                        - XA_RANGE, YA_RANGE, XA_TICKNAME, YA_TICKNAME
+                        - Now define default YRANGE = [ ZBOT, ZTOP ]
+                          to make Y-axis labels correct for both pressure
+                          and altitude on the Y-axis.
+                        - Removed ZBOT, ZTOP from the keyword list; 
+                          these are now internal variables. 
+                        - updated comments
+      bmy, 02 Mar 2004: GAMAP VERSION 2.02
+                        - added MARGIN keyword a la TVMAP
+                        - added OMARGIN keyword
+      bmy, 28 May 2004: - Now returns the modified value of
+                          C_COLORS to the calling program
+                        - added CBTICKLEN keyword to specify the
+                          color bar tick length
+      bmy, 30 Nov 2004: GAMAP VERSION 2.03
+                        - added WINDOWPOSITION keyword  
+      bmy, 12 Jul 2005: GAMAP VERSION 2.04
+                        - added /ISOTROPIC keyword
+                        - added /NOZINTERP keyword to prevent interpolation
+                          to a fine grid of 100 pts in the vertical dim.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+bmy & phs, 26 Nov 2007: GAMAP VERSION 2.11
+                        - Minor fix for margins w/ for new TVIMAGE
+                        - Also reset !P.MULTI=0 when using TVIMAGE
+                          so that it will use the internally computed
+                          position vector.  Reset after TVIMAGE call.
+                        - Make sure to label last colorbar division
+                          for contour plots
+                        - Vertical colorbar options and MIN_VALID, 
+                          MAX_VALID keywords are the same as TVMAP
+                        - Extra space is now added to the default
+                          MARGIN values for vertical colorbar
+                          and multiple plots per page.
+                        - Adjust default CBPOSITION values such
+                          that the colorbar will be placed either
+                          0.05 below or 0.02 to the right of the plot
+      phs, 04 Apr 2008: GAMAP VERSION 2.12
+                        - now produces a better coarse pixel plot
+                          for altitude vs latitude or longitude
+                          plots, even though the initial box size
+                          is not exactly reproduced. 

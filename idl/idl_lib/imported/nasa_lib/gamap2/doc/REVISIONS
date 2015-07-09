@@ -1,0 +1,90 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/doc/
+last updated : 07/17/2008 10:09
+
+===================
+ADD_TEMPLATE.PRO
+===================
+     written by:
+        R. Sterner, about Sep 1989 at Sac Peak.  The exact date was
+             probably lost by this routine itself.
+     modified:
+        R. Sterner, 13 Dec, 1993 --- dropped spawn to copy files.
+        R. Sterner, 11 Mar, 1993 --- handled no help text case.
+        M. Schultz, 01 Aug, 1997 --- simplified version without
+             analyzing help text
+             Also, original file is left intact 
+             (i.e. modification date etc.)
+             and renamed file.backup if operation successfully.
+             OF COURSE the copyright note is changed as well 
+        mgs, 09 Oct 1998 : - added Id tag for RCS
+        bmy, 19 Jul 1999 : - changed name & email from mgs to bmy
+                             for convenience!  :-)
+        bmy, 27 Jul 1999 : - put RCS tag as the first line of
+                             the standard header
+        bmy, 06 Jul 2000 : - extended separator lines a bit
+        bmy, 11 Oct 2006 : TOOLS VERSION 2.05
+                           - Cosmetic chanes
+   bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                           - Now include 2 email addresses
+                           - Updated comments, cosmetic changes.
+                           - Same conditions apply
+         bmy, 22 Apr 2008: GAMAP VERSION 2.12
+                           - Updated email addresses
+
+===================
+FIX_MANUAL_HTML.PRO
+===================
+      bmy, 23 Apr 2008: GAMAP VERSION 2.12
+
+===================
+GAMAP2_HTML.PRO
+===================
+bmy & phs, 23 Jul 2007: GAMAP VERSION 2.10
+      bmy, 20 Nov 2007: GAMAP VERSION 2.11
+                        - Added new category for timeseries routines
+
+===================
+GAMAP2_MANUAL_CREATE.PRO
+===================
+      bmy, 01 Jul 2008: GAMAP VERSION 2.12
+
+===================
+GAMAP2_REVISIONS.PRO
+===================
+      bmy, 17 Jul 2007: VERSION 1.00
+
+===================
+IDL2HTML.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+REVISIONS.PRO
+===================
+      mgs, 16 Jun 1998: VERSION 1.00
+      mgs, 25 May 1999: - added caution for tag detection in this
+                          routine itself.
+      bmy, 24 Oct 2003: TOOLS VERSION 1.53
+                        - Bug fix: EXPAND_PATH strips the directory
+                          separator string from the end of DIRNAME
+                          in IDL 6.0+.  Add this back manually.
+                        - use MFINDFILE instead of FINDFILE to fix
+                          file listing bug in IDL 5.2-
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+UPDATE_LIBRARY.PRO
+===================
+      mgs, 19 Nov 1997: VERSION 1.00
+      mgs, 22 Feb 1999: replaced findfile with mfindfile for SGI
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+USAGE.PRO
+===================
+      mgs, 27 Mar 1998: VERSION 1.00
+      mgs, 16 Jun 1998: - replaced close by free_lun
+      bmy, 09 May 2002: TOOLS VERSION 1.50
+                        - test RNAME to see if it's a string
+                        - updated comments
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10

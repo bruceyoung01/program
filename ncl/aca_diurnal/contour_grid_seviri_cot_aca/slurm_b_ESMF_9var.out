@@ -1,0 +1,30 @@
+Mon Jul  6 21:46:33 EDT 2015
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	Program Starts at Mon Jul  6 21:46:22 EDT 2015
+(0)	Selected track : CAL_LID_L2_05kmALay-Prov-V3-01.2008-07-14T12-55-53ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmALay-Prov-V3-01.2008-07-14T14-34-48ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmCLay-Prov-V3-01.2008-07-14T12-55-53ZD.hdf
+(0)	Selected track : CAL_LID_L2_05kmCLay-Prov-V3-01.2008-07-14T14-34-48ZD.hdf
+(0)	Now Processing = SEV_06-CLD-L2_2008-07-14T07-15-00_V1-03.hdf
+(0)	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(0)	Start to interpolate pixel data to gridded data
+(0)	get_src_grid_info: source lat dims = (1601,1501)
+(0)	get_src_grid_info: source lon dims = (1601,1501)
+(0)	get_src_grid_info: source grid type is 'curvilinear'
+fatal:Eq: Dimension size, for dimension number 0, of operands does not match, can't continue
+
+fatal:["Execute.c":8575]:Execute: Error occurred at or near line 1614 in file $NCARG_ROOT/lib/ncarg/nclscripts/esmf/ESMF_regridding.ncl
+
+fatal:["Execute.c":8575]:Execute: Error occurred at or near line 3853 in file $NCARG_ROOT/lib/ncarg/nclscripts/esmf/ESMF_regridding.ncl
+
+fatal:["Execute.c":8575]:Execute: Error occurred at or near line 3983 in file $NCARG_ROOT/lib/ncarg/nclscripts/esmf/ESMF_regridding.ncl
+
+fatal:["Execute.c":8575]:Execute: Error occurred at or near line 59 in file /home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/pixel_to_grid_ESMF.ncl
+
+fatal:["Execute.c":8575]:Execute: Error occurred at or near line 395 in file contour_grid_seviri_cot_aca_ESMF_9var.ncl
+
+

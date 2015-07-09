@@ -1,0 +1,2535 @@
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+Thu Jun 13 22:28:56 CDT 2013
+(0)	Now Processing Site : 1 of 7
+Thu Jun 13 22:28:57 CDT 2013
+(0)	Now Processing : 2012-08-01_00:00:00
+Thu Jun 13 22:28:57 CDT 2013
+(0)	Now Processing : 2012-08-01_01:00:00
+Thu Jun 13 22:28:58 CDT 2013
+(0)	Now Processing : 2012-08-01_02:00:00
+Thu Jun 13 22:28:58 CDT 2013
+(0)	Now Processing : 2012-08-01_03:00:00
+Thu Jun 13 22:28:59 CDT 2013
+(0)	Now Processing : 2012-08-01_04:00:00
+Thu Jun 13 22:28:59 CDT 2013
+(0)	Now Processing : 2012-08-01_05:00:00
+Thu Jun 13 22:29:00 CDT 2013
+(0)	Now Processing : 2012-08-01_06:00:00
+Thu Jun 13 22:29:00 CDT 2013
+(0)	Now Processing : 2012-08-01_07:00:00
+Thu Jun 13 22:29:01 CDT 2013
+(0)	Now Processing : 2012-08-01_08:00:00
+Thu Jun 13 22:29:02 CDT 2013
+(0)	Now Processing : 2012-08-01_09:00:00
+Thu Jun 13 22:29:02 CDT 2013
+(0)	Now Processing : 2012-08-01_10:00:00
+Thu Jun 13 22:29:03 CDT 2013
+(0)	Now Processing : 2012-08-01_11:00:00
+Thu Jun 13 22:29:04 CDT 2013
+(0)	Now Processing : 2012-08-01_12:00:00
+Thu Jun 13 22:29:04 CDT 2013
+(0)	Now Processing : 2012-08-01_13:00:00
+Thu Jun 13 22:29:05 CDT 2013
+(0)	Now Processing : 2012-08-01_14:00:00
+Thu Jun 13 22:29:06 CDT 2013
+(0)	Now Processing : 2012-08-01_15:00:00
+Thu Jun 13 22:29:07 CDT 2013
+(0)	Now Processing : 2012-08-01_16:00:00
+Thu Jun 13 22:29:08 CDT 2013
+(0)	Now Processing : 2012-08-01_17:00:00
+Thu Jun 13 22:29:09 CDT 2013
+(0)	Now Processing : 2012-08-01_18:00:00
+Thu Jun 13 22:29:09 CDT 2013
+(0)	Now Processing : 2012-08-01_19:00:00
+Thu Jun 13 22:29:10 CDT 2013
+(0)	Now Processing : 2012-08-01_20:00:00
+Thu Jun 13 22:29:11 CDT 2013
+(0)	Now Processing : 2012-08-01_21:00:00
+Thu Jun 13 22:29:12 CDT 2013
+(0)	Now Processing : 2012-08-01_22:00:00
+Thu Jun 13 22:29:13 CDT 2013
+(0)	Now Processing : 2012-08-01_23:00:00
+Thu Jun 13 22:29:14 CDT 2013
+(0)	Now Processing : 2012-08-02_00:00:00
+Thu Jun 13 22:29:15 CDT 2013
+(0)	Now Processing : 2012-08-02_01:00:00
+Thu Jun 13 22:29:16 CDT 2013
+(0)	Now Processing : 2012-08-02_02:00:00
+Thu Jun 13 22:29:17 CDT 2013
+(0)	Now Processing : 2012-08-02_03:00:00
+Thu Jun 13 22:29:18 CDT 2013
+(0)	Now Processing : 2012-08-02_04:00:00
+Thu Jun 13 22:29:19 CDT 2013
+(0)	Now Processing : 2012-08-02_05:00:00
+Thu Jun 13 22:29:21 CDT 2013
+(0)	Now Processing : 2012-08-02_06:00:00
+Thu Jun 13 22:29:22 CDT 2013
+(0)	Now Processing : 2012-08-02_07:00:00
+Thu Jun 13 22:29:23 CDT 2013
+(0)	Now Processing : 2012-08-02_08:00:00
+Thu Jun 13 22:29:24 CDT 2013
+(0)	Now Processing : 2012-08-02_09:00:00
+Thu Jun 13 22:29:25 CDT 2013
+(0)	Now Processing : 2012-08-02_10:00:00
+Thu Jun 13 22:29:26 CDT 2013
+(0)	Now Processing : 2012-08-02_11:00:00
+Thu Jun 13 22:29:28 CDT 2013
+(0)	Now Processing : 2012-08-02_12:00:00
+Thu Jun 13 22:29:29 CDT 2013
+(0)	Now Processing : 2012-08-02_13:00:00
+Thu Jun 13 22:29:30 CDT 2013
+(0)	Now Processing : 2012-08-02_14:00:00
+Thu Jun 13 22:29:32 CDT 2013
+(0)	Now Processing : 2012-08-02_15:00:00
+Thu Jun 13 22:29:33 CDT 2013
+(0)	Now Processing : 2012-08-02_16:00:00
+Thu Jun 13 22:29:34 CDT 2013
+(0)	Now Processing : 2012-08-02_17:00:00
+Thu Jun 13 22:29:36 CDT 2013
+(0)	Now Processing : 2012-08-02_18:00:00
+Thu Jun 13 22:29:37 CDT 2013
+(0)	Now Processing : 2012-08-02_19:00:00
+Thu Jun 13 22:29:39 CDT 2013
+(0)	Now Processing : 2012-08-02_20:00:00
+Thu Jun 13 22:29:40 CDT 2013
+(0)	Now Processing : 2012-08-02_21:00:00
+Thu Jun 13 22:29:42 CDT 2013
+(0)	Now Processing : 2012-08-02_22:00:00
+Thu Jun 13 22:29:43 CDT 2013
+(0)	Now Processing : 2012-08-02_23:00:00
+Thu Jun 13 22:29:45 CDT 2013
+(0)	Now Processing : 2012-08-03_00:00:00
+Thu Jun 13 22:29:46 CDT 2013
+(0)	Now Processing : 2012-08-03_01:00:00
+Thu Jun 13 22:29:48 CDT 2013
+(0)	Now Processing : 2012-08-03_02:00:00
+Thu Jun 13 22:29:50 CDT 2013
+(0)	Now Processing : 2012-08-03_03:00:00
+Thu Jun 13 22:29:52 CDT 2013
+(0)	Now Processing : 2012-08-03_04:00:00
+Thu Jun 13 22:29:53 CDT 2013
+(0)	Now Processing : 2012-08-03_05:00:00
+Thu Jun 13 22:29:55 CDT 2013
+(0)	Now Processing : 2012-08-03_06:00:00
+Thu Jun 13 22:29:57 CDT 2013
+(0)	Now Processing : 2012-08-03_07:00:00
+Thu Jun 13 22:29:58 CDT 2013
+(0)	Now Processing : 2012-08-03_08:00:00
+Thu Jun 13 22:30:00 CDT 2013
+(0)	Now Processing : 2012-08-03_09:00:00
+Thu Jun 13 22:30:02 CDT 2013
+(0)	Now Processing : 2012-08-03_10:00:00
+Thu Jun 13 22:30:04 CDT 2013
+(0)	Now Processing : 2012-08-03_11:00:00
+Thu Jun 13 22:30:06 CDT 2013
+(0)	Now Processing : 2012-08-03_12:00:00
+Thu Jun 13 22:30:08 CDT 2013
+(0)	Now Processing : 2012-08-03_13:00:00
+Thu Jun 13 22:30:10 CDT 2013
+(0)	Now Processing : 2012-08-03_14:00:00
+Thu Jun 13 22:30:12 CDT 2013
+(0)	Now Processing : 2012-08-03_15:00:00
+Thu Jun 13 22:30:14 CDT 2013
+(0)	Now Processing : 2012-08-03_16:00:00
+Thu Jun 13 22:30:16 CDT 2013
+(0)	Now Processing : 2012-08-03_17:00:00
+Thu Jun 13 22:30:18 CDT 2013
+(0)	Now Processing : 2012-08-03_18:00:00
+Thu Jun 13 22:30:20 CDT 2013
+(0)	Now Processing : 2012-08-03_19:00:00
+Thu Jun 13 22:30:22 CDT 2013
+(0)	Now Processing : 2012-08-03_20:00:00
+Thu Jun 13 22:30:24 CDT 2013
+(0)	Now Processing : 2012-08-03_21:00:00
+Thu Jun 13 22:30:26 CDT 2013
+(0)	Now Processing : 2012-08-03_22:00:00
+Thu Jun 13 22:30:28 CDT 2013
+(0)	Now Processing : 2012-08-03_23:00:00
+Thu Jun 13 22:30:30 CDT 2013
+(0)	Now Processing : 2012-08-04_00:00:00
+Thu Jun 13 22:30:33 CDT 2013
+(0)	Now Processing : 2012-08-04_01:00:00
+Thu Jun 13 22:30:35 CDT 2013
+(0)	Now Processing : 2012-08-04_02:00:00
+Thu Jun 13 22:30:37 CDT 2013
+(0)	Now Processing : 2012-08-04_03:00:00
+Thu Jun 13 22:30:39 CDT 2013
+(0)	Now Processing : 2012-08-04_04:00:00
+Thu Jun 13 22:30:42 CDT 2013
+(0)	Now Processing : 2012-08-04_05:00:00
+Thu Jun 13 22:30:44 CDT 2013
+(0)	Now Processing : 2012-08-04_06:00:00
+Thu Jun 13 22:30:47 CDT 2013
+(0)	Now Processing : 2012-08-04_07:00:00
+Thu Jun 13 22:30:49 CDT 2013
+(0)	Now Processing : 2012-08-04_08:00:00
+Thu Jun 13 22:30:51 CDT 2013
+(0)	Now Processing : 2012-08-04_09:00:00
+Thu Jun 13 22:30:54 CDT 2013
+(0)	Now Processing : 2012-08-04_10:00:00
+Thu Jun 13 22:30:56 CDT 2013
+(0)	Now Processing : 2012-08-04_11:00:00
+Thu Jun 13 22:30:59 CDT 2013
+(0)	Now Processing : 2012-08-04_12:00:00
+Thu Jun 13 22:31:01 CDT 2013
+(0)	Now Processing : 2012-08-04_13:00:00
+Thu Jun 13 22:31:04 CDT 2013
+(0)	Now Processing : 2012-08-04_14:00:00
+Thu Jun 13 22:31:07 CDT 2013
+(0)	Now Processing : 2012-08-04_15:00:00
+Thu Jun 13 22:31:09 CDT 2013
+(0)	Now Processing : 2012-08-04_16:00:00
+Thu Jun 13 22:31:12 CDT 2013
+(0)	Now Processing : 2012-08-04_17:00:00
+Thu Jun 13 22:31:15 CDT 2013
+(0)	Now Processing : 2012-08-04_18:00:00
+Thu Jun 13 22:31:17 CDT 2013
+(0)	Now Processing : 2012-08-04_19:00:00
+Thu Jun 13 22:31:20 CDT 2013
+(0)	Now Processing : 2012-08-04_20:00:00
+Thu Jun 13 22:31:23 CDT 2013
+(0)	Now Processing : 2012-08-04_21:00:00
+Thu Jun 13 22:31:26 CDT 2013
+(0)	Now Processing : 2012-08-04_22:00:00
+Thu Jun 13 22:31:28 CDT 2013
+(0)	Now Processing : 2012-08-04_23:00:00
+Thu Jun 13 22:31:31 CDT 2013
+(0)	Now Processing : 2012-08-05_00:00:00
+Thu Jun 13 22:31:34 CDT 2013
+(0)	Now Processing : 2012-08-05_01:00:00
+Thu Jun 13 22:31:37 CDT 2013
+(0)	Now Processing : 2012-08-05_02:00:00
+Thu Jun 13 22:31:40 CDT 2013
+(0)	Now Processing : 2012-08-05_03:00:00
+Thu Jun 13 22:31:43 CDT 2013
+(0)	Now Processing : 2012-08-05_04:00:00
+Thu Jun 13 22:31:46 CDT 2013
+(0)	Now Processing : 2012-08-05_05:00:00
+Thu Jun 13 22:31:49 CDT 2013
+(0)	Now Processing : 2012-08-05_06:00:00
+Thu Jun 13 22:31:52 CDT 2013
+(0)	Now Processing : 2012-08-05_07:00:00
+Thu Jun 13 22:31:55 CDT 2013
+(0)	Now Processing : 2012-08-05_08:00:00
+Thu Jun 13 22:31:58 CDT 2013
+(0)	Now Processing : 2012-08-05_09:00:00
+Thu Jun 13 22:32:01 CDT 2013
+(0)	Now Processing : 2012-08-05_10:00:00
+Thu Jun 13 22:32:04 CDT 2013
+(0)	Now Processing : 2012-08-05_12:00:00
+Thu Jun 13 22:32:08 CDT 2013
+(0)	Now Processing : 2012-08-05_13:00:00
+Thu Jun 13 22:32:11 CDT 2013
+(0)	Now Processing : 2012-08-05_14:00:00
+Thu Jun 13 22:32:14 CDT 2013
+(0)	Now Processing : 2012-08-05_15:00:00
+Thu Jun 13 22:32:17 CDT 2013
+(0)	Now Processing : 2012-08-05_16:00:00
+Thu Jun 13 22:32:21 CDT 2013
+(0)	Now Processing : 2012-08-05_17:00:00
+Thu Jun 13 22:32:24 CDT 2013
+(0)	Now Processing : 2012-08-05_18:00:00
+Thu Jun 13 22:32:27 CDT 2013
+(0)	Now Processing : 2012-08-05_19:00:00
+Thu Jun 13 22:32:31 CDT 2013
+(0)	Now Processing : 2012-08-05_20:00:00
+Thu Jun 13 22:32:34 CDT 2013
+(0)	Now Processing : 2012-08-05_21:00:00
+Thu Jun 13 22:32:37 CDT 2013
+(0)	Now Processing : 2012-08-05_22:00:00
+Thu Jun 13 22:32:41 CDT 2013
+(0)	Now Processing : 2012-08-05_23:00:00
+Thu Jun 13 22:32:44 CDT 2013
+(0)	Now Processing : 2012-08-06_00:00:00
+Thu Jun 13 22:32:48 CDT 2013
+(0)	Now Processing : 2012-08-06_01:00:00
+Thu Jun 13 22:32:51 CDT 2013
+(0)	Now Processing : 2012-08-06_02:00:00
+Thu Jun 13 22:32:55 CDT 2013
+(0)	Now Processing : 2012-08-06_03:00:00
+Thu Jun 13 22:32:59 CDT 2013
+(0)	Now Processing : 2012-08-06_04:00:00
+Thu Jun 13 22:33:02 CDT 2013
+(0)	Now Processing : 2012-08-06_05:00:00
+Thu Jun 13 22:33:06 CDT 2013
+(0)	Now Processing : 2012-08-06_06:00:00
+Thu Jun 13 22:33:10 CDT 2013
+(0)	Now Processing : 2012-08-06_07:00:00
+Thu Jun 13 22:33:13 CDT 2013
+(0)	Now Processing : 2012-08-06_08:00:00
+Thu Jun 13 22:33:17 CDT 2013
+(0)	Now Processing : 2012-08-06_09:00:00
+Thu Jun 13 22:33:21 CDT 2013
+(0)	Now Processing : 2012-08-06_10:00:00
+Thu Jun 13 22:33:25 CDT 2013
+(0)	Now Processing : 2012-08-06_11:00:00
+Thu Jun 13 22:33:28 CDT 2013
+(0)	Now Processing : 2012-08-06_12:00:00
+Thu Jun 13 22:33:32 CDT 2013
+(0)	Now Processing : 2012-08-06_13:00:00
+Thu Jun 13 22:33:36 CDT 2013
+(0)	Now Processing : 2012-08-06_14:00:00
+Thu Jun 13 22:33:40 CDT 2013
+(0)	Now Processing : 2012-08-06_15:00:00
+Thu Jun 13 22:33:44 CDT 2013
+(0)	Now Processing : 2012-08-06_16:00:00
+Thu Jun 13 22:33:48 CDT 2013
+(0)	Now Processing : 2012-08-06_17:00:00
+Thu Jun 13 22:33:52 CDT 2013
+(0)	Now Processing : 2012-08-06_18:00:00
+Thu Jun 13 22:33:56 CDT 2013
+(0)	Now Processing : 2012-08-06_19:00:00
+Thu Jun 13 22:34:00 CDT 2013
+(0)	Now Processing : 2012-08-06_20:00:00
+Thu Jun 13 22:34:04 CDT 2013
+(0)	Now Processing : 2012-08-06_21:00:00
+Thu Jun 13 22:34:08 CDT 2013
+(0)	Now Processing : 2012-08-06_22:00:00
+Thu Jun 13 22:34:12 CDT 2013
+(0)	Now Processing : 2012-08-06_23:00:00
+Thu Jun 13 22:34:17 CDT 2013
+(0)	Now Processing : 2012-08-07_00:00:00
+Thu Jun 13 22:34:21 CDT 2013
+(0)	Now Processing : 2012-08-07_01:00:00
+Thu Jun 13 22:34:25 CDT 2013
+(0)	Now Processing : 2012-08-07_02:00:00
+Thu Jun 13 22:34:29 CDT 2013
+(0)	Now Processing : 2012-08-07_03:00:00
+Thu Jun 13 22:34:34 CDT 2013
+(0)	Now Processing : 2012-08-07_04:00:00
+Thu Jun 13 22:34:38 CDT 2013
+(0)	Now Processing : 2012-08-07_05:00:00
+Thu Jun 13 22:34:42 CDT 2013
+(0)	Now Processing : 2012-08-07_06:00:00
+Thu Jun 13 22:34:47 CDT 2013
+(0)	Now Processing : 2012-08-07_07:00:00
+Thu Jun 13 22:34:51 CDT 2013
+(0)	Now Processing : 2012-08-07_08:00:00
+Thu Jun 13 22:34:55 CDT 2013
+(0)	Now Processing : 2012-08-07_09:00:00
+Thu Jun 13 22:35:00 CDT 2013
+(0)	Now Processing : 2012-08-07_10:00:00
+Thu Jun 13 22:35:04 CDT 2013
+(0)	Now Processing : 2012-08-07_11:00:00
+Thu Jun 13 22:35:09 CDT 2013
+(0)	Now Processing : 2012-08-07_12:00:00
+Thu Jun 13 22:35:14 CDT 2013
+(0)	Now Processing : 2012-08-07_13:00:00
+Thu Jun 13 22:35:18 CDT 2013
+(0)	Now Processing : 2012-08-07_14:00:00
+Thu Jun 13 22:35:23 CDT 2013
+(0)	Now Processing : 2012-08-07_15:00:00
+Thu Jun 13 22:35:28 CDT 2013
+(0)	Now Processing : 2012-08-07_16:00:00
+Thu Jun 13 22:35:32 CDT 2013
+(0)	Now Processing : 2012-08-07_17:00:00
+Thu Jun 13 22:35:37 CDT 2013
+(0)	Now Processing : 2012-08-07_18:00:00
+Thu Jun 13 22:35:42 CDT 2013
+(0)	Now Processing : 2012-08-07_19:00:00
+Thu Jun 13 22:35:47 CDT 2013
+(0)	Now Processing : 2012-08-07_20:00:00
+Thu Jun 13 22:35:52 CDT 2013
+(0)	Now Processing : 2012-08-07_21:00:00
+Thu Jun 13 22:35:57 CDT 2013
+(0)	Now Processing : 2012-08-07_22:00:00
+Thu Jun 13 22:36:02 CDT 2013
+(0)	Now Processing : 2012-08-07_23:00:00
+Thu Jun 13 22:36:07 CDT 2013
+(0)	Now Processing : 2012-08-08_00:00:00
+Thu Jun 13 22:36:12 CDT 2013
+(0)	Now Processing : 2012-08-08_01:00:00
+Thu Jun 13 22:36:17 CDT 2013
+(0)	Now Processing : 2012-08-08_02:00:00
+Thu Jun 13 22:36:22 CDT 2013
+(0)	Now Processing : 2012-08-08_03:00:00
+Thu Jun 13 22:36:27 CDT 2013
+(0)	Now Processing : 2012-08-08_04:00:00
+Thu Jun 13 22:36:32 CDT 2013
+(0)	Now Processing : 2012-08-08_05:00:00
+Thu Jun 13 22:36:37 CDT 2013
+(0)	Now Processing : 2012-08-08_06:00:00
+Thu Jun 13 22:36:42 CDT 2013
+(0)	Now Processing : 2012-08-08_07:00:00
+Thu Jun 13 22:36:48 CDT 2013
+(0)	Now Processing : 2012-08-08_08:00:00
+Thu Jun 13 22:36:53 CDT 2013
+(0)	Now Processing : 2012-08-08_09:00:00
+Thu Jun 13 22:36:58 CDT 2013
+(0)	Now Processing : 2012-08-08_10:00:00
+Thu Jun 13 22:37:04 CDT 2013
+(0)	Now Processing : 2012-08-08_11:00:00
+Thu Jun 13 22:37:09 CDT 2013
+(0)	Now Processing : 2012-08-08_13:00:00
+Thu Jun 13 22:37:15 CDT 2013
+(0)	Now Processing : 2012-08-08_14:00:00
+Thu Jun 13 22:37:20 CDT 2013
+(0)	Now Processing : 2012-08-08_15:00:00
+Thu Jun 13 22:37:25 CDT 2013
+(0)	Now Processing : 2012-08-08_16:00:00
+Thu Jun 13 22:37:31 CDT 2013
+(0)	Now Processing : 2012-08-08_17:00:00
+Thu Jun 13 22:37:36 CDT 2013
+(0)	Now Processing : 2012-08-08_18:00:00
+Thu Jun 13 22:37:42 CDT 2013
+(0)	Now Processing : 2012-08-08_19:00:00
+Thu Jun 13 22:37:47 CDT 2013
+(0)	Now Processing : 2012-08-08_20:00:00
+Thu Jun 13 22:37:53 CDT 2013
+(0)	Now Processing : 2012-08-08_21:00:00
+Thu Jun 13 22:37:59 CDT 2013
+(0)	Now Processing : 2012-08-08_22:00:00
+Thu Jun 13 22:38:04 CDT 2013
+(0)	Now Processing : 2012-08-08_23:00:00
+Thu Jun 13 22:38:10 CDT 2013
+(0)	Now Processing : 2012-08-09_00:00:00
+Thu Jun 13 22:38:16 CDT 2013
+(0)	Now Processing : 2012-08-09_01:00:00
+Thu Jun 13 22:38:21 CDT 2013
+(0)	Now Processing : 2012-08-09_02:00:00
+Thu Jun 13 22:38:27 CDT 2013
+(0)	Now Processing : 2012-08-09_03:00:00
+Thu Jun 13 22:38:33 CDT 2013
+(0)	Now Processing : 2012-08-09_04:00:00
+Thu Jun 13 22:38:39 CDT 2013
+(0)	Now Processing : 2012-08-09_05:00:00
+Thu Jun 13 22:38:44 CDT 2013
+(0)	Now Processing : 2012-08-09_06:00:00
+Thu Jun 13 22:38:50 CDT 2013
+(0)	Now Processing : 2012-08-09_07:00:00
+Thu Jun 13 22:38:56 CDT 2013
+(0)	Now Processing : 2012-08-09_08:00:00
+Thu Jun 13 22:39:02 CDT 2013
+(0)	Now Processing : 2012-08-09_09:00:00
+Thu Jun 13 22:39:08 CDT 2013
+(0)	Now Processing : 2012-08-09_10:00:00
+Thu Jun 13 22:39:14 CDT 2013
+(0)	Now Processing : 2012-08-09_11:00:00
+Thu Jun 13 22:39:20 CDT 2013
+(0)	Now Processing : 2012-08-09_12:00:00
+Thu Jun 13 22:39:26 CDT 2013
+(0)	Now Processing : 2012-08-09_13:00:00
+Thu Jun 13 22:39:32 CDT 2013
+(0)	Now Processing : 2012-08-09_14:00:00
+Thu Jun 13 22:39:38 CDT 2013
+(0)	Now Processing : 2012-08-09_15:00:00
+Thu Jun 13 22:39:44 CDT 2013
+(0)	Now Processing : 2012-08-09_16:00:00
+Thu Jun 13 22:39:51 CDT 2013
+(0)	Now Processing : 2012-08-09_17:00:00
+Thu Jun 13 22:39:57 CDT 2013
+(0)	Now Processing : 2012-08-09_18:00:00
+Thu Jun 13 22:40:03 CDT 2013
+(0)	Now Processing : 2012-08-09_19:00:00
+Thu Jun 13 22:40:09 CDT 2013
+(0)	Now Processing : 2012-08-09_20:00:00
+Thu Jun 13 22:40:16 CDT 2013
+(0)	Now Processing : 2012-08-09_21:00:00
+Thu Jun 13 22:40:22 CDT 2013
+(0)	Now Processing : 2012-08-09_22:00:00
+Thu Jun 13 22:40:29 CDT 2013
+(0)	Now Processing : 2012-08-09_23:00:00
+Thu Jun 13 22:40:35 CDT 2013
+(0)	Now Processing : 2012-08-10_00:00:00
+Thu Jun 13 22:40:41 CDT 2013
+(0)	Now Processing : 2012-08-10_01:00:00
+Thu Jun 13 22:40:48 CDT 2013
+(0)	Now Processing : 2012-08-10_02:00:00
+Thu Jun 13 22:40:55 CDT 2013
+(0)	Now Processing : 2012-08-10_03:00:00
+Thu Jun 13 22:41:01 CDT 2013
+(0)	Now Processing : 2012-08-10_04:00:00
+Thu Jun 13 22:41:08 CDT 2013
+(0)	Now Processing : 2012-08-10_05:00:00
+Thu Jun 13 22:41:14 CDT 2013
+(0)	Now Processing : 2012-08-10_06:00:00
+Thu Jun 13 22:41:21 CDT 2013
+(0)	Now Processing : 2012-08-10_07:00:00
+Thu Jun 13 22:41:28 CDT 2013
+(0)	Now Processing : 2012-08-10_08:00:00
+Thu Jun 13 22:41:34 CDT 2013
+(0)	Now Processing : 2012-08-10_09:00:00
+Thu Jun 13 22:41:41 CDT 2013
+(0)	Now Processing : 2012-08-10_10:00:00
+Thu Jun 13 22:41:48 CDT 2013
+(0)	Now Processing : 2012-08-10_11:00:00
+Thu Jun 13 22:41:55 CDT 2013
+(0)	Now Processing : 2012-08-10_12:00:00
+Thu Jun 13 22:42:01 CDT 2013
+(0)	Now Processing : 2012-08-10_13:00:00
+Thu Jun 13 22:42:08 CDT 2013
+(0)	Now Processing : 2012-08-10_14:00:00
+Thu Jun 13 22:42:15 CDT 2013
+(0)	Now Processing : 2012-08-10_15:00:00
+Thu Jun 13 22:42:22 CDT 2013
+(0)	Now Processing : 2012-08-10_16:00:00
+Thu Jun 13 22:42:29 CDT 2013
+(0)	Now Processing : 2012-08-10_17:00:00
+Thu Jun 13 22:42:36 CDT 2013
+(0)	Now Processing : 2012-08-10_18:00:00
+Thu Jun 13 22:42:43 CDT 2013
+(0)	Now Processing : 2012-08-10_19:00:00
+Thu Jun 13 22:42:50 CDT 2013
+(0)	Now Processing : 2012-08-10_20:00:00
+Thu Jun 13 22:42:57 CDT 2013
+(0)	Now Processing : 2012-08-10_21:00:00
+Thu Jun 13 22:43:04 CDT 2013
+(0)	Now Processing : 2012-08-10_22:00:00
+Thu Jun 13 22:43:11 CDT 2013
+(0)	Now Processing : 2012-08-10_23:00:00
+Thu Jun 13 22:43:18 CDT 2013
+(0)	Now Processing : 2012-08-11_00:00:00
+Thu Jun 13 22:43:25 CDT 2013
+(0)	Now Processing : 2012-08-11_01:00:00
+Thu Jun 13 22:43:32 CDT 2013
+(0)	Now Processing : 2012-08-11_02:00:00
+Thu Jun 13 22:43:40 CDT 2013
+(0)	Now Processing : 2012-08-11_03:00:00
+Thu Jun 13 22:43:47 CDT 2013
+(0)	Now Processing : 2012-08-11_04:00:00
+Thu Jun 13 22:43:54 CDT 2013
+(0)	Now Processing : 2012-08-11_05:00:00
+Thu Jun 13 22:44:02 CDT 2013
+(0)	Now Processing : 2012-08-11_06:00:00
+Thu Jun 13 22:44:09 CDT 2013
+(0)	Now Processing : 2012-08-11_07:00:00
+Thu Jun 13 22:44:16 CDT 2013
+(0)	Now Processing : 2012-08-11_08:00:00
+Thu Jun 13 22:44:24 CDT 2013
+(0)	Now Processing : 2012-08-11_09:00:00
+Thu Jun 13 22:44:31 CDT 2013
+(0)	Now Processing : 2012-08-11_10:00:00
+Thu Jun 13 22:44:39 CDT 2013
+(0)	Now Processing : 2012-08-11_11:00:00
+Thu Jun 13 22:44:46 CDT 2013
+(0)	Now Processing : 2012-08-11_12:00:00
+Thu Jun 13 22:44:54 CDT 2013
+(0)	Now Processing : 2012-08-11_13:00:00
+Thu Jun 13 22:45:01 CDT 2013
+(0)	Now Processing : 2012-08-11_14:00:00
+Thu Jun 13 22:45:09 CDT 2013
+(0)	Now Processing : 2012-08-11_15:00:00
+Thu Jun 13 22:45:17 CDT 2013
+(0)	Now Processing : 2012-08-11_16:00:00
+Thu Jun 13 22:45:24 CDT 2013
+(0)	Now Processing : 2012-08-11_17:00:00
+Thu Jun 13 22:45:32 CDT 2013
+(0)	Now Processing : 2012-08-11_18:00:00
+Thu Jun 13 22:45:40 CDT 2013
+(0)	Now Processing : 2012-08-11_19:00:00
+Thu Jun 13 22:45:48 CDT 2013
+(0)	Now Processing : 2012-08-11_20:00:00
+Thu Jun 13 22:45:55 CDT 2013
+(0)	Now Processing : 2012-08-11_21:00:00
+Thu Jun 13 22:46:03 CDT 2013
+(0)	Now Processing : 2012-08-11_22:00:00
+Thu Jun 13 22:46:11 CDT 2013
+(0)	Now Processing : 2012-08-11_23:00:00
+Thu Jun 13 22:46:19 CDT 2013
+(0)	Now Processing : 2012-08-12_00:00:00
+Thu Jun 13 22:46:30 CDT 2013
+(0)	Now Processing : 2012-08-12_01:00:00
+Thu Jun 13 22:46:40 CDT 2013
+(0)	Now Processing : 2012-08-12_02:00:00
+Thu Jun 13 22:46:48 CDT 2013
+(0)	Now Processing : 2012-08-12_03:00:00
+Thu Jun 13 22:46:56 CDT 2013
+(0)	Now Processing : 2012-08-12_04:00:00
+Thu Jun 13 22:47:04 CDT 2013
+(0)	Now Processing : 2012-08-12_05:00:00
+Thu Jun 13 22:47:12 CDT 2013
+(0)	Now Processing : 2012-08-12_06:00:00
+Thu Jun 13 22:47:20 CDT 2013
+(0)	Now Processing : 2012-08-12_07:00:00
+Thu Jun 13 22:47:29 CDT 2013
+(0)	Now Processing : 2012-08-12_08:00:00
+Thu Jun 13 22:47:37 CDT 2013
+(0)	Now Processing : 2012-08-12_09:00:00
+Thu Jun 13 22:47:45 CDT 2013
+(0)	Now Processing : 2012-08-12_10:00:00
+Thu Jun 13 22:47:53 CDT 2013
+(0)	Now Processing : 2012-08-12_11:00:00
+Thu Jun 13 22:48:02 CDT 2013
+(0)	Now Processing : 2012-08-12_12:00:00
+Thu Jun 13 22:48:10 CDT 2013
+(0)	Now Processing : 2012-08-12_13:00:00
+Thu Jun 13 22:48:18 CDT 2013
+(0)	Now Processing : 2012-08-12_14:00:00
+Thu Jun 13 22:48:27 CDT 2013
+(0)	Now Processing : 2012-08-12_15:00:00
+Thu Jun 13 22:48:35 CDT 2013
+(0)	Now Processing : 2012-08-12_16:00:00
+Thu Jun 13 22:48:44 CDT 2013
+(0)	Now Processing : 2012-08-12_18:00:00
+Thu Jun 13 22:48:52 CDT 2013
+(0)	Now Processing : 2012-08-12_19:00:00
+Thu Jun 13 22:49:01 CDT 2013
+(0)	Now Processing : 2012-08-12_20:00:00
+Thu Jun 13 22:49:09 CDT 2013
+(0)	Now Processing : 2012-08-12_21:00:00
+Thu Jun 13 22:49:18 CDT 2013
+(0)	Now Processing : 2012-08-12_22:00:00
+Thu Jun 13 22:49:26 CDT 2013
+(0)	Now Processing : 2012-08-12_23:00:00
+Thu Jun 13 22:49:35 CDT 2013
+(0)	Now Processing : 2012-08-13_00:00:00
+Thu Jun 13 22:49:44 CDT 2013
+(0)	Now Processing : 2012-08-13_01:00:00
+Thu Jun 13 22:49:52 CDT 2013
+(0)	Now Processing : 2012-08-13_02:00:00
+Thu Jun 13 22:50:01 CDT 2013
+(0)	Now Processing : 2012-08-13_03:00:00
+Thu Jun 13 22:50:10 CDT 2013
+(0)	Now Processing : 2012-08-13_04:00:00
+Thu Jun 13 22:50:19 CDT 2013
+(0)	Now Processing : 2012-08-13_05:00:00
+Thu Jun 13 22:50:28 CDT 2013
+(0)	Now Processing : 2012-08-13_06:00:00
+Thu Jun 13 22:50:37 CDT 2013
+(0)	Now Processing : 2012-08-13_07:00:00
+Thu Jun 13 22:50:45 CDT 2013
+(0)	Now Processing : 2012-08-13_08:00:00
+Thu Jun 13 22:50:54 CDT 2013
+(0)	Now Processing : 2012-08-13_09:00:00
+Thu Jun 13 22:51:03 CDT 2013
+(0)	Now Processing : 2012-08-13_10:00:00
+Thu Jun 13 22:51:12 CDT 2013
+(0)	Now Processing : 2012-08-13_11:00:00
+Thu Jun 13 22:51:21 CDT 2013
+(0)	Now Processing : 2012-08-13_12:00:00
+Thu Jun 13 22:51:30 CDT 2013
+(0)	Now Processing : 2012-08-13_13:00:00
+Thu Jun 13 22:51:39 CDT 2013
+(0)	Now Processing : 2012-08-13_14:00:00
+Thu Jun 13 22:51:49 CDT 2013
+(0)	Now Processing : 2012-08-13_15:00:00
+Thu Jun 13 22:51:58 CDT 2013
+(0)	Now Processing : 2012-08-13_16:00:00
+Thu Jun 13 22:52:07 CDT 2013
+(0)	Now Processing : 2012-08-13_18:00:00
+Thu Jun 13 22:52:16 CDT 2013
+(0)	Now Processing : 2012-08-13_19:00:00
+Thu Jun 13 22:52:25 CDT 2013
+(0)	Now Processing : 2012-08-13_20:00:00
+Thu Jun 13 22:52:35 CDT 2013
+(0)	Now Processing : 2012-08-13_21:00:00
+Thu Jun 13 22:52:44 CDT 2013
+(0)	Now Processing : 2012-08-13_22:00:00
+Thu Jun 13 22:52:53 CDT 2013
+(0)	Now Processing : 2012-08-13_23:00:00
+Thu Jun 13 22:53:03 CDT 2013
+(0)	Now Processing : 2012-08-14_00:00:00
+Thu Jun 13 22:53:12 CDT 2013
+(0)	Now Processing : 2012-08-14_01:00:00
+Thu Jun 13 22:53:22 CDT 2013
+(0)	Now Processing : 2012-08-14_02:00:00
+Thu Jun 13 22:53:33 CDT 2013
+(0)	Now Processing : 2012-08-14_03:00:00
+Thu Jun 13 22:53:47 CDT 2013
+(0)	Now Processing : 2012-08-14_04:00:00
+Thu Jun 13 22:54:01 CDT 2013
+(0)	Now Processing : 2012-08-14_05:00:00
+Thu Jun 13 22:54:14 CDT 2013
+(0)	Now Processing : 2012-08-14_06:00:00
+Thu Jun 13 22:54:28 CDT 2013
+(0)	Now Processing : 2012-08-14_07:00:00
+Thu Jun 13 22:54:41 CDT 2013
+(0)	Now Processing : 2012-08-14_08:00:00
+Thu Jun 13 22:54:55 CDT 2013
+(0)	Now Processing : 2012-08-14_09:00:00
+Thu Jun 13 22:55:09 CDT 2013
+(0)	Now Processing : 2012-08-14_10:00:00
+Thu Jun 13 22:55:22 CDT 2013
+(0)	Now Processing : 2012-08-14_11:00:00
+Thu Jun 13 22:55:36 CDT 2013
+(0)	Now Processing : 2012-08-14_12:00:00
+Thu Jun 13 22:55:50 CDT 2013
+(0)	Now Processing : 2012-08-14_13:00:00
+Thu Jun 13 22:56:02 CDT 2013
+(0)	Now Processing : 2012-08-14_14:00:00
+Thu Jun 13 22:56:13 CDT 2013
+(0)	Now Processing : 2012-08-14_15:00:00
+Thu Jun 13 22:56:25 CDT 2013
+(0)	Now Processing : 2012-08-14_16:00:00
+Thu Jun 13 22:56:36 CDT 2013
+(0)	Now Processing : 2012-08-14_17:00:00
+Thu Jun 13 22:56:48 CDT 2013
+(0)	Now Processing : 2012-08-14_18:00:00
+Thu Jun 13 22:57:02 CDT 2013
+(0)	Now Processing : 2012-08-14_19:00:00
+Thu Jun 13 22:57:15 CDT 2013
+(0)	Now Processing : 2012-08-14_20:00:00
+Thu Jun 13 22:57:29 CDT 2013
+(0)	Now Processing : 2012-08-14_21:00:00
+Thu Jun 13 22:57:43 CDT 2013
+(0)	Now Processing : 2012-08-14_22:00:00
+Thu Jun 13 22:57:56 CDT 2013
+(0)	Now Processing : 2012-08-14_23:00:00
+Thu Jun 13 22:58:10 CDT 2013
+(0)	Now Processing : 2012-08-15_01:00:00
+Thu Jun 13 22:58:24 CDT 2013
+(0)	Now Processing : 2012-08-15_02:00:00
+Thu Jun 13 22:58:39 CDT 2013
+(0)	Now Processing : 2012-08-15_03:00:00
+Thu Jun 13 22:58:53 CDT 2013
+(0)	Now Processing : 2012-08-15_04:00:00
+Thu Jun 13 22:59:07 CDT 2013
+(0)	Now Processing : 2012-08-15_05:00:00
+Thu Jun 13 22:59:21 CDT 2013
+(0)	Now Processing : 2012-08-15_06:00:00
+Thu Jun 13 22:59:35 CDT 2013
+(0)	Now Processing : 2012-08-15_07:00:00
+Thu Jun 13 22:59:49 CDT 2013
+(0)	Now Processing : 2012-08-15_08:00:00
+Thu Jun 13 23:00:04 CDT 2013
+(0)	Now Processing : 2012-08-15_09:00:00
+Thu Jun 13 23:00:18 CDT 2013
+(0)	Now Processing : 2012-08-15_10:00:00
+Thu Jun 13 23:00:32 CDT 2013
+(0)	Now Processing : 2012-08-15_11:00:00
+Thu Jun 13 23:00:46 CDT 2013
+(0)	Now Processing : 2012-08-15_12:00:00
+Thu Jun 13 23:01:01 CDT 2013
+(0)	Now Processing : 2012-08-15_13:00:00
+Thu Jun 13 23:01:13 CDT 2013
+(0)	Now Processing : 2012-08-15_14:00:00
+Thu Jun 13 23:01:28 CDT 2013
+(0)	Now Processing : 2012-08-15_15:00:00
+Thu Jun 13 23:01:42 CDT 2013
+(0)	Now Processing : 2012-08-15_16:00:00
+Thu Jun 13 23:01:57 CDT 2013
+(0)	Now Processing : 2012-08-15_17:00:00
+Thu Jun 13 23:02:11 CDT 2013
+(0)	Now Processing : 2012-08-15_18:00:00
+Thu Jun 13 23:02:26 CDT 2013
+(0)	Now Processing : 2012-08-15_19:00:00
+Thu Jun 13 23:02:41 CDT 2013
+(0)	Now Processing : 2012-08-15_20:00:00
+Thu Jun 13 23:02:55 CDT 2013
+(0)	Now Processing : 2012-08-15_21:00:00
+Thu Jun 13 23:03:10 CDT 2013
+(0)	Now Processing : 2012-08-15_22:00:00
+Thu Jun 13 23:03:25 CDT 2013
+(0)	Now Processing : 2012-08-15_23:00:00
+Thu Jun 13 23:03:40 CDT 2013
+(0)	Now Processing : 2012-08-16_00:00:00
+Thu Jun 13 23:03:54 CDT 2013
+(0)	Now Processing : 2012-08-16_01:00:00
+Thu Jun 13 23:04:09 CDT 2013
+(0)	Now Processing : 2012-08-16_02:00:00
+Thu Jun 13 23:04:23 CDT 2013
+(0)	Now Processing : 2012-08-16_03:00:00
+Thu Jun 13 23:04:39 CDT 2013
+(0)	Now Processing : 2012-08-16_04:00:00
+Thu Jun 13 23:04:54 CDT 2013
+(0)	Now Processing : 2012-08-16_05:00:00
+Thu Jun 13 23:05:09 CDT 2013
+(0)	Now Processing : 2012-08-16_06:00:00
+Thu Jun 13 23:05:25 CDT 2013
+(0)	Now Processing : 2012-08-16_07:00:00
+Thu Jun 13 23:05:41 CDT 2013
+(0)	Now Processing : 2012-08-16_08:00:00
+Thu Jun 13 23:05:56 CDT 2013
+(0)	Now Processing : 2012-08-16_10:00:00
+Thu Jun 13 23:06:11 CDT 2013
+(0)	Now Processing : 2012-08-16_11:00:00
+Thu Jun 13 23:06:27 CDT 2013
+(0)	Now Processing : 2012-08-16_12:00:00
+Thu Jun 13 23:06:43 CDT 2013
+(0)	Now Processing : 2012-08-16_13:00:00
+Thu Jun 13 23:06:58 CDT 2013
+(0)	Now Processing : 2012-08-16_14:00:00
+Thu Jun 13 23:07:12 CDT 2013
+(0)	Now Processing : 2012-08-16_15:00:00
+Thu Jun 13 23:07:29 CDT 2013
+(0)	Now Processing : 2012-08-16_16:00:00
+Thu Jun 13 23:07:44 CDT 2013
+(0)	Now Processing : 2012-08-16_17:00:00
+Thu Jun 13 23:08:00 CDT 2013
+(0)	Now Processing : 2012-08-16_18:00:00
+Thu Jun 13 23:08:16 CDT 2013
+(0)	Now Processing : 2012-08-16_19:00:00
+Thu Jun 13 23:08:32 CDT 2013
+(0)	Now Processing : 2012-08-16_20:00:00
+Thu Jun 13 23:08:49 CDT 2013
+(0)	Now Processing : 2012-08-16_21:00:00
+Thu Jun 13 23:09:04 CDT 2013
+(0)	Now Processing : 2012-08-16_22:00:00
+Thu Jun 13 23:09:16 CDT 2013
+(0)	Now Processing : 2012-08-16_23:00:00
+Thu Jun 13 23:09:27 CDT 2013
+(0)	Now Processing : 2012-08-17_00:00:00
+Thu Jun 13 23:09:39 CDT 2013
+(0)	Now Processing : 2012-08-17_01:00:00
+Thu Jun 13 23:09:50 CDT 2013
+(0)	Now Processing : 2012-08-17_02:00:00
+Thu Jun 13 23:10:02 CDT 2013
+(0)	Now Processing : 2012-08-17_03:00:00
+Thu Jun 13 23:10:14 CDT 2013
+(0)	Now Processing : 2012-08-17_04:00:00
+Thu Jun 13 23:10:26 CDT 2013
+(0)	Now Processing : 2012-08-17_05:00:00
+Thu Jun 13 23:10:38 CDT 2013
+(0)	Now Processing : 2012-08-17_06:00:00
+Thu Jun 13 23:10:50 CDT 2013
+(0)	Now Processing : 2012-08-17_07:00:00
+Thu Jun 13 23:11:02 CDT 2013
+(0)	Now Processing : 2012-08-17_08:00:00
+Thu Jun 13 23:11:14 CDT 2013
+(0)	Now Processing : 2012-08-17_09:00:00
+Thu Jun 13 23:11:26 CDT 2013
+(0)	Now Processing : 2012-08-17_10:00:00
+Thu Jun 13 23:11:38 CDT 2013
+(0)	Now Processing : 2012-08-17_11:00:00
+Thu Jun 13 23:11:50 CDT 2013
+(0)	Now Processing : 2012-08-17_12:00:00
+Thu Jun 13 23:12:02 CDT 2013
+(0)	Now Processing : 2012-08-17_13:00:00
+Thu Jun 13 23:12:15 CDT 2013
+(0)	Now Processing : 2012-08-17_14:00:00
+Thu Jun 13 23:12:27 CDT 2013
+(0)	Now Processing : 2012-08-17_15:00:00
+Thu Jun 13 23:12:39 CDT 2013
+(0)	Now Processing : 2012-08-17_16:00:00
+Thu Jun 13 23:12:52 CDT 2013
+(0)	Now Processing : 2012-08-17_17:00:00
+Thu Jun 13 23:13:04 CDT 2013
+(0)	Now Processing : 2012-08-17_18:00:00
+Thu Jun 13 23:13:17 CDT 2013
+(0)	Now Processing : 2012-08-17_19:00:00
+Thu Jun 13 23:13:29 CDT 2013
+(0)	Now Processing : 2012-08-17_20:00:00
+Thu Jun 13 23:13:42 CDT 2013
+(0)	Now Processing : 2012-08-17_21:00:00
+Thu Jun 13 23:13:54 CDT 2013
+(0)	Now Processing : 2012-08-17_22:00:00
+Thu Jun 13 23:14:07 CDT 2013
+(0)	Now Processing : 2012-08-17_23:00:00
+Thu Jun 13 23:14:20 CDT 2013
+(0)	Now Processing : 2012-08-18_00:00:00
+Thu Jun 13 23:14:33 CDT 2013
+(0)	Now Processing : 2012-08-18_01:00:00
+Thu Jun 13 23:14:45 CDT 2013
+(0)	Now Processing : 2012-08-18_02:00:00
+Thu Jun 13 23:14:58 CDT 2013
+(0)	Now Processing : 2012-08-18_03:00:00
+Thu Jun 13 23:15:11 CDT 2013
+(0)	Now Processing : 2012-08-18_04:00:00
+Thu Jun 13 23:15:24 CDT 2013
+(0)	Now Processing : 2012-08-18_05:00:00
+Thu Jun 13 23:15:37 CDT 2013
+(0)	Now Processing : 2012-08-18_06:00:00
+Thu Jun 13 23:15:50 CDT 2013
+(0)	Now Processing : 2012-08-18_07:00:00
+Thu Jun 13 23:16:03 CDT 2013
+(0)	Now Processing : 2012-08-18_08:00:00
+Thu Jun 13 23:16:16 CDT 2013
+(0)	Now Processing : 2012-08-18_09:00:00
+Thu Jun 13 23:16:29 CDT 2013
+(0)	Now Processing : 2012-08-18_10:00:00
+Thu Jun 13 23:16:43 CDT 2013
+(0)	Now Processing : 2012-08-18_11:00:00
+Thu Jun 13 23:16:56 CDT 2013
+(0)	Now Processing : 2012-08-18_12:00:00
+Thu Jun 13 23:17:09 CDT 2013
+(0)	Now Processing : 2012-08-18_13:00:00
+Thu Jun 13 23:17:23 CDT 2013
+(0)	Now Processing : 2012-08-18_14:00:00
+Thu Jun 13 23:17:36 CDT 2013
+(0)	Now Processing : 2012-08-18_15:00:00
+Thu Jun 13 23:17:49 CDT 2013
+(0)	Now Processing : 2012-08-18_16:00:00
+Thu Jun 13 23:18:03 CDT 2013
+(0)	Now Processing : 2012-08-18_17:00:00
+Thu Jun 13 23:18:17 CDT 2013
+(0)	Now Processing : 2012-08-18_18:00:00
+Thu Jun 13 23:18:30 CDT 2013
+(0)	Now Processing : 2012-08-18_19:00:00
+Thu Jun 13 23:18:44 CDT 2013
+(0)	Now Processing : 2012-08-18_20:00:00
+Thu Jun 13 23:18:58 CDT 2013
+(0)	Now Processing : 2012-08-18_21:00:00
+Thu Jun 13 23:19:11 CDT 2013
+(0)	Now Processing : 2012-08-18_22:00:00
+Thu Jun 13 23:19:25 CDT 2013
+(0)	Now Processing : 2012-08-18_23:00:00
+Thu Jun 13 23:19:39 CDT 2013
+(0)	Now Processing : 2012-08-19_00:00:00
+Thu Jun 13 23:19:53 CDT 2013
+(0)	Now Processing : 2012-08-19_01:00:00
+Thu Jun 13 23:20:07 CDT 2013
+(0)	Now Processing : 2012-08-19_02:00:00
+Thu Jun 13 23:20:21 CDT 2013
+(0)	Now Processing : 2012-08-19_03:00:00
+Thu Jun 13 23:20:35 CDT 2013
+(0)	Now Processing : 2012-08-19_04:00:00
+Thu Jun 13 23:20:49 CDT 2013
+(0)	Now Processing : 2012-08-19_05:00:00
+Thu Jun 13 23:21:03 CDT 2013
+(0)	Now Processing : 2012-08-19_06:00:00
+Thu Jun 13 23:21:17 CDT 2013
+(0)	Now Processing : 2012-08-19_07:00:00
+Thu Jun 13 23:21:32 CDT 2013
+(0)	Now Processing : 2012-08-19_08:00:00
+Thu Jun 13 23:21:46 CDT 2013
+(0)	Now Processing : 2012-08-19_09:00:00
+Thu Jun 13 23:22:01 CDT 2013
+(0)	Now Processing : 2012-08-19_10:00:00
+Thu Jun 13 23:22:15 CDT 2013
+(0)	Now Processing : 2012-08-19_11:00:00
+Thu Jun 13 23:22:29 CDT 2013
+(0)	Now Processing : 2012-08-19_12:00:00
+Thu Jun 13 23:22:44 CDT 2013
+(0)	Now Processing : 2012-08-19_13:00:00
+Thu Jun 13 23:22:59 CDT 2013
+(0)	Now Processing : 2012-08-19_14:00:00
+Thu Jun 13 23:23:13 CDT 2013
+(0)	Now Processing : 2012-08-19_15:00:00
+Thu Jun 13 23:23:28 CDT 2013
+(0)	Now Processing : 2012-08-19_16:00:00
+Thu Jun 13 23:23:42 CDT 2013
+(0)	Now Processing : 2012-08-19_17:00:00
+Thu Jun 13 23:23:57 CDT 2013
+(0)	Now Processing : 2012-08-19_18:00:00
+Thu Jun 13 23:24:12 CDT 2013
+(0)	Now Processing : 2012-08-19_19:00:00
+Thu Jun 13 23:24:27 CDT 2013
+(0)	Now Processing : 2012-08-19_20:00:00
+Thu Jun 13 23:24:42 CDT 2013
+(0)	Now Processing : 2012-08-19_21:00:00
+Thu Jun 13 23:24:56 CDT 2013
+(0)	Now Processing : 2012-08-19_22:00:00
+Thu Jun 13 23:25:11 CDT 2013
+(0)	Now Processing : 2012-08-19_23:00:00
+Thu Jun 13 23:25:27 CDT 2013
+(0)	Now Processing : 2012-08-20_00:00:00
+Thu Jun 13 23:25:42 CDT 2013
+(0)	Now Processing : 2012-08-20_01:00:00
+Thu Jun 13 23:25:57 CDT 2013
+(0)	Now Processing : 2012-08-20_02:00:00
+Thu Jun 13 23:26:12 CDT 2013
+(0)	Now Processing : 2012-08-20_03:00:00
+Thu Jun 13 23:26:27 CDT 2013
+(0)	Now Processing : 2012-08-20_04:00:00
+Thu Jun 13 23:26:42 CDT 2013
+(0)	Now Processing : 2012-08-20_05:00:00
+Thu Jun 13 23:26:58 CDT 2013
+(0)	Now Processing : 2012-08-20_06:00:00
+Thu Jun 13 23:27:13 CDT 2013
+(0)	Now Processing : 2012-08-20_07:00:00
+Thu Jun 13 23:27:28 CDT 2013
+(0)	Now Processing : 2012-08-20_08:00:00
+Thu Jun 13 23:27:44 CDT 2013
+(0)	Now Processing : 2012-08-20_09:00:00
+Thu Jun 13 23:27:59 CDT 2013
+(0)	Now Processing : 2012-08-20_10:00:00
+Thu Jun 13 23:28:15 CDT 2013
+(0)	Now Processing : 2012-08-20_11:00:00
+Thu Jun 13 23:28:30 CDT 2013
+(0)	Now Processing : 2012-08-20_12:00:00
+Thu Jun 13 23:28:47 CDT 2013
+(0)	Now Processing : 2012-08-20_13:00:00
+Thu Jun 13 23:29:02 CDT 2013
+(0)	Now Processing : 2012-08-20_14:00:00
+Thu Jun 13 23:29:18 CDT 2013
+(0)	Now Processing : 2012-08-20_15:00:00
+Thu Jun 13 23:29:34 CDT 2013
+(0)	Now Processing : 2012-08-20_16:00:00
+Thu Jun 13 23:29:50 CDT 2013
+(0)	Now Processing : 2012-08-20_17:00:00
+Thu Jun 13 23:30:05 CDT 2013
+(0)	Now Processing : 2012-08-20_18:00:00
+Thu Jun 13 23:30:21 CDT 2013
+(0)	Now Processing : 2012-08-20_19:00:00
+Thu Jun 13 23:30:37 CDT 2013
+(0)	Now Processing : 2012-08-20_20:00:00
+Thu Jun 13 23:30:53 CDT 2013
+(0)	Now Processing : 2012-08-20_21:00:00
+Thu Jun 13 23:31:09 CDT 2013
+(0)	Now Processing : 2012-08-20_22:00:00
+Thu Jun 13 23:31:25 CDT 2013
+(0)	Now Processing : 2012-08-20_23:00:00
+Thu Jun 13 23:31:41 CDT 2013
+(0)	Now Processing : 2012-08-21_00:00:00
+Thu Jun 13 23:31:58 CDT 2013
+(0)	Now Processing : 2012-08-21_02:00:00
+Thu Jun 13 23:32:14 CDT 2013
+(0)	Now Processing : 2012-08-21_03:00:00
+Thu Jun 13 23:32:30 CDT 2013
+(0)	Now Processing : 2012-08-21_04:00:00
+Thu Jun 13 23:32:46 CDT 2013
+(0)	Now Processing : 2012-08-21_05:00:00
+Thu Jun 13 23:33:03 CDT 2013
+(0)	Now Processing : 2012-08-21_07:00:00
+Thu Jun 13 23:33:19 CDT 2013
+(0)	Now Processing : 2012-08-21_08:00:00
+Thu Jun 13 23:33:36 CDT 2013
+(0)	Now Processing : 2012-08-21_09:00:00
+Thu Jun 13 23:33:52 CDT 2013
+(0)	Now Processing : 2012-08-21_10:00:00
+Thu Jun 13 23:34:09 CDT 2013
+(0)	Now Processing : 2012-08-21_11:00:00
+Thu Jun 13 23:34:25 CDT 2013
+(0)	Now Processing : 2012-08-21_12:00:00
+Thu Jun 13 23:34:42 CDT 2013
+(0)	Now Processing : 2012-08-21_13:00:00
+Thu Jun 13 23:34:59 CDT 2013
+(0)	Now Processing : 2012-08-21_14:00:00
+Thu Jun 13 23:35:16 CDT 2013
+(0)	Now Processing : 2012-08-21_15:00:00
+Thu Jun 13 23:35:32 CDT 2013
+(0)	Now Processing : 2012-08-21_16:00:00
+Thu Jun 13 23:35:49 CDT 2013
+(0)	Now Processing : 2012-08-21_17:00:00
+Thu Jun 13 23:36:06 CDT 2013
+(0)	Now Processing : 2012-08-21_18:00:00
+Thu Jun 13 23:36:23 CDT 2013
+(0)	Now Processing : 2012-08-21_19:00:00
+Thu Jun 13 23:36:40 CDT 2013
+(0)	Now Processing : 2012-08-21_20:00:00
+Thu Jun 13 23:36:57 CDT 2013
+(0)	Now Processing : 2012-08-21_21:00:00
+Thu Jun 13 23:37:14 CDT 2013
+(0)	Now Processing : 2012-08-21_22:00:00
+Thu Jun 13 23:37:32 CDT 2013
+(0)	Now Processing : 2012-08-21_23:00:00
+Thu Jun 13 23:37:49 CDT 2013
+(0)	Now Processing : 2012-08-22_00:00:00
+Thu Jun 13 23:38:06 CDT 2013
+(0)	Now Processing : 2012-08-22_01:00:00
+Thu Jun 13 23:38:23 CDT 2013
+(0)	Now Processing : 2012-08-22_02:00:00
+Thu Jun 13 23:38:41 CDT 2013
+(0)	Now Processing : 2012-08-22_03:00:00
+Thu Jun 13 23:38:58 CDT 2013
+(0)	Now Processing : 2012-08-22_04:00:00
+Thu Jun 13 23:39:16 CDT 2013
+(0)	Now Processing : 2012-08-22_05:00:00
+Thu Jun 13 23:39:33 CDT 2013
+(0)	Now Processing : 2012-08-22_06:00:00
+Thu Jun 13 23:39:51 CDT 2013
+(0)	Now Processing : 2012-08-22_07:00:00
+Thu Jun 13 23:40:08 CDT 2013
+(0)	Now Processing : 2012-08-22_08:00:00
+Thu Jun 13 23:40:26 CDT 2013
+(0)	Now Processing : 2012-08-22_09:00:00
+Thu Jun 13 23:40:43 CDT 2013
+(0)	Now Processing : 2012-08-22_10:00:00
+Thu Jun 13 23:41:01 CDT 2013
+(0)	Now Processing : 2012-08-22_11:00:00
+Thu Jun 13 23:41:19 CDT 2013
+(0)	Now Processing : 2012-08-22_12:00:00
+Thu Jun 13 23:41:37 CDT 2013
+(0)	Now Processing : 2012-08-22_13:00:00
+Thu Jun 13 23:41:55 CDT 2013
+(0)	Now Processing : 2012-08-22_14:00:00
+Thu Jun 13 23:42:13 CDT 2013
+(0)	Now Processing : 2012-08-22_15:00:00
+Thu Jun 13 23:42:31 CDT 2013
+(0)	Now Processing : 2012-08-22_17:00:00
+Thu Jun 13 23:42:49 CDT 2013
+(0)	Now Processing : 2012-08-22_18:00:00
+Thu Jun 13 23:43:07 CDT 2013
+(0)	Now Processing : 2012-08-22_19:00:00
+Thu Jun 13 23:43:25 CDT 2013
+(0)	Now Processing : 2012-08-22_20:00:00
+Thu Jun 13 23:43:43 CDT 2013
+(0)	Now Processing : 2012-08-22_21:00:00
+Thu Jun 13 23:44:02 CDT 2013
+(0)	Now Processing : 2012-08-22_22:00:00
+Thu Jun 13 23:44:20 CDT 2013
+(0)	Now Processing : 2012-08-22_23:00:00
+Thu Jun 13 23:44:38 CDT 2013
+(0)	Now Processing : 2012-08-23_00:00:00
+Thu Jun 13 23:44:57 CDT 2013
+(0)	Now Processing : 2012-08-23_01:00:00
+Thu Jun 13 23:45:16 CDT 2013
+(0)	Now Processing : 2012-08-23_02:00:00
+Thu Jun 13 23:45:34 CDT 2013
+(0)	Now Processing : 2012-08-23_03:00:00
+Thu Jun 13 23:45:53 CDT 2013
+(0)	Now Processing : 2012-08-23_04:00:00
+Thu Jun 13 23:46:12 CDT 2013
+(0)	Now Processing : 2012-08-23_05:00:00
+Thu Jun 13 23:46:30 CDT 2013
+(0)	Now Processing : 2012-08-23_06:00:00
+Thu Jun 13 23:46:49 CDT 2013
+(0)	Now Processing : 2012-08-23_07:00:00
+Thu Jun 13 23:47:10 CDT 2013
+(0)	Now Processing : 2012-08-23_08:00:00
+Thu Jun 13 23:47:28 CDT 2013
+(0)	Now Processing : 2012-08-23_09:00:00
+Thu Jun 13 23:47:47 CDT 2013
+(0)	Now Processing : 2012-08-23_10:00:00
+Thu Jun 13 23:48:06 CDT 2013
+(0)	Now Processing : 2012-08-23_11:00:00
+Thu Jun 13 23:48:25 CDT 2013
+(0)	Now Processing : 2012-08-23_12:00:00
+Thu Jun 13 23:48:44 CDT 2013
+(0)	Now Processing : 2012-08-23_13:00:00
+Thu Jun 13 23:49:04 CDT 2013
+(0)	Now Processing : 2012-08-23_14:00:00
+Thu Jun 13 23:49:23 CDT 2013
+(0)	Now Processing : 2012-08-23_15:00:00
+Thu Jun 13 23:49:42 CDT 2013
+(0)	Now Processing : 2012-08-23_16:00:00
+Thu Jun 13 23:50:01 CDT 2013
+(0)	Now Processing : 2012-08-23_17:00:00
+Thu Jun 13 23:50:20 CDT 2013
+(0)	Now Processing : 2012-08-23_18:00:00
+Thu Jun 13 23:50:40 CDT 2013
+(0)	Now Processing : 2012-08-23_19:00:00
+Thu Jun 13 23:50:59 CDT 2013
+(0)	Now Processing : 2012-08-23_20:00:00
+Thu Jun 13 23:51:18 CDT 2013
+(0)	Now Processing : 2012-08-23_21:00:00
+Thu Jun 13 23:51:38 CDT 2013
+(0)	Now Processing : 2012-08-23_22:00:00
+Thu Jun 13 23:51:57 CDT 2013
+(0)	Now Processing : 2012-08-23_23:00:00
+Thu Jun 13 23:52:17 CDT 2013
+(0)	Now Processing : 2012-08-24_00:00:00
+Thu Jun 13 23:52:36 CDT 2013
+(0)	Now Processing : 2012-08-24_01:00:00
+Thu Jun 13 23:52:56 CDT 2013
+(0)	Now Processing : 2012-08-24_02:00:00
+Thu Jun 13 23:53:16 CDT 2013
+(0)	Now Processing : 2012-08-24_03:00:00
+Thu Jun 13 23:53:35 CDT 2013
+(0)	Now Processing : 2012-08-24_04:00:00
+Thu Jun 13 23:53:55 CDT 2013
+(0)	Now Processing : 2012-08-24_05:00:00
+Thu Jun 13 23:54:15 CDT 2013
+(0)	Now Processing : 2012-08-24_06:00:00
+Thu Jun 13 23:54:34 CDT 2013
+(0)	Now Processing : 2012-08-24_07:00:00
+Thu Jun 13 23:54:54 CDT 2013
+(0)	Now Processing : 2012-08-24_08:00:00
+Thu Jun 13 23:55:14 CDT 2013
+(0)	Now Processing : 2012-08-24_09:00:00
+Thu Jun 13 23:55:33 CDT 2013
+(0)	Now Processing : 2012-08-24_10:00:00
+Thu Jun 13 23:55:53 CDT 2013
+(0)	Now Processing : 2012-08-24_11:00:00
+Thu Jun 13 23:56:13 CDT 2013
+(0)	Now Processing : 2012-08-24_12:00:00
+Thu Jun 13 23:56:33 CDT 2013
+(0)	Now Processing : 2012-08-24_13:00:00
+Thu Jun 13 23:56:53 CDT 2013
+(0)	Now Processing : 2012-08-24_14:00:00
+Thu Jun 13 23:57:13 CDT 2013
+(0)	Now Processing : 2012-08-24_15:00:00
+Thu Jun 13 23:57:33 CDT 2013
+(0)	Now Processing : 2012-08-24_16:00:00
+Thu Jun 13 23:57:53 CDT 2013
+(0)	Now Processing : 2012-08-24_17:00:00
+Thu Jun 13 23:58:13 CDT 2013
+(0)	Now Processing : 2012-08-24_18:00:00
+Thu Jun 13 23:58:34 CDT 2013
+(0)	Now Processing : 2012-08-24_19:00:00
+Thu Jun 13 23:58:54 CDT 2013
+(0)	Now Processing : 2012-08-24_20:00:00
+Thu Jun 13 23:59:14 CDT 2013
+(0)	Now Processing : 2012-08-24_21:00:00
+Thu Jun 13 23:59:34 CDT 2013
+(0)	Now Processing : 2012-08-24_22:00:00
+Thu Jun 13 23:59:54 CDT 2013
+(0)	Now Processing : 2012-08-24_23:00:00
+Fri Jun 14 00:00:15 CDT 2013
+(0)	Now Processing : 2012-08-25_00:00:00
+Fri Jun 14 00:00:35 CDT 2013
+(0)	Now Processing : 2012-08-25_01:00:00
+Fri Jun 14 00:00:56 CDT 2013
+(0)	Now Processing : 2012-08-25_02:00:00
+Fri Jun 14 00:01:16 CDT 2013
+(0)	Now Processing : 2012-08-25_03:00:00
+Fri Jun 14 00:01:37 CDT 2013
+(0)	Now Processing : 2012-08-25_04:00:00
+Fri Jun 14 00:01:57 CDT 2013
+(0)	Now Processing : 2012-08-25_05:00:00
+Fri Jun 14 00:02:18 CDT 2013
+(0)	Now Processing : 2012-08-25_06:00:00
+Fri Jun 14 00:02:38 CDT 2013
+(0)	Now Processing : 2012-08-25_07:00:00
+Fri Jun 14 00:02:59 CDT 2013
+(0)	Now Processing : 2012-08-25_08:00:00
+Fri Jun 14 00:03:20 CDT 2013
+(0)	Now Processing : 2012-08-25_09:00:00
+Fri Jun 14 00:03:40 CDT 2013
+(0)	Now Processing : 2012-08-25_10:00:00
+Fri Jun 14 00:04:01 CDT 2013
+(0)	Now Processing : 2012-08-25_11:00:00
+Fri Jun 14 00:04:22 CDT 2013
+(0)	Now Processing : 2012-08-25_12:00:00
+Fri Jun 14 00:04:43 CDT 2013
+(0)	Now Processing : 2012-08-25_13:00:00
+Fri Jun 14 00:05:04 CDT 2013
+(0)	Now Processing : 2012-08-25_14:00:00
+Fri Jun 14 00:05:25 CDT 2013
+(0)	Now Processing : 2012-08-25_15:00:00
+Fri Jun 14 00:05:46 CDT 2013
+(0)	Now Processing : 2012-08-25_16:00:00
+Fri Jun 14 00:06:07 CDT 2013
+(0)	Now Processing : 2012-08-25_17:00:00
+Fri Jun 14 00:06:28 CDT 2013
+(0)	Now Processing : 2012-08-25_18:00:00
+Fri Jun 14 00:06:49 CDT 2013
+(0)	Now Processing : 2012-08-25_19:00:00
+Fri Jun 14 00:07:10 CDT 2013
+(0)	Now Processing : 2012-08-25_20:00:00
+Fri Jun 14 00:07:32 CDT 2013
+(0)	Now Processing : 2012-08-25_21:00:00
+Fri Jun 14 00:07:53 CDT 2013
+(0)	Now Processing : 2012-08-25_22:00:00
+Fri Jun 14 00:08:14 CDT 2013
+(0)	Now Processing : 2012-08-25_23:00:00
+Fri Jun 14 00:08:35 CDT 2013
+(0)	Now Processing : 2012-08-26_00:00:00
+Fri Jun 14 00:08:57 CDT 2013
+(0)	Now Processing : 2012-08-26_01:00:00
+Fri Jun 14 00:09:18 CDT 2013
+(0)	Now Processing : 2012-08-26_02:00:00
+Fri Jun 14 00:09:40 CDT 2013
+(0)	Now Processing : 2012-08-26_03:00:00
+Fri Jun 14 00:10:01 CDT 2013
+(0)	Now Processing : 2012-08-26_04:00:00
+Fri Jun 14 00:10:23 CDT 2013
+(0)	Now Processing : 2012-08-26_05:00:00
+Fri Jun 14 00:10:44 CDT 2013
+(0)	Now Processing : 2012-08-26_07:00:00
+Fri Jun 14 00:11:06 CDT 2013
+(0)	Now Processing : 2012-08-26_08:00:00
+Fri Jun 14 00:11:27 CDT 2013
+(0)	Now Processing : 2012-08-26_09:00:00
+Fri Jun 14 00:11:49 CDT 2013
+(0)	Now Processing : 2012-08-26_10:00:00
+Fri Jun 14 00:12:11 CDT 2013
+(0)	Now Processing : 2012-08-26_11:00:00
+Fri Jun 14 00:12:33 CDT 2013
+(0)	Now Processing : 2012-08-26_12:00:00
+Fri Jun 14 00:12:54 CDT 2013
+(0)	Now Processing : 2012-08-26_13:00:00
+Fri Jun 14 00:13:16 CDT 2013
+(0)	Now Processing : 2012-08-26_14:00:00
+Fri Jun 14 00:13:38 CDT 2013
+(0)	Now Processing : 2012-08-26_15:00:00
+Fri Jun 14 00:14:00 CDT 2013
+(0)	Now Processing : 2012-08-26_16:00:00
+Fri Jun 14 00:14:22 CDT 2013
+(0)	Now Processing : 2012-08-26_17:00:00
+Fri Jun 14 00:14:44 CDT 2013
+(0)	Now Processing : 2012-08-26_18:00:00
+Fri Jun 14 00:15:06 CDT 2013
+(0)	Now Processing : 2012-08-26_19:00:00
+Fri Jun 14 00:15:29 CDT 2013
+(0)	Now Processing : 2012-08-26_20:00:00
+Fri Jun 14 00:15:51 CDT 2013
+(0)	Now Processing : 2012-08-26_21:00:00
+Fri Jun 14 00:16:13 CDT 2013
+(0)	Now Processing : 2012-08-26_22:00:00
+Fri Jun 14 00:16:35 CDT 2013
+(0)	Now Processing : 2012-08-26_23:00:00
+Fri Jun 14 00:16:58 CDT 2013
+(0)	Now Processing : 2012-08-27_00:00:00
+Fri Jun 14 00:17:20 CDT 2013
+(0)	Now Processing : 2012-08-27_01:00:00
+Fri Jun 14 00:17:43 CDT 2013
+(0)	Now Processing : 2012-08-27_02:00:00
+Fri Jun 14 00:18:05 CDT 2013
+(0)	Now Processing : 2012-08-27_03:00:00
+Fri Jun 14 00:18:27 CDT 2013
+(0)	Now Processing : 2012-08-27_04:00:00
+Fri Jun 14 00:18:50 CDT 2013
+(0)	Now Processing : 2012-08-27_05:00:00
+Fri Jun 14 00:19:13 CDT 2013
+(0)	Now Processing : 2012-08-27_06:00:00
+Fri Jun 14 00:19:35 CDT 2013
+(0)	Now Processing : 2012-08-27_07:00:00
+Fri Jun 14 00:19:58 CDT 2013
+(0)	Now Processing : 2012-08-27_08:00:00
+Fri Jun 14 00:20:21 CDT 2013
+(0)	Now Processing : 2012-08-27_09:00:00
+Fri Jun 14 00:20:43 CDT 2013
+(0)	Now Processing : 2012-08-27_10:00:00
+Fri Jun 14 00:21:06 CDT 2013
+(0)	Now Processing : 2012-08-27_11:00:00
+Fri Jun 14 00:21:29 CDT 2013
+(0)	Now Processing : 2012-08-27_12:00:00
+Fri Jun 14 00:21:52 CDT 2013
+(0)	Now Processing : 2012-08-27_13:00:00
+Fri Jun 14 00:22:15 CDT 2013
+(0)	Now Processing : 2012-08-27_14:00:00
+Fri Jun 14 00:22:38 CDT 2013
+(0)	Now Processing : 2012-08-27_15:00:00
+Fri Jun 14 00:23:01 CDT 2013
+(0)	Now Processing : 2012-08-27_16:00:00
+Fri Jun 14 00:23:24 CDT 2013
+(0)	Now Processing : 2012-08-27_17:00:00
+Fri Jun 14 00:23:47 CDT 2013
+(0)	Now Processing : 2012-08-27_18:00:00
+Fri Jun 14 00:24:10 CDT 2013
+(0)	Now Processing : 2012-08-27_19:00:00
+Fri Jun 14 00:24:33 CDT 2013
+(0)	Now Processing : 2012-08-27_20:00:00
+Fri Jun 14 00:24:56 CDT 2013
+(0)	Now Processing : 2012-08-27_21:00:00
+Fri Jun 14 00:25:19 CDT 2013
+(0)	Now Processing : 2012-08-27_22:00:00
+Fri Jun 14 00:25:43 CDT 2013
+(0)	Now Processing : 2012-08-27_23:00:00
+Fri Jun 14 00:26:06 CDT 2013
+(0)	Now Processing : 2012-08-28_00:00:00
+Fri Jun 14 00:26:29 CDT 2013
+(0)	Now Processing : 2012-08-28_01:00:00
+Fri Jun 14 00:26:53 CDT 2013
+(0)	Now Processing : 2012-08-28_02:00:00
+Fri Jun 14 00:27:16 CDT 2013
+(0)	Now Processing : 2012-08-28_03:00:00
+Fri Jun 14 00:27:40 CDT 2013
+(0)	Now Processing : 2012-08-28_04:00:00
+Fri Jun 14 00:28:03 CDT 2013
+(0)	Now Processing : 2012-08-28_05:00:00
+Fri Jun 14 00:28:27 CDT 2013
+(0)	Now Processing : 2012-08-28_06:00:00
+Fri Jun 14 00:28:50 CDT 2013
+(0)	Now Processing : 2012-08-28_07:00:00
+Fri Jun 14 00:29:14 CDT 2013
+(0)	Now Processing : 2012-08-28_08:00:00
+Fri Jun 14 00:29:38 CDT 2013
+(0)	Now Processing : 2012-08-28_09:00:00
+Fri Jun 14 00:30:01 CDT 2013
+(0)	Now Processing : 2012-08-28_10:00:00
+Fri Jun 14 00:30:25 CDT 2013
+(0)	Now Processing : 2012-08-28_11:00:00
+Fri Jun 14 00:30:49 CDT 2013
+(0)	Now Processing : 2012-08-28_12:00:00
+Fri Jun 14 00:31:13 CDT 2013
+(0)	Now Processing : 2012-08-28_13:00:00
+Fri Jun 14 00:31:37 CDT 2013
+(0)	Now Processing : 2012-08-28_14:00:00
+Fri Jun 14 00:32:01 CDT 2013
+(0)	Now Processing : 2012-08-28_15:00:00
+Fri Jun 14 00:32:24 CDT 2013
+(0)	Now Processing : 2012-08-28_16:00:00
+Fri Jun 14 00:32:48 CDT 2013
+(0)	Now Processing : 2012-08-28_17:00:00
+Fri Jun 14 00:33:12 CDT 2013
+(0)	Now Processing : 2012-08-28_18:00:00
+Fri Jun 14 00:33:36 CDT 2013
+(0)	Now Processing : 2012-08-28_19:00:00
+Fri Jun 14 00:34:00 CDT 2013
+(0)	Now Processing : 2012-08-28_20:00:00
+Fri Jun 14 00:34:24 CDT 2013
+(0)	Now Processing : 2012-08-28_21:00:00
+Fri Jun 14 00:34:48 CDT 2013
+(0)	Now Processing : 2012-08-28_22:00:00
+Fri Jun 14 00:35:12 CDT 2013
+(0)	Now Processing : 2012-08-28_23:00:00
+Fri Jun 14 00:35:36 CDT 2013
+(0)	Now Processing : 2012-08-29_00:00:00
+Fri Jun 14 00:36:00 CDT 2013
+(0)	Now Processing : 2012-08-29_01:00:00
+Fri Jun 14 00:36:25 CDT 2013
+(0)	Now Processing : 2012-08-29_02:00:00
+Fri Jun 14 00:36:49 CDT 2013
+(0)	Now Processing : 2012-08-29_03:00:00
+Fri Jun 14 00:37:14 CDT 2013
+(0)	Now Processing : 2012-08-29_04:00:00
+Fri Jun 14 00:37:38 CDT 2013
+(0)	Now Processing : 2012-08-29_05:00:00
+Fri Jun 14 00:38:02 CDT 2013
+(0)	Now Processing : 2012-08-29_06:00:00
+Fri Jun 14 00:38:27 CDT 2013
+(0)	Now Processing : 2012-08-29_07:00:00
+Fri Jun 14 00:38:52 CDT 2013
+(0)	Now Processing : 2012-08-29_08:00:00
+Fri Jun 14 00:39:16 CDT 2013
+(0)	Now Processing : 2012-08-29_09:00:00
+Fri Jun 14 00:39:41 CDT 2013
+(0)	Now Processing : 2012-08-29_10:00:00
+Fri Jun 14 00:40:06 CDT 2013
+(0)	Now Processing : 2012-08-29_11:00:00
+Fri Jun 14 00:40:31 CDT 2013
+(0)	Now Processing : 2012-08-29_12:00:00
+Fri Jun 14 00:40:56 CDT 2013
+(0)	Now Processing : 2012-08-29_13:00:00
+Fri Jun 14 00:41:21 CDT 2013
+(0)	Now Processing : 2012-08-29_14:00:00
+Fri Jun 14 00:41:46 CDT 2013
+(0)	Now Processing : 2012-08-29_15:00:00
+Fri Jun 14 00:42:11 CDT 2013
+(0)	Now Processing : 2012-08-29_16:00:00
+Fri Jun 14 00:42:36 CDT 2013
+(0)	Now Processing : 2012-08-29_17:00:00
+Fri Jun 14 00:43:01 CDT 2013
+(0)	Now Processing : 2012-08-29_18:00:00
+Fri Jun 14 00:43:27 CDT 2013
+(0)	Now Processing : 2012-08-29_19:00:00
+Fri Jun 14 00:43:52 CDT 2013
+(0)	Now Processing : 2012-08-29_20:00:00
+Fri Jun 14 00:44:17 CDT 2013
+(0)	Now Processing : 2012-08-29_21:00:00
+Fri Jun 14 00:44:43 CDT 2013
+(0)	Now Processing : 2012-08-29_22:00:00
+Fri Jun 14 00:45:09 CDT 2013
+(0)	Now Processing : 2012-08-29_23:00:00
+Fri Jun 14 00:45:34 CDT 2013
+(0)	Now Processing : 2012-08-30_00:00:00
+Fri Jun 14 00:46:00 CDT 2013
+(0)	Now Processing : 2012-08-30_01:00:00
+Fri Jun 14 00:46:25 CDT 2013
+(0)	Now Processing : 2012-08-30_02:00:00
+Fri Jun 14 00:46:51 CDT 2013
+(0)	Now Processing : 2012-08-30_03:00:00
+Fri Jun 14 00:47:17 CDT 2013
+(0)	Now Processing : 2012-08-30_04:00:00
+Fri Jun 14 00:47:43 CDT 2013
+(0)	Now Processing : 2012-08-30_05:00:00
+Fri Jun 14 00:48:09 CDT 2013
+(0)	Now Processing : 2012-08-30_06:00:00
+Fri Jun 14 00:48:35 CDT 2013
+(0)	Now Processing : 2012-08-30_07:00:00
+Fri Jun 14 00:49:01 CDT 2013
+(0)	Now Processing : 2012-08-30_08:00:00
+Fri Jun 14 00:49:27 CDT 2013
+(0)	Now Processing : 2012-08-30_09:00:00
+Fri Jun 14 00:49:53 CDT 2013
+(0)	Now Processing : 2012-08-30_10:00:00
+Fri Jun 14 00:50:20 CDT 2013
+(0)	Now Processing : 2012-08-30_11:00:00
+Fri Jun 14 00:50:46 CDT 2013
+(0)	Now Processing : 2012-08-30_12:00:00
+Fri Jun 14 00:51:13 CDT 2013
+(0)	Now Processing : 2012-08-30_13:00:00
+Fri Jun 14 00:51:39 CDT 2013
+(0)	Now Processing : 2012-08-30_14:00:00
+Fri Jun 14 00:52:06 CDT 2013
+(0)	Now Processing : 2012-08-30_15:00:00
+Fri Jun 14 00:52:32 CDT 2013
+(0)	Now Processing : 2012-08-30_16:00:00
+Fri Jun 14 00:52:59 CDT 2013
+(0)	Now Processing : 2012-08-30_17:00:00
+Fri Jun 14 00:53:26 CDT 2013
+(0)	Now Processing : 2012-08-30_18:00:00
+Fri Jun 14 00:53:52 CDT 2013
+(0)	Now Processing : 2012-08-30_19:00:00
+Fri Jun 14 00:54:19 CDT 2013
+(0)	Now Processing : 2012-08-30_20:00:00
+Fri Jun 14 00:54:46 CDT 2013
+(0)	Now Processing : 2012-08-30_21:00:00
+Fri Jun 14 00:55:13 CDT 2013
+(0)	Now Processing : 2012-08-30_22:00:00
+Fri Jun 14 00:55:40 CDT 2013
+(0)	Now Processing : 2012-08-30_23:00:00
+Fri Jun 14 00:56:07 CDT 2013
+(0)	Now Processing : 2012-08-31_00:00:00
+Fri Jun 14 00:56:35 CDT 2013
+(0)	Now Processing : 2012-08-31_01:00:00
+Fri Jun 14 00:57:02 CDT 2013
+(0)	Now Processing : 2012-08-31_02:00:00
+Fri Jun 14 00:57:29 CDT 2013
+(0)	Now Processing : 2012-08-31_03:00:00
+Fri Jun 14 00:57:56 CDT 2013
+(0)	Now Processing : 2012-08-31_04:00:00
+Fri Jun 14 00:58:24 CDT 2013
+(0)	Now Processing : 2012-08-31_05:00:00
+Fri Jun 14 00:58:51 CDT 2013
+(0)	Now Processing : 2012-08-31_06:00:00
+Fri Jun 14 00:59:19 CDT 2013
+(0)	Now Processing : 2012-08-31_07:00:00
+Fri Jun 14 00:59:47 CDT 2013
+(0)	Now Processing : 2012-08-31_08:00:00
+Fri Jun 14 01:00:14 CDT 2013
+(0)	Now Processing : 2012-08-31_09:00:00
+Fri Jun 14 01:00:42 CDT 2013
+(0)	Now Processing : 2012-08-31_10:00:00
+Fri Jun 14 01:01:10 CDT 2013
+(0)	Now Processing : 2012-08-31_11:00:00
+Fri Jun 14 01:01:38 CDT 2013
+(0)	Now Processing : 2012-08-31_12:00:00
+Fri Jun 14 01:02:06 CDT 2013
+(0)	Now Processing : 2012-08-31_13:00:00
+Fri Jun 14 01:02:34 CDT 2013
+(0)	Now Processing : 2012-08-31_14:00:00
+Fri Jun 14 01:03:02 CDT 2013
+(0)	Now Processing : 2012-08-31_15:00:00
+Fri Jun 14 01:03:30 CDT 2013
+(0)	Now Processing : 2012-08-31_16:00:00
+Fri Jun 14 01:03:58 CDT 2013
+(0)	Now Processing : 2012-08-31_17:00:00
+Fri Jun 14 01:04:26 CDT 2013
+(0)	Now Processing : 2012-08-31_18:00:00
+Fri Jun 14 01:04:54 CDT 2013
+(0)	Now Processing : 2012-08-31_19:00:00
+Fri Jun 14 01:05:23 CDT 2013
+(0)	Now Processing : 2012-08-31_20:00:00
+Fri Jun 14 01:05:51 CDT 2013
+(0)	Now Processing : 2012-08-31_21:00:00
+Fri Jun 14 01:06:20 CDT 2013
+(0)	Now Processing : 2012-08-31_22:00:00
+Fri Jun 14 01:06:48 CDT 2013
+(0)	Now Processing : 2012-08-31_23:00:00
+Fri Jun 14 01:07:17 CDT 2013
+(0)	Now Processing : 2012-09-01_00:00:00
+Fri Jun 14 01:07:45 CDT 2013
+(0)	Now Processing : 2012-09-01_01:00:00
+Fri Jun 14 01:08:14 CDT 2013
+(0)	Now Processing : 2012-09-01_02:00:00
+Fri Jun 14 01:08:43 CDT 2013
+(0)	Now Processing : 2012-09-01_03:00:00
+Fri Jun 14 01:09:12 CDT 2013
+(0)	Now Processing : 2012-09-01_04:00:00
+Fri Jun 14 01:09:40 CDT 2013
+(0)	Now Processing : 2012-09-01_05:00:00
+Fri Jun 14 01:10:09 CDT 2013
+(0)	Now Processing : 2012-09-01_06:00:00
+Fri Jun 14 01:10:38 CDT 2013
+(0)	Now Processing : 2012-09-01_07:00:00
+Fri Jun 14 01:11:07 CDT 2013
+(0)	Now Processing : 2012-09-01_08:00:00
+Fri Jun 14 01:11:37 CDT 2013
+(0)	Now Processing : 2012-09-01_09:00:00
+Fri Jun 14 01:12:06 CDT 2013
+(0)	Now Processing : 2012-09-01_10:00:00
+Fri Jun 14 01:12:35 CDT 2013
+(0)	Now Processing : 2012-09-01_11:00:00
+Fri Jun 14 01:13:04 CDT 2013
+(0)	Now Processing : 2012-09-01_12:00:00
+Fri Jun 14 01:13:34 CDT 2013
+(0)	Now Processing : 2012-09-01_13:00:00
+Fri Jun 14 01:14:03 CDT 2013
+(0)	Now Processing : 2012-09-01_14:00:00
+Fri Jun 14 01:14:33 CDT 2013
+(0)	Now Processing : 2012-09-01_15:00:00
+Fri Jun 14 01:15:03 CDT 2013
+(0)	Now Processing : 2012-09-01_16:00:00
+Fri Jun 14 01:15:32 CDT 2013
+(0)	Now Processing : 2012-09-01_17:00:00
+Fri Jun 14 01:16:02 CDT 2013
+(0)	Now Processing : 2012-09-01_18:00:00
+Fri Jun 14 01:16:32 CDT 2013
+(0)	Now Processing : 2012-09-01_19:00:00
+Fri Jun 14 01:17:02 CDT 2013
+(0)	Now Processing : 2012-09-01_20:00:00
+Fri Jun 14 01:17:32 CDT 2013
+(0)	Now Processing : 2012-09-01_21:00:00
+Fri Jun 14 01:18:01 CDT 2013
+(0)	Now Processing : 2012-09-01_22:00:00
+Fri Jun 14 01:18:32 CDT 2013
+(0)	Now Processing : 2012-09-01_23:00:00
+Fri Jun 14 01:19:01 CDT 2013
+(0)	Now Processing : 2012-09-02_00:00:00
+Fri Jun 14 01:19:32 CDT 2013
+(0)	Now Processing : 2012-09-02_01:00:00
+Fri Jun 14 01:20:02 CDT 2013
+(0)	Now Processing : 2012-09-02_02:00:00
+Fri Jun 14 01:20:32 CDT 2013
+(0)	Now Processing : 2012-09-02_03:00:00
+Fri Jun 14 01:21:03 CDT 2013
+(0)	Now Processing : 2012-09-02_04:00:00
+Fri Jun 14 01:21:33 CDT 2013
+(0)	Now Processing : 2012-09-02_05:00:00
+Fri Jun 14 01:22:04 CDT 2013
+(0)	Now Processing : 2012-09-02_06:00:00
+Fri Jun 14 01:22:34 CDT 2013
+(0)	Now Processing : 2012-09-02_07:00:00
+Fri Jun 14 01:23:05 CDT 2013
+(0)	Now Processing : 2012-09-02_08:00:00
+Fri Jun 14 01:23:36 CDT 2013
+(0)	Now Processing : 2012-09-02_09:00:00
+Fri Jun 14 01:24:06 CDT 2013
+(0)	Now Processing : 2012-09-02_10:00:00
+Fri Jun 14 01:24:37 CDT 2013
+(0)	Now Processing : 2012-09-02_11:00:00
+Fri Jun 14 01:25:08 CDT 2013
+(0)	Now Processing : 2012-09-02_12:00:00
+Fri Jun 14 01:25:39 CDT 2013
+(0)	Now Processing : 2012-09-02_13:00:00
+Fri Jun 14 01:26:10 CDT 2013
+(0)	Now Processing : 2012-09-02_14:00:00
+Fri Jun 14 01:26:41 CDT 2013
+(0)	Now Processing : 2012-09-02_15:00:00
+Fri Jun 14 01:27:12 CDT 2013
+(0)	Now Processing : 2012-09-02_16:00:00
+Fri Jun 14 01:27:43 CDT 2013
+(0)	Now Processing : 2012-09-02_17:00:00
+Fri Jun 14 01:28:14 CDT 2013
+(0)	Now Processing : 2012-09-02_18:00:00
+Fri Jun 14 01:28:45 CDT 2013
+(0)	Now Processing : 2012-09-02_19:00:00
+Fri Jun 14 01:29:17 CDT 2013
+(0)	Now Processing : 2012-09-02_20:00:00
+Fri Jun 14 01:29:48 CDT 2013
+(0)	Now Processing : 2012-09-02_21:00:00
+Fri Jun 14 01:30:20 CDT 2013
+(0)	Now Processing : 2012-09-02_22:00:00
+Fri Jun 14 01:30:52 CDT 2013
+(0)	Now Processing : 2012-09-02_23:00:00
+Fri Jun 14 01:31:23 CDT 2013
+(0)	Now Processing : 2012-09-03_00:00:00
+Fri Jun 14 01:31:55 CDT 2013
+(0)	Now Processing : 2012-09-03_01:00:00
+Fri Jun 14 01:32:27 CDT 2013
+(0)	Now Processing : 2012-09-03_02:00:00
+Fri Jun 14 01:32:59 CDT 2013
+(0)	Now Processing : 2012-09-03_03:00:00
+Fri Jun 14 01:33:31 CDT 2013
+(0)	Now Processing : 2012-09-03_04:00:00
+Fri Jun 14 01:34:03 CDT 2013
+(0)	Now Processing : 2012-09-03_05:00:00
+Fri Jun 14 01:34:35 CDT 2013
+(0)	Now Processing : 2012-09-03_06:00:00
+Fri Jun 14 01:35:07 CDT 2013
+(0)	Now Processing : 2012-09-03_07:00:00
+Fri Jun 14 01:35:39 CDT 2013
+(0)	Now Processing : 2012-09-03_08:00:00
+Fri Jun 14 01:36:12 CDT 2013
+(0)	Now Processing : 2012-09-03_09:00:00
+Fri Jun 14 01:36:44 CDT 2013
+(0)	Now Processing : 2012-09-03_10:00:00
+Fri Jun 14 01:37:16 CDT 2013
+(0)	Now Processing : 2012-09-03_11:00:00
+Fri Jun 14 01:37:49 CDT 2013
+(0)	Now Processing : 2012-09-03_12:00:00
+Fri Jun 14 01:38:22 CDT 2013
+(0)	Now Processing : 2012-09-03_13:00:00
+Fri Jun 14 01:38:54 CDT 2013
+(0)	Now Processing : 2012-09-03_14:00:00
+Fri Jun 14 02:05:07 CDT 2013
+(0)	Now Processing : 2012-09-03_15:00:00
+Fri Jun 14 02:05:40 CDT 2013
+(0)	Now Processing : 2012-09-03_16:00:00
+Fri Jun 14 02:06:13 CDT 2013
+(0)	Now Processing : 2012-09-03_17:00:00
+Fri Jun 14 02:06:46 CDT 2013
+(0)	Now Processing : 2012-09-03_18:00:00
+Fri Jun 14 02:07:18 CDT 2013
+(0)	Now Processing : 2012-09-03_19:00:00
+Fri Jun 14 02:07:51 CDT 2013
+(0)	Now Processing : 2012-09-03_20:00:00
+Fri Jun 14 02:08:24 CDT 2013
+(0)	Now Processing : 2012-09-03_21:00:00
+Fri Jun 14 02:08:57 CDT 2013
+(0)	Now Processing : 2012-09-03_22:00:00
+Fri Jun 14 02:09:30 CDT 2013
+(0)	Now Processing : 2012-09-03_23:00:00
+Fri Jun 14 02:10:03 CDT 2013
+(0)	Now Processing : 2012-09-04_00:00:00
+Fri Jun 14 02:10:37 CDT 2013
+(0)	Now Processing : 2012-09-04_01:00:00
+Fri Jun 14 02:11:10 CDT 2013
+(0)	Now Processing : 2012-09-04_02:00:00
+Fri Jun 14 02:11:43 CDT 2013
+(0)	Now Processing : 2012-09-04_03:00:00
+Fri Jun 14 02:12:16 CDT 2013
+(0)	Now Processing : 2012-09-04_04:00:00
+Fri Jun 14 02:12:50 CDT 2013
+(0)	Now Processing : 2012-09-04_05:00:00
+Fri Jun 14 02:13:23 CDT 2013
+(0)	Now Processing : 2012-09-04_06:00:00
+Fri Jun 14 02:13:56 CDT 2013
+(0)	Now Processing : 2012-09-04_07:00:00
+Fri Jun 14 02:14:30 CDT 2013
+(0)	Now Processing : 2012-09-04_08:00:00
+Fri Jun 14 02:15:03 CDT 2013
+(0)	Now Processing : 2012-09-04_09:00:00
+Fri Jun 14 02:15:37 CDT 2013
+(0)	Now Processing : 2012-09-04_10:00:00
+Fri Jun 14 02:16:10 CDT 2013
+(0)	Now Processing : 2012-09-04_11:00:00
+Fri Jun 14 02:16:44 CDT 2013
+(0)	Now Processing : 2012-09-04_12:00:00
+Fri Jun 14 02:17:18 CDT 2013
+(0)	Now Processing : 2012-09-04_13:00:00
+Fri Jun 14 02:17:51 CDT 2013
+(0)	Now Processing : 2012-09-04_14:00:00
+Fri Jun 14 02:18:25 CDT 2013
+(0)	Now Processing : 2012-09-04_15:00:00
+Fri Jun 14 02:18:59 CDT 2013
+(0)	Now Processing : 2012-09-04_16:00:00
+Fri Jun 14 02:19:33 CDT 2013
+(0)	Now Processing : 2012-09-04_17:00:00
+Fri Jun 14 02:20:07 CDT 2013
+(0)	Now Processing : 2012-09-04_18:00:00
+Fri Jun 14 02:20:40 CDT 2013
+(0)	Now Processing : 2012-09-04_19:00:00
+Fri Jun 14 02:21:15 CDT 2013
+(0)	Now Processing : 2012-09-04_20:00:00
+Fri Jun 14 02:21:49 CDT 2013
+(0)	Now Processing : 2012-09-04_21:00:00
+Fri Jun 14 02:22:23 CDT 2013
+(0)	Now Processing : 2012-09-04_22:00:00
+Fri Jun 14 02:22:58 CDT 2013
+(0)	Now Processing : 2012-09-04_23:00:00
+Fri Jun 14 02:23:32 CDT 2013
+(0)	Now Processing : 2012-09-05_00:00:00
+Fri Jun 14 02:24:06 CDT 2013
+(0)	Now Processing : 2012-09-05_01:00:00
+Fri Jun 14 02:24:41 CDT 2013
+(0)	Now Processing : 2012-09-05_02:00:00
+Fri Jun 14 02:25:16 CDT 2013
+(0)	Now Processing : 2012-09-05_03:00:00
+Fri Jun 14 02:25:50 CDT 2013
+(0)	Now Processing : 2012-09-05_04:00:00
+Fri Jun 14 02:26:25 CDT 2013
+(0)	Now Processing : 2012-09-05_05:00:00
+Fri Jun 14 02:26:59 CDT 2013
+(0)	Now Processing : 2012-09-05_06:00:00
+Fri Jun 14 02:27:34 CDT 2013
+(0)	Now Processing : 2012-09-05_07:00:00
+Fri Jun 14 02:28:09 CDT 2013
+(0)	Now Processing : 2012-09-05_08:00:00
+Fri Jun 14 02:28:44 CDT 2013
+(0)	Now Processing : 2012-09-05_09:00:00
+Fri Jun 14 02:29:19 CDT 2013
+(0)	Now Processing : 2012-09-05_10:00:00
+Fri Jun 14 02:29:54 CDT 2013
+(0)	Now Processing : 2012-09-05_11:00:00
+Fri Jun 14 02:30:30 CDT 2013
+(0)	Now Processing : 2012-09-05_12:00:00
+Fri Jun 14 02:31:05 CDT 2013
+(0)	Now Processing : 2012-09-05_13:00:00
+Fri Jun 14 02:31:40 CDT 2013
+(0)	Now Processing : 2012-09-05_14:00:00
+Fri Jun 14 02:32:16 CDT 2013
+(0)	Now Processing : 2012-09-05_15:00:00
+Fri Jun 14 02:32:51 CDT 2013
+(0)	Now Processing : 2012-09-05_16:00:00
+Fri Jun 14 02:33:26 CDT 2013
+(0)	Now Processing : 2012-09-05_17:00:00
+Fri Jun 14 02:34:02 CDT 2013
+(0)	Now Processing : 2012-09-05_18:00:00
+Fri Jun 14 02:34:38 CDT 2013
+(0)	Now Processing : 2012-09-05_19:00:00
+Fri Jun 14 02:35:14 CDT 2013
+(0)	Now Processing : 2012-09-05_20:00:00
+Fri Jun 14 02:35:50 CDT 2013
+(0)	Now Processing : 2012-09-05_21:00:00
+Fri Jun 14 02:36:25 CDT 2013
+(0)	Now Processing : 2012-09-05_22:00:00
+Fri Jun 14 02:37:01 CDT 2013
+(0)	Now Processing : 2012-09-05_23:00:00
+Fri Jun 14 02:37:37 CDT 2013
+(0)	Now Processing : 2012-09-06_00:00:00
+Fri Jun 14 02:38:13 CDT 2013
+(0)	Now Processing : 2012-09-06_01:00:00
+Fri Jun 14 02:38:50 CDT 2013
+(0)	Now Processing : 2012-09-06_02:00:00
+Fri Jun 14 02:39:26 CDT 2013
+(0)	Now Processing : 2012-09-06_03:00:00
+Fri Jun 14 02:40:02 CDT 2013
+(0)	Now Processing : 2012-09-06_04:00:00
+Fri Jun 14 02:40:39 CDT 2013
+(0)	Now Processing : 2012-09-06_05:00:00
+Fri Jun 14 02:41:15 CDT 2013
+(0)	Now Processing : 2012-09-06_06:00:00
+Fri Jun 14 02:41:52 CDT 2013
+(0)	Now Processing : 2012-09-06_07:00:00
+Fri Jun 14 02:42:28 CDT 2013
+(0)	Now Processing : 2012-09-06_08:00:00
+Fri Jun 14 02:43:04 CDT 2013
+(0)	Now Processing : 2012-09-06_09:00:00
+Fri Jun 14 02:43:41 CDT 2013
+(0)	Now Processing : 2012-09-06_10:00:00
+Fri Jun 14 02:44:18 CDT 2013
+(0)	Now Processing : 2012-09-06_11:00:00
+Fri Jun 14 02:44:55 CDT 2013
+(0)	Now Processing : 2012-09-06_12:00:00
+Fri Jun 14 02:45:32 CDT 2013
+(0)	Now Processing : 2012-09-06_13:00:00
+Fri Jun 14 02:46:10 CDT 2013
+(0)	Now Processing : 2012-09-06_14:00:00
+Fri Jun 14 02:46:47 CDT 2013
+(0)	Now Processing : 2012-09-06_15:00:00
+Fri Jun 14 02:47:24 CDT 2013
+(0)	Now Processing : 2012-09-06_16:00:00
+Fri Jun 14 02:48:01 CDT 2013
+(0)	Now Processing : 2012-09-06_17:00:00
+Fri Jun 14 02:48:38 CDT 2013
+(0)	Now Processing : 2012-09-06_18:00:00
+Fri Jun 14 02:49:15 CDT 2013
+(0)	Now Processing : 2012-09-06_19:00:00
+Fri Jun 14 02:49:53 CDT 2013
+(0)	Now Processing : 2012-09-06_21:00:00
+Fri Jun 14 02:50:30 CDT 2013
+(0)	Now Processing : 2012-09-06_22:00:00
+Fri Jun 14 02:51:07 CDT 2013
+(0)	Now Processing : 2012-09-06_23:00:00
+Fri Jun 14 02:51:45 CDT 2013
+(0)	Now Processing : 2012-09-07_00:00:00
+Fri Jun 14 02:52:23 CDT 2013
+(0)	Now Processing : 2012-09-07_01:00:00
+Fri Jun 14 02:53:01 CDT 2013
+(0)	Now Processing : 2012-09-07_02:00:00
+Fri Jun 14 02:53:39 CDT 2013
+(0)	Now Processing : 2012-09-07_03:00:00
+Fri Jun 14 02:54:17 CDT 2013
+(0)	Now Processing : 2012-09-07_04:00:00
+Fri Jun 14 02:54:55 CDT 2013
+(0)	Now Processing : 2012-09-07_05:00:00
+Fri Jun 14 02:55:33 CDT 2013
+(0)	Now Processing : 2012-09-07_06:00:00
+Fri Jun 14 02:56:11 CDT 2013
+(0)	Now Processing : 2012-09-07_07:00:00
+Fri Jun 14 02:56:49 CDT 2013
+(0)	Now Processing : 2012-09-07_08:00:00
+Fri Jun 14 02:57:28 CDT 2013
+(0)	Now Processing : 2012-09-07_09:00:00
+Fri Jun 14 02:58:06 CDT 2013
+(0)	Now Processing : 2012-09-07_10:00:00
+Fri Jun 14 02:58:44 CDT 2013
+(0)	Now Processing : 2012-09-07_11:00:00
+Fri Jun 14 02:59:23 CDT 2013
+(0)	Now Processing : 2012-09-07_12:00:00
+Fri Jun 14 03:00:02 CDT 2013
+(0)	Now Processing : 2012-09-07_13:00:00
+Fri Jun 14 03:00:40 CDT 2013
+(0)	Now Processing : 2012-09-07_14:00:00
+Fri Jun 14 03:01:19 CDT 2013
+(0)	Now Processing : 2012-09-07_15:00:00
+Fri Jun 14 03:01:58 CDT 2013
+(0)	Now Processing : 2012-09-07_16:00:00
+Fri Jun 14 03:02:37 CDT 2013
+(0)	Now Processing : 2012-09-07_17:00:00
+Fri Jun 14 03:03:15 CDT 2013
+(0)	Now Processing : 2012-09-07_18:00:00
+Fri Jun 14 03:03:55 CDT 2013
+(0)	Now Processing : 2012-09-07_19:00:00
+Fri Jun 14 03:04:34 CDT 2013
+(0)	Now Processing : 2012-09-07_20:00:00
+Fri Jun 14 03:05:13 CDT 2013
+(0)	Now Processing : 2012-09-07_21:00:00
+Fri Jun 14 03:05:52 CDT 2013
+(0)	Now Processing : 2012-09-07_22:00:00
+Fri Jun 14 03:06:31 CDT 2013
+(0)	Now Processing : 2012-09-07_23:00:00
+Fri Jun 14 03:07:11 CDT 2013
+(0)	Now Processing : 2012-09-08_00:00:00
+Fri Jun 14 03:07:50 CDT 2013
+(0)	Now Processing : 2012-09-08_01:00:00
+Fri Jun 14 03:08:30 CDT 2013
+(0)	Now Processing : 2012-09-08_02:00:00
+Fri Jun 14 03:09:09 CDT 2013
+(0)	Now Processing : 2012-09-08_03:00:00
+Fri Jun 14 03:09:49 CDT 2013
+(0)	Now Processing : 2012-09-08_04:00:00
+Fri Jun 14 03:10:29 CDT 2013
+(0)	Now Processing : 2012-09-08_05:00:00
+Fri Jun 14 03:11:09 CDT 2013
+(0)	Now Processing : 2012-09-08_06:00:00
+Fri Jun 14 03:11:48 CDT 2013
+(0)	Now Processing : 2012-09-08_07:00:00
+Fri Jun 14 03:12:28 CDT 2013
+(0)	Now Processing : 2012-09-08_08:00:00
+Fri Jun 14 03:13:08 CDT 2013
+(0)	Now Processing : 2012-09-08_09:00:00
+Fri Jun 14 03:13:49 CDT 2013
+(0)	Now Processing : 2012-09-08_10:00:00
+Fri Jun 14 03:14:29 CDT 2013
+(0)	Now Processing : 2012-09-08_11:00:00
+Fri Jun 14 03:15:09 CDT 2013
+(0)	Now Processing : 2012-09-08_12:00:00
+Fri Jun 14 03:15:49 CDT 2013
+(0)	Now Processing : 2012-09-08_13:00:00
+Fri Jun 14 03:16:30 CDT 2013
+(0)	Now Processing : 2012-09-08_14:00:00
+Fri Jun 14 03:17:10 CDT 2013
+(0)	Now Processing : 2012-09-08_15:00:00
+Fri Jun 14 03:17:51 CDT 2013
+(0)	Now Processing : 2012-09-08_16:00:00
+Fri Jun 14 03:18:31 CDT 2013
+(0)	Now Processing : 2012-09-08_17:00:00
+Fri Jun 14 03:19:12 CDT 2013
+(0)	Now Processing : 2012-09-08_18:00:00
+Fri Jun 14 03:19:53 CDT 2013
+(0)	Now Processing : 2012-09-08_19:00:00
+Fri Jun 14 03:20:34 CDT 2013
+(0)	Now Processing : 2012-09-08_20:00:00
+Fri Jun 14 03:21:15 CDT 2013
+(0)	Now Processing : 2012-09-08_21:00:00
+Fri Jun 14 03:21:55 CDT 2013
+(0)	Now Processing : 2012-09-08_22:00:00
+Fri Jun 14 03:22:37 CDT 2013
+(0)	Now Processing : 2012-09-08_23:00:00
+Fri Jun 14 03:23:18 CDT 2013
+(0)	Now Processing : 2012-09-09_00:00:00
+Fri Jun 14 03:23:59 CDT 2013
+(0)	Now Processing : 2012-09-09_01:00:00
+Fri Jun 14 03:24:40 CDT 2013
+(0)	Now Processing : 2012-09-09_02:00:00
+Fri Jun 14 03:25:22 CDT 2013
+(0)	Now Processing : 2012-09-09_03:00:00
+Fri Jun 14 03:26:03 CDT 2013
+(0)	Now Processing : 2012-09-09_04:00:00
+Fri Jun 14 03:26:45 CDT 2013
+(0)	Now Processing : 2012-09-09_05:00:00
+Fri Jun 14 03:27:26 CDT 2013
+(0)	Now Processing : 2012-09-09_06:00:00
+Fri Jun 14 03:28:08 CDT 2013
+(0)	Now Processing : 2012-09-09_07:00:00
+Fri Jun 14 03:28:50 CDT 2013
+(0)	Now Processing : 2012-09-09_08:00:00
+Fri Jun 14 03:29:32 CDT 2013
+(0)	Now Processing : 2012-09-09_09:00:00
+Fri Jun 14 03:30:13 CDT 2013
+(0)	Now Processing : 2012-09-09_10:00:00
+Fri Jun 14 03:30:55 CDT 2013
+(0)	Now Processing : 2012-09-09_11:00:00
+Fri Jun 14 03:31:38 CDT 2013
+(0)	Now Processing : 2012-09-09_12:00:00
+Fri Jun 14 03:32:20 CDT 2013
+(0)	Now Processing : 2012-09-09_13:00:00
+Fri Jun 14 03:33:02 CDT 2013
+(0)	Now Processing : 2012-09-09_14:00:00
+Fri Jun 14 03:33:44 CDT 2013
+(0)	Now Processing : 2012-09-09_15:00:00
+Fri Jun 14 03:34:27 CDT 2013
+(0)	Now Processing : 2012-09-09_16:00:00
+Fri Jun 14 03:35:09 CDT 2013
+(0)	Now Processing : 2012-09-09_17:00:00
+Fri Jun 14 03:35:52 CDT 2013
+(0)	Now Processing : 2012-09-09_18:00:00
+Fri Jun 14 03:36:34 CDT 2013
+(0)	Now Processing : 2012-09-09_19:00:00
+Fri Jun 14 03:37:17 CDT 2013
+(0)	Now Processing : 2012-09-09_20:00:00
+Fri Jun 14 03:38:00 CDT 2013
+(0)	Now Processing : 2012-09-09_21:00:00
+Fri Jun 14 03:38:43 CDT 2013
+(0)	Now Processing : 2012-09-09_22:00:00
+Fri Jun 14 03:39:25 CDT 2013
+(0)	Now Processing : 2012-09-09_23:00:00
+Fri Jun 14 03:40:08 CDT 2013
+(0)	Now Processing : 2012-09-10_00:00:00
+Fri Jun 14 03:40:51 CDT 2013
+(0)	Now Processing : 2012-09-10_01:00:00
+Fri Jun 14 03:41:34 CDT 2013
+(0)	Now Processing : 2012-09-10_02:00:00
+Fri Jun 14 03:42:17 CDT 2013
+(0)	Now Processing : 2012-09-10_03:00:00
+Fri Jun 14 03:43:01 CDT 2013
+(0)	Now Processing : 2012-09-10_04:00:00
+Fri Jun 14 03:43:44 CDT 2013
+(0)	Now Processing : 2012-09-10_05:00:00
+Fri Jun 14 03:44:27 CDT 2013
+(0)	Now Processing : 2012-09-10_06:00:00
+Fri Jun 14 03:45:11 CDT 2013
+(0)	Now Processing : 2012-09-10_07:00:00
+Fri Jun 14 03:45:54 CDT 2013
+(0)	Now Processing : 2012-09-10_08:00:00
+Fri Jun 14 03:46:38 CDT 2013
+(0)	Now Processing : 2012-09-10_09:00:00
+Fri Jun 14 03:47:22 CDT 2013
+(0)	Now Processing : 2012-09-10_10:00:00
+Fri Jun 14 03:48:06 CDT 2013
+(0)	Now Processing : 2012-09-10_11:00:00
+Fri Jun 14 03:48:50 CDT 2013
+(0)	Now Processing : 2012-09-10_12:00:00
+Fri Jun 14 03:49:33 CDT 2013
+(0)	Now Processing : 2012-09-10_13:00:00
+Fri Jun 14 03:50:17 CDT 2013
+(0)	Now Processing : 2012-09-10_14:00:00
+Fri Jun 14 03:51:01 CDT 2013
+(0)	Now Processing : 2012-09-10_15:00:00
+Fri Jun 14 03:51:46 CDT 2013
+(0)	Now Processing : 2012-09-10_16:00:00
+Fri Jun 14 03:52:30 CDT 2013
+(0)	Now Processing : 2012-09-10_17:00:00
+Fri Jun 14 03:53:14 CDT 2013
+(0)	Now Processing : 2012-09-10_18:00:00
+Fri Jun 14 03:53:58 CDT 2013
+(0)	Now Processing : 2012-09-10_19:00:00
+Fri Jun 14 03:54:43 CDT 2013
+(0)	Now Processing : 2012-09-10_20:00:00
+Fri Jun 14 03:55:28 CDT 2013
+(0)	Now Processing : 2012-09-10_21:00:00
+Fri Jun 14 03:56:12 CDT 2013
+(0)	Now Processing : 2012-09-10_22:00:00
+Fri Jun 14 03:56:57 CDT 2013
+(0)	Now Processing : 2012-09-10_23:00:00
+Fri Jun 14 03:57:42 CDT 2013
+(0)	Now Processing : 2012-09-11_00:00:00
+Fri Jun 14 03:58:27 CDT 2013
+(0)	Now Processing : 2012-09-11_01:00:00
+Fri Jun 14 03:59:12 CDT 2013
+(0)	Now Processing : 2012-09-11_02:00:00
+Fri Jun 14 03:59:57 CDT 2013
+(0)	Now Processing : 2012-09-11_03:00:00
+Fri Jun 14 04:00:42 CDT 2013
+(0)	Now Processing : 2012-09-11_04:00:00
+Fri Jun 14 04:01:27 CDT 2013
+(0)	Now Processing : 2012-09-11_05:00:00
+Fri Jun 14 04:02:12 CDT 2013
+(0)	Now Processing : 2012-09-11_06:00:00
+Fri Jun 14 04:02:58 CDT 2013
+(0)	Now Processing : 2012-09-11_07:00:00
+Fri Jun 14 04:03:43 CDT 2013
+(0)	Now Processing : 2012-09-11_08:00:00
+Fri Jun 14 04:04:28 CDT 2013
+(0)	Now Processing : 2012-09-11_09:00:00
+Fri Jun 14 04:05:14 CDT 2013
+(0)	Now Processing : 2012-09-11_10:00:00
+Fri Jun 14 04:06:00 CDT 2013
+(0)	Now Processing : 2012-09-11_11:00:00
+Fri Jun 14 04:06:46 CDT 2013
+(0)	Now Processing : 2012-09-11_12:00:00
+Fri Jun 14 04:07:31 CDT 2013
+(0)	Now Processing : 2012-09-11_13:00:00
+Fri Jun 14 04:08:17 CDT 2013
+(0)	Now Processing : 2012-09-11_14:00:00
+Fri Jun 14 04:09:03 CDT 2013
+(0)	Now Processing : 2012-09-11_15:00:00
+Fri Jun 14 04:09:50 CDT 2013
+(0)	Now Processing : 2012-09-11_16:00:00
+Fri Jun 14 04:10:35 CDT 2013
+(0)	Now Processing : 2012-09-11_17:00:00
+Fri Jun 14 04:11:22 CDT 2013
+(0)	Now Processing : 2012-09-11_18:00:00
+Fri Jun 14 04:12:08 CDT 2013
+(0)	Now Processing : 2012-09-11_19:00:00
+Fri Jun 14 04:12:55 CDT 2013
+(0)	Now Processing : 2012-09-11_20:00:00
+Fri Jun 14 04:13:41 CDT 2013
+(0)	Now Processing : 2012-09-11_21:00:00
+Fri Jun 14 04:14:27 CDT 2013
+(0)	Now Processing : 2012-09-11_22:00:00
+Fri Jun 14 04:15:14 CDT 2013
+(0)	Now Processing : 2012-09-11_23:00:00
+Fri Jun 14 04:16:01 CDT 2013
+(0)	Now Processing : 2012-09-12_00:00:00
+Fri Jun 14 04:16:47 CDT 2013
+(0)	Now Processing : 2012-09-12_01:00:00
+Fri Jun 14 04:17:34 CDT 2013
+(0)	Now Processing : 2012-09-12_02:00:00
+Fri Jun 14 04:18:21 CDT 2013
+(0)	Now Processing : 2012-09-12_03:00:00
+Fri Jun 14 04:19:08 CDT 2013
+(0)	Now Processing : 2012-09-12_04:00:00
+Fri Jun 14 04:19:56 CDT 2013
+(0)	Now Processing : 2012-09-12_05:00:00
+Fri Jun 14 04:20:44 CDT 2013
+(0)	Now Processing : 2012-09-12_06:00:00
+Fri Jun 14 04:21:31 CDT 2013
+(0)	Now Processing : 2012-09-12_07:00:00
+Fri Jun 14 04:22:18 CDT 2013
+(0)	Now Processing : 2012-09-12_08:00:00
+Fri Jun 14 04:23:07 CDT 2013
+(0)	Now Processing : 2012-09-12_09:00:00
+Fri Jun 14 04:23:54 CDT 2013
+(0)	Now Processing : 2012-09-12_10:00:00
+Fri Jun 14 04:24:42 CDT 2013
+(0)	Now Processing : 2012-09-12_11:00:00
+Fri Jun 14 04:25:30 CDT 2013
+(0)	Now Processing : 2012-09-12_12:00:00
+Fri Jun 14 04:26:18 CDT 2013
+(0)	Now Processing : 2012-09-12_13:00:00
+Fri Jun 14 04:27:06 CDT 2013
+(0)	Now Processing : 2012-09-12_14:00:00
+Fri Jun 14 04:27:54 CDT 2013
+(0)	Now Processing : 2012-09-12_15:00:00
+Fri Jun 14 04:28:42 CDT 2013
+(0)	Now Processing : 2012-09-12_16:00:00
+Fri Jun 14 04:29:30 CDT 2013
+(0)	Now Processing : 2012-09-12_17:00:00
+Fri Jun 14 04:30:19 CDT 2013
+(0)	Now Processing : 2012-09-12_18:00:00
+Fri Jun 14 04:31:07 CDT 2013
+(0)	Now Processing : 2012-09-12_19:00:00
+Fri Jun 14 04:31:55 CDT 2013
+(0)	Now Processing : 2012-09-12_20:00:00
+Fri Jun 14 04:32:44 CDT 2013
+(0)	Now Processing : 2012-09-12_21:00:00
+Fri Jun 14 04:33:32 CDT 2013
+(0)	Now Processing : 2012-09-12_22:00:00
+Fri Jun 14 04:34:21 CDT 2013
+(0)	Now Processing : 2012-09-12_23:00:00
+Fri Jun 14 04:35:10 CDT 2013
+(0)	Now Processing : 2012-09-13_00:00:00
+Fri Jun 14 04:35:59 CDT 2013
+(0)	Now Processing : 2012-09-13_01:00:00
+Fri Jun 14 04:36:47 CDT 2013
+(0)	Now Processing : 2012-09-13_02:00:00
+Fri Jun 14 04:37:37 CDT 2013
+(0)	Now Processing : 2012-09-13_03:00:00
+Fri Jun 14 04:38:25 CDT 2013
+(0)	Now Processing : 2012-09-13_04:00:00
+Fri Jun 14 04:39:14 CDT 2013
+(0)	Now Processing : 2012-09-13_05:00:00
+Fri Jun 14 04:40:04 CDT 2013
+(0)	Now Processing : 2012-09-13_06:00:00
+Fri Jun 14 04:40:53 CDT 2013
+(0)	Now Processing : 2012-09-13_07:00:00
+Fri Jun 14 04:41:42 CDT 2013
+(0)	Now Processing : 2012-09-13_08:00:00
+Fri Jun 14 04:42:32 CDT 2013
+(0)	Now Processing : 2012-09-13_09:00:00
+Fri Jun 14 04:43:21 CDT 2013
+(0)	Now Processing : 2012-09-13_10:00:00
+Fri Jun 14 04:44:11 CDT 2013
+(0)	Now Processing : 2012-09-13_11:00:00
+Fri Jun 14 04:45:00 CDT 2013
+(0)	Now Processing : 2012-09-13_12:00:00
+Fri Jun 14 04:45:50 CDT 2013
+(0)	Now Processing : 2012-09-13_13:00:00
+Fri Jun 14 04:46:40 CDT 2013
+(0)	Now Processing : 2012-09-13_14:00:00
+Fri Jun 14 04:47:29 CDT 2013
+(0)	Now Processing : 2012-09-13_15:00:00
+Fri Jun 14 04:48:20 CDT 2013
+(0)	Now Processing : 2012-09-13_16:00:00
+Fri Jun 14 04:49:09 CDT 2013
+(0)	Now Processing : 2012-09-13_17:00:00
+Fri Jun 14 04:49:59 CDT 2013
+(0)	Now Processing : 2012-09-13_18:00:00
+Fri Jun 14 04:50:49 CDT 2013
+(0)	Now Processing : 2012-09-13_19:00:00
+Fri Jun 14 04:51:39 CDT 2013
+(0)	Now Processing : 2012-09-13_20:00:00
+Fri Jun 14 04:52:30 CDT 2013
+(0)	Now Processing : 2012-09-13_21:00:00
+Fri Jun 14 04:53:20 CDT 2013
+(0)	Now Processing : 2012-09-13_22:00:00
+Fri Jun 14 04:54:11 CDT 2013
+(0)	Now Processing : 2012-09-13_23:00:00
+Fri Jun 14 04:55:01 CDT 2013
+(0)	Now Processing : 2012-09-14_00:00:00
+Fri Jun 14 04:55:52 CDT 2013
+(0)	Now Processing : 2012-09-14_01:00:00
+Fri Jun 14 04:56:43 CDT 2013
+(0)	Now Processing : 2012-09-14_02:00:00
+Fri Jun 14 04:57:33 CDT 2013
+(0)	Now Processing : 2012-09-14_03:00:00
+Fri Jun 14 04:58:24 CDT 2013
+(0)	Now Processing : 2012-09-14_04:00:00
+Fri Jun 14 04:59:15 CDT 2013
+(0)	Now Processing : 2012-09-14_05:00:00
+Fri Jun 14 05:00:05 CDT 2013
+(0)	Now Processing : 2012-09-14_06:00:00
+Fri Jun 14 05:00:57 CDT 2013
+(0)	Now Processing : 2012-09-14_07:00:00
+Fri Jun 14 05:01:48 CDT 2013
+(0)	Now Processing : 2012-09-14_08:00:00
+Fri Jun 14 05:02:39 CDT 2013
+(0)	Now Processing : 2012-09-14_09:00:00
+Fri Jun 14 05:03:30 CDT 2013
+(0)	Now Processing : 2012-09-14_10:00:00
+Fri Jun 14 05:04:21 CDT 2013
+(0)	Now Processing : 2012-09-14_11:00:00
+Fri Jun 14 05:05:13 CDT 2013
+(0)	Now Processing : 2012-09-14_12:00:00
+Fri Jun 14 05:06:04 CDT 2013
+(0)	Now Processing : 2012-09-14_13:00:00
+Fri Jun 14 05:06:56 CDT 2013
+(0)	Now Processing : 2012-09-14_14:00:00
+Fri Jun 14 05:07:47 CDT 2013
+(0)	Now Processing : 2012-09-14_15:00:00
+Fri Jun 14 05:08:39 CDT 2013
+(0)	Now Processing : 2012-09-14_16:00:00
+Fri Jun 14 05:09:31 CDT 2013
+(0)	Now Processing : 2012-09-14_17:00:00
+Fri Jun 14 05:10:23 CDT 2013
+(0)	Now Processing : 2012-09-14_18:00:00
+Fri Jun 14 05:11:15 CDT 2013
+(0)	Now Processing : 2012-09-14_19:00:00
+Fri Jun 14 05:12:07 CDT 2013
+(0)	Now Processing : 2012-09-14_20:00:00
+Fri Jun 14 05:12:59 CDT 2013
+(0)	Now Processing : 2012-09-14_21:00:00
+Fri Jun 14 05:13:51 CDT 2013
+(0)	Now Processing : 2012-09-14_22:00:00
+Fri Jun 14 05:14:44 CDT 2013
+(0)	Now Processing : 2012-09-14_23:00:00
+Fri Jun 14 05:15:35 CDT 2013
+(0)	Now Processing : 2012-09-15_00:00:00
+Fri Jun 14 05:16:28 CDT 2013
+(0)	Now Processing : 2012-09-15_01:00:00
+Fri Jun 14 05:17:20 CDT 2013
+(0)	Now Processing : 2012-09-15_02:00:00
+Fri Jun 14 05:18:13 CDT 2013
+(0)	Now Processing : 2012-09-15_03:00:00
+Fri Jun 14 05:19:06 CDT 2013
+(0)	Now Processing : 2012-09-15_04:00:00
+Fri Jun 14 05:19:58 CDT 2013
+(0)	Now Processing : 2012-09-15_05:00:00
+Fri Jun 14 05:20:51 CDT 2013
+(0)	Now Processing : 2012-09-15_06:00:00
+Fri Jun 14 05:21:44 CDT 2013
+(0)	Now Processing : 2012-09-15_07:00:00
+Fri Jun 14 05:22:37 CDT 2013
+(0)	Now Processing : 2012-09-15_08:00:00
+Fri Jun 14 05:23:30 CDT 2013
+(0)	Now Processing : 2012-09-15_09:00:00
+Fri Jun 14 05:24:23 CDT 2013
+(0)	Now Processing : 2012-09-15_10:00:00
+Fri Jun 14 05:25:16 CDT 2013
+(0)	Now Processing : 2012-09-15_11:00:00
+Fri Jun 14 05:26:10 CDT 2013
+(0)	Now Processing : 2012-09-15_12:00:00
+Fri Jun 14 05:27:03 CDT 2013
+(0)	Now Processing : 2012-09-15_13:00:00
+Fri Jun 14 05:27:56 CDT 2013
+(0)	Now Processing : 2012-09-15_14:00:00
+Fri Jun 14 05:28:50 CDT 2013
+(0)	Now Processing : 2012-09-15_15:00:00
+Fri Jun 14 05:29:44 CDT 2013
+(0)	Now Processing : 2012-09-15_16:00:00
+Fri Jun 14 05:30:37 CDT 2013
+(0)	Now Processing : 2012-09-15_17:00:00
+Fri Jun 14 05:31:31 CDT 2013
+(0)	Now Processing : 2012-09-15_18:00:00
+Fri Jun 14 05:32:25 CDT 2013
+(0)	Now Processing : 2012-09-15_19:00:00
+Fri Jun 14 05:33:19 CDT 2013
+(0)	Now Processing : 2012-09-15_20:00:00
+Fri Jun 14 05:34:13 CDT 2013
+(0)	Now Processing : 2012-09-15_21:00:00
+Fri Jun 14 05:35:07 CDT 2013
+(0)	Now Processing : 2012-09-15_22:00:00
+Fri Jun 14 05:36:01 CDT 2013
+(0)	Now Processing : 2012-09-15_23:00:00
+Fri Jun 14 05:36:56 CDT 2013
+(0)	Now Processing : 2012-09-16_00:00:00
+Fri Jun 14 05:37:50 CDT 2013
+(0)	Now Processing : 2012-09-16_01:00:00
+Fri Jun 14 05:38:45 CDT 2013
+(0)	Now Processing : 2012-09-16_02:00:00
+Fri Jun 14 05:39:39 CDT 2013
+(0)	Now Processing : 2012-09-16_03:00:00
+Fri Jun 14 05:40:34 CDT 2013
+(0)	Now Processing : 2012-09-16_04:00:00
+Fri Jun 14 05:41:28 CDT 2013
+(0)	Now Processing : 2012-09-16_05:00:00
+Fri Jun 14 05:42:23 CDT 2013
+(0)	Now Processing : 2012-09-16_06:00:00
+Fri Jun 14 05:43:18 CDT 2013
+(0)	Now Processing : 2012-09-16_07:00:00
+Fri Jun 14 05:44:13 CDT 2013
+(0)	Now Processing : 2012-09-16_08:00:00
+Fri Jun 14 05:45:08 CDT 2013
+(0)	Now Processing : 2012-09-16_09:00:00
+Fri Jun 14 05:46:03 CDT 2013
+(0)	Now Processing : 2012-09-16_10:00:00
+Fri Jun 14 05:46:58 CDT 2013
+(0)	Now Processing : 2012-09-16_11:00:00
+Fri Jun 14 05:47:54 CDT 2013
+(0)	Now Processing : 2012-09-16_12:00:00
+Fri Jun 14 05:48:49 CDT 2013
+(0)	Now Processing : 2012-09-16_13:00:00
+Fri Jun 14 05:49:45 CDT 2013
+(0)	Now Processing : 2012-09-16_14:00:00
+Fri Jun 14 05:50:40 CDT 2013
+(0)	Now Processing : 2012-09-16_15:00:00
+Fri Jun 14 05:51:36 CDT 2013
+(0)	Now Processing : 2012-09-16_16:00:00
+Fri Jun 14 05:52:31 CDT 2013
+(0)	Now Processing : 2012-09-16_17:00:00
+Fri Jun 14 05:53:27 CDT 2013
+(0)	Now Processing : 2012-09-16_18:00:00
+Fri Jun 14 05:54:23 CDT 2013
+(0)	Now Processing : 2012-09-16_19:00:00
+Fri Jun 14 05:55:19 CDT 2013
+(0)	Now Processing : 2012-09-16_20:00:00
+Fri Jun 14 05:56:14 CDT 2013
+(0)	Now Processing : 2012-09-16_21:00:00
+Fri Jun 14 05:57:11 CDT 2013
+(0)	Now Processing : 2012-09-16_22:00:00
+Fri Jun 14 05:58:07 CDT 2013
+(0)	Now Processing : 2012-09-16_23:00:00
+Fri Jun 14 05:59:03 CDT 2013
+(0)	Now Processing : 2012-09-17_00:00:00
+Fri Jun 14 05:59:59 CDT 2013
+(0)	Now Processing : 2012-09-17_01:00:00
+Fri Jun 14 06:00:55 CDT 2013
+(0)	Now Processing : 2012-09-17_02:00:00
+Fri Jun 14 06:01:52 CDT 2013
+(0)	Now Processing : 2012-09-17_03:00:00
+Fri Jun 14 06:02:48 CDT 2013
+(0)	Now Processing : 2012-09-17_04:00:00
+Fri Jun 14 06:03:45 CDT 2013
+(0)	Now Processing : 2012-09-17_05:00:00
+Fri Jun 14 06:04:42 CDT 2013
+(0)	Now Processing : 2012-09-17_06:00:00
+Fri Jun 14 06:05:39 CDT 2013
+(0)	Now Processing : 2012-09-17_07:00:00
+Fri Jun 14 06:06:35 CDT 2013
+(0)	Now Processing : 2012-09-17_08:00:00
+Fri Jun 14 06:07:32 CDT 2013
+(0)	Now Processing : 2012-09-17_09:00:00
+Fri Jun 14 06:08:29 CDT 2013
+(0)	Now Processing : 2012-09-17_10:00:00
+Fri Jun 14 06:09:27 CDT 2013
+(0)	Now Processing : 2012-09-17_11:00:00
+Fri Jun 14 06:10:24 CDT 2013
+(0)	Now Processing : 2012-09-17_12:00:00
+Fri Jun 14 06:11:21 CDT 2013
+(0)	Now Processing : 2012-09-17_13:00:00
+Fri Jun 14 06:12:18 CDT 2013
+(0)	Now Processing : 2012-09-17_14:00:00
+Fri Jun 14 06:13:15 CDT 2013
+(0)	Now Processing : 2012-09-17_15:00:00
+Fri Jun 14 06:14:13 CDT 2013
+(0)	Now Processing : 2012-09-17_16:00:00
+Fri Jun 14 06:15:10 CDT 2013
+(0)	Now Processing : 2012-09-17_17:00:00
+Fri Jun 14 06:16:08 CDT 2013
+(0)	Now Processing : 2012-09-17_18:00:00
+Fri Jun 14 06:17:06 CDT 2013
+(0)	Now Processing : 2012-09-17_19:00:00
+Fri Jun 14 06:18:03 CDT 2013
+(0)	Now Processing : 2012-09-17_20:00:00
+Fri Jun 14 06:19:02 CDT 2013
+(0)	Now Processing : 2012-09-17_21:00:00
+Fri Jun 14 06:19:59 CDT 2013
+(0)	Now Processing : 2012-09-17_22:00:00
+Fri Jun 14 06:20:57 CDT 2013
+(0)	Now Processing : 2012-09-17_23:00:00
+Fri Jun 14 06:21:55 CDT 2013
+(0)	Now Processing : 2012-09-18_00:00:00
+Fri Jun 14 06:22:54 CDT 2013
+(0)	Now Processing : 2012-09-18_01:00:00
+Fri Jun 14 06:23:52 CDT 2013
+(0)	Now Processing : 2012-09-18_02:00:00
+Fri Jun 14 06:24:50 CDT 2013
+(0)	Now Processing : 2012-09-18_03:00:00
+Fri Jun 14 06:25:49 CDT 2013
+(0)	Now Processing : 2012-09-18_04:00:00
+Fri Jun 14 06:26:48 CDT 2013
+(0)	Now Processing : 2012-09-18_05:00:00
+Fri Jun 14 06:27:46 CDT 2013
+(0)	Now Processing : 2012-09-18_06:00:00
+Fri Jun 14 06:28:45 CDT 2013
+(0)	Now Processing : 2012-09-18_07:00:00
+Fri Jun 14 06:29:44 CDT 2013
+(0)	Now Processing : 2012-09-18_08:00:00
+Fri Jun 14 06:30:43 CDT 2013
+(0)	Now Processing : 2012-09-18_09:00:00
+Fri Jun 14 06:31:41 CDT 2013
+(0)	Now Processing : 2012-09-18_10:00:00
+Fri Jun 14 06:32:40 CDT 2013
+(0)	Now Processing : 2012-09-18_11:00:00
+Fri Jun 14 06:33:39 CDT 2013
+(0)	Now Processing : 2012-09-18_12:00:00
+Fri Jun 14 06:34:38 CDT 2013
+(0)	Now Processing : 2012-09-18_13:00:00
+Fri Jun 14 06:35:37 CDT 2013
+(0)	Now Processing : 2012-09-18_14:00:00
+Fri Jun 14 06:36:36 CDT 2013
+(0)	Now Processing : 2012-09-18_15:00:00
+Fri Jun 14 06:37:35 CDT 2013
+(0)	Now Processing : 2012-09-18_16:00:00
+Fri Jun 14 06:38:34 CDT 2013
+(0)	Now Processing : 2012-09-18_17:00:00
+Fri Jun 14 06:39:34 CDT 2013
+(0)	Now Processing : 2012-09-18_18:00:00
+Fri Jun 14 06:40:33 CDT 2013
+(0)	Now Processing : 2012-09-18_19:00:00
+Fri Jun 14 06:41:33 CDT 2013
+(0)	Now Processing : 2012-09-18_20:00:00
+Fri Jun 14 06:42:32 CDT 2013
+(0)	Now Processing : 2012-09-18_21:00:00
+Fri Jun 14 06:43:31 CDT 2013
+(0)	Now Processing : 2012-09-18_22:00:00
+Fri Jun 14 06:44:31 CDT 2013
+(0)	Now Processing : 2012-09-18_23:00:00
+Fri Jun 14 06:45:31 CDT 2013
+(0)	Now Processing : 2012-09-19_00:00:00
+Fri Jun 14 06:46:31 CDT 2013
+(0)	Now Processing : 2012-09-19_01:00:00
+Fri Jun 14 06:47:30 CDT 2013
+(0)	Now Processing : 2012-09-19_02:00:00
+Fri Jun 14 06:48:30 CDT 2013
+(0)	Now Processing : 2012-09-19_03:00:00
+Fri Jun 14 06:49:30 CDT 2013
+(0)	Now Processing : 2012-09-19_04:00:00
+Fri Jun 14 06:50:30 CDT 2013
+(0)	Now Processing : 2012-09-19_05:00:00
+Fri Jun 14 06:51:31 CDT 2013
+(0)	Now Processing : 2012-09-19_06:00:00
+Fri Jun 14 06:52:31 CDT 2013
+(0)	Now Processing : 2012-09-19_07:00:00
+Fri Jun 14 06:53:31 CDT 2013
+(0)	Now Processing : 2012-09-19_08:00:00
+Fri Jun 14 06:54:32 CDT 2013
+(0)	Now Processing : 2012-09-19_09:00:00
+Fri Jun 14 06:55:32 CDT 2013
+(0)	Now Processing : 2012-09-19_10:00:00
+Fri Jun 14 06:56:32 CDT 2013
+(0)	Now Processing : 2012-09-19_11:00:00
+Fri Jun 14 06:57:33 CDT 2013
+(0)	Now Processing : 2012-09-19_12:00:00
+Fri Jun 14 06:58:33 CDT 2013
+(0)	Now Processing : 2012-09-19_13:00:00
+Fri Jun 14 06:59:34 CDT 2013
+(0)	Now Processing : 2012-09-19_15:00:00
+Fri Jun 14 07:00:35 CDT 2013
+(0)	Now Processing : 2012-09-19_16:00:00
+Fri Jun 14 07:01:36 CDT 2013
+(0)	Now Processing : 2012-09-19_17:00:00
+Fri Jun 14 07:02:36 CDT 2013
+(0)	Now Processing : 2012-09-19_18:00:00
+Fri Jun 14 07:03:38 CDT 2013
+(0)	Now Processing : 2012-09-19_19:00:00
+Fri Jun 14 07:04:39 CDT 2013
+(0)	Now Processing : 2012-09-19_20:00:00
+Fri Jun 14 07:05:40 CDT 2013
+(0)	Now Processing : 2012-09-19_21:00:00
+Fri Jun 14 07:06:41 CDT 2013
+(0)	Now Processing : 2012-09-19_22:00:00
+Fri Jun 14 07:07:42 CDT 2013
+(0)	Now Processing : 2012-09-19_23:00:00
+Fri Jun 14 07:08:44 CDT 2013
+(0)	Now Processing : 2012-09-20_00:00:00
+Fri Jun 14 07:09:45 CDT 2013
+(0)	Now Processing : 2012-09-20_01:00:00
+Fri Jun 14 07:10:47 CDT 2013
+(0)	Now Processing : 2012-09-20_02:00:00
+Fri Jun 14 07:11:49 CDT 2013
+(0)	Now Processing : 2012-09-20_03:00:00
+Fri Jun 14 07:12:50 CDT 2013
+(0)	Now Processing : 2012-09-20_04:00:00
+Fri Jun 14 07:13:52 CDT 2013
+(0)	Now Processing : 2012-09-20_05:00:00
+Fri Jun 14 07:14:54 CDT 2013
+(0)	Now Processing : 2012-09-20_06:00:00
+Fri Jun 14 07:15:56 CDT 2013
+(0)	Now Processing : 2012-09-20_07:00:00
+Fri Jun 14 07:16:58 CDT 2013
+(0)	Now Processing : 2012-09-20_08:00:00
+Fri Jun 14 07:18:00 CDT 2013
+(0)	Now Processing : 2012-09-20_09:00:00
+Fri Jun 14 07:19:02 CDT 2013
+(0)	Now Processing : 2012-09-20_10:00:00
+Fri Jun 14 07:20:04 CDT 2013
+(0)	Now Processing : 2012-09-20_11:00:00
+Fri Jun 14 07:21:06 CDT 2013
+(0)	Now Processing : 2012-09-20_12:00:00
+Fri Jun 14 07:22:08 CDT 2013
+(0)	Now Processing : 2012-09-20_13:00:00
+Fri Jun 14 07:23:11 CDT 2013
+(0)	Now Processing : 2012-09-20_14:00:00
+Fri Jun 14 07:24:13 CDT 2013
+(0)	Now Processing : 2012-09-20_15:00:00
+Fri Jun 14 07:25:16 CDT 2013
+(0)	Now Processing : 2012-09-20_16:00:00
+Fri Jun 14 07:26:19 CDT 2013
+(0)	Now Processing : 2012-09-20_17:00:00
+Fri Jun 14 07:27:22 CDT 2013
+(0)	Now Processing : 2012-09-20_18:00:00
+Fri Jun 14 07:28:25 CDT 2013
+(0)	Now Processing : 2012-09-20_19:00:00
+Fri Jun 14 07:29:27 CDT 2013
+(0)	Now Processing : 2012-09-20_20:00:00
+Fri Jun 14 07:30:31 CDT 2013
+(0)	Now Processing : 2012-09-20_21:00:00
+Fri Jun 14 07:31:33 CDT 2013
+(0)	Now Processing : 2012-09-20_22:00:00
+Fri Jun 14 07:32:37 CDT 2013
+(0)	Now Processing : 2012-09-20_23:00:00
+Fri Jun 14 07:33:40 CDT 2013
+(0)	Now Processing : 2012-09-21_00:00:00
+Fri Jun 14 07:34:43 CDT 2013
+(0)	Now Processing : 2012-09-21_01:00:00
+Fri Jun 14 07:35:47 CDT 2013
+(0)	Now Processing : 2012-09-21_02:00:00
+Fri Jun 14 07:36:50 CDT 2013
+(0)	Now Processing : 2012-09-21_03:00:00
+Fri Jun 14 07:37:54 CDT 2013
+(0)	Now Processing : 2012-09-21_04:00:00
+Fri Jun 14 07:38:58 CDT 2013
+(0)	Now Processing : 2012-09-21_05:00:00
+Fri Jun 14 07:40:01 CDT 2013
+(0)	Now Processing : 2012-09-21_06:00:00
+Fri Jun 14 07:41:05 CDT 2013
+(0)	Now Processing : 2012-09-21_07:00:00
+Fri Jun 14 07:42:09 CDT 2013
+(0)	Now Processing : 2012-09-21_08:00:00
+Fri Jun 14 07:43:13 CDT 2013
+(0)	Now Processing : 2012-09-21_09:00:00
+Fri Jun 14 07:44:17 CDT 2013
+(0)	Now Processing : 2012-09-21_10:00:00
+Fri Jun 14 07:45:21 CDT 2013
+(0)	Now Processing : 2012-09-21_11:00:00
+Fri Jun 14 07:46:25 CDT 2013
+(0)	Now Processing : 2012-09-21_12:00:00
+Fri Jun 14 07:47:29 CDT 2013
+(0)	Now Processing : 2012-09-21_13:00:00
+Fri Jun 14 07:48:34 CDT 2013
+(0)	Now Processing : 2012-09-21_14:00:00
+Fri Jun 14 07:49:38 CDT 2013
+(0)	Now Processing : 2012-09-21_15:00:00
+Fri Jun 14 07:50:43 CDT 2013
+(0)	Now Processing : 2012-09-21_16:00:00
+Fri Jun 14 07:51:47 CDT 2013
+(0)	Now Processing : 2012-09-21_17:00:00
+Fri Jun 14 07:52:52 CDT 2013
+(0)	Now Processing : 2012-09-21_18:00:00
+Fri Jun 14 07:53:57 CDT 2013
+(0)	Now Processing : 2012-09-21_19:00:00
+Fri Jun 14 07:55:01 CDT 2013
+(0)	Now Processing : 2012-09-21_20:00:00
+Fri Jun 14 07:56:07 CDT 2013
+(0)	Now Processing : 2012-09-21_21:00:00
+Fri Jun 14 07:57:11 CDT 2013
+(0)	Now Processing : 2012-09-21_22:00:00
+Fri Jun 14 07:58:17 CDT 2013
+(0)	Now Processing : 2012-09-21_23:00:00
+Fri Jun 14 07:59:22 CDT 2013
+(0)	Now Processing : 2012-09-22_00:00:00
+Fri Jun 14 08:00:27 CDT 2013
+(0)	Now Processing : 2012-09-22_01:00:00
+Fri Jun 14 08:01:32 CDT 2013
+(0)	Now Processing : 2012-09-22_02:00:00
+Fri Jun 14 08:02:37 CDT 2013
+(0)	Now Processing : 2012-09-22_03:00:00
+Fri Jun 14 08:03:43 CDT 2013
+(0)	Now Processing : 2012-09-22_04:00:00
+Fri Jun 14 08:04:48 CDT 2013
+(0)	Now Processing : 2012-09-22_05:00:00
+Fri Jun 14 08:05:54 CDT 2013
+(0)	Now Processing : 2012-09-22_07:00:00
+Fri Jun 14 08:06:59 CDT 2013
+(0)	Now Processing : 2012-09-22_08:00:00
+Fri Jun 14 08:08:05 CDT 2013
+(0)	Now Processing : 2012-09-22_09:00:00
+Fri Jun 14 08:09:11 CDT 2013
+(0)	Now Processing : 2012-09-22_10:00:00
+Fri Jun 14 08:10:17 CDT 2013
+(0)	Now Processing : 2012-09-22_11:00:00
+Fri Jun 14 08:11:23 CDT 2013
+(0)	Now Processing : 2012-09-22_12:00:00
+Fri Jun 14 08:12:29 CDT 2013
+(0)	Now Processing : 2012-09-22_13:00:00
+Fri Jun 14 08:13:35 CDT 2013
+(0)	Now Processing : 2012-09-22_14:00:00
+Fri Jun 14 08:14:41 CDT 2013
+(0)	Now Processing : 2012-09-22_15:00:00
+Fri Jun 14 08:15:48 CDT 2013
+(0)	Now Processing : 2012-09-22_16:00:00
+Fri Jun 14 08:16:54 CDT 2013
+(0)	Now Processing : 2012-09-22_17:00:00
+Fri Jun 14 08:18:01 CDT 2013
+(0)	Now Processing : 2012-09-22_18:00:00
+Fri Jun 14 08:19:07 CDT 2013
+(0)	Now Processing : 2012-09-22_19:00:00
+Fri Jun 14 08:20:14 CDT 2013
+(0)	Now Processing : 2012-09-22_20:00:00
+Fri Jun 14 08:21:20 CDT 2013
+(0)	Now Processing : 2012-09-22_21:00:00
+Fri Jun 14 08:22:27 CDT 2013
+(0)	Now Processing : 2012-09-22_22:00:00
+Fri Jun 14 08:23:34 CDT 2013
+(0)	Now Processing : 2012-09-22_23:00:00
+Fri Jun 14 08:24:41 CDT 2013
+(0)	Now Processing : 2012-09-23_00:00:00
+Fri Jun 14 08:25:48 CDT 2013
+(0)	Now Processing : 2012-09-23_01:00:00
+Fri Jun 14 08:26:55 CDT 2013
+(0)	Now Processing : 2012-09-23_02:00:00
+Fri Jun 14 08:28:02 CDT 2013
+(0)	Now Processing : 2012-09-23_03:00:00
+Fri Jun 14 08:29:09 CDT 2013
+(0)	Now Processing : 2012-09-23_04:00:00

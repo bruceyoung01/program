@@ -1,0 +1,3953 @@
+Tue Feb 12 14:56:41 CST 2013
+Tue Feb 12 14:56:50 CST 2013
+Tue Feb 12 14:56:55 CST 2013
+Tue Feb 12 14:57:04 CST 2013
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	DATE : 2012-8-1_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0720110_e0721352_b03943_c20120801134829639141_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0721364_e0723006_b03943_c20120801134829639141_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0723018_e0724260_b03943_c20120801134829639141_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0724272_e0725514_b03943_c20120801134829639141_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1145327
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	4.7
+(0)	2012-8-1-7==130770002
+(0)	DATE : 2012-8-3_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120803_t0643469_e0645110_b03971_c20120803131101990991_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120803_t0645123_e0646365_b03971_c20120803131316469112_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1356103
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	11.3
+(0)	2012-8-3-6==130770002
+(0)	DATE : 2012-8-5_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120805_t0745303_e0746545_b04000_c20120805140636139990_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120805_t0746557_e0748199_b04000_c20120805141129145231_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120805_t0748211_e0749453_b04000_c20120805141129145231_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120805_t0749465_e0751107_b04000_c20120805141129145231_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.130301
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	5.1
+(0)	2012-8-5-7==130770002
+(0)	DATE : 2012-8-8_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120808_t0648433_e0650075_b04042_c20120808131631723496_noaa_oTue Feb 12 14:57:13 CST 2013
+Tue Feb 12 14:57:22 CST 2013
+Tue Feb 12 14:57:31 CST 2013
+ps.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120808_t0650087_e0651329_b04042_c20120808131631723496_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120808_t0651341_e0652583_b04042_c20120808131631723496_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120808_t0652595_e0654237_b04042_c20120808131631723496_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1378004
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	4.1
+(0)	2012-8-8-6==130770002
+(0)	DATE : 2012-8-12_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120812_t0714027_e0715268_b04099_c20120812133512473604_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120812_t0715281_e0716522_b04099_c20120812133605260928_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120812_t0716535_e0718177_b04099_c20120812133605260928_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120812_t0718189_e0719431_b04099_c20120812133605260928_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1133355
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	5.3
+(0)	2012-8-12-7==130770002
+(0)	DATE : 2012-8-13_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120813_t0655070_e0656312_b04113_c20120813132452731850_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120813_t0656324_e0657566_b04113_c20120813132452731850_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120813_t0657578_e0659220_b04113_c20120813132508763622_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120813_t0659232_e0700474_b04113_c20120813132508763622_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1295934
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	7.3
+(0)	2012-8-13-6==130770002
+(0)	DATE : 2012-8-15_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120815_t0758159_e0759401_b04142_c20120815142310809948_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120815_t0759413_e0801055_b04142_c20120815142946804090_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDTue Feb 12 14:57:38 CST 2013
+Tue Feb 12 14:57:47 CST 2013
+Tue Feb 12 14:57:57 CST 2013
+NB_npp_d20120815_t0801067_e0802309_b04142_c20120815142946804090_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.09772548
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	6.7
+(0)	2012-8-15-7==130770002
+(0)	DATE : 2012-8-17_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120817_t0720263_e0721505_b04170_c20120817135458633819_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120817_t0721517_e0723159_b04170_c20120817135458633819_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120817_t0723171_e0724413_b04170_c20120817135458633819_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120817_t0724426_e0726050_b04170_c20120817135549692636_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.08562811
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	20
+(0)	2012-8-17-7==130770002
+(0)	DATE : 2012-8-18_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120818_t0701307_e0702549_b04184_c20120818132435977714_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120818_t0702561_e0704203_b04184_c20120818132435977714_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120818_t0704215_e0705457_b04184_c20120818132435977714_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120818_t0705469_e0707111_b04184_c20120818132435977714_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.116143
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	 7
+(0)	2012-8-18-7==130770002
+(0)	DATE : 2012-8-23_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120823_t0707526_e0709167_b04255_c20120823133050844770_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120823_t0709180_e0710421_b04255_c20120823133050844770_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120823_t0710434_e0712075_b04255_c20120823134029091301_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120823_t0712088_e0713329_b04255_c20120823134029091301_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+Tue Feb 12 14:58:05 CST 2013
+Tue Feb 12 14:58:13 CST 2013
+Tue Feb 12 14:58:22 CST 2013
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1171668
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	11.9
+(0)	2012-8-23-7==130770002
+(0)	DATE : 2012-8-26_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120826_t0752075_e0753317_b04298_c20120826142007239565_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120826_t0753330_e0754571_b04298_c20120826142007239565_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120826_t0754584_e0756225_b04298_c20120826144454531949_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1321318
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	14.2
+(0)	2012-8-26-7==130770002
+(0)	DATE : 2012-8-27_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120827_t0733119_e0734361_b04312_c20120827140053688029_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120827_t0734373_e0736015_b04312_c20120827140053688029_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120827_t0736027_e0737269_b04312_c20120827140053688029_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120827_t0737281_e0738523_b04312_c20120827140131773888_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.115731
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	13.4
+(0)	2012-8-27-7==130770002
+(0)	DATE : 2012-9-2_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120902_t0719145_e0720387_b04397_c20120902135243364696_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120902_t0720399_e0722041_b04397_c20120902135243364696_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120902_t0722053_e0723295_b04397_c20120902135243364696_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120902_t0723307_e0724549_b04397_c20120902135553511424_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120902_t0724561_e0726203_b04397_c20120902135553511424_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+VaTue Feb 12 14:58:33 CST 2013
+Tue Feb 12 14:58:42 CST 2013
+Tue Feb 12 14:58:53 CST 2013
+riable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1427813
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	5.8
+(0)	2012-9-2-7==130770002
+(0)	DATE : 2012-9-3_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120903_t0701443_e0703085_b04411_c20120903132701889293_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120903_t0703097_e0704339_b04411_c20120903132701889293_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120903_t0704351_e0705593_b04411_c20120903132701889293_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120903_t0706005_e0707247_b04411_c20120903133422405852_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1177938
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	7.9
+(0)	2012-9-3-7==130770002
+(0)	DATE : 2012-9-7_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120907_t0725382_e0727006_b04468_c20120907134617074786_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120907_t0727018_e0728260_b04468_c20120907135348935344_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120907_t0728273_e0729514_b04468_c20120907135348935344_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120907_t0729527_e0731168_b04468_c20120907135348935344_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120907_t0731181_e0732422_b04468_c20120907135348935344_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.08969128
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	8.1
+(0)	2012-9-7-7==130770002
+(0)	DATE : 2012-9-9_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120909_t0649123_e0650365_b04496_c20120909131417067485_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120909_t0650377_e0652019_b04496_c20120909131417067485_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120909_t0652031_e0653273_b04496_c20120909131640167554_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates:Tue Feb 12 14:59:00 CST 2013
+Tue Feb 12 14:59:11 CST 2013
+Tue Feb 12 14:59:22 CST 2013
+ 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1427604
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	2.2
+(0)	2012-9-9-6==130770002
+(0)	DATE : 2012-9-12_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120912_t0732001_e0733243_b04539_c20120912140635531763_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120912_t0733255_e0734497_b04539_c20120912140635531763_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120912_t0734509_e0736151_b04539_c20120912140635531763_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120912_t0736163_e0737405_b04539_c20120912135913131985_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120912_t0737417_e0739059_b04539_c20120912135913131985_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1165379
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	10.9
+(0)	2012-9-12-7==130770002
+(0)	DATE : 2012-9-19_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120919_t0700326_e0701567_b04638_c20120919132944800991_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120919_t0701580_e0703221_b04638_c20120919132944800991_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120919_t0703234_e0704475_b04638_c20120919132944800991_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120919_t0704488_e0706129_b04638_c20120919132957176925_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120919_t0706142_e0707383_b04638_c20120919132957176925_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1283948
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	7.9
+(0)	2012-9-19-7==130770002
+(0)	DATE : 2012-9-20_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120920_t0643023_e0644265_b04652_c20120920131700651437_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120920_t0644277_e0645519_b04652_c20120920131700651437_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120920_t0645531_e0647173_b04652_c20120920131700651437_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValuTue Feb 12 14:59:29 CST 2013
+Tue Feb 12 14:59:39 CST 2013
+Tue Feb 12 14:59:50 CST 2013
+e :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1248528
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	8.3
+(0)	2012-9-20-6==130770002
+(0)	DATE : 2012-9-22_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120922_t0744458_e0746100_b04681_c20120922141032499198_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120922_t0746112_e0747354_b04681_c20120922141032499198_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120922_t0747366_e0749008_b04681_c20120922141032499198_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120922_t0749020_e0750262_b04681_c20120922142311230545_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.126216
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	12.7
+(0)	2012-9-22-7==130770002
+(0)	DATE : 2012-9-23_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120923_t0725519_e0727161_b04695_c20120923135602938358_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120923_t0727173_e0728415_b04695_c20120923135602938358_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120923_t0728427_e0730069_b04695_c20120923135602938358_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120923_t0730081_e0731323_b04695_c20120923135602938358_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120923_t0731335_e0732559_b04695_c20120923135615178424_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1182688
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	7.2
+(0)	2012-9-23-7==130770002
+(0)	DATE : 2012-9-24_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120924_t0706563_e0708205_b04709_c20120924133051539571_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120924_t0708217_e0709459_b04709_c20120924133106190477_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120924_t0709471_e0711113_b04709_c20120924133106190477_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120924_t0711125_e0712367_b04709_c20120924133106190477_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120924_t0712379_e0714021_b04709_c20120924133106190477_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+DimeTue Feb 12 15:00:01 CST 2013
+Tue Feb 12 15:00:08 CST 2013
+Tue Feb 12 15:00:17 CST 2013
+nsions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1295781
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	1.1
+(0)	2012-9-24-7==130770002
+(0)	DATE : 2012-9-25_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120925_t0649260_e0650502_b04723_c20120925132203375843_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120925_t0650515_e0652156_b04723_c20120925132610685159_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120925_t0652169_e0653410_b04723_c20120925132610685159_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1539793
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	6.3
+(0)	2012-9-25-6==130770002
+(0)	DATE : 2012-9-27_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120927_t0751095_e0752337_b04752_c20120927141556406719_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120927_t0752350_e0753591_b04752_c20120927141608043822_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120927_t0754004_e0755245_b04752_c20120927141608043822_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120927_t0755258_e0756499_b04752_c20120927141608043822_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1481455
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	12.3
+(0)	2012-9-27-7==130770002
+(0)	DATE : 2012-9-28_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120928_t0732139_e0733381_b04766_c20120928135953337352_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120928_t0733393_e0735035_b04766_c20120928135953337352_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120928_t0735047_e0736289_b04766_c20120928140007196187_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120928_t0736301_e0737543_b04766_c20120928140007196187_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number OTue Feb 12 15:00:26 CST 2013
+Tue Feb 12 15:00:35 CST 2013
+Tue Feb 12 15:00:40 CST 2013
+Tue Feb 12 15:00:49 CST 2013
+f Attributes: 1
+  _FillValue :	-999
+(0)	0.1359379
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	15.6
+(0)	2012-9-28-7==130770002
+(0)	DATE : 2012-10-5_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121005_t0700464_e0702106_b04865_c20121005132118666582_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121005_t0702118_e0703360_b04865_c20121005132118666582_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121005_t0703372_e0705014_b04865_c20121005133429590013_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121005_t0705026_e0706268_b04865_c20121005133429590013_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1352708
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	20.8
+(0)	2012-10-5-7==130770002
+(0)	DATE : 2012-10-6_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121006_t0643162_e0644404_b04879_c20121006130514030440_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121006_t0644416_e0646058_b04879_c20121006130514030440_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1416483
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	17.2
+(0)	2012-10-6-6==130770002
+(0)	DATE : 2012-10-10_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121010_t0707103_e0708344_b04936_c20121010132706632028_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121010_t0708357_e0709598_b04936_c20121010132706632028_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121010_t0710011_e0711253_b04936_c20121010132706632028_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121010_t0711265_e0712507_b04936_c20121010132706632028_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1279099
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	15.7
+(0)	2012-10-10-7==130770002
+(0)	DATE : 2012-10-11_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121011_t0Tue Feb 12 15:00:58 CST 2013
+Tue Feb 12 15:01:06 CST 2013
+Tue Feb 12 15:01:15 CST 2013
+648146_e0649388_b04950_c20121011131126423359_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121011_t0649400_e0651042_b04950_c20121011131942563989_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121011_t0651055_e0652296_b04950_c20121011131942563989_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121011_t0652309_e0653550_b04950_c20121011131942563989_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1402235
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	11.5
+(0)	2012-10-11-6==130770002
+(0)	DATE : 2012-10-16_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121016_t0654385_e0656009_b05021_c20121016131530880310_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121016_t0656021_e0657263_b05021_c20121016131530880310_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121016_t0657275_e0658517_b05021_c20121016131530880310_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121016_t0658529_e0700171_b05021_c20121016133616661426_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1353467
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	5.1
+(0)	2012-10-16-6==130770002
+(0)	DATE : 2012-10-19_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121019_t0738518_e0740160_b05064_c20121026045622671614_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121019_t0740172_e0741414_b05064_c20121026045622671614_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121019_t0741426_e0743068_b05064_c20121026045622671614_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121019_t0743080_e0744322_b05064_c20121026045629774941_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1325339
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	2.5
+(0)	2012-10-19-7==130770002
+(0)	DATE : 2012-10-20_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121020_t0719562_e0721204_b05078_c20121020135530086555_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121020_t0721216_e0722458_b05078_c201210Tue Feb 12 15:01:24 CST 2013
+Tue Feb 12 15:01:33 CST 2013
+Tue Feb 12 15:01:38 CST 2013
+20135530086555_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121020_t0722470_e0724112_b05078_c20121020135530086555_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121020_t0724124_e0725366_b05078_c20121020135530086555_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1210611
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	8.3
+(0)	2012-10-20-7==130770002
+(0)	DATE : 2012-10-21_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121021_t0701006_e0702248_b05092_c20121021133546935810_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121021_t0702260_e0703502_b05092_c20121021133748913661_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121021_t0703514_e0705156_b05092_c20121021133748913661_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121021_t0705168_e0706410_b05092_c20121021133748913661_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1393394
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	 7
+(0)	2012-10-21-7==130770002
+(0)	DATE : 2012-10-22_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121022_t0643304_e0644545_b05106_c20121022130140655520_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121022_t0644558_e0646200_b05106_c20121022132220344210_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1433464
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	10.4
+(0)	2012-10-22-6==130770002
+(0)	DATE : 2012-10-23_8
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121023_t0805349_e0806591_b05121_c20121023143205593355_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121023_t0807004_e0808245_b05121_c20121023143205593355_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+DiTue Feb 12 15:01:43 CST 2013
+Tue Feb 12 15:01:51 CST 2013
+Tue Feb 12 15:02:00 CST 2013
+mensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1518343
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	20.1
+(0)	2012-10-23-8==130770002
+(0)	DATE : 2012-10-24_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121024_t0745139_e0746381_b05135_c20121024140351314360_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121024_t0746393_e0748035_b05135_c20121024141525399625_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121024_t0748047_e0749289_b05135_c20121024141525399625_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121024_t0749301_e0750543_b05135_c20121024141525399625_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1440922
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	13.3
+(0)	2012-10-24-7==130770002
+(0)	DATE : 2012-10-25_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121025_t0726183_e0727425_b05149_c20121025140329668906_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121025_t0727437_e0729079_b05149_c20121025140329668906_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121025_t0729091_e0730333_b05149_c20121025135417078611_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121025_t0730345_e0731587_b05149_c20121025135417078611_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1305051
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	17
+(0)	2012-10-25-7==130770002
+(0)	DATE : 2012-10-29_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121029_t0751378_e0753020_b05206_c20121029141943214114_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121029_t0753032_e0754274_b05206_c20121029141943214114_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121029_t0754286_e0755528_b05206_c20121029141943214114_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121029_t0755540_e0757182_b05206_c20121029194006801593_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: floTue Feb 12 15:02:09 CST 2013
+Tue Feb 12 15:02:18 CST 2013
+Tue Feb 12 15:02:27 CST 2013
+at
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.2060841
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	3.7
+(0)	2012-10-29-7==130770002
+(0)	DATE : 2012-10-30_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121030_t0732422_e0734064_b05220_c20121030135547642542_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121030_t0734076_e0735318_b05220_c20121030135547642542_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121030_t0735330_e0736572_b05220_c20121030135547642542_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121030_t0736584_e0738226_b05220_c20121030135547642542_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1871956
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-10-30-7==130770002
+(0)	DATE : 2012-10-31_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121031_t0713466_e0715108_b05234_c20121031133145977395_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121031_t0715120_e0716362_b05234_c20121031133958903932_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121031_t0716374_e0718016_b05234_c20121031133958903932_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121031_t0718028_e0719270_b05234_c20121031133958903932_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1579582
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-10-31-7==130770002
+(0)	DATE : 2012-11-1_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121101_t0654510_e0656152_b05248_c20121101131616887562_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121101_t0656164_e0657406_b05248_c20121101131616887562_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121101_t0657418_e0659060_b05248_c20121101131959047088_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121101_t0659072_e0700314_b05248_c20121101131959047088_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FilTue Feb 12 15:02:36 CST 2013
+Tue Feb 12 15:02:43 CST 2013
+Tue Feb 12 15:02:52 CST 2013
+Tue Feb 12 15:02:56 CST 2013
+lValue :	-999
+(0)	0.1760029
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-1-6==130770002
+(0)	DATE : 2012-11-3_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121103_t0758000_e0759242_b05277_c20121103143200758275_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121103_t0759254_e0800496_b05277_c20121103142446569129_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121103_t0800508_e0802150_b05277_c20121103142446569129_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1700335
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-3-7==130770002
+(0)	DATE : 2012-11-5_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121105_t0720105_e0721347_b05305_c20121105134940369718_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121105_t0721359_e0723001_b05305_c20121105134940369718_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121105_t0723013_e0724255_b05305_c20121105134940369718_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121105_t0724268_e0725509_b05305_c20121105135043377208_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1367592
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-5-7==130770002
+(0)	DATE : 2012-11-8_8
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121108_t0805493_e0807135_b05348_c20121108142351923987_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121108_t0807147_e0808389_b05348_c20121108142351923987_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.162402
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-8-8==130770002
+(0)	DATE : 2012-11-9_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121109_t0745283_e0746525_b05362_c20121109141609848300_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121109_t0746537_e0748179_b05362_c20Tue Feb 12 15:03:05 CST 2013
+Tue Feb 12 15:03:14 CST 2013
+Tue Feb 12 15:03:23 CST 2013
+121109141609848300_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121109_t0748191_e0749433_b05362_c20121109141609848300_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121109_t0749445_e0751087_b05362_c20121109141609848300_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1461034
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-9-7==130770002
+(0)	DATE : 2012-11-10_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121110_t0726327_e0727569_b05376_c20121110135034747816_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121110_t0727581_e0729223_b05376_c20121110135255611668_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121110_t0729235_e0730477_b05376_c20121110135255611668_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121110_t0730489_e0732131_b05376_c20121110135255611668_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.130476
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-10-7==130770002
+(0)	DATE : 2012-11-11_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121111_t0707371_e0709013_b05390_c20121111133100515101_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121111_t0709025_e0710267_b05390_c20121111133100515101_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121111_t0710279_e0711521_b05390_c20121111134808673115_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121111_t0711533_e0713175_b05390_c20121111134808673115_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1365993
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-11-7==130770002
+(0)	DATE : 2012-11-16_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121116_t0714010_e0715252_b05461_c20121116133519460252_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121116_t0715264_e0716506_b05461_c20121116133519460252_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121116_t0716518_e0718160_b05461_c20121116133519460252_noaa_ops.h5Tue Feb 12 15:03:32 CST 2013
+Tue Feb 12 15:03:41 CST 2013
+Tue Feb 12 15:03:48 CST 2013
+
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121116_t0718172_e0719414_b05461_c20121116133519460252_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1254433
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-16-7==130770002
+(0)	DATE : 2012-11-17_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121117_t0655054_e0656296_b05475_c20121117131533604813_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121117_t0656308_e0657550_b05475_c20121117132525146107_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121117_t0657562_e0659204_b05475_c20121117132525146107_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121117_t0659216_e0700458_b05475_c20121117132525146107_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1529614
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-17-6==130770002
+(0)	DATE : 2012-11-19_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121119_t0758144_e0759386_b05504_c20121119142607138734_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121119_t0759398_e0801040_b05504_c20121119142607138734_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121119_t0801052_e0802294_b05504_c20121119142607138734_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1637103
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-19-7==130770002
+(0)	DATE : 2012-11-22_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121122_t0701294_e0702536_b05546_c20121122133149779028_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121122_t0702548_e0704190_b05546_c20121122133149779028_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121122_t0704202_e0705426_b05546_c20121122133149779028_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121122_t0705438_e0707080_b05546_c20121122133201658121_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizesTue Feb 12 15:03:57 CST 2013
+Tue Feb 12 15:04:02 CST 2013
+Tue Feb 12 15:04:07 CST 2013
+:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1470221
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-22-7==130770002
+(0)	DATE : 2012-11-23_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121123_t0643583_e0645225_b05560_c20121123130853175514_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121123_t0645237_e0646479_b05560_c20121123130853175514_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1690495
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-23-6==130770002
+(0)	DATE : 2012-11-24_8
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121124_t0806028_e0807270_b05575_c20121124142530330893_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121124_t0807282_e0808524_b05575_c20121124143311701082_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.192556
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-24-8==130770002
+(0)	DATE : 2012-11-25_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121125_t0745418_e0747059_b05589_c20121125141144371545_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121125_t0747072_e0748313_b05589_c20121125141144371545_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121125_t0748326_e0749567_b05589_c20121125141144371545_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121125_t0749580_e0751222_b05589_c20121125141537666193_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1640914
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+      Tue Feb 12 15:04:16 CST 2013
+Tue Feb 12 15:04:26 CST 2013
+Tue Feb 12 15:04:36 CST 2013
+      1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-25-7==130770002
+(0)	DATE : 2012-11-26_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121126_t0726479_e0728121_b05603_c20121126140324142385_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121126_t0728133_e0729357_b05603_c20121126140324142385_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121126_t0729369_e0731011_b05603_c20121126140324142385_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121126_t0731023_e0732265_b05603_c20121126140324142385_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.155311
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-11-26-7==130770002
+(0)	DATE : 2012-12-1_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121201_t0733098_e0734339_b05674_c20121201135513451085_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121201_t0734352_e0735593_b05674_c20121201135513451085_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121201_t0736006_e0737247_b05674_c20121201141546194097_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121201_t0737260_e0738501_b05674_c20121201141546194097_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1619875
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-12-1-7==130770002
+(0)	DATE : 2012-12-3_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121203_t0655202_e0656444_b05702_c20121203133233195541_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121203_t0656456_e0658098_b05702_c20121203133233195541_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121203_t0658110_e0659334_b05702_c20121203133233195541_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121203_t0659347_e0700588_b05702_c20121203133233195541_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1634476
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012Tue Feb 12 15:04:45 CST 2013
+Tue Feb 12 15:04:52 CST 2013
+Tue Feb 12 15:04:59 CST 2013
+Tue Feb 12 15:05:06 CST 2013
+-12-3-6==130770002
+(0)	DATE : 2012-12-14_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121214_t0649101_e0650343_b05858_c20121214132147874941_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121214_t0650355_e0651597_b05858_c20121214132123344686_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121214_t0652009_e0653251_b05858_c20121214132123344686_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1621361
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-12-14-6==130770002
+(0)	DATE : 2012-12-19_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121219_t0655337_e0656578_b05929_c20121219132621136687_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121219_t0656591_e0658233_b05929_c20121219132621136687_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121219_t0658245_e0659487_b05929_c20121219132621136687_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1543678
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-12-19-6==130770002
+(0)	DATE : 2012-12-21_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121221_t0758425_e0800067_b05958_c20121221142643870182_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121221_t0800079_e0801321_b05958_c20121221142643870182_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121221_t0801333_e0802575_b05958_c20121221143737420111_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1807381
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-12-21-7==130770002
+(0)	DATE : 2012-12-22_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121222_t0738214_e0739456_b05972_c20121222140128453063_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121222_t0739468_e0741110_b05972_c20121222140128453063_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121222_t0741123_e0742364_b05972_c20121222140128453063_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121222_t0742377_e0744018_b05972_c201212221401284530Tue Feb 12 15:05:18 CST 2013
+Tue Feb 12 15:05:29 CST 2013
+Tue Feb 12 15:05:38 CST 2013
+63_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121222_t0744031_e0745272_b05972_c20121222142608470430_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1516514
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-12-22-7==130770002
+(0)	DATE : 2012-12-23_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0719258_e0720500_b05986_c20121223133847652943_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0720512_e0722154_b05986_c20121223134912506639_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0722166_e0723408_b05986_c20121223134912506639_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0723420_e0725062_b05986_c20121223134912506639_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0725074_e0726316_b05986_c20121223134912506639_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.132674
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2012-12-23-7==130770002
+(0)	DATE : 2013-1-4_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0654218_e0655459_b06156_c20130104131938117232_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0655472_e0657114_b06156_c20130104131938117232_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0657126_e0658368_b06156_c20130104131938117232_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0658380_e0700022_b06156_c20130104132907258446_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1673813
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2013-1-4-6==130770002
+(0)	DATE : 2013-1-8_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0719411_e0721053_b06213_c20130108134633369611_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0721065_e0722307_b06213_c20130108134633369611_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0722320_e0723561_b06213_c20130108134633369611_noaa_ops.h5
+(0)	NOW READING VIIRTue Feb 12 15:05:47 CST 2013
+Tue Feb 12 15:05:56 CST 2013
+Tue Feb 12 15:06:04 CST 2013
+S FILE : SVDNB_npp_d20130108_t0723574_e0725215_b06213_c20130108134633369611_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1306233
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2013-1-8-7==130770002
+(0)	DATE : 2013-1-18_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130118_t0732267_e0733509_b06355_c20130118135611714889_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130118_t0733521_e0735163_b06355_c20130118135611714889_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130118_t0735175_e0736417_b06355_c20130118135611714889_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130118_t0736429_e0738071_b06355_c20130118135611714889_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1200441
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2013-1-18-7==130770002
+(0)	DATE : 2013-1-19_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130119_t0713311_e0714552_b06369_c20130119133553476436_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130119_t0714565_e0716206_b06369_c20130119135619932104_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130119_t0716219_e0717460_b06369_c20130119135619932104_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130119_t0717473_e0719115_b06369_c20130119135619932104_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1358526
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2013-1-19-7==130770002
+(0)	DATE : 2013-1-20_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130120_t0654354_e0655596_b06383_c20130120131350661112_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130120_t0656008_e0657250_b06383_c20130120131350661112_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130120_t0657262_e0658504_b06383_c20130120132528788373_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130120_t0658516_e0700158_b06383_c20130120132528788373_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+TotalTue Feb 12 15:06:14 CST 2013
+Tue Feb 12 15:06:20 CST 2013
+ Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1423118
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2013-1-20-6==130770002
+(0)	DATE : 2013-1-22_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130122_t0757460_e0759084_b06412_c20130122142056429757_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130122_t0759096_e0800338_b06412_c20130122143021028038_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130122_t0800351_e0801592_b06412_c20130122143021028038_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1723736
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2013-1-22-7==130770002
+(0)	DATE : 2013-1-23_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130123_t0738503_e0740145_b06426_c20130123140457660710_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130123_t0740157_e0741399_b06426_c20130123140457660710_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130123_t0741412_e0743053_b06426_c20130123140507945766_noaa_ops.h5
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130123_t0743066_e0744307_b06426_c20130123140507945766_noaa_ops.h5
+
+
+Variable: site_latitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	33.404
+
+
+Variable: site_longitude (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-84.746
+
+
+Variable: select_aod (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1311921
+
+
+Variable: select_pm (parameter)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	-999
+(0)	2013-1-23-7==130770002
+
+
+Variable: site_id (subsection)
+Type: string
+Total Size: 8 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+(0)	130770002
+
+
+Variable: select_aod
+Type: float
+Total Size: 276 bytes
+            69 values
+Number of Dimensions: 1
+Dimensions and sizes:	[69]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	0.1145327
+(1)	0.1356103
+(2)	0.130301
+(3)	0.1378004
+(4)	0.1133355
+(5)	0.1295934
+(6)	0.09772548
+(7)	0.08562811
+(8)	0.116143
+(9)	0.1171668
+(10)	0.1321318
+(11)	0.115731
+(12)	0.1427813
+(13)	0.1177938
+(14)	0.08969128
+(15)	0.1427604
+(16)	0.1165379
+(17)	0.1283948
+(18)	0.1248528
+(19)	0.126216
+(20)	0.1182688
+(21)	0.1295781
+(22)	0.1539793
+(23)	0.1481455
+(24)	0.1359379
+(25)	0.1352708
+(26)	0.1416483
+(27)	0.1279099
+(28)	0.1402235
+(29)	0.1353467
+(30)	0.1325339
+(31)	0.1210611
+(32)	0.1393394
+(33)	0.1433464
+(34)	0.1518343
+(35)	0.1440922
+(36)	0.1305051
+(37)	0.2060841
+(38)	0.1871956
+(39)	0.1579582
+(40)	0.1760029
+(41)	0.1700335
+(42)	0.1367592
+(43)	0.162402
+(44)	0.1461034
+(45)	0.130476
+(46)	0.1365993
+(47)	0.1254433
+(48)	0.1529614
+(49)	0.1637103
+(50)	0.1470221
+(51)	0.1690495
+(52)	0.192556
+(53)	0.1640914
+(54)	0.155311
+(55)	0.1619875
+(56)	0.1634476
+(57)	0.1621361
+(58)	0.1543678
+(59)	0.1807381
+(60)	0.1516514
+(61)	0.132674
+(62)	0.1673813
+(63)	0.1306233
+(64)	0.1200441
+(65)	0.1358526
+(66)	0.1423118
+(67)	0.1723736
+(68)	0.1311921
+
+
+Variable: select_pm
+Type: float
+Total Size: 276 bytes
+            69 values
+Number of Dimensions: 1
+Dimensions and sizes:	[69]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-999
+(0)	4.7
+(1)	11.3
+(2)	5.1
+(3)	4.1
+(4)	5.3
+(5)	7.3
+(6)	6.7
+(7)	20
+(8)	 7
+(9)	11.9
+(10)	14.2
+(11)	13.4
+(12)	5.8
+(13)	7.9
+(14)	8.1
+(15)	2.2
+(16)	10.9
+(17)	7.9
+(18)	8.3
+(19)	12.7
+(20)	7.2
+(21)	1.1
+(22)	6.3
+(23)	12.3
+(24)	15.6
+(25)	20.8
+(26)	17.2
+(27)	15.7
+(28)	11.5
+(29)	5.1
+(30)	2.5
+(31)	8.3
+(32)	 7
+(33)	10.4
+(34)	20.1
+(35)	13.3
+(36)	17
+(37)	3.7
+(38)	-999
+(39)	-999
+(40)	-999
+(41)	-999
+(42)	-999
+(43)	-999
+(44)	-999
+(45)	-999
+(46)	-999
+(47)	-999
+(48)	-999
+(49)	-999
+(50)	-999
+(51)	-999
+(52)	-999
+(53)	-999
+(54)	-999
+(55)	-999
+(56)	-999
+(57)	-999
+(58)	-999
+(59)	-999
+(60)	-999
+(61)	-999
+(62)	-999
+(63)	-999
+(64)	-999
+(65)	-999
+(66)	-999
+(67)	-999
+(68)	-999

@@ -1,0 +1,2099 @@
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+Sun Jan 26 16:03:03 CST 2014
+(0)	DATE : 2012-8-1_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0720110_e0721352_b03943_c20120801134829639141_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0721364_e0723006_b03943_c20120801134829639141_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0723018_e0724260_b03943_c20120801134829639141_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120801_t0724272_e0725514_b03943_c20120801134829639141_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-8-1_7==131350002
+(0)	2012-8-1_7==130890002
+(0)	2012-8-1_7==131210055
+(0)	2012-8-1_7==130770002
+(0)	2012-8-1_7==131510002
+(0)	2012-8-1_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 76
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 64
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 64
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 40
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:03:50 CST 2014
+(0)	DATE : 2012-8-13_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120813_t0655070_e0656312_b04113_c20120813132452731850_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120813_t0656324_e0657566_b04113_c20120813132452731850_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120813_t0657578_e0659220_b04113_c20120813132508763622_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120813_t0659232_e0700474_b04113_c20120813132508763622_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-8-13_6==131350002
+(0)	2012-8-13_6==130890002
+(0)	2012-8-13_6==131210055
+(0)	2012-8-13_6==130770002
+(0)	2012-8-13_6==131510002
+(0)	2012-8-13_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 28
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 100
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:04:38 CST 2014
+(0)	DATE : 2012-8-25_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120825_t0631284_e0632526_b04283_c20120825125605290904_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120825_t0632538_e0634180_b04283_c20120825125605290904_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-8-25_6==131350002
+(0)	2012-8-25_6==130890002
+(0)	2012-8-25_6==131210055
+(0)	2012-8-25_6==130770002
+(0)	2012-8-25_6==131510002
+(0)	2012-8-25_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 112
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 88
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 76
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 64
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 64
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:05:12 CST 2014
+(0)	DATE : 2012-9-6_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120906_t0747229_e0748471_b04454_c20120906141037064185_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120906_t0748483_e0750125_b04454_c20120906141037064185_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-9-6_7==131350002
+(0)	2012-9-6_7==130890002
+(0)	2012-9-6_7==131210055
+(0)	2012-9-6_7==130770002
+(0)	2012-9-6_7==131510002
+(0)	2012-9-6_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 16
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 52
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 4
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 16
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 4
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:05:47 CST 2014
+(0)	DATE : 2012-9-18_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120918_t0719282_e0720524_b04624_c20120918134526609749_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120918_t0720536_e0722178_b04624_c20120918134526609749_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120918_t0722190_e0723432_b04624_c20120918134543307345_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120918_t0723444_e0725086_b04624_c20120918134543307345_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120918_t0725098_e0726340_b04624_c20120918134543307345_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-9-18_7==131350002
+(0)	2012-9-18_7==130890002
+(0)	2012-9-18_7==131210055
+(0)	2012-9-18_7==130770002
+(0)	2012-9-18_7==131510002
+(0)	2012-9-18_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 4
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 40
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 4
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 4
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 4
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:06:40 CST 2014
+(0)	DATE : 2012-9-30_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120930_t0654244_e0655486_b04794_c20120930132427341644_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120930_t0655498_e0657140_b04794_c20120930132427341644_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120930_t0657152_e0658394_b04794_c20120930132427341644_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20120930_t0658406_e0700030_b04794_c20120930132427341644_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-9-30_6==131350002
+(0)	2012-9-30_6==130890002
+(0)	2012-9-30_6==131210055
+(0)	2012-9-30_6==130770002
+(0)	2012-9-30_6==131510002
+(0)	2012-9-30_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 88
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 88
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 88
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 64
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 76
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:07:28 CST 2014
+(0)	DATE : 2012-10-12_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121012_t0630444_e0632086_b04964_c20121012125210745621_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121012_t0632098_e0633340_b04964_c20121012125556148961_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-10-12_6==131350002
+(0)	2012-10-12_6==130890002
+(0)	2012-10-12_6==131210055
+(0)	2012-10-12_6==130770002
+(0)	2012-10-12_6==131510002
+(0)	2012-10-12_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 52
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 136
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 40
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 52
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 64
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:08:03 CST 2014
+(0)	DATE : 2012-10-24_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121024_t0745139_e0746381_b05135_c20121024140351314360_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121024_t0746393_e0748035_b05135_c20121024141525399625_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121024_t0748047_e0749289_b05135_c20121024141525399625_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121024_t0749301_e0750543_b05135_c20121024141525399625_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-10-24_7==131350002
+(0)	2012-10-24_7==130890002
+(0)	2012-10-24_7==131210055
+(0)	2012-10-24_7==130770002
+(0)	2012-10-24_7==131510002
+(0)	2012-10-24_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 52
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 112
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 52
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 64
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 76
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:08:51 CST 2014
+(0)	DATE : 2012-11-5_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121105_t0720105_e0721347_b05305_c20121105134940369718_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121105_t0721359_e0723001_b05305_c20121105134940369718_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121105_t0723013_e0724255_b05305_c20121105134940369718_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121105_t0724268_e0725509_b05305_c20121105135043377208_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-11-5_7==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2012-11-5_7==130890002
+(0)	2012-11-5_7==131210055
+(0)	2012-11-5_7==130770002
+(0)	2012-11-5_7==131510002
+(0)	2012-11-5_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 28
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 16
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 16
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:09:38 CST 2014
+(0)	DATE : 2012-11-17_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121117_t0655054_e0656296_b05475_c20121117131533604813_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121117_t0656308_e0657550_b05475_c20121117132525146107_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121117_t0657562_e0659204_b05475_c20121117132525146107_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121117_t0659216_e0700458_b05475_c20121117132525146107_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2012-11-17_6==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2012-11-17_6==130890002
+(0)	2012-11-17_6==131210055
+(0)	2012-11-17_6==130770002
+(0)	2012-11-17_6==131510002
+(0)	2012-11-17_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 124
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 76
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 88
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:10:25 CST 2014
+(0)	DATE : 2012-11-29_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121129_t0631263_e0632505_b05645_c20121129125243629476_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121129_t0632517_e0634159_b05645_c20121129125243629476_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-11-29_6==131350002
+(0)	2012-11-29_6==130890002
+(0)	2012-11-29_6==131210055
+(0)	2012-11-29_6==130770002
+(0)	2012-11-29_6==131510002
+(0)	2012-11-29_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 52
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 100
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 64
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 52
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:11:00 CST 2014
+(0)	DATE : 2012-12-11_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121211_t0745571_e0747213_b05816_c20121211140708826060_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121211_t0747225_e0748467_b05816_c20121211140708826060_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121211_t0748479_e0750121_b05816_c20121211141419190970_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2012-12-11_7==131350002
+(0)	2012-12-11_7==130890002
+(0)	2012-12-11_7==131210055
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2012-12-11_7==130770002
+(0)	2012-12-11_7==131510002
+(0)	2012-12-11_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 40
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 4
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 4
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:11:43 CST 2014
+(0)	DATE : 2012-12-23_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0719258_e0720500_b05986_c20121223133847652943_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0720512_e0722154_b05986_c20121223134912506639_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0722166_e0723408_b05986_c20121223134912506639_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0723420_e0725062_b05986_c20121223134912506639_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20121223_t0725074_e0726316_b05986_c20121223134912506639_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2012-12-23_7==131350002
+(0)	2012-12-23_7==130890002
+(0)	2012-12-23_7==131210055
+(0)	2012-12-23_7==130770002
+(0)	2012-12-23_7==131510002
+(0)	2012-12-23_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 52
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 160
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 16
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:12:38 CST 2014
+(0)	DATE : 2013-1-5_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130105_t0636515_e0638157_b06170_c20130105130331791112_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130105_t0638169_e0639411_b06170_c20130105130331791112_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-5_6==131350002
+(0)	2013-1-5_6==130890002
+(0)	2013-1-5_6==131210055
+(0)	2013-1-5_6==130770002
+(0)	2013-1-5_6==131510002
+(0)	2013-1-5_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 40
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 124
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 40
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:13:14 CST 2014
+(0)	DATE : 2013-1-17_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0751224_e0752466_b06341_c20130117142054549609_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0752478_e0754120_b06341_c20130117142054549609_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0754132_e0755374_b06341_c20130117142054549609_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0755386_e0757028_b06341_c20130117142133284648_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-17_7==131350002
+(0)	2013-1-17_7==130890002
+(0)	2013-1-17_7==131210055
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-17_7==130770002
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-17_7==131510002
+(0)	2013-1-17_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 4
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+(0)	color = 28
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 4
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 16
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+Sun Jan 26 16:14:03 CST 2014
+(0)	DATE : 2013-1-29_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130129_t0726183_e0727424_b06511_c20130129140133726093_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130129_t0727437_e0729079_b06511_c20130129135104558794_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130129_t0729091_e0730315_b06511_c20130129135104558794_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130129_t0730327_e0731569_b06511_c20130129135104558794_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-29_7==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-29_7==130890002
+(0)	2013-1-29_7==131210055
+(0)	2013-1-29_7==130770002
+(0)	2013-1-29_7==131510002
+(0)	2013-1-29_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+(0)	color = 136
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 124
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 112
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 112
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+(0)	color = 184
+warning:tfPolyDrawOrder is not a resource in the given object
+warning:gsnDraw is not a valid resource in graphic_style at this time
+warning:gsnFrame is not a valid resource in graphic_style at this time
+fatal:NhlAddPrimitive: invalid transform id
+fatal:Invalid plot ID=68 passed to NhlGetBB
+warning:pmOverlaySequenceIds isn't a resource in this object
+warning:NhlGetValues:Error retrieving pmOverlaySequenceIds
+fatal:["Execute.c":7743]:Execute: Error occurred at or near line 1830 in file $NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl
+
+fatal:["Execute.c":7743]:Execute: Error occurred at or near line 6407 in file $NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl
+
+fatal:["Execute.c":7743]:Execute: Error occurred at or near line 7105 in file $NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl
+
+fatal:["Execute.c":7743]:Execute: Error occurred at or near line 227 in file viirs_contour_pixel_dnb_epa_liu_nfile_16day.ncl
+
+

@@ -1,0 +1,272 @@
+; $Id: print_totals.pro,v 1.49 2001/12/17 15:37:31 bmy v1.49 $
+;-------------------------------------------------------------
+;+
+; NAME:
+;        PRINT_TOTALS
+;
+; PURPOSE:
+;        Prints Global, Northern Hemisphere, and Southern Hemisphere
+;        totals for CTM diagnostic data arrays
+;
+; CATEGORY:
+;        CTM tools
+;
+; CALLING SEQUENCE:
+;        PRINT_TOTALS, DATA, TRACERINDEX, LATBINCENTERS [,Keywords]
+;
+; INPUTS:
+;        DATA          -> A 3-D data cube (longitude, latitude, tracer)
+;                         of CTM diagnostic data, as read in from a
+;                         punch file.  DATA is returned by subroutine
+;                         such as CTM_READ_DIAG.
+;
+;                         NOTE: If there is only one tracer, then DATA
+;                         may be specified as a 2-D array (long, lat).
+;
+;        TRACERINDEX   -> An index array of tracers contained in the
+;                         the DATA array.  TRACERINDEX is also returned by
+;                         the CTM_READ_**DIAG subroutines.
+;            
+;                         NOTE: If the DATA array is 2-D, then
+;                         TRACERINDEX may be specified as a scalar.
+;
+;        LATBINCENTERS -> An array containing the latitude bin centers 
+;                         that correspond to the DATA array. 
+;
+; KEYWORD PARAMETERS:
+;        HEADER        -> A descriptor string that is printed out to 
+;                         the screen and to the log file along with
+;                         the NH, SH and Global totals.
+;
+;        SEPARATOR     -> A string to separate groups of output.  If
+;                         not specified then print a blank line.
+; 
+;        LOGFILELUN    -> The logical unit number of a log file, to
+;                         which NH, SH, and Global totals will be
+;                         written.
+;        
+;        /USE_EFORMAT  -> Will print out totals using Exponential
+;                         format (E11.4) instead of floating-point 
+;                         format (F11.4).
+;        
+;        NHTOTAL       -> An array of the Northern Hemisphere totals
+;                         of each tracer contained in DATA.  
+;
+;        SHTOTAL       -> An array of the Southern Hemisphere totals
+;                         of each tracer contained in DATA.
+;
+;        GLOBETOTAL    -> An array of the Global totals
+;                         of each tracer contained in DATA.
+;
+;        NAME          -> An array of tracer names corresponding to
+;                         each of the tracers specified in TRACERINDEX.
+;
+; OUTPUTS:
+;        None.
+;
+; SUBROUTINES:
+;        None.
+;
+; REQUIREMENTS:
+;        None.
+;
+; NOTES:
+;        It is recommended to use the CTM_TYPE and CTM_GRID
+;        subroutines to compute the latitude bin centers (e.g the 
+;        "YMID" structure field as returned by CTM_GRID)
+;
+; EXAMPLE:
+;        MODELINFO     = CTM_TYPE( 'GEOS1', Resolution=[5,4] )
+;        GRIDINFO      = CTM_GRID( MODELINFO )
+;        LATBINCENTERS = GRIDINFO.YMID
+;
+;        PRINT_TOTALS, DATA, TRACERINDEX, LATBINCENTERS
+;                   
+;              prints global, NH, SH totals for GEOS1 4x5 
+;              diagnostic data
+;
+; MODIFICATION HISTORY:
+;        bmy, 17 Apr 1998: VERSION 1.00
+;        bmy, 20 Apr 1998: - added HEADER, SEPARATOR, & USE_EFORMAT keywords.
+;                          - changed NHTOTAL, SHTOTAL, GLOBETOTAL into
+;                            arrays that can be passed back to the
+;                            calling program via keyword arguments.
+;        bmy,  7 May 1998  - Renamed NAMES to NAME for consistency
+;                            with other plotting programs.
+;        bmy, 14 May 1998  - Only print HEADER and SEPARATOR if they
+;                            are not equal to ''
+;        bmy, 27 Jul 1999: VERSION 1.42
+;                          - updated comments
+;
+;-
+; Copyright (C) 1998, Bob Yantosca, Harvard University
+; This software is provided as is without any warranty
+; whatsoever. It may be freely used, copied or distributed
+; for non-commercial purposes. This copyright notice must be
+; kept with any copy of this software. If this software shall
+; be used commercially or sold as part of a larger package,
+; please contact the author to arrange payment.
+; Bugs and comments should be directed to bmy@io.harvard.edu
+; with subject "IDL routine print_totals"
+;-------------------------------------------------------------
+
+
+pro Print_Totals, Data, TracerIndex, LatBinCenters,                $
+                  Header=Header,          Separator=Separator,     $
+                  LogFileLUN=LogFileLUN,  Use_EFormat=Use_EFormat, $
+                  NHTotal=NHTotal,        SHTotal=SHTotal,         $
+                  GlobeTotal=GlobeTotal,  Name=Name
+ 
+   ; Error checking
+   on_error, 2
+ 
+   ; Make sure the DATA array is passed correctly
+   if ( n_elements( Data ) eq 0 ) then begin
+      print, 'DATA must be specified!!!'
+      return
+   endif
+
+   ; Make sure the LATBINCENTERS array is passed correctly
+   if ( n_elements( LatBinCenters ) eq 0 ) then begin
+      print, 'LATBINCENTERS must be specified'
+      return
+   endif
+
+   ; Make sure the TRACERINDEX array is passed correctly
+   if ( n_elements( TracerIndex ) eq 0 ) then begin
+      print, 'TRACERINDEX must be specified!!!'
+      return
+   endif
+   
+   ; Default settings for keywords
+   if ( not keyword_set( Header      ) ) then Header      =  ''
+   if ( not keyword_set( Separator   ) ) then Separator   =  ''
+   if ( not keyword_set( LogFileLUN  ) ) then LogFileLUN  = -1
+   if ( not keyword_set( Use_EFormat ) ) then Use_EFormat = 0
+
+   if ( keyword_set( Name ) ) then begin
+      ; If NAME is set, make sure NAME has same size as TracerIndex
+      if ( n_elements( Name ) ne n_elements( TracerIndex ) ) then begin
+         print, 'NAMES is not the same size as TRACERINDEX!!!'
+         return
+      endif
+
+      ; Store NAME in a temporary array (to prevent being overwritten)
+      TmpName = Name
+   endif else begin
+      ; If NAME is not set, then create a temporary array of blanks
+      TmpName = replicate( '   ', n_elements( TracerIndex ) )
+   endelse
+
+   ; If USE_EFORMAT =  0 then print totals as F11.4
+   ; If USE_EFORMAT ne 0 then print totals as E11.4
+   case ( Use_EFormat ) of 
+      0    : Format = '( a7, i4, 1x, a8, 3x, 3( a7, f11.4 ) )'
+      else : Format = '( a7, i4, 1x, a8, 3x, 3( a7, e11.4 ) )'
+   endcase
+    
+   ; Determine the dimensions of Data and TracerIndex arrays. 
+   SD = size( Data        )
+   ST = size( TracerIndex )
+   
+   ; If DATA is only 2-D then introduce a "fake" 3rd dimension 
+   ; for purposes of looping.  In other words, change the dimension
+   ; from (X, Y) to (X, Y, 1).  Check the new size of Data.
+   if ( SD(0) eq 2 ) then begin
+      Data = reform( Data, SD(1), SD(2), 1 )
+      SD   = size( Data )
+   endif
+ 
+   ; If TRACERINDEX is a scalar then make it a 1-D array,
+   ; also for purposes of looping
+   Scalar = 0
+   if ( ST(0) eq 0 ) then begin
+      Scalar      = 1
+      TracerIndex = [ TracerIndex ]
+      ST          = size( TracerIndex )
+   endif
+   
+   ; Check to make sure that the dimension of TRACERINDEX
+   ; matches the 3rd dimension of DATA
+   if ( ST(1) ne SD(3) ) then begin
+      print, 'TRACERINDEX does not match the 3rd dimension of Data!!!'
+      print, '3rd Dim of DATA       : ', SD(3)
+      print, 'Dim     of TRACERINDEX: ', ST(1)
+      return   ; temporary
+   endif
+ 
+   ; Define some string variables
+   TracerStr = 'Tracer '
+   GlobeStr  = 'Globe: '
+   NHStr     = '   NH: '
+   SHStr     = '   SH: '
+
+   ; Index array of Northern Hemisphere grid boxes
+   ; plus the Equator, if the Equator is the center of a grid box
+   NH = where( LatBinCenters ge 0, C_NH )
+   
+   ; Index array of Southern Hemisphere grid boxes
+   SH = where( LatBinCenters lt 0, C_SH )
+  
+   ; Initialize NH and SH total counters
+   NHTotal    = fltarr( n_elements( TracerIndex ) )
+   SHTotal    = fltarr( n_elements( TracerIndex ) )
+   GlobeTotal = fltarr( n_elements( TracerIndex ) )
+
+   ; Upper loop boundary
+   MaxN = n_elements( TracerIndex ) - 1
+
+   ; Loop over each tracer and print totals
+   for N = 0, MaxN do begin
+
+      ; Get NH and SH totals for each tracer (default is 0) 
+      if ( C_NH gt 0 ) then NHTotal(N) = total( Data( *, NH, N ) )
+      if ( C_SH gt 0 ) then SHTotal(N) = total( Data( *, SH, N ) )
+ 
+      ; Global Total: Add NH and SH totals 
+      GlobeTotal(N) = NHTotal(N) + SHTotal(N)
+ 
+      ; Print the group header (before the first tracer)
+      ; Print NH, SH, and Global totals to the screen 
+      ; Print the Separator line (after the last tracer)
+      if ( N eq 0 and Header ne '' ) then print, Header
+
+      print, Format=Format,                            $
+         TracerStr, TracerIndex(N), TmpName(N),        $
+         GlobeStr,  GlobeTotal(N),  NHStr, NHTotal(N), $
+         SHStr,     SHTotal(N)
+
+      if ( N eq MaxN and Separator ne '' ) $
+         then print, Separator
+
+      ; If LOGFILELUN is set, then write the same info to the log file
+      if ( LogFileLUN gt 0 ) then begin
+         if ( N eq 0 and Header ne '' ) then printf, LogFileLUN, Header
+
+         printf, LogFileLUN, Format=Format,               $
+            TracerStr, TracerIndex(N), TmpName(N),        $
+            GlobeStr,  GlobeTotal(N),  NHStr, NHTotal(N), $
+            SHStr,     SHTotal(N)
+
+         if ( N eq MaxN and Separator ne '' ) $
+            then printf, LogFileLUN, Separator
+      endif
+   endfor
+ 
+   ; If the third dimension equals 1, then reform DATA to a 2-D array. 
+   if ( SD(3) eq 1 ) then begin
+      Data = reform( Data )
+   endif
+
+   ; If TRACERINDEX was a scalar to begin with, then turn it 
+   ; back into a scalar, along with the NHTotal, SHTotal, and 
+   ; GlobeTotal arrays.
+   if ( Scalar ) then begin
+      TracerIndex = reform( TracerIndex )
+      NHTotal     = reform( NHTotal     )
+      SHTotal     = reform( SHTotal     )
+      GlobeTotal  = reform( GlobeTotal  )
+   endif
+
+   return
+end

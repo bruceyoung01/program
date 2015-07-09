@@ -1,0 +1,173 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/math_units/
+last updated : 07/17/2008 10:09
+
+===================
+ARREX.PRO
+===================
+      mgs, 20 May 1999: VERSION 1.00
+                        - with a lot of input from 
+                          L. Gumley, S. Vidar, and others
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+BINARY.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments, cosmetic changes
+
+===================
+CMSET_OP.PRO
+===================
+ Written, CM, 23 Feb 2000
+ Added empty set capability, CM, 25 Feb 2000
+ Documentation clarification, CM 02 Mar 2000
+ Incompatible but more consistent reworking of EMPTY keywords, CM,
+   04 Mar 2000
+ Minor documentation clarifications, CM, 26 Mar 2000
+ Corrected bug in empty_arg special case, CM 06 Apr 2000
+ Add INDEX keyword, CM 31 Jul 2000
+ Clarify INDEX keyword documentation, CM 06 Sep 2000
+ Made INDEX keyword always force SLOW_SET_OP, CM 06 Sep 2000
+ Added CMSET_OP_UNIQ, and ability to select FIRST_UNIQUE or
+   LAST_UNIQUE values, CM, 18 Sep 2000
+ Removed FIRST_UNIQUE and LAST_UNIQUE, and streamlined
+   CMSET_OP_UNIQ until problems with SORT can be understood, CM, 20
+   Sep 2000 (thanks to Ben Tupper)
+ Still trying to get documentation of INDEX and NOT right, CM, 28
+   Sep 2000 (no code changes)
+ Correct bug for AND case, when input sets A and B each only have
+   one unique value, and the values are equal.  CM, 04 Mar 2004
+   (thanks to James B. jbattat at cfa dot harvard dot edu)
+ Add support for the cases where the input data types are mixed,
+    but still compatible; also, attempt to return the same data
+    type that was passed in; CM, 05 Feb 2005
+ Fix bug in type checking (thanks to "marit"), CM, 10 Dec 2005
+ Work around a stupidity in the built-in IDL HISTOGRAM routine,
+    which tries to "help" you by restricting the MIN/MAX to the
+    range of the input variable (thanks to Will Maddox), CM, 16 Jan 2006
+$Id: REVISIONS,v 1.30 2008/07/17 14:10:16 bmy Exp $
+
+===================
+CONVERT_KG_MOLCM2.PRO
+===================
+      bmy, 07 Apr 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CONVERT_MOLCM2_KG.PRO
+===================
+      bmy, 07 Apr 1998: VERSION 1.00
+      bmy, 09 Apr 1998: VERSION 1.01 
+                        - DATA can now be a 2-D or 3-D array.
+                        - KgPerMole can now be an array of the same
+                          dimension as the 3rd dimension of Data.
+      bmy, 07 Oct 1998: VERSION 1.02
+                        - now uses MESSAGE statement
+                        - also uses [] instead of () for array
+                          indices
+      bmy  23 Nov 1998: VERSION 2.00
+                        - now uses double precision array NEWDATA
+                          to avoid overflow/underflow errors
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CONVERT_UNIT.PRO
+===================
+      mgs, 26 Aug 1998: VERSION 1.00
+      mgs, 27 Aug 1998: 
+          - added RESULT and QUIET keywords
+          - improved error handling
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+CUM_TOTAL.PRO
+===================
+      mgs, 21 Oct 1998: VERSION 1.00
+      bmy, 23 May 2007: TOOLS VERSION 2.06
+                        - Now use longword for loop counter
+                        - Updated comments, cosmetic changes
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+FCONVERT_UNIT.PRO
+===================
+      mgs, 26 Aug 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Added std documentation header
+
+===================
+FIND_UNIT.PRO
+===================
+      mgs, 26 Aug 1998: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+MEAN.PRO
+===================
+    ivory, 04 Mar 1997: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Cosmetic changes, added comments
+
+===================
+MULTISORT.PRO
+===================
+      mgs, 30 Jun 1997: VERSION 1.00
+      mgs, 08 Apr 1998: - now stand-alone routine and documentation
+      mgs, 22 Dec 1998: - bug fix (startindex must be -1)
+      mgs, 17 Mar 1999: - bug fix: now has default 0 for revert
+                          (thanks to G. Fireman)
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ORG_CORR.PRO
+===================
+pip, clh, bmy, 10 Oct 2002: TOOLS VERSION 1.52
+          bmy, 26 Jan 2007: TOOLS VERSION 2.06
+                            - Now compute gradient of YNEW with max 
+                              & min values & subscripts of.  This avoids
+                              the assumption that the first & last 
+                              elements of YNEW are different.  
+                              (Fix submitted by Mike Barkley, 1/26/07)
+    bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+PERCENTILES.PRO
+===================
+      mgs, 03 Aug 1997: VERSION 1.00
+      mgs, 20 Feb 1998: - improved speed and memory usage
+              (after tip from Stein Vidar on newsgroup)
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+QQNORM.PRO
+===================
+          mgs, 14 Dec 1998: VERSION 1.0
+                            - extracted from w_calc.pro
+pip, clh, bmy, 10 Oct 2002: TOOLS VERSION 1.52
+amf, swu, bmy, 10 Oct 2006: TOOLS VERSION 2.05
+                            - Now use simpler algorithm from
+                              Arlene Fiore's code
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+RUN_AV.PRO
+===================
+      mgs, 21 Oct 1998: VERSION 1.00
+      mgs, 07 Jun 1999: - changed loop variable to LONG type.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+SEARCH.PRO
+===================
+      mgs, 21 Sep 1998: VERSION 1.00
+      bmy, 24 May 2007: TOOLS VERSION 2.06
+                        - updated comments, cosmetic changes
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+SIGN.PRO
+===================
+     R. Sterner, 7 May, 1986.
+     Johns Hopkins University Applied Physics Laboratory.
+     RES 15 Sep, 1989 --- converted to SUN.
+ES 23 Sep, 1991 --- rewrote, reducing 11 lines of code to 1.

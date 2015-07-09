@@ -1,0 +1,24 @@
+
+
+This directory contains:
+
+
+** Two general routines to save GEOS-Chem timeseries into 4D bpch files:
+
+ gc_combine_nd48.pro  -> to process stations.YYYYMMDD files
+ gc_combine_nd49.pro  -> to process tsYYYYMMDD.bpch files (works with Met Fields too!)
+
+
+
+** A timeseries tutorial:
+
+ tutorial\DATA            -> contains data for the tutorial
+
+ tutorial\timeseries_brief_tutorial.pdf  -> the tutorial. Some commands in 
+                                            the text can be found in the 
+                                            following routines:
+
+ tutorial\comp_nd48_49.pro         -> batch to compare output from nd48 and 49
+ tutorial\example_anim_ts.pro      -> example to produce animation
+ tutorial\examples_manip_4d.pro    -> example to test 4D datainfo
+

@@ -1,0 +1,142 @@
+; idl_ozone (iam, bmy, 10/20/03, 3/29/04)
+; Batch script to plot data from 3 GEOS-CHEM models plus ozonesondes
+
+; NOTE: To run interactively, uncomment this line!
+pro idl_ozone
+
+;=============================================================================
+; Specify input information
+;=============================================================================
+
+; Model #1 (red): Mat's GEOS-3 4x5 2001 v5-07-08
+pref1   = '/data/ctm/GEOS/stdrun_1yr/v5-07-08.mje/data/v5-07-08.mje.2001'
+ptop1   = 0.01
+dlat1   = 4.0
+dlon1   = 5.0
+nalt1   = 30
+year1   = 2001
+
+; Model #2 (green): GEOS-3 4x5 2001 v7-02-03
+pref2   = '/data/ctm/GEOS/stdrun_1yr/v7-02-03.geos3/data/v7-02-03.geos3.2001'
+ptop2   = 0.01
+dlat2   = 4.0
+dlon2   = 5.0
+nalt2   = 30
+year2   = 2001
+
+; Model #3 (blue): GEOS-4 4x5 2001 v7-02-03
+pref3   = '/data/ctm/GEOS/stdrun_1yr/v7-02-03.geos4/data/v7-02-03.geos4.2001'
+ptop3   = 0.01
+dlat3   = 4.0
+dlon3   = 5.0
+nalt3   = 30
+year3   = 2001
+
+; Title for top of plot
+title   = 'Red: v5-07-08 (2001);  Green: v7-02-03.geos3 (2001);  Blue: v7-02-03.geos4 (2001)'
+
+; String to denote PostScript filenames
+runname = 'v7-02-03.1yr'
+
+; Redirect PostScript output (end w/ slash)
+PSDir   = '/as/home/ctm/bmy/stdrun_1yr' + $
+          '/runs/geos.v7-02-03/run.fullchem.geos4/output/'
+
+;=============================================================================
+; Program execution begins here!
+;=============================================================================
+
+; ID string
+print, '==================================================='
+print, 'IDL_OZONE: Prints models vs. ozonesonde data'
+print, '==================================================='
+
+; NOTE: To run in batch mode, uncomment these lines
+; Compile all routines first
+;.r plot_3lev_o3_geos_3_models
+;.r plot_4lev_o3_geos_3_models.pro
+;.r plot_station_profiles_geos_3_models.pro
+
+;------------
+; 1st plot
+;------------
+PRINT, '################ 1st Plot ############'
+filest='/users/trop/iam/netCDF/Sites.O3.prof.1'
+psname= PSDir + 'O3.seascycle.3lev.'+runname+'.ps'
+max_stations=32
+
+plot_3lev_o3_geos_3_models, pref1, ptop1, dlat1, dlon1, nalt1, $
+                            pref2, ptop2, dlat2, dlon2, nalt2, $
+                            pref3, ptop3, dlat3, dlon3, nalt3, $
+                            title, psname, max_stations, filest
+
+;------------
+; 2nd plot
+;------------
+PRINT, '################ 2nd Plot ############'
+filest='/users/trop/iam/netCDF/Sites.O3.prof.res.kag.sam'
+psname = PSDir + 'O3.seascycle.3lev.3page.'+runname+'.ps'
+max_stations=12
+
+plot_3lev_o3_geos_3_models, pref1, ptop1, dlat1, dlon1, nalt1, $
+                            pref2, ptop2, dlat2, dlon2, nalt2, $
+                            pref3, ptop3, dlat3, dlon3, nalt3, $
+                            title, psname, max_stations, filest
+
+
+;------------
+; 3rd plot
+;------------
+PRINT, '################ 3rd Plot ############'
+filest='/users/trop/iam/netCDF/Sites.O3.prof.trop'
+psname= PSDir + 'O3.seascycle.4lev.'+runname+'.ps'
+max_stations=8
+plot_4lev_o3_geos_3_models, pref1, ptop1, dlat1, dlon1, nalt1, $
+                            pref2, ptop2, dlat2, dlon2, nalt2, $
+                            pref3, ptop3, dlat3, dlon3, nalt3, $
+                            title, psname, max_stations, filest
+
+;------------
+; 4th plot
+;------------
+PRINT, '################ 4th Plot ############'
+filest='/users/trop/iam/netCDF/Sites.O3.prof.kag'
+psname = PsDir + 'O3.seascycle.4lev.kag.'+runname+'.ps'
+max_stations=4
+plot_4lev_o3_geos_3_models, pref1, ptop1, dlat1, dlon1, nalt1, $
+                            pref2, ptop2, dlat2, dlon2, nalt2, $
+                            pref3, ptop3, dlat3, dlon3, nalt3, $
+                            title, psname, max_stations, filest
+
+;------------
+; 5th plot
+;------------
+PRINT, '################ 5th Plot ############'
+filest='/users/trop/iam/netCDF/Sites.O3.prof.1'
+psname = PSDir + 'O3.profiles.geos.'+runname+'.ps'
+max_station=32
+plot_station_profiles_geos_3_models, 1,4,7,10,$
+                                     pref1, ptop1, dlat1, dlon1, nalt1, $
+                                     pref2, ptop2, dlat2, dlon2, nalt2, $
+                                     pref3, ptop3, dlat3, dlon3, nalt3, $
+                                     title, psname, max_station, filest
+
+;------------------------------------------------------------------------------
+; We normally don't plot this, leave the call here though (bmy, 10/20/03)
+; 6th plot
+;filest='/users/trop/iam/netCDF/Sites.O3.prof.res.kag.sam'
+;psname = PSDir + 'O3.profiles.3page.geos.'+runname+'.ps'
+;max_station=12
+;plot_station_profiles_geos_3_models, 1,4,7,10,$
+;                                pref1, ptop1, dlat1, dlon1, nalt1, $
+;                                pref2, ptop2, dlat2, dlon2, nalt2, $
+;                                pref3, ptop3, dlat3, dlon3, nalt3, $
+;                                title, psname, max_station, filest
+;------------------------------------------------------------------------------
+
+
+; NOTE: To run interactively, uncomment this line!
+end
+
+; NOTE: To run this in batch mode, uncomment this line!
+;exit

@@ -1,0 +1,5473 @@
+ Copyright (C) 1995-2012 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.1.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+Tue Jan 21 22:11:08 CST 2014
+(0)	DATE : 2013-1-1_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130101_t0751087_e0752329_b06114_c20130101142605946136_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130101_t0752341_e0753583_b06114_c20130101142605946136_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130101_t0753596_e0755237_b06114_c20130101142605946136_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130101_t0755250_e0756491_b06114_c20130101142605946136_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-1_7==131350002
+(0)	2013-1-1_7==130890002
+(0)	2013-1-1_7==131210055
+(0)	2013-1-1_7==130770002
+(0)	2013-1-1_7==131510002
+(0)	2013-1-1_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	30.5
+(0)	color = 172
+(0)	scolor = 172
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	25.05
+(0)	color = 136
+(0)	scolor = 136
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	14.85
+(0)	color = 76
+(0)	scolor = 76
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	12.75
+(0)	color = 64
+(0)	scolor = 64
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.5
+(0)	color = 52
+(0)	scolor = 52
+Tue Jan 21 22:12:18 CST 2014
+(0)	DATE : 2013-1-2_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130102_t0732131_e0733373_b06128_c20130102140612616653_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130102_t0733385_e0735027_b06128_c20130102135502169872_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130102_t0735039_e0736281_b06128_c20130102135502169872_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130102_t0736293_e0737535_b06128_c20130102135502169872_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-2_7==131350002
+(0)	2013-1-2_7==130890002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-2_7==131210055
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-2_7==130770002
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-2_7==131510002
+(0)	2013-1-2_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	 2
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.1
+(0)	color = 52
+(0)	scolor = 52
+Tue Jan 21 22:13:31 CST 2014
+(0)	DATE : 2013-1-3_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0713174_e0714416_b06142_c20130103134609643688_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0714428_e0716070_b06142_c20130103134609643688_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0716082_e0717324_b06142_c20130103134545880210_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0717336_e0718578_b06142_c20130103134545880210_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130103_t0718590_e0720232_b06142_c20130103134545880210_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-3_7==131350002
+(0)	2013-1-3_7==130890002
+(0)	2013-1-3_7==131210055
+(0)	2013-1-3_7==130770002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-3_7==131510002
+(0)	2013-1-3_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.299999
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17.3
+(0)	color = 88
+(0)	scolor = 88
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.9
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.4
+(0)	color = 40
+(0)	scolor = 40
+Tue Jan 21 22:14:49 CST 2014
+(0)	DATE : 2013-1-4_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0654218_e0655459_b06156_c20130104131938117232_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0655472_e0657114_b06156_c20130104131938117232_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0657126_e0658368_b06156_c20130104131938117232_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130104_t0658380_e0700022_b06156_c20130104132907258446_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-4_6==131350002
+(0)	2013-1-4_6==130890002
+(0)	2013-1-4_6==131210055
+(0)	2013-1-4_6==130770002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-4_6==131510002
+(0)	2013-1-4_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.2
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17.9
+(0)	color = 88
+(0)	scolor = 88
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.75
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.75
+(0)	color = 40
+(0)	scolor = 40
+Tue Jan 21 22:15:59 CST 2014
+(0)	DATE : 2013-1-5_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130105_t0636515_e0638157_b06170_c20130105130331791112_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130105_t0638169_e0639411_b06170_c20130105130331791112_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-5_6==131350002
+(0)	2013-1-5_6==130890002
+(0)	2013-1-5_6==131210055
+(0)	2013-1-5_6==130770002
+(0)	2013-1-5_6==131510002
+(0)	2013-1-5_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.65
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	22.7
+(0)	color = 124
+(0)	scolor = 124
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.9
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.25
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.15
+(0)	color = 28
+(0)	scolor = 28
+Tue Jan 21 22:16:47 CST 2014
+(0)	DATE : 2013-1-6_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130106_t0758561_e0800202_b06185_c20130106141611720137_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130106_t0800215_e0801457_b06185_c20130106142600394386_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130106_t0801469_e0803111_b06185_c20130106142600394386_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-6_7==131350002
+(0)	2013-1-6_7==130890002
+(0)	2013-1-6_7==131210055
+(0)	2013-1-6_7==130770002
+(0)	2013-1-6_7==131510002
+(0)	2013-1-6_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.45
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17.25
+(0)	color = 88
+(0)	scolor = 88
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.05
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.55
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.2
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	12.7225
+(0)	color = 64
+(0)	scolor = 64
+Tue Jan 21 22:17:48 CST 2014
+(0)	DATE : 2013-1-7_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130107_t0738350_e0739592_b06199_c20130107140440661185_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130107_t0740004_e0741246_b06199_c20130107140440661185_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130107_t0741258_e0742500_b06199_c20130107140440661185_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130107_t0742512_e0744154_b06199_c20130107151207291977_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-7_7==131350002
+(0)	2013-1-7_7==130890002
+(0)	2013-1-7_7==131210055
+(0)	2013-1-7_7==130770002
+(0)	2013-1-7_7==131510002
+(0)	2013-1-7_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.2
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	13.7
+(0)	color = 64
+(0)	scolor = 64
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.9
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.6
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.65
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.57
+(0)	color = 52
+(0)	scolor = 52
+Tue Jan 21 22:18:52 CST 2014
+(0)	DATE : 2013-1-8_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0719411_e0721053_b06213_c20130108134633369611_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0721065_e0722307_b06213_c20130108134633369611_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0722320_e0723561_b06213_c20130108134633369611_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130108_t0723574_e0725215_b06213_c20130108134633369611_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-8_7==131350002
+(0)	2013-1-8_7==130890002
+(0)	2013-1-8_7==131210055
+(0)	2013-1-8_7==130770002
+(0)	2013-1-8_7==131510002
+(0)	2013-1-8_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.65
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	14
+(0)	color = 76
+(0)	scolor = 76
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.1
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.7
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	13.40333
+(0)	color = 64
+(0)	scolor = 64
+Tue Jan 21 22:19:59 CST 2014
+(0)	DATE : 2013-1-9_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130109_t0700455_e0702097_b06227_c20130109133547559255_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130109_t0702109_e0703351_b06227_c20130109133749190516_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130109_t0703363_e0705005_b06227_c20130109133749190516_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130109_t0705017_e0706259_b06227_c20130109133749190516_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-9_7==131350002
+(0)	2013-1-9_7==130890002
+(0)	2013-1-9_7==131210055
+(0)	2013-1-9_7==130770002
+(0)	2013-1-9_7==131510002
+(0)	2013-1-9_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.6
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	19.85
+(0)	color = 100
+(0)	scolor = 100
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.95
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	14.65
+(0)	color = 76
+(0)	scolor = 76
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.85
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17.345
+(0)	color = 88
+(0)	scolor = 88
+Tue Jan 21 22:21:04 CST 2014
+(0)	DATE : 2013-1-10_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130110_t0643152_e0644394_b06241_c20130110130149069111_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130110_t0644406_e0646048_b06241_c20130110130846522761_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130110_t0646061_e0647302_b06241_c20130110130846522761_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-10_6==131350002
+(0)	2013-1-10_6==130890002
+(0)	2013-1-10_6==131210055
+(0)	2013-1-10_6==130770002
+(0)	2013-1-10_6==131510002
+(0)	2013-1-10_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.4
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	16.5
+(0)	color = 88
+(0)	scolor = 88
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	20.4
+(0)	color = 112
+(0)	scolor = 112
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.7
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.05
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	16.82417
+(0)	color = 88
+(0)	scolor = 88
+Tue Jan 21 22:22:00 CST 2014
+(0)	DATE : 2013-1-11_8
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130111_t0805198_e0806440_b06256_c20130111142941186288_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130111_t0806452_e0808094_b06256_c20130111142941186288_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-11_8==131350002
+(0)	2013-1-11_8==130890002
+(0)	2013-1-11_8==131210055
+(0)	2013-1-11_8==130770002
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-11_8==131510002
+(0)	2013-1-11_8==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	3.15
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.6
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.35
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	4.65
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.305
+(0)	color = 28
+(0)	scolor = 28
+Tue Jan 21 22:23:05 CST 2014
+(0)	DATE : 2013-1-12_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130112_t0744587_e0746229_b06270_c20130112142130713848_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130112_t0746241_e0747483_b06270_c20130112141045194527_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130112_t0747495_e0749137_b06270_c20130112141045194527_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130112_t0749149_e0750391_b06270_c20130112141045194527_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-12_7==131350002
+(0)	2013-1-12_7==130890002
+(0)	2013-1-12_7==131210055
+(0)	2013-1-12_7==130770002
+(0)	2013-1-12_7==131510002
+(0)	2013-1-12_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.75
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.65
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.05
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.25
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.7
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17.29833
+(0)	color = 88
+(0)	scolor = 88
+Tue Jan 21 22:24:20 CST 2014
+(0)	DATE : 2013-1-13_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130113_t0726031_e0727273_b06284_c20130113144740670820_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130113_t0727285_e0728527_b06284_c20130113144740670820_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130113_t0728539_e0730181_b06284_c20130113141146146419_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130113_t0730193_e0731435_b06284_c20130113141146146419_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-13_7==131350002
+(0)	2013-1-13_7==130890002
+(0)	2013-1-13_7==131210055
+(0)	2013-1-13_7==130770002
+(0)	2013-1-13_7==131510002
+(0)	2013-1-13_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.15
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	14.6
+(0)	color = 76
+(0)	scolor = 76
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.5
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.95
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.45
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	13.20833
+(0)	color = 64
+(0)	scolor = 64
+Tue Jan 21 22:25:35 CST 2014
+(0)	DATE : 2013-1-14_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130114_t0707074_e0708316_b06298_c20130114132730327407_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130114_t0708328_e0709570_b06298_c20130114132730327407_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130114_t0709582_e0711224_b06298_c20130114132730327407_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130114_t0711236_e0712478_b06298_c20130114133502999299_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-14_7==131350002
+(0)	2013-1-14_7==130890002
+(0)	2013-1-14_7==131210055
+(0)	2013-1-14_7==130770002
+(0)	2013-1-14_7==131510002
+(0)	2013-1-14_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	3.55
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.2
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	4.2
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.1
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	 4
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	12.34083
+(0)	color = 64
+(0)	scolor = 64
+Tue Jan 21 22:26:46 CST 2014
+(0)	DATE : 2013-1-15_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130115_t0649389_e0651031_b06312_c20130115132342458963_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130115_t0651043_e0652285_b06312_c20130115132342458963_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130115_t0652298_e0653539_b06312_c20130115132342458963_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-15_6==131350002
+(0)	2013-1-15_6==130890002
+(0)	2013-1-15_6==131210055
+(0)	2013-1-15_6==130770002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-15_6==131510002
+(0)	2013-1-15_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	1.7
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.35
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	1.45
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	2.8
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.503334
+(0)	color = 40
+(0)	scolor = 40
+Tue Jan 21 22:27:49 CST 2014
+(0)	DATE : 2013-1-16_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130116_t0630433_e0632075_b06326_c20130116130121356176_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130116_t0632087_e0633329_b06326_c20130116130121356176_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-16_6==131350002
+(0)	2013-1-16_6==130890002
+(0)	2013-1-16_6==131210055
+(0)	2013-1-16_6==130770002
+(0)	2013-1-16_6==131510002
+(0)	2013-1-16_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	4.75
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.35
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.3
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.95
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.25
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	21.46667
+(0)	color = 112
+(0)	scolor = 112
+Tue Jan 21 22:28:42 CST 2014
+(0)	DATE : 2013-1-17_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0751224_e0752466_b06341_c20130117142054549609_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0752478_e0754120_b06341_c20130117142054549609_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0754132_e0755374_b06341_c20130117142054549609_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130117_t0755386_e0757028_b06341_c20130117142133284648_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-17_7==131350002
+(0)	2013-1-17_7==130890002
+(0)	2013-1-17_7==131210055
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-17_7==130770002
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-17_7==131510002
+(0)	2013-1-17_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	0.65
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.9
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	2.25
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	4.3425
+(0)	color = 16
+(0)	scolor = 16
+Tue Jan 21 22:29:59 CST 2014
+(0)	DATE : 2013-1-18_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130118_t0732267_e0733509_b06355_c20130118135611714889_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130118_t0733521_e0735163_b06355_c20130118135611714889_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130118_t0735175_e0736417_b06355_c20130118135611714889_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130118_t0736429_e0738071_b06355_c20130118135611714889_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-18_7==131350002
+(0)	2013-1-18_7==130890002
+(0)	2013-1-18_7==131210055
+(0)	2013-1-18_7==130770002
+(0)	2013-1-18_7==131510002
+(0)	2013-1-18_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	4.45
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	15.8
+(0)	color = 76
+(0)	scolor = 76
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.5
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.3
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.9
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.95667
+(0)	color = 52
+(0)	scolor = 52
+Tue Jan 21 22:31:14 CST 2014
+(0)	DATE : 2013-1-19_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130119_t0713311_e0714552_b06369_c20130119133553476436_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130119_t0714565_e0716206_b06369_c20130119135619932104_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130119_t0716219_e0717460_b06369_c20130119135619932104_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130119_t0717473_e0719115_b06369_c20130119135619932104_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-19_7==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-19_7==130890002
+(0)	2013-1-19_7==131210055
+(0)	2013-1-19_7==130770002
+(0)	2013-1-19_7==131510002
+(0)	2013-1-19_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.9
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.55
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.2
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.35
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.5625
+(0)	color = 28
+(0)	scolor = 28
+Tue Jan 21 22:32:22 CST 2014
+(0)	DATE : 2013-1-20_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130120_t0654354_e0655596_b06383_c20130120131350661112_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130120_t0656008_e0657250_b06383_c20130120131350661112_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130120_t0657262_e0658504_b06383_c20130120132528788373_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130120_t0658516_e0700158_b06383_c20130120132528788373_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-20_6==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-20_6==130890002
+(0)	2013-1-20_6==131210055
+(0)	2013-1-20_6==130770002
+(0)	2013-1-20_6==131510002
+(0)	2013-1-20_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17.75
+(0)	color = 88
+(0)	scolor = 88
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	18.85
+(0)	color = 100
+(0)	scolor = 100
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.55
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.65
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	16.7725
+(0)	color = 88
+(0)	scolor = 88
+Tue Jan 21 22:33:33 CST 2014
+(0)	DATE : 2013-1-21_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130121_t0637051_e0638293_b06397_c20130121130352450764_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130121_t0638305_e0639547_b06397_c20130121130352450764_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-21_6==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-21_6==130890002
+(0)	2013-1-21_6==131210055
+(0)	2013-1-21_6==130770002
+(0)	2013-1-21_6==131510002
+(0)	2013-1-21_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.75
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17.25
+(0)	color = 88
+(0)	scolor = 88
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.45
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.95
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	14.7775
+(0)	color = 76
+(0)	scolor = 76
+Tue Jan 21 22:34:26 CST 2014
+(0)	DATE : 2013-1-22_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130122_t0757460_e0759084_b06412_c20130122142056429757_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130122_t0759096_e0800338_b06412_c20130122143021028038_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130122_t0800351_e0801592_b06412_c20130122143021028038_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-22_7==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-22_7==130890002
+(0)	2013-1-22_7==131210055
+(0)	2013-1-22_7==130770002
+(0)	2013-1-22_7==131510002
+(0)	2013-1-22_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	1.65
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	3.65
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	2.1
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	2.2
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	3.87
+(0)	color = 4
+(0)	scolor = 4
+Tue Jan 21 22:35:36 CST 2014
+(0)	DATE : 2013-1-23_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130123_t0738503_e0740145_b06426_c20130123140457660710_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130123_t0740157_e0741399_b06426_c20130123140457660710_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130123_t0741412_e0743053_b06426_c20130123140507945766_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130123_t0743066_e0744307_b06426_c20130123140507945766_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-23_7==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-23_7==130890002
+(0)	2013-1-23_7==131210055
+(0)	2013-1-23_7==130770002
+(0)	2013-1-23_7==131510002
+(0)	2013-1-23_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	4.15
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.05
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.25
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.3
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.228333
+(0)	color = 16
+(0)	scolor = 16
+Tue Jan 21 22:36:52 CST 2014
+(0)	DATE : 2013-1-24_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130124_t0719547_e0721188_b06440_c20130124135540976831_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130124_t0721201_e0722442_b06440_c20130124135540976831_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130124_t0722455_e0724097_b06440_c20130124135540976831_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130124_t0724109_e0725351_b06440_c20130124135431337485_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-24_7==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-24_7==130890002
+(0)	2013-1-24_7==131210055
+(0)	2013-1-24_7==130770002
+(0)	2013-1-24_7==131510002
+(0)	2013-1-24_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11.85
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	12.8
+(0)	color = 64
+(0)	scolor = 64
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	18.7
+(0)	color = 100
+(0)	scolor = 100
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	13.8
+(0)	color = 64
+(0)	scolor = 64
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	16.75
+(0)	color = 88
+(0)	scolor = 88
+Tue Jan 21 22:38:05 CST 2014
+(0)	DATE : 2013-1-25_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130125_t0700590_e0702232_b06454_c20130125132520004516_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130125_t0702244_e0703486_b06454_c20130125132520004516_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130125_t0703498_e0705140_b06454_c20130125132520004516_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130125_t0705152_e0706394_b06454_c20130125132520004516_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-25_7==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-25_7==130890002
+(0)	2013-1-25_7==131210055
+(0)	2013-1-25_7==130770002
+(0)	2013-1-25_7==131510002
+(0)	2013-1-25_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	4.55
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.25
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.85
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.450001
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	9.109167
+(0)	color = 40
+(0)	scolor = 40
+Tue Jan 21 22:39:14 CST 2014
+(0)	DATE : 2013-1-26_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130126_t0643287_e0644529_b06468_c20130126130551592162_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130126_t0644541_e0646183_b06468_c20130126130551592162_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130126_t0646195_e0647437_b06468_c20130126130551592162_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-26_6==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-26_6==130890002
+(0)	2013-1-26_6==131210055
+(0)	2013-1-26_6==130770002
+(0)	2013-1-26_6==131510002
+(0)	2013-1-26_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17.55
+(0)	color = 88
+(0)	scolor = 88
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	20.95
+(0)	color = 112
+(0)	scolor = 112
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	18.85
+(0)	color = 100
+(0)	scolor = 100
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	18.8
+(0)	color = 100
+(0)	scolor = 100
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	28.59917
+(0)	color = 160
+(0)	scolor = 160
+Tue Jan 21 22:40:18 CST 2014
+(0)	DATE : 2013-1-27_8
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130127_t0805332_e0806574_b06483_c20130127142957119846_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130127_t0806587_e0808228_b06483_c20130127142957119846_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-27_8==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-27_8==130890002
+(0)	2013-1-27_8==131210055
+(0)	2013-1-27_8==130770002
+(0)	2013-1-27_8==131510002
+(0)	2013-1-27_8==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.55
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.95
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	8.950001
+(0)	color = 40
+(0)	scolor = 40
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	10.1
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	13.03417
+(0)	color = 64
+(0)	scolor = 64
+Tue Jan 21 22:41:24 CST 2014
+(0)	DATE : 2013-1-28_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130128_t0745122_e0746363_b06497_c20130128141540254133_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130128_t0746376_e0748017_b06497_c20130128141540254133_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130128_t0748030_e0749272_b06497_c20130128141540254133_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130128_t0749284_e0750526_b06497_c20130128141540254133_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-28_7==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-28_7==130890002
+(0)	2013-1-28_7==131210055
+(0)	2013-1-28_7==130770002
+(0)	2013-1-28_7==131510002
+(0)	2013-1-28_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	13.75
+(0)	color = 64
+(0)	scolor = 64
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	11
+(0)	color = 52
+(0)	scolor = 52
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	19.25
+(0)	color = 100
+(0)	scolor = 100
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	15.35
+(0)	color = 76
+(0)	scolor = 76
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	19.0625
+(0)	color = 100
+(0)	scolor = 100
+Tue Jan 21 22:42:40 CST 2014
+(0)	DATE : 2013-1-29_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130129_t0726183_e0727424_b06511_c20130129140133726093_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130129_t0727437_e0729079_b06511_c20130129135104558794_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130129_t0729091_e0730315_b06511_c20130129135104558794_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130129_t0730327_e0731569_b06511_c20130129135104558794_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-29_7==131350002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-29_7==130890002
+(0)	2013-1-29_7==131210055
+(0)	2013-1-29_7==130770002
+(0)	2013-1-29_7==131510002
+(0)	2013-1-29_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	24.85
+(0)	color = 136
+(0)	scolor = 136
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	22.7
+(0)	color = 124
+(0)	scolor = 124
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	20.55
+(0)	color = 112
+(0)	scolor = 112
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	20.95
+(0)	color = 112
+(0)	scolor = 112
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	42.9125
+(0)	color = 184
+
+
+Variable: tpmcolor
+Type: integer
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	184
+(0)	max184
+(0)	scolor = 184
+Tue Jan 21 22:43:54 CST 2014
+(0)	DATE : 2013-1-30_7
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130130_t0707226_e0708468_b06525_c20130130134151529710_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130130_t0708480_e0710122_b06525_c20130130134151529710_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130130_t0710134_e0711376_b06525_c20130130134024384684_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130130_t0711388_e0713030_b06525_c20130130134024384684_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	2013-1-30_7==131350002
+(0)	2013-1-30_7==130890002
+(0)	2013-1-30_7==131210055
+(0)	2013-1-30_7==130770002
+(0)	2013-1-30_7==131510002
+(0)	2013-1-30_7==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.7
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	7.9
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	4.7
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.6
+(0)	color = 16
+(0)	scolor = 16
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	6.45
+(0)	color = 28
+(0)	scolor = 28
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	17.78333
+(0)	color = 88
+(0)	scolor = 88
+Tue Jan 21 22:45:08 CST 2014
+(0)	DATE : 2013-1-31_6
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130131_t0649523_e0651165_b06539_c20130131131601410928_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130131_t0651177_e0652419_b06539_c20130131131601410928_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+(0)	NOW READING VIIRS FILE : SVDNB_npp_d20130131_t0652431_e0654073_b06539_c20130131131633065737_noaa_ops.h5
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+file: h5reader.c, line: 3138
+
+dataset region reference
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-31_6==131350002
+(0)	2013-1-31_6==130890002
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-31_6==131210055
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-31_6==130770002
+warning:avg: Entire input array contains missing values, can't compute average
+warning:avg: Entire input array contains missing values, can't compute average
+(0)	2013-1-31_6==131510002
+(0)	2013-1-31_6==liu
+
+
+Variable: labels
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	2
+(1)	4
+(2)	6
+(3)	8
+(4)	10
+(5)	12
+(6)	14
+(7)	16
+(8)	18
+(9)	20
+(10)	22
+(11)	24
+(12)	26
+(13)	28
+(14)	30
+(15)	32
+
+
+Variable: colors
+Type: integer
+Total Size: 64 bytes
+            16 values
+Number of Dimensions: 1
+Dimensions and sizes:	[16]
+Coordinates: 
+(0)	4
+(1)	16
+(2)	28
+(3)	40
+(4)	52
+(5)	64
+(6)	76
+(7)	88
+(8)	100
+(9)	112
+(10)	124
+(11)	136
+(12)	148
+(13)	160
+(14)	172
+(15)	184
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	 1
+(0)	color = 4
+(0)	scolor = 4
+
+
+Variable: srel (subsection)
+Type: float
+Total Size: 4 bytes
+            1 values
+Number of Dimensions: 1
+Dimensions and sizes:	[1]
+Coordinates: 
+Number Of Attributes: 1
+  _FillValue :	-9999
+(0)	5.079166
+(0)	color = 16
+(0)	scolor = 16

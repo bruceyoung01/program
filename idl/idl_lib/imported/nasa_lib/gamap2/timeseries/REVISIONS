@@ -1,0 +1,47 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/timeseries/
+last updated : 07/17/2008 10:09
+
+===================
+GC_COMBINE_ND48.PRO
+===================
+      phs, 31 Jul 2007: GAMAP VERSION 2.10
+                        - Initial version
+      phs, 11 Oct 2007: - few bugs fix
+                        - added output keywords
+      phs, 15 Oct 2007: - added LOCALTIME keyword
+      phs, 18 Oct 2007: - do not save if output file is one of the
+                          input file.
+      phs, 26 Oct 2007: - TIME can be use to select the time span
+                          of the series.
+                          Added DAVG keyword.
+      phs, 30 Oct 2007: - couple of minor fixes.
+
+===================
+GC_COMBINE_ND49.PRO
+===================
+      phs,  6 Jun 2007: GAMAP VERSION 2.05
+                        - Initial version
+      phs, 25 Jul 2007: GAMAP VERSION 2.10
+                        - added Moving Average and Daily Max as
+                          signal processing available before 
+                          saving/passing data.
+                        - added Lon and Lat keywords to select one
+                          location or a smaller area.
+                        - added output keywords.
+      phs,  4 Oct 2007: - Bug fix for OUTTIME keyword
+      phs, 12 Oct 2007: - Added OUTLEV output keyword, and LEV
+                          input keyword.
+                        - INDIR can be used as output keyword.
+      phs, 15 Oct 2007: - added LOCALTIME keyword
+      phs, 18 Oct 2007: - do not save if output file is one of the
+                          input file.
+      phs, 26 Oct 2007: - bug fix for LON and LAT
+                        - added TIME keyword to limit
+                          timeseries in time.
+      phs, 28 Oct 2007: - DMAX accounts for LOCALTIME if set.
+                        - Bug fix for OutTime when /DMax.
+      phs, 04 Apr 2008: GAMAP VERSION 2.12
+                        - added DAVG keyword
+                        - now cleanup the /no_global pointers
+                        - added the FILELIST keyword
+      phs, 17 Jul 2008: - Added comments

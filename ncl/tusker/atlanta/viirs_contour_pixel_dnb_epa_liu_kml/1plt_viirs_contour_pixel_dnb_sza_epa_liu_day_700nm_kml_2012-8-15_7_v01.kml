@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>viirs kml2012-8-15_7</name>
+<ScreenOverlay>
+<name>Label Bar</name>
+<Icon>
+<href>1plt_viirs_contour_pixel_dnb_sza_epa_liu_day_700nm_kml_v012012-8-15_7_lb.png</href>
+</Icon>
+<overlayXY x="0" y="0" xunits="fraction" yunits="fraction"/>
+<screenXY x="100" y="1000" xunits="fraction" yunits="fraction"/>
+</ScreenOverlay>
+<GroundOverlay>
+<name>GroundOverlay</name>
+<Icon>
+<href>1plt_viirs_contour_pixel_dnb_sza_epa_liu_day_700nm_kml_v012012-8-15_7.png</href>
+</Icon>
+<altitude>0</altitude>
+<altitudeMode>relativeToGround</altitudeMode>
+<LatLonBox>
+  <north>33.8</north>
+  <south>33.5</south>
+  <east>-84.5</east>
+  <west>-84.1</west>
+  <rotation>0</rotation>
+</LatLonBox>
+</GroundOverlay>
+</Document>
+</kml>
+

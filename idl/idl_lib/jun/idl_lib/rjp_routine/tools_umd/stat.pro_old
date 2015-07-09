@@ -1,0 +1,47 @@
+;+
+; NAME:  
+;   stat.pro
+;         
+; PURPOSE: 
+;   Calculate statistics on calculation 
+; COMMENTS:
+;
+; KEYWORD PARAMETERS: 
+; 
+;   
+; MODIFICATION HISTORY:  
+;   Initial version   19 April 1994 
+;
+;
+;- 
+function stat,fd1d,nobs=nobs,min=min,max=max,std=std,med=med,$
+q25=q25,q75=q75,q90=q90,range=range,badval=badval,q10=q10
+
+if n_elements(badval) eq 0 then badval = 1.e20   
+  
+xx = where (fd1d lt badval,count) 
+case count of 
+0: begin 
+     nobs = 0 & min = 1.e20 & max = 1.e20 & med = 1.e20 & q25 = 1.e20 
+     q75 = 1.e20 & q90 = 1.e20 & mean = 1.e20 & std = 1.e20 & q10 = 1.e20
+    end
+else: begin 
+       uu = fd1d(xx) 
+       vv = size(uu) & nobs = vv(1) 
+       uu =  uu(sort(uu)) 
+       min = uu(0) 
+       max = uu(nobs-1) 
+       med = uu((nobs-1)/2) 
+       q25 = uu((nobs-1)/4) 
+       q75 = uu(3*(nobs-1)/4) 
+       q90 =  uu(9*(nobs-1)/10) 
+       q10 = uu(1*(nobs-1)/10) 
+       mean = total(uu,0)/ nobs  
+       std = sqrt((total(uu*uu) - total(uu)*total(uu)/nobs)/(nobs-1)) 
+       range = max - min 
+      end  
+endcase 
+
+return,mean 
+
+end 

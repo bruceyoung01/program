@@ -1,0 +1,15 @@
+ Copyright (C) 1995-2015 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.3.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+fatal:syntax error: procedure select_seviri_calipso_aca_cloud_costantino2010_write_all_9var expects 23 arguments, got 22
+fatal:error at line 426 in file contour_grid_seviri_cot_aca_ESMF.ncl
+
+fatal:syntax error: procedure select_seviri_calipso_aca_cloud_costantino2013_write_all_9var expects 23 arguments, got 22
+fatal:error at line 434 in file contour_grid_seviri_cot_aca_ESMF.ncl
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 499 in file contour_grid_seviri_cot_aca_ESMF.ncl
+
+

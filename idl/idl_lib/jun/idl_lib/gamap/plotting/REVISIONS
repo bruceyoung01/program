@@ -1,0 +1,277 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/plotting/
+last updated : 07/17/2008 10:09
+
+===================
+ARROWMAP.PRO
+===================
+      bmy, 26 May 2000: GAMAP VERSION 1.45
+      bmy, 24 Jul 2000: GAMAP VERSION 1.46
+                        - added X_STEP, Y_STEP, and MAXMAG keywords
+                        - now print the longest vector as the arrow
+                          legend below the plot.  
+                        - added MARGIN keyword for MULTIPANEL 
+                        - added ISOTROPIC keyword for MAP_SET
+      bmy, 23 Jul 2002: GAMAP VERSION 1.51
+                        - now default HSIZE to a device pixel length
+                        - added LEGENDLEN keyword
+                        - now call VELOCITY_FIELD using new LEGENDLEN,
+                          LEGENDNORM, and LEGENDMAG keywords
+                        - Now use MYCT_DEFAULTS for default BLACK
+                        - added COUNTRIES and COASTS keywords
+                        - removed HANGLE keyword -- it's obsolete!
+                        - renamed ARRLEN to LEGENDNORM
+                        - renamed MAXMAG to LEGENDMAG
+      bmy, 28 Sep 2002: - Now reference MYCT colors from the !MYCT
+                          system variable
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      phs, 12 Mar 2008: GAMAP VERSION 2.12
+                        - add /NOADVANCE keyword to prevent advancing
+                          to the next page (in case you want to overplot)
+
+===================
+BARGRAPH.PRO
+===================
+      bmy, 18 Nov 1997: VERSION 1.00
+      bmy, 19 Nov 1997: VERSION 1.01
+      bmy, 29 Apr 1999: VERSION 1.10
+                        - added COLOR keyword
+                        - eliminated help screen 
+                        - enhanced readability & updated comments
+      bmy, 15 Mar 2000: VERSION 1.45
+                        - added BARCHARSIZE keyword
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - added HORIZONTAL keyword to plot
+                          bars in the horizontal 
+                        - Now limits XLABELS array to 58 elements
+                          in order to prevent exceeding an IDL
+                          plotting limit
+
+===================
+BOXPLOT.PRO
+===================
+      mgs, 30 Jul 1997: VERSION 1.00
+      mgs, 03 Aug 1997: added template
+      mgs, 27 Nov 1997: some revisions and suggested changes by T.Brauers:
+           - better color handling (NOTE: meaning of BOXCOLOR has changed)
+           - optional overlay of mean value
+           - box frames
+           - variable boxwidth
+           - error fixing lower upper boundaries in log plots
+           - bug fix with label keyword
+           - added OVERPLOT and BOXPOSITION keywords
+      mgs, 22 Jan 1998: added IS_PERCENTILE keyword to allow
+             plotting of data that has been processed already
+      mgs, 17 Apr 1998: 
+           - x-axis handling improved (now uses axis command and xyouts)
+           - orientation and medianthick keywords added
+      mgs, 21 May 1998:
+           - added percval keyword
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+DRAWDOTONMAP.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+ERRORBAR.PRO
+===================
+      bmy, 21 Jul 1999: VERSION 1.01
+                        - based on IDL routine OPLOTERR
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+GET_CHARSIZE_NORM.PRO
+===================
+      phs,  3 Dec 2007: VERSION 1.00
+
+===================
+IMAGE_MAP.PRO
+===================
+mgs, 01 Oct 1997: based on IMAGE_CONT by DMS, May, 1988.
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+LEGEND.PRO
+===================
+      mgs, 23 Jun 1998: VERSION 1.00
+      mgs, 24 Jun 1998: - now uses !X.Window and !Y.Window to get
+             default size of the plotting window (thanks DWF)
+      mgs, 25 Jun 1998: - added THICK keyword
+      mgs, 27 Oct 1998: - more room for lines
+                        - now uses formstrlen instead of strlen
+      mgs, 28 Nov 1998: - box width not incremented by 1 if plotmode=0
+      mgs, 25 Jun 1999: - added TEXTCOLOR keyword
+dbm & bmy, 23 Aug 2005: TOOLS VERSION 2.04
+                        - now pass _EXTRA=e to XYOUTS 
+                        - cosmetic changes
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments
+
+===================
+LOGLEVELS.PRO
+===================
+      mgs, 17 Mar 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+MAP_LABELS.PRO
+===================
+      mgs, 19 Feb 1999: VERSION 1.00
+      bmy, 26 Feg 1999: VERSION 1.10
+                        - now works for maps that are smaller
+                          than global size.
+      bmy, 04 Mar 1999: VERSION 1.11
+                        - added DEBUG keyword for output
+                        - now computes NORM_XLAT correctly for
+                          grids that are centered on -180 degrees
+      mgs, 17 Mar 1999: - cleaned up
+                        - replaced Norm[XY]... by two dimensional
+                          NormLons and NormLats
+                        - Longitude conversion now done in CONSTRUCT_...
+                        - calls MAP_SET if /MAPGRID is set and no
+                          map has been established.
+      bmy, 25 Mar 1999: - double default DLON if more than 2 plots
+                          per page
+      mgs, 23 Apr 1999: - bug fix for LON labels in Pacific mode
+mgs & bmy, 03 Jun 1999: - fix for Pacific ranges in GET_GRIDSPACING
+      bmy, 17 Nov 2005: GAMAP VERSION 2.04
+                        - Now allows for a spacing of 1 degree
+                          if the plot range is smaller or equal to
+                          10 degrees
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      phs, 29 Feb 2008: GAMAP VERSION 2.12
+                        - Grid spacing can be set by user with
+                          DLON and DLAT
+                        - LONS/LATS can be use as input to specify
+                          the start (if 1 element) or the entire
+                          grid (more than 1 element)
+                        - GET_GRIDSPACING is now a procedure
+      phs, 14 Mar 2008: - Added a new method to find the Labels
+                          position. This can be used to overwrite
+                          the old position with two new keywords,
+                          NEWLONLAB and NEWLATLAB. Useful for map
+                          projection defined with SCALE instead
+                          of LIMIT. Need to pass MapPosition to work.
+
+===================
+MULTIPANEL.PRO
+===================
+      mgs, 19 Mar 1999: VERSION 1.00
+      mgs, 22 Mar 1999: - improved documentation, changed OMARGIN
+               to accept normalized coordinates.
+                        - position now also returned if turned OFF
+                        - added FIRSTPANEL and LASTPANEL keywords
+                        - allow NPLOTS to be specified as parameter 
+      mgs, 02 Jun 1999: - now saves old values of !X, !Y, and !P
+                          and restores them when turned OFF.
+      mgs, 03 Jun 1999: - save !X, !Y, and !P only if !p.multi was 
+                          really off
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+PIE.PRO
+===================
+Written by: Edward C. Wiebe, 1998-02-05.
+Modified:   Daithi A. Stone (stoned@atm.ox.ac.uk), 2002-04-12 
+     (re-wrote, added documentation)
+Modified:   DAS, 2005-08-05 (replaced SUM.PRO use with TOTAL; 
+     removed CONSTANTS.PRO use)
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - updated comments
+
+===================
+PLOT_CPD.PRO
+===================
+swu & bmy, 10 Oct 2006: TOOLS VERSION 2.05
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+RECTANGLE.PRO
+===================
+      mgs, 13 Apr 1998: INITIAL VERSION
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments, cosmetic changes
+
+===================
+STRSIZE.PRO
+===================
+      bmy, 10 Oct 2006: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+SYM.PRO
+===================
+      mgs, 22 Aug 1997: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+TRIANGLE.PRO
+===================
+      cdh, 19 Nov 2007: GAMAP VERSION 2.11
+                        - Adapted from "rectangles.pro"
+
+===================
+VELOCITY_FIELD.PRO
+===================
+      DMS, RSI, Oct., 1983.             
+      For Sun, DMS, RSI, April, 1989.             
+      Added TITLE, Oct, 1990.             
+      Added POSITION, NOERASE, COLOR, Feb 91, RES.             
+      August, 1993.  Vince Patrick, Adv. Visualization Lab, U. of Maryland, 
+              fixed errors in math.             
+      August, 1993. DMS, Added _EXTRA keyword inheritance.             
+      bmy, 03 Dec 1999: GAMAP VERSION 1.44
+                        - renamed to VELOCITY_FIELD
+                        - added ARRLEN, HSIZE, HANGLE, THICK keywords
+                        - cleaned up some things
+      bmy, 26 May 2000: GAMAP VERSION 1.45
+                        - updated comments, minor cleanup
+ bey, bmy, 24 Jul 2000: GAMAP VERSION 1.46
+                        - several bug fixes
+                        - added internal routine MAGNITUDE
+                        - added X_STEP, Y_STEP, MAXMAG keywords
+ sjg, bmy, 01 Aug 2000: - added error check on index array GOOD
+                        - now compare magnitudes to abs( MISSING )
+                        - now error check for MAXLEN: prevent div by 0
+                        - updated comments
+      bmy, 23 Jul 2002: GAMAP VERSION 1.51
+                        - now use IDL ARROW procedure to draw arrows
+                        - HSIZE is now defaulted to device coordinates
+                        - removed HANGLE keyword -- it's obsolete
+                        - now specify legend vector w/ LEGENDLEN
+                        - renamed ARRLEN to LEGENDNORM
+      bmy, 02 Jun 2005: GAMAP VERSION 2.04
+                        - Added /DATELINE keyword to perform a quick 
+                          test to skip over points which will choke 
+                          at the date line
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+      phs, 20 Mar 2008: GAMAP VERSION 2.12
+                        - Now test if the vector position is in
+                          the plot window
+                        - Added the PLOTPOSITION keyword
+
+===================
+YBOXPLOT.PRO
+===================
+      mgs, 30 Jul 1997: VERSION 1.00
+      mgs, 03 Aug 1997: added template
+      mgs, 27 Nov 1997: some revisions and suggested changes by T.Brauers:
+           - better color handling (NOTE: meaning of BOXCOLOR has changed)
+           - optional overlay of mean value
+           - box frames
+           - variable boxwidth
+           - error fixing lower upper boundaries in log plots
+           - bug fix with label keyword
+           - added OVERPLOT and BOXPOSITION keywords
+      mgs, 22 Jan 1998: added IS_PERCENTILE keyword to allow
+             plotting of data that has been processed already
+      mgs, 17 Apr 1998: 
+           - x-axis handling improved (now uses axis command and xyouts)
+           - orientation and medianthick keywords added
+           - CREATED as yboxplot
+      mgs, 06 May 1998:
+           - added percval keyword
+      mgs, 21 May 1998: 
+           - percval defaults changed from min,max to 5%, 95%
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10

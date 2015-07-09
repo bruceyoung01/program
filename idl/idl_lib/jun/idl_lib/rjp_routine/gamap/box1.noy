@@ -1,0 +1,55 @@
+BOX1.NOY -- defines "Box 1" over Pacific Region for "ctm_noybudget.pro"
+Use commas to separate multiple items on the same line!
+==============================================================================
+Input Punch File Name      : /users/amalthea/ctm/bdf/CTM4/run_3.3/ctm_full.bpch
+Tau0                       : 80304.0, 81048.0
+IMin, IMax (Fortran style) : 52, 67
+JMin, JMax (Fortran style) : 31, 35
+LMin, LMax (Fortran style) :  1,  6
+------------------------------------------------------------------------------
+Category Name: NOx_Anthro  : NOX-AN-$
+Category Name: NOx_Aircraft: NOX-AC-$
+Category Name: NOx_Lightnin: NOX-LI-$
+Category Name: NOx_Biomass : NOX-BIOB
+Category Name: NOx_Soil    : NOX-SOIL
+Category Name: E-W  Flux   : EW-FLX-$
+Category Name: N-S  Flux   : NS-FLX-$
+Category Name: Up   Flux   : UP-FLX-$
+Category Name: Conv Flux   : CV-FLX-$
+Category Name: Turb Flux   : TURBMC-$
+Category Name: Drydep flux : DRYD-FLX
+Category Name: Conv wetdep : WETDCV-$
+Category Name: LS   wetdep : WETDLS-$
+Category Name: Prod-Loss   : PORL-L=$
+------------------------------------------------------------------------------
+DryDep Family Tracer Names : NOx,   PAN, HNO3, PMN, PPN, R4N2
+DryDep Family Tracer #'s   :   1,     3,    4,   6,   7,    9     
+------------------------------------------------------------------------------
+NOx Family Names           :  NOx, N2O5, HNO4
+NOx Family Tracer #'s      :    1,   22,   23
+NOx Family MW's (g/mole)   :   46,  108,   79 
+NOx Family Constituent #   :    1,    2,    1
+NOx Family P-L tracer #'s  :    3,    4
+NOx Family P-L units       : molec/cm3/s
+------------------------------------------------------------------------------
+PAN Family Names           :  PAN,  PMN,  PPN
+PAN Family Tracer #'s      :    3,   15,   16
+PAN Family MW's (g/mole)   :  121,  147,  135
+PAN Family Constituent #   :    1,    1,    1
+PAN Family P-L tracer #'s  :    7,    8
+PAN Family P-L units       : molec/cm3/s
+------------------------------------------------------------------------------
+HNO3 Family Names          : HNO3
+HNO3 Family Tracer #'s     :    7
+HNO3 Family MW's (g/mole)  :   63 
+HNO3 Family Constituent #  :    1
+HNO3 Family P-L tracer #'s :    5,    6
+HNO3 Family P-L units      : molec/cm3/s
+------------------------------------------------------------------------------
+R4N2 Family Names          : R4N2
+R4N2 Family Tracer #'s     :   17    
+R4N2 Family MW's (g/mole)  :  119 
+HNO3 Family Constituent #  :    1
+R4N2 Family P-L tracer #'s :    9,   10
+R4N2 Family P-L units      : molec/cm3/s  
+==============================================================================

@@ -1,0 +1,28 @@
+#!/usr/bin/csh
+
+#  tar and gzip all files for a new TOOLS release
+#
+#  call: release_tools VERSION
+#
+#  the result will be a tools.VERSION.tar.gz file in ~/IDL
+
+
+if ( $#argv == 0 ) then
+   echo "usage:  release_tools {VERSION}"
+   echo "        VERSION: e.g. 1-30"
+   exit(1)
+endif
+
+set curdir = `pwd`
+cd ~/IDL
+
+# Comment out 6/20/2000
+#mv tools/REVISIONS tools/REVISIONS_TOOLS
+
+tar -cvf tools.$1.tar tools/*.pro tools/REVISIONS_TOOLS 
+gzip tools.$1.tar
+
+cd $curdir
+
+echo Done.
+

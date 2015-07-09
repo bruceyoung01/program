@@ -1,0 +1,1372 @@
+Modification history for all files in /as/home/ctm/bmy/IDL/tools/
+last updated : 06/02/2004 16:22
+
+===================
+ADD_DATA.PRO
+===================
+      mgs, 05 Nov 1997: VERSION 1.00
+          extracted from CREATE_MASTER.PRO, added flexibility for
+          optional parameters
+      mgs, 06 Nov 1997: - added FIRST keyword
+
+===================
+ADD_SEPARATOR.PRO
+===================
+      bmy, 03 May 2002: TOOLS VERSION 1.50
+
+===================
+ADD_TEMPLATE.PRO
+===================
+     written by:
+        R. Sterner, about Sep 1989 at Sac Peak.  The exact date was
+             probably lost by this routine itself.
+     modified:
+        R. Sterner, 13 Dec, 1993 --- dropped spawn to copy files.
+        R. Sterner, 11 Mar, 1993 --- handled no help text case.
+        M. Schultz, 01 Aug, 1997 --- simplified version without
+             analyzing help text
+             Also, original file is left intact (i.e. modification date etc.)
+             and renamed file.backup if operation successfully.
+             OF COURSE the copyright note is changed as well 
+        mgs, 09 Oct 1998 : - added Id tag for RCS
+        bmy, 19 Jul 1999 : - changed name & email from mgs to bmy
+                             for convenience!  :-)
+        bmy, 27 Jul 1999 : - put RCS tag as the first line of
+                             the standard header
+        bmy, 06 Jul 2000 : - extended separator lines a bit
+
+===================
+AIRDENS.PRO
+===================
+      mgs, 12 Nov 1998: VERSION 1.00
+
+===================
+ARREX.PRO
+===================
+      mgs, 20 May 1999: VERSION 1.00
+          - with a lot of input from L. Gumley, S. Vidar, and others
+
+===================
+ARROWMAP.PRO
+===================
+      bmy, 26 May 2000: GAMAP VERSION 1.45
+      bmy, 24 Jul 2000: GAMAP VERSION 1.46
+                        - added X_STEP, Y_STEP, and MAXMAG keywords
+                        - now print the longest vector as the arrow
+                          legend below the plot.  
+                        - added MARGIN keyword for MULTIPANEL 
+                        - added ISOTROPIC keyword for MAP_SET
+      bmy, 23 Jul 2002: GAMAP VERSION 1.51
+                        - now default HSIZE to a device pixel length
+                        - added LEGENDLEN keyword
+                        - now call VELOCITY_FIELD using new LEGENDLEN,
+                          LEGENDNORM, and LEGENDMAG keywords
+                        - Now use MYCT_DEFAULTS for default BLACK
+                        - added COUNTRIES and COASTS keywords
+                        - removed HANGLE keyword -- it's obsolete!
+                        - renamed ARRLEN to LEGENDNORM
+                        - renamed MAXMAG to LEGENDMAG
+      bmy, 28 Sep 2002: - Now reference MYCT colors from the !MYCT
+                          system variable
+
+===================
+BARGRAPH.PRO
+===================
+      bmy, 18 Nov 1997: VERSION 1.00
+      bmy, 19 Nov 1997: VERSION 1.01
+      bmy, 29 Apr 1999: VERSION 1.10
+                        - added COLOR keyword
+                        - eliminated help screen 
+                        - enhanced readability & updated comments
+      bmy, 15 Mar 2000: VERSION 1.45
+                        - added BARCHARSIZE keyword
+
+===================
+BINARY.PRO
+===================
+
+===================
+BOXPLOT.PRO
+===================
+      mgs, 30 Jul 1997: VERSION 1.00
+      mgs, 03 Aug 1997: added template
+      mgs, 27 Nov 1997: some revisions and suggested changes by T.Brauers:
+           - better color handling (NOTE: meaning of BOXCOLOR has changed)
+           - optional overlay of mean value
+           - box frames
+           - variable boxwidth
+           - error fixing lower upper boundaries in log plots
+           - bug fix with label keyword
+           - added OVERPLOT and BOXPOSITION keywords
+      mgs, 22 Jan 1998: added IS_PERCENTILE keyword to allow
+             plotting of data that has been processed already
+      mgs, 17 Apr 1998: 
+           - x-axis handling improved (now uses axis command and xyouts)
+           - orientation and medianthick keywords added
+      mgs, 21 May 1998:
+           - added percval keyword
+
+===================
+CHKSTRU.PRO
+===================
+      mgs, 02 Mar 1998: VERSION 1.00
+      mgs, 07 Apr 1998: - second parameter (FIELDS) now optional
+
+===================
+CHOICE.PRO
+===================
+      mgs, 26 Sep 1997: VERSION 1.00
+      mgs, 17 Nov 1998: - added DEFAULT and NOABORT keywords
+
+===================
+CINDEX.PRO
+===================
+
+===================
+CLEANPLOT.PRO
+===================
+   Written IDL Version 2.3.0  W. Landsman & K. Venkatakrishna May '92
+   Handle new system variables in V3.0.0     W. Landsman   Dec 92
+   Assume user has at least V3.0.0           W. Landsman   August 95
+   V5.0 has 60 instead of 30 TICKV values    W. Landsman   Sep. 97
+
+===================
+CLOSE_DEVICE.PRO
+===================
+      bmy, 18 Aug 1997: VERSION 1.00
+      bmy, 19 Aug 1997: VERSION 1.01
+      mgs, 20 Aug 1997: VERSION 1.02
+      mgs, 08 Apr 1998: VERSION 2.00 
+                        - automatic filename detection
+                        - default device depending on OS_FAMILY
+      mgs, 21 May 1998: 
+                        - added L.. keywords to control label 
+                          and timestamp output
+      mgs, 18 Nov 1998:
+                        - added output of username as default in timestamp
+      bmy, 28 Jul 2000: TOOLS VERSION 1.46
+                        - cleaned up a few things
+
+===================
+CODE_TREE.PRO
+===================
+     99/5/18 Philip Cameron-Smith, Harvard 
+       Initial code.
+     99/5/21 Philip Cameron-Smith, Harvard 
+       Have included some of my utilities to allow easy distribution.
+       Added '1' to names to ensure no future conflicts.
+     99/5/24 Philip Cameron-Smith, Harvard 
+       Now removes tabs and strings.
+       Various other improvements.
+     99/5/25 Philip Cameron-Smith, Harvard 
+       Reversed order of path and filename arguments
+       Converted a "print" to a "printf,lun" to stop lines running
+       on when printing to a file.
+       Improved check for ENTRY before SUBROUTINE.
+
+===================
+COLORBAR.PRO
+===================
+      mgs, 02 Jun 1998: VERSION 1.00
+      mgs, 14 Nov 1998: - changed default format to f14.2 from f6.2
+      mgs, 19 Nov 1998: - added cbdefaultformat function to better handle
+                          default labeling format.
+      mgs, 28 Nov 1998: - default labelling format now exponential for
+                          values gt 1.e6
+      mgs, 19 May 1999: - unit string placed a little further right
+                          in horizontal colorbars.
+      mgs, 27 May 1999: - added functionality for discrete colorbars
+                          (C_COLORS, C_LEVELS, and SKIP keywords)
+      bmy, 02 Jun 1999: - added /SCIENTIFIC keyword
+                        - updated comments
+      mgs, 03 Jun 1999: - fixed discrete labeling x positions
+      bmy, 27 Jul 2000: TOOLS VERSION 1.46
+                        - added ORIENTATION keyword so that the user
+                          can control the vertical colorbar labels
+      bmy, 27 Sep 2002: TOOLS VERSION 1.51
+                        - Now use 2 decimal places for exponential
+                          default format instead of 3
+      bmy, 18 Oct 2002: TOOLS VERSION 1.52
+                        - now use _EXTRA=e to pass commands to
+                          XYOUTS (i.e. to set label thickness)
+      bmy, 26 Nov 2002: - Added ANNOTATION keyword to print
+                          string labels instead of numeric labels
+      bmy, 26 Nov 2003: TOOLS VERSION 2.01
+                        - make sure MINV, MAXV, and DIVISIONS
+                          are scalars so as not to generate the
+                          color bar labels incorrectly.
+      bmy, 21 May 2004: TOOLS VERSION 2.02
+                        - If SKIP is passed, make sure that it is
+                          never less than 1.
+                        - added TICKLEN and FLAGVAL keywords
+                        - now add ticks where labels are printed
+                        - Cosmetic changes, updated comments
+                        
+===================
+CONVERT_INDEX.PRO
+===================
+      bmy, 07 Oct 1998: VERSION 1.00
+      mgs, 07 Oct 1998: VERSION 1.20
+             - made result etc LONG arrays
+             - allow sany dimensions now
+             - added reverse operation if index is multidimensional
+             - added FORTRAN keyword 
+
+===================
+CONVERT_LON.PRO
+===================
+      mgs, 25 Aug 1998: VERSION 1.00
+      mgs, 19 May 1999: - now makes sure that longitude range does
+                          not exceed -180..180 or 0..360
+      mgs, 24 Jun 1999: - bug fix: choked at missing values 
+
+===================
+CONVERT_UNIT.PRO
+===================
+      mgs, 26 Aug 1998: VERSION 1.00
+      mgs, 27 Aug 1998: 
+          - added RESULT and QUIET keywords
+          - improved error handling
+
+===================
+CUM_TOTAL.PRO
+===================
+      mgs, 21 Oct 1998: VERSION 1.00
+
+===================
+DATATYPE.PRO
+===================
+      bmy, 26 Jul 1999: VERSION 1.00
+
+===================
+DEFAULT_COLORS.PRO
+===================
+      bmy, 23 Jul 2001: TOOLS VERSION 1.48
+                        - adapted from "default_colors.pro"
+ 
+
+===================
+DEFAULT_CTM.PRO
+===================
+      mgs, 20 May 1999: VERSION 1.00
+
+===================
+DEFAULT_DIRS.PRO
+===================
+      mgs, 12 May 1999: VERSION 1.00
+
+===================
+DEFAULT_GTE.PRO
+===================
+      mgs, 12 May 1999: VERSION 1.00
+
+===================
+DEFAULT_RANGE.PRO
+===================
+      mgs, 29 Sep 1998: VERSION 1.00
+      mgs, 17 Nov 1998: - added string handling
+                        - added RANGE and NOSORT keywords
+      bmy, 13 Jul 2001: TOOLS VERSION 1.48
+                        - now uses new STRREPL function from mgs
+      bmy, 16 Jul 2001: - bug fix: only call STRREPL if there are
+                          non-algebraic characters to be replaced
+                        - eliminate call to obsolete STR_SEP function
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+                        - now call STRBREAK wrapper routine from
+                          the TOOLS subdirectory for backwards
+                          compatiblity for string-splitting
+
+===================
+DIAL_CT.PRO
+===================
+      bmy, 26 Sep 2002: TOOLS VERSION 1.51
+
+===================
+DISTRIBUTE.PRO
+===================
+      mgs, 16 Nov 1997: VERSION 1.00
+      mgs, 20 Nov 1997: - added OUTFILE and NO_IDL keywords
+
+===================
+E_H2O.PRO
+===================
+      mgs, 23 Feb 1997: VERSION 1.00
+      mgs, 03 Aug 1997: split e_h2o and rh, renamed, added template
+      mgs, 23 May 1998: changed default behaviour to set reference
+             temperature to given TD value
+      mgs, 29 Aug 1998: VERSION 2.00
+        - much simpler and more logical interface
+        - no automatic detection of dew- or frostpoint any longer
+        - can now accomodate arrays
+
+===================
+EOS_GETGR.PRO
+===================
+      bmy, 18 Sep 2002: TOOLS VERSION 1.51
+      bmy, 19 Dec 2002: TOOLS VERSION 1.52
+                        - fixed typos
+      bmy, 04 Jun 2003: TOOLS VERSION 1.53
+                        - fixed more typos
+
+===================
+EOS_GETSW.PRO
+===================
+      bmy, 18 Sep 2002: TOOLS VERSION 1.51
+
+===================
+ERRORBAR.PRO
+===================
+      bmy, 21 Jul 1999: VERSION 1.01
+                        - based on IDL routine OPLOTERR
+
+===================
+EXTRACT_COMMENTS.PRO
+===================
+      mgs, 10 Nov 1997: VERSION 1.00
+
+===================
+EXTRACT_FILENAME.PRO
+===================
+      mgs, 18 Nov 1997: VERSION 1.00
+      mgs, 21 Jan 1999: - added extra check for use of '/' path 
+                          specifiers in Windows OS;
+      bmy, 19 Jan 2000: TOOLS VERSION 1.44
+                        - replaced obsolete RSTRPOS( ) command with
+                          STRPOS( /REVERSE_SEARCH ) for IDL 5.3+
+                        - updated comments, few cosmetic changes
+      bmy, 13 Mar 2001: TOOLS VERSION 1.47
+                        - Add support for MacOS operating system
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+                        - now call RSEARCH for backwards compatibility
+                          with versions of IDL prior to v. 5.2
+                        - use FORWARD_FUNCTION to declare RSEARCH
+
+===================
+EXTRACT_PATH.PRO
+===================
+      mgs, 18 Nov 1997: VERSION 1.00
+      mgs, 21 Jan 1999: - added extra check for use of '/' path 
+                          specifiers in Windows OS
+      bmy, 19 Jan 2000: TOOLS VERSION 1.44
+                        - replaced obsolete RSTRPOS( ) command with
+                          STRPOS( /REVERSE_SEARCH ) for IDL 5.3+
+                        - updated comments, few cosmetic changes
+      bmy, 13 Mar 2001: TOOLS VERSION 1.47
+                        - Add support for MacOS operating system
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+                        - now call RSEARCH for backwards compatibility
+                          with versions of IDL prior to v. 5.2
+                        - use FORWARD_FUNCTION to declare RSEARCH
+
+===================
+FCONVERT_UNIT.PRO
+===================
+
+===================
+FILE_EXIST.PRO
+===================
+      mgs, 26 Sep 1997: VERSION 1.00
+      mgs, 28 Sep 1997: - added expand_path() in order to digest ~-pathnames
+                        - initializes FULL_PATH with a zero string
+      mgs, 06 Nov 1997: - replaced DIRNAMES by PATH and added 
+                          string seperation if PATH is a path
+                          string with multiple entries
+      mgs, 05 Feb 1998: - bug fix: use expand_path also if only 
+                          filename is given
+      bmy, 13 Mar 2001: TOOLS VERSION 1.47
+                        - now supports Windows, MacOS, and Unix
+                        - cosmetic change, updated comments
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+                        - now call STRBREAK wrapper routine from
+                          the TOOLS subdirectory for backwards
+                          compatiblity for string-splitting;
+      bmy, 03 Oct 2003: TOOLS VERSION 1.53
+                        - minor bug fix: FILE must be placed w/in
+                          the call to EXPAND_PATH for IDL 6.0+
+                        - deleted obsolete code from Jan 2002
+      bmy, 28 May 2004: TOOLS VERSION 2.02
+                        - now call MFINDFILE instead of FINDFILE,
+                          since MFINDFILE will call the new
+                          FILE_SEARCH program for IDL 5.5+
+
+===================
+FIND_UNIT.PRO
+===================
+      mgs, 26 Aug 1998: VERSION 1.00
+
+===================
+FORMAT_INP.PRO
+===================
+      mgs, 18 Dec 1997: VERSION 1.00
+      mgs, 11 Jun 1998: - added SIMPLE and SKP2 keyword
+      mgs, 30 Oct 1998: - bug fix with units and scale
+                        - improved formatting for large numbers
+                          (allows display of chem1d output files)
+
+===================
+FORMSTRLEN.PRO
+===================
+      mgs, 27 Oct 1998: VERSION 1.00
+
+===================
+GET_DEFAULTFORMAT.PRO
+===================
+      mgs, 17 Mar 1999: VERSION 1.00
+      mgs, 25 Mar 1999: - added DEFAULTLEN keyword
+      mgs, 19 May 1999: - DEFAULTLEN now converted to string.
+                        - added THRESHOLD keyword
+      bmy, 27 Sep 2002: TOOLS VERSION 1.51
+                        - made default exponential format e12.2
+
+===================
+GET_FREELUN.PRO
+===================
+      mgs, 17 Sep 1998: VERSION 1.00
+
+===================
+GET_RANGE.PRO
+===================
+      mgs, 24 Aug 1998: VERSION 1.00
+
+===================
+GETDATABLOCK.PRO
+===================
+      mgs, 22 Apr 1998: VERSION 1.00
+
+===================
+GIF2PS.PRO
+===================
+      bmy, 28 Jan 2000: VERSION 1.45
+
+===================
+HCOLORBAR.PRO
+===================
+      bmy, 10 Nov 1994: VERSION 1.00
+      bmy, 24 Jun 1997: VERSION 1.01
+      bmy, 30 Sep 1997: VERSION 1.10
+      bmy, 20 Nov 1997: VERSION 1.11
+      bmy, 02 Aug 1999: VERSION 1.43 
+                        - minor bug fix
+
+===================
+HDF_GETSD.PRO
+===================
+      bmy, 05 Nov 2001: VERSION 1.00
+      bmy, 23 Apr 2002: TOOLS VERSION 1.50
+                        - updated documentation
+
+===================
+HDF_GETSDATTR.PRO
+===================
+      bmy, 30 Apr 2002: TOOLS VERSION 1.50
+
+===================
+HDF_GETVD.PRO
+===================
+      bmy, 05 Nov 2001: VERSION 1.00
+
+===================
+HDF_SETSD.PRO
+===================
+      bmy, 17 Apr 2002: TOOLS VERSION 1.50
+      bmy, 11 Sep 2002: TOOLS VERSION 1.51
+                        - Now call routine DATATYPE to determine
+                          the type of the data so that we can
+                          write all data types to the HDF file.
+                        - Don't add the RANGE attribute to
+                          the HDF file for a string type value.
+                        - Updated comments 
+
+===================
+HYSTAT.PRO
+===================
+      mgs, 21 Aug 1998: VERSION 1.00
+
+===================
+IMAGE_MAP.PRO
+===================
+gs, Oct 1997 : based on IMAGE_CONT by DMS, May, 1988.
+
+===================
+IN_RANGE.PRO
+===================
+      bmy, 24 Sep 1997: VERSION 1.00
+
+===================
+IND_COMB.PRO
+===================
+      mgs, 04 Dec 1997: VERSION 1.00
+
+===================
+INTERPOLATE_2D.PRO
+===================
+
+===================
+INV_INDEX.PRO
+===================
+      mgs, 10 May 1997: VERSION 1.00
+      mgs, 18 Aug 1997: - added template and check if n_elements(index) eq 0
+      mgs, 05 Apr 1999: - bug fix: needed to make sure result is type long
+
+===================
+IS_DEFINED.PRO
+===================
+
+===================
+IS_DIR.PRO
+===================
+     Written by:     R.Bauer , 26.01.99
+
+===================
+IS_SELECTED.PRO
+===================
+      mgs, 19 Aug 1998: VERSION 1.00
+
+===================
+ISALGEBRAIC.PRO
+===================
+      bmy, 17 Nov 1998: VERSION 1.00
+      mgs, 17 Nov 1998: - removed INVERT keyword. It's simply 1-isalgebraic
+                        - added test for '.'
+
+===================
+ISALNUM.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998  VERSION 1.10
+                        - now uses ISALPHA and ISDIGIT
+
+===================
+ISALPHA.PRO
+===================
+      bmy, 29 May 1998: VERSION 1.00
+      bmy, 01 Jun 1998: - now returns 0 for condition FALSE
+                        - fixed bug that allowed byte values from
+                          91-96 to be treated as letters
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998  VERSION 1.10
+                        - now uses ISUPPER and ISLOWER 
+
+===================
+ISDIGIT.PRO
+===================
+      bmy, 29 May 1998: VERSION 1.00
+      bmy, 01 Jun 1998: - now returns 0 for condition FALSE
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998  VERSION 1.10
+                        - now can analyze an entire string
+
+===================
+ISGRAPH.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998  VERSION 1.10
+                        - now can analyze an entire string
+
+===================
+ISLEAP.PRO
+===================
+      mgs, 02 Oct 1998: VERSION 1.00
+
+===================
+ISLOWER.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998: VERSION 1.10
+                        - now can analyze entire strings
+
+===================
+ISPRINT.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998  - now use BYTE function in where statement
+                          instead of hardwired constants
+      bmy, 02 Jun 1998: VERSION 1.10
+                        - now uses ISGRAPH
+
+===================
+ISSPACE.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998: - now use BYTE function in where statement
+                          instead of hardwired constants (where
+                          possible)
+      bmy, 02 Jun 1998: VERSION 1.10
+                        - now can analyze an entire string 
+
+===================
+ISUPPER.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      bmy, 02 Jun 1998: VERSION 1.10
+                        - now can analyze entire strings
+
+===================
+JPEG2PS.PRO
+===================
+      bmy, 28 Jan 2000: VERSION 1.45
+
+===================
+KNMHC.PRO
+===================
+
+===================
+KTROE.PRO
+===================
+      mgs, 20 Mar 1998: VERSION 1.00
+
+===================
+LEGEND.PRO
+===================
+      mgs, 23 Jun 1998: VERSION 1.00
+      mgs, 24 Jun 1998: - now uses !X.Window and !Y.Window to get
+             default size of the plotting window (thanks DWF)
+      mgs, 25 Jun 1998: - added THICK keyword
+      mgs, 27 Oct 1998: - more room for lines
+                        - now uses formstrlen instead of strlen
+      mgs, 28 Nov 1998: - box width not incremented by 1 if plotmode=0
+      mgs, 25 Jun 1999: - added TEXTCOLOR keyword
+
+===================
+LITTLE_ENDIAN.PRO
+===================
+
+===================
+LOGLEVELS.PRO
+===================
+      mgs, 17 Mar 1999: VERSION 1.00
+
+===================
+LOOP.PRO
+===================
+      mgs, 05 Dec 1997: VERSION 1.00
+
+===================
+MAKE_SELECTION.PRO
+===================
+      mgs, 28 Aug 1998: VERSION 1.00
+      mgs, 29 Aug 1998: - changed behaviour and added ONLY_VALID keyword
+
+===================
+MAP_LABELS.PRO
+===================
+      mgs, 19 Feb 1999: VERSION 1.00
+      bmy, 26 Feg 1999: VERSION 1.10
+                        - now works for maps that are smaller
+                          than global size.
+      bmy, 04 Mar 1999: VERSION 1.11
+                        - added DEBUG keyword for output
+                        - now computes NORM_XLAT correctly for
+                          grids that are centered on -180 degrees
+      mgs, 17 Mar 1999: - cleaned up
+                        - replaced Norm[XY]... by two dimensional
+                          NormLons and NormLats
+                        - Longitude conversion now done in CONSTRUCT_...
+                        - calls MAP_SET if /MAPGRID is set and no
+                          map has been established.
+      bmy, 25 Mar 1999: - double default DLON if more than 2 plots
+                          per page
+      mgs, 23 Apr 1999: - bug fix for LON labels in Pacific mode
+      mgs & bmy, 03 Jun 1999: - fix for Pacific ranges in GET_GRIDSPACING
+
+===================
+MEAN.PRO
+===================
+
+===================
+MFINDFILE.PRO
+===================
+      mgs, 14 Sep 1998: VERSION 1.00
+      bmy, 14 Oct 2003: TOOLS VERSION 1.53
+                        - Now use built-in FINDFILE() routine to
+                          return file listing for IDL 5.3 and higher
+      bmy, 06 Nov 2003: TOOLS VERSION 2.01
+                        - return to pre v1-53 algorithm
+      bmy, 28 May 2004: TOOLS VERSION 2.02
+                        - For IDL 5.5+, now use FILE_SEARCH to return
+                          a list of files corresponding to MASK
+  
+
+===================
+MULTIPANEL.PRO
+===================
+      mgs, 19 Mar 1999: VERSION 1.00
+      mgs, 22 Mar 1999: - improved documentation, changed OMARGIN
+               to accept normalized coordinates.
+                        - position now also returned if turned OFF
+                        - added FIRSTPANEL and LASTPANEL keywords
+                        - allow NPLOTS to be specified as parameter 
+      mgs, 02 Jun 1999: - now saves old values of !X, !Y, and !P
+                          and restores them when turned OFF.
+      mgs, 03 Jun 1999: - save !X, !Y, and !P only if !p.multi was 
+                          really off
+
+===================
+MULTISORT.PRO
+===================
+      mgs, 30 Jun 1997: VERSION 1.00
+      mgs, 08 Apr 1998: - now stand-alone routine and documentation
+      mgs, 22 Dec 1998: - bug fix (startindex must be -1)
+      mgs, 17 Mar 1999: - bug fix: now has default 0 for revert
+                          (thanks to G. Fireman)
+
+===================
+MYCT.PRO
+===================
+      mgs, 06 Feb 1997: VERSION 1.00
+      mgs, 03 Aug 1997: - added input parameter and template
+      mgs, 26 Mar 1998: - added NCOLORS keyword
+      mgs, 06 Apr 1998: - added BOTTOM, RANGE, and RGB keywords
+      mgs, 04 May 1998: - added test for null device
+      mgs, 03 Jun 1998: - return if !D.N_COLORS is less than 3 (b/w)
+      mgs, 16 Jun 1998: - bug fix: range check now after tvlct
+      mgs, 18 Jul 1998: - bug re-visited, added HLS keyword and changed
+                          default to HSV. Also added SATURATION and
+                          VALUE keywords.
+      mgs, 12 Aug 1998: - re-written with bug fixes and more concise.
+                          removed RGB and HLS keywords, added REVERSE 
+                          and NO_STD               keywords.
+      mgs, 14 Jan 1999: - limit oldcolors and ncolors to MaxColors (256) 
+                          on PC with TrueColor Graphics to ensure 
+                          compatibility with Unix.
+      bmy, 26 Sep 2002: TOOLS VERSION 1.51
+                        - added /DIAL keyword to specify the DIAL/LIDAR
+                          colortable from Ed Browell et al.
+                        - now save MYCT parameters into a system variable
+                          so that plotting routines can access them.
+      bmy, 22 Oct 2002: TOOLS VERSION 1.52
+                        - fixed minor bugs in defining the !MYCT variable 
+      bmy, 28 May 2004: TOOLS VERSION 2.02
+                        - removed TESTMYCT routine, it's obsolete
+                        - Bug fix: make sure RANGE is defined before
+                          saving it to the !MYCT variable
+                        
+
+===================
+MYCT_DEFAULTS.PRO
+===================
+      bmy, 23 Jul 2001: TOOLS VERSION 1.48
+                        - adapted from "default_colors.pro"
+      bmy, 04 Feb 2004: TOOLS VERSION 2.01
+                        - Increased grayscale color range slightly
+ 
+
+===================
+MYCT_DEFINE.PRO
+===================
+      bmy, 30 Sep 2002: VERSION 1.00
+
+===================
+MYCT_SETCOLOR.PRO
+===================
+      bmy, 23 Jul 2001: TOOLS VERSION 1.48
+      bmy, 27 Aug 2001: - expanded integer formats to I9; this is
+                          necessary for true-color systems
+      bmy, 26 Sep 2002: TOOLS VERSION 1.51
+                        - Now pass _EXTRA=e to MYCT
+
+===================
+N_UNIQ.PRO
+===================
+      bmy, 17 Nov 1998: VERSION 1.00
+      mgs, 17 Nov 1998: - little streamlining
+      mgs, 16 Mar 1999: - don't print out warning for empty argument
+                          and return 0 instead of -1
+
+===================
+NCDF_GET.PRO
+===================
+      bmy, 22 May 2002: TOOLS VERSION 1.50
+      bmy, 21 Oct 2003: TOOLS VERSION 1.53
+                        - If we can't find a netCDF variable name,
+                          then try again using a "sanitized" name
+                          w/ all bad characters stripped out
+
+===================
+NCDF_READ.PRO
+===================
+      mgs, 18 Sep 1999: VERSION 1.00
+      mgs, 29 Feb 2000: - added variables keyword
+                        - added CATCH error handler
+      mgs, 21 Mar 2000: - bug fix for tag names
+      mgs, 09 May 2000: VERSION 2.00
+                        - now only reads dimensions as default
+                        - added ALL keyword to compensate
+                        - returns dimnames and attributes
+                          (makes ncdf_detail obsolete)
+                        - added COUNT, OFFSET and STRIDE keywords
+                        - added NO_DIMENSIONS and NO_DIALOG
+                          keywords and more
+      mgs, 22 Aug 2000: - added title keyword
+      bmy, 22 May 2002: GAMAP VERSION 1.50
+                        - Now replace ":", "=", "#" with "_" in
+                          structure tag names, so IDL won't choke
+      bmy, 21 Oct 2003: GAMAP VERSION 1.53
+                        - also replace "(" and ")" in tag names
+                        - replace "$" with "S" (close to dollar sign)
+                        - replace "*" with "A" (for Asterisk)
+
+===================
+NCDF_SET.PRO
+===================
+      bmy, 19 Apr 2002: TOOLS VERSION 1.50
+      bmy, 10 Sep 2002: TOOLS VERSION 1.51
+                        - Now call routine DATATYPE to determine
+                          the type of the data so that we can
+                          write to the netCDF file appropriately
+                        - Don't add the RANGE attribute to
+                          the netCDF file for a string type value.
+                        - Updated comments 
+      bmy, 21 Oct 2003: TOOLS VERSION 1.53
+                        - now "sanitize" the netCDF variable name
+                          w/ routine NCDF_VALID_NAME.  The new netCDF
+                          library in IDL 6.0+ chokes on bad characters.
+
+===================
+NCDF_VALID_NAME.PRO
+===================
+      bmy, 21 Oct 2003: VERSION 1.00
+
+===================
+OPEN_DEVICE.PRO
+===================
+      bmy  15 Aug 1997: VERSION 1.00
+      bmy, 19 Aug 1997: VERSION 1.01
+      mgs, 20 Aug 1997: VERSION 1.02
+      mgs, 09 Apr 1998: VERSION 1.10 
+                        - added 2 more parameters for WINPARAM
+                          and TITLE keyword
+      bmy, 28 Jul 2000: VERSION 1.46   
+                        - now make XSIZE, XOFFSET, YSIZE, YOFFSET keywords
+                        - cosmetic changes, updated comments
+      bmy, 30 Jan 2001: VERSION 1.47
+                        - added /Z and NCOLORS keywords for the Z-buffer
+                        - updated comments
+      bmy, 26 Jul 2001: VERSION 1.48
+                        - use default window size of 640 x 512 for
+                          the Z-buffer, if WINPARAM isn't specified.
+      bmy, 27 Aug 2001: - now call DEVICE with XSIZE, YSIZE,
+                          XOFFSET, YOFFSET for /LANDSCAPE plots
+                        - Updatedd comments
+
+===================
+OPEN_FILE.PRO
+===================
+      mgs, 13 Aug 1998: VERSION 1.00
+                        - extracted from ctm_read3dp_header.pro and 
+                          modified
+      mgs, 14 Aug 1998: - small bug fix: handle empty filename
+                          string correctly
+      mgs, 22 Aug 1998: - added WRITE keyword to open writable files
+      mgs, 22 Oct 1998: - now always returns LUN=-1 in case of an error
+      mgs, 21 Jan 1999: - Added explicit F77_Unformatted keyword and set
+                          Swap_If_Little_Endian or Swap_If_Big_Endian  
+                          automatically
+      mgs, 10 Feb 1999: - bug fix: swap_if was wrong way round
+      mgs, 12 May 1999: - ok. finally got the hang of byte swapping! 
+                          It's the machine architecture not the operating
+                          system!  Now changed it so that !VERSION.ARCH is
+                          tested for 'x86'
+      mgs, 20 May 1999: - abandoned SWAP_IF completely and use explicit
+                          SWAP_ENDIAN keyword in users grace now.
+      bmy, 14 Oct 2003: TOOLS VERSION 1.53
+                        - For IDL 6.0+, if PATH is a null string, then
+                          manually reset it to './'.  This will avoid
+                          the contents of the !PATH variable from being
+                          listed in the dialog box. 
+
+===================
+ORG_CORR.PRO
+===================
+pip, clh, bmy, 10 Oct 2002: TOOLS VERSION 1.52
+
+===================
+P3B_CHARGEBUDGET.PRO
+===================
+
+===================
+PAUSE.PRO
+===================
+
+===================
+PEDGE.PRO
+===================
+      bmy, 17 Jun 1999: VERSION 1.00
+
+===================
+PERCENTILES.PRO
+===================
+      mgs, 03 Aug 1997: VERSION 1.00
+      mgs, 20 Feb 1998: - improved speed and memory usage
+              (after tip from Stein Vidar on newsgroup)
+
+===================
+PHYSCONST.PRO
+===================
+
+===================
+PLOT_MYCT.PRO
+===================
+      mgs, 03 Aug 1997: VERSION 1.00
+
+===================
+PMID.PRO
+===================
+      bmy, 17 Jun 1999: VERSION 1.00
+      bmy, 22 Oct 1999: VERSION 1.44
+                        - Now use SHIFT to compute the average
+                          between successive edges
+
+===================
+PWD.PRO
+===================
+      mgs, 23 Dec 1998: VERSION 1.00
+
+===================
+QQNORM.PRO
+===================
+
+===================
+READ_BDT0001.PRO
+===================
+      mgs, 24 Aug 1998: VERSION 1.00
+      mgs, 23 Dec 1998: VERSION 1.10:
+          - DATA now undefined if unsuccessful
+
+===================
+READ_BIN.PRO
+===================
+      mgs, 15 Jan 1999: VERSION 1.00
+      mgs, 15 Jun 1999: - added header
+                        - added PLOT keyword and _EXTRA
+
+===================
+READ_SONDE.PRO
+===================
+      mgs, 29 Oct 1998: VERSION 1.00
+      mgs, 02 Nov 1998: - added call to read_sondestations
+                          (i.e. can now return LAT, LON, ALT of station)
+                        - improved comments
+
+===================
+READ_SONDESTATIONS.PRO
+===================
+      mgs, 02 Nov 1998: VERSION 1.00
+
+===================
+READDATA.PRO
+===================
+      mgs  03/12/1997   - last update : 05/22/97
+      mgs 01 Aug 1997 : added template
+      mgs 15 Sep 1997 : added LINES option and removed some twitch in the
+               handling of TRANSPOSE. Unfortunately, LINES does not improve 
+               the speed as desired, but you can restrict the reading to
+               a smaller subset of the data.
+      mgs 26 Sep 1997 : Major review
+               - bug fixes in noheader option
+               - bug fixes in COLS and NCOL handling
+               - removed units option and created comments keyword instead.
+                 program now reads in all header lines into a string array 
+                 including the variable names line.
+               - automatic generation of a header if /NOHEADER is specified
+      mgs 06 Nov 1997 : Added AUTOSKIP option for easier reading of e.g. 
+               NASA formatted files.
+      mgs 01 Dec 1997 : added MAXCOMMENTS keyword and limit
+               - skp1 now returns correct amount if autoskip is set
+      mgs 30 Dec 1997 : added NODATA keyword
+      mgs 21 Aug 1998 : now uses open_file routine to allow wildcards
+
+===================
+RECTANGLE.PRO
+===================
+
+===================
+REGRID_COLUMN.PRO
+===================
+      bmy, 22 Jan 2002: TOOLS VERSION 1.50
+      bmy, 14 Mar 2002: - added /NO_CHECK keyword
+
+===================
+REGTEST.PRO
+===================
+
+===================
+REPLACE_TOKEN.PRO
+===================
+      bmy, 23 Sep 1998: VERSION 1.00
+      bmy, 24 Sep 1998: - added VERBOSE keyword and improved comments
+      mgs, 24 Sep 1998: - improved error handling
+                        - TOKEN and TEXT may now be arrays
+                        - *or* TOKEN may be a structure
+                        - TEXT is trimmed
+                        - added FORMAT and TFORMAT keywords
+      mgs, 23 Dec 1998: - added wildcard (isarray) functionality
+
+===================
+RESOLVE_EVERY.PRO
+===================
+Written by:
+MS, RSI, January, 1995.
+MS, RSI, April, 1997, Added SKIP_ROUTINES keyword.
+     mgs, Harvard, 21 Apr 1998: use findfile before trying to resolve
+                                a routine
+     bmy, 28 May 2004: TOOLS VERSION 2.02 
+                        - Now use MFINDFILE which will call FILE_SEARCH
+                          for IDL 5.5+ or FINDFILE for IDL 5.4-
+
+===================
+REVISIONS.PRO
+===================
+      mgs, 16 Jun 1998: VERSION 1.00
+      mgs, 25 May 1999: - added caution for tag detection in this
+                          routine itself.
+      bmy, 24 Oct 2003: TOOLS VERSION 1.53
+                        - Bug fix: EXPAND_PATH strips the directory
+                          separator string from the end of DIRNAME
+                          in IDL 6.0+.  Add this back manually.
+                        - use MFINDFILE instead of FINDFILE to fix
+                          file listing bug in IDL 5.2-
+
+===================
+RH.PRO
+===================
+      mgs, 23 Feb 1997: VERSION 1.00
+      mgs, 03 Aug 1997: split e_h2o and rh, renamed, added template
+
+===================
+ROUTINE_NAME.PRO
+===================
+      mgs, 27 Mar 1998: VERSION 1.00
+      mgs, 22 Apr 1998: - added FILENAME and CALLER keywords
+      mgs, 14 Jan 1998: - needed fix for filename when working on PC:
+                          $MAIN$ allows no str_sep
+      bmy, 07 Aug 2002: TOOLS VERSION 1.51
+                        - Now use routine STRBREAK to split the line
+                          instead of STR_SEP.  STR_SEP has been removed
+                          from the IDL distribution in IDL 5.4+.
+
+===================
+RSEARCH.PRO
+===================
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+
+===================
+RUN_AV.PRO
+===================
+      mgs, 21 Oct 1998: VERSION 1.00
+      mgs, 07 Jun 1999: - changed loop variable to LONG type.
+
+===================
+SCHMIDT.PRO
+===================
+pip & bmy, 27 Jun 2003: VERSION 1.00
+                        - Written by Paul Palmer
+
+===================
+SCHMIDTDRIVER.PRO
+===================
+      bmy, 27 Jun 2003: VERSION 1.00
+
+===================
+SCREEN2GIF.PRO
+===================
+      bmy, 24 Jul 2001: TOOLS VERSION 1.49
+      bmy, 02 Dec 2002: TOOLS VERSION 1.52
+                        - now uses TVREAD function from D. Fanning
+                          which works on both PC's & Unix terminals
+      bmy, 30 Apr 2003: TOOLS VERSION 1.53
+                        - Bug fix in passing file name to TVREAD
+
+===================
+SCREEN2JPG.PRO
+===================
+      bmy, 25 Sep 2003: TOOLS VERSION 1.53
+                        - Bug fix in passing file name to TVREAD
+
+===================
+SCREEN2PNG.PRO
+===================
+      bmy, 25 Sep 2003: TOOLS VERSION 1.53
+                        - Bug fix in passing file name to TVREAD
+
+===================
+SCREEN2TIFF.PRO
+===================
+      bmy, 25 Sep 2003: TOOLS VERSION 1.53
+                        - Bug fix in passing file name to TVREAD
+
+===================
+SEARCH.PRO
+===================
+      mgs, 21 Sep 1998: VERSION 1.00
+
+===================
+SIGN.PRO
+===================
+     R. Sterner, 7 May, 1986.
+     Johns Hopkins University Applied Physics Laboratory.
+     RES 15 Sep, 1989 --- converted to SUN.
+ RES 23 Sep, 1991 --- rewrote, reducing 11 lines of code to 1.
+
+===================
+STR2BYTE.PRO
+===================
+      mgs, 24 Aug 1998: VERSION 1.00
+
+===================
+STR_SIZE.PRO
+===================
+Written by: David Fanning, 17 DEC 96.
+Added a scaling factor to take into account the aspect ratio
+   of the window in determing the character size. 28 Oct 97. DWF
+
+===================
+STRBREAK.PRO
+===================
+      bmy, 17 Jan 2002: TOOLS VERSION 1.50
+      bmy, 17 Jan 2003: TOOLS VERSION 1.52
+                        - now use CALL_FUNCTION to call both STRSPLIT 
+                          and STR_SEP functions for backwards compatibility
+      bmy, 14 Oct 2003: TOOLS VERSION 1.53
+                        - deleted obsolete code
+
+===================
+STRCHEM.PRO
+===================
+      bmy, 01 Jun 1998: VERSION 1.00
+      mgs, 02 Jun 1998: VERSION 1.10 - rewritten
+      mgs, 11 Jun 1998: 
+          - removed IS_ION keyword
+          - changed default specialchars for SUPER
+      mgs, 22 Sep 1998:
+          - added TRIM keyword
+
+===================
+STRDATE.PRO
+===================
+      mgs, 11 Nov 1997: VERSION 1.00
+      mgs, 26 Mar 1998: VERSION 1.10 
+          - examines type of DATE parameter and accepts structure input.
+
+===================
+STRREPL.PRO
+===================
+      mgs, 02 Jun 1998: VERSION 1.00
+      mgs, 24 Feb 2000: - rewritten
+                        - now accepts character argument
+                        - added IGNORECASE keyword
+      mgs, 26 Aug 2000: - changed copyright to open source
+                        - added FOLD_CASE keyword
+      bmy, 28 Oct 2003: VERSION 1.01
+                        - Need to test if FROMCHAR is a character
+                          or a byte type.  This will allow STRREPL
+                          to replace non-printable ASCII characters
+                          such as Horizontal TAB ( BYTE(9B) ).  
+
+===================
+STRRIGHT.PRO
+===================
+      mgs, 19 Nov 1997: VERSION 1.00
+
+===================
+STRSCI.PRO
+===================
+      bmy, 28 May 1998: VERSION 1.00            B
+         - now returns string of the form A x 10
+      mgs, 29 May 1998:
+         - bug fix: now allows negative numbers
+         - keyword MANTISSA_ONLY added
+         - default format changed to f12.2
+      bmy, 02 Jun 1998:
+         - renamed to STRSCI ("STRing SCIentific notation"),
+      mgs, 03 Jun 1998:
+         - added TRIM keyword
+      mgs, 22 Sep 1998:
+         - added SHORT keyword
+         - modified handling of TRIM keyword
+      mgs, 24 Sep 1998:
+         - bug fix with SHORT flag
+      bmy & mgs, 02 Jun 1999:
+         - now can handle DATA=0.0 correctly
+         - updated comments
+      mgs, 03 Jun 1999: 
+         - can now also handle values lt 1 ;-)
+         - and doesn't choke on arrays
+
+===================
+STRSIZE.PRO
+===================
+
+===================
+STRUADDVAR.PRO
+===================
+      mgs, 03 May 1999: VERSION 1.00
+
+===================
+STRUINFO.PRO
+===================
+      mgs, 03 May 1999: VERSION 1.00
+
+===================
+STRWHERE.PRO
+===================
+      mgs, 02 Jun 1998: VERSION 1.00
+      bmy, 30 Jun 1998: - now returns COUNT, the number 
+                          of matches that are found (this is
+                          analogous to the WHERE command)
+
+===================
+SYM.PRO
+===================
+      mgs, 22 Aug 1997: VERSION 1.00
+
+===================
+TESTPATH.PRO
+===================
+      mgs, 16 Jun 1998: VERSION 1.00
+      mgs, 02 Nov 1998: - changed IDL path from idl5 to idl
+
+===================
+TVREAD.PRO
+===================
+     Written by David W. Fanning, 9 AUG 2000.
+     Added changes to make the program more device independent. 16 SEP 2000. DWF.
+     Removed GIF file support for IDL 5.4 and above. 18 JAN 2001. DWF.
+     Added NODIALOG keyword. 28 MAR 2001. DWF.
+     Added an output CANCEL keyword. 29 AUG 2001. DWF.
+     Added ERROR_MESSAGE code to file. 17 DEC 2001. DWF.
+     Added ORDER keyword. 25 March 2002. DWF.
+     Now create 24-bit PNG files if reading from a 24-bit display. 11 May 2002. DWF.
+     Now create 24-bit BMP files if reading from a 24-bit display. 23 May 2002. DWF.
+
+===================
+TYPECAST.PRO
+===================
+      mgs, 24 Aug 1998: VERSION 1.00
+
+===================
+UNDEFINE.PRO
+===================
+     Written by David Fanning, 8 June 97, from an original program
+     given to me by Andrew Cool, DSTO, Adelaide, Australia.
+     Simplified program so you can pass it an undefined variable. :-) 17 May 2000. DWF
+     Simplified it even more by removing the unnecessary SIZE function. 28 June 2002. DWF.
+
+===================
+UPDATE_LIBRARY.PRO
+===================
+      mgs, 19 Nov 1997: VERSION 1.00
+      mgs, 22 Feb 1999: replaced findfile with mfindfile for SGI
+
+===================
+USAGE.PRO
+===================
+      mgs, 27 Mar 1998: VERSION 1.00
+      mgs, 16 Jun 1998: - replaced close by free_lun
+      bmy, 09 May 2002: TOOLS VERSION 1.50
+                        - test RNAME to see if it's a string
+                        - updated comments
+
+===================
+VELOCITY_FIELD.PRO
+===================
+      DMS, RSI, Oct., 1983.             
+      For Sun, DMS, RSI, April, 1989.             
+      Added TITLE, Oct, 1990.             
+      Added POSITION, NOERASE, COLOR, Feb 91, RES.             
+      August, 1993.  Vince Patrick, Adv. Visualization Lab, U. of Maryland, 
+              fixed errors in math.             
+      August, 1993. DMS, Added _EXTRA keyword inheritance.             
+      bmy, 03 Dec 1999: GAMAP VERSION 1.44
+                        - renamed to VELOCITY_FIELD
+                        - added ARRLEN, HSIZE, HANGLE, THICK keywords
+                        - cleaned up some things
+      bmy, 26 May 2000: GAMAP VERSION 1.45
+                        - updated comments, minor cleanup
+ bey, bmy, 24 Jul 2000: GAMAP VERSION 1.46
+                        - several bug fixes
+                        - added internal routine MAGNITUDE
+                        - added X_STEP, Y_STEP, MAXMAG keywords
+ sjg, bmy, 01 Aug 2000: - added error check on index array GOOD
+                        - now compare magnitudes to abs( MISSING )
+                        - now error check for MAXLEN: prevent div by 0
+                        - updated comments
+      bmy, 23 Jul 2002: GAMAP VERSION 1.51
+                        - now use IDL ARROW procedure to draw arrows
+                        - HSIZE is now defaulted to device coordinates
+                        - removed HANGLE keyword -- it's obsolete
+                        - now specify legend vector w/ LEGENDLEN
+                        - renamed ARRLEN to LEGENDNORM
+            
+
+===================
+WRITE_BDT0001.PRO
+===================
+      mgs, 24 Aug 1998: VERSION 1.00
+      mgs, 28 Aug 1998: - changed specs to allow comments
+
+===================
+WRITE_BIN.PRO
+===================
+
+===================
+WRITEBIN.PRO
+===================
+
+===================
+WRITEDATA.PRO
+===================
+      mgs, 25 Nov 1997: VERSION 1.00
+      mgs, 05 Apr 1999: - now uses formatted write statement
+               (looks like a bug in IDL for windows: sometimes no space
+                is printed between numbers if you simply print,data)
+
+===================
+YBOXPLOT.PRO
+===================
+      mgs, 30 Jul 1997: VERSION 1.00
+      mgs, 03 Aug 1997: added template
+      mgs, 27 Nov 1997: some revisions and suggested changes by T.Brauers:
+           - better color handling (NOTE: meaning of BOXCOLOR has changed)
+           - optional overlay of mean value
+           - box frames
+           - variable boxwidth
+           - error fixing lower upper boundaries in log plots
+           - bug fix with label keyword
+           - added OVERPLOT and BOXPOSITION keywords
+      mgs, 22 Jan 1998: added IS_PERCENTILE keyword to allow
+             plotting of data that has been processed already
+      mgs, 17 Apr 1998: 
+           - x-axis handling improved (now uses axis command and xyouts)
+           - orientation and medianthick keywords added
+           - CREATED as yboxplot
+      mgs, 06 May 1998:
+           - added percval keyword
+      mgs, 21 May 1998: 
+           - percval defaults changed from min,max to 5%, 95%
+
+===================
+YESNO.PRO
+===================
+      mgs, 22 Jan 1999: VERSION 1.00
+      mgs, 23 Mar 1999: - added /QUIT option
+                        - bug fix: '0' was recognized as 'Y'
+
+===================
+ZMID.PRO
+===================
+      bmy, 21 Jun 1999: VERSION 1.00
+      bmy, 22 Oct 1999: VERSION 1.44
+                        - Now use SHIFT to compute the average
+                          between successive edges
+
+===================
+ZSTAR.PRO
+===================
+      bmy, 21 Jun 1999: VERSION 1.00

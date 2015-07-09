@@ -1,0 +1,28 @@
+Modification history for all files in /san/home/ctm/bmy/IDL/gamap2/structures/
+last updated : 07/17/2008 10:09
+
+===================
+CHKSTRU.PRO
+===================
+      mgs, 02 Mar 1998: VERSION 1.00
+      mgs, 07 Apr 1998: - second parameter (FIELDS) now optional
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated documentation
+
+===================
+SORT_STRU.PRO
+===================
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+STRUADDVAR.PRO
+===================
+      mgs, 03 May 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+
+===================
+STRUINFO.PRO
+===================
+      mgs, 03 May 1999: VERSION 1.00
+bmy & phs, 13 Jul 2007: GAMAP VERSION 2.10
+                        - Updated comments

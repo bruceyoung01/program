@@ -1,0 +1,15 @@
+#!/bin/sh
+#PBS -N ncl
+#PBS -l select=1
+#PBS -l walltime=2:00:00
+#PBS -l mem=6Gb
+#PBS -o ncl.stdout
+#PBS -e ncl.stderr
+#PBS -V
+
+#change to job directory
+cd /work/jwang7/bruceyoung01/model/ncl/atlanta/viirs_contour_pixel_dnb_epa_liu_point
+#set up environmental variables
+
+#run program
+stdbuf -o0 -e0 ncl viirs_contour_pixel_dnb_epa_liu_nfile_point.ncl &>ncl_run.log

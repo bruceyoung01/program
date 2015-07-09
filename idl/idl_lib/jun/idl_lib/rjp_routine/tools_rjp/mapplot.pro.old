@@ -1,0 +1,92 @@
+pro mapplot,fd,lon,lat,POS=pos,VERTICAL=vertical,twait=twait,$
+    Title=title,xlon=xlon,ylat=ylat,Shaded=shaded,Image=image,Cline=cline,Grid=grid,$
+    maxval=maxval,minval=minval,divisions=divisions,cindex=cindex
+
+ if n_elements(POS) eq 0 then pos = [0.15,0.2,0.85,0.85]
+ if n_elements(twait) eq 0 then twait = 0.1
+ if n_elements(title) eq 0 then title=''
+ if n_elements(divisions) eq 0 then divisions = 11
+ if n_elements(maxval) eq 0 then maxval = max(fd)
+ if n_elements(minval) eq 0 then minval = min(fd)
+ if n_elements(cindex) eq 0 then cindex = 13
+
+  barpos = [pos(2)+0.01,pos(1),pos(2)+0.04,pos(3)]
+
+ inc = (maxval-minval)/float(divisions)
+ level = fltarr(divisions+1)
+ for i = 0, divisions do begin
+  level[i] = minval+float(i)*inc
+ end
+
+ if n_elements(lon) eq 0 then begin
+  dim = size(fd,/dimensions)
+  dx  = 360./dim(0)
+  dy  = 180./(dim(1)-1)
+  lon = -180.+ dx*findgen(dim(0))
+  lat = -90.+ dy*findgen(dim(1))
+ endif
+
+ if n_elements(xlon) eq 0 then xlon= [min(lon),max(lon)]
+ if n_elements(ylat) eq 0 then ylat= [min(lat),max(lat)]
+
+ if KEYWORD_SET(shaded) then begin
+  ncolors = divisions+1
+  loadct, cindex, ncolors=ncolors, bottom=0
+ ; device, decomposed=0
+ ; loadct_rjp, ncolors=nl+1
+  ctable = indgen(ncolors)
+ endif 
+
+ if Keyword_set(image) then begin
+  ncolors = !d.table_size-1
+  loadct, cindex, ncolors=ncolors, bottom=0
+ endif
+
+ !p.position = pos
+
+ lonst = [lon, lon(0)+360.]
+ fdst = [fd,fd(0,*)]
+ nx = where( lonst ge xlon(0) and lonst le xlon(1) )
+ ny = where( lat ge ylat(0) and lat le ylat(1) )
+ i1 = min(nx) & i2 = max(nx)
+ j1 = min(ny) & j2 = max(ny)
+ limit = [ylat[0],xlon[0],ylat[1],xlon[1]]
+
+ map_set,/cylindrical,0.,0.,/continent,title=Title, $
+        Limit=limit,charsize=1.0, /noerase, color=!p.color
+ 
+ if keyword_set(shaded) then begin
+  contour,fdst(i1:i2,j1:j2),lonst(i1:i2),lat(j1:j2),/cell_fill, $
+  c_colors=ctable,levels=level,xstyle=1,ystyle=1, $
+  background=!p.background,color=!p.color, $
+  /overplot,/normal
+
+  cbar, pos=barpos, clevel=level, /vertical, format=2.
+ endif
+
+ if keyword_set(image) then begin 
+  im = bytscl(fdst(i1:i2,j1:j2),min=minval,max=maxval,top=ncolors-1)
+  projec= map_patch(im,lonst(i1:i2),lat(j1:j2),xstart=x0,ystart=y0,xsize=xs,ysize=ys)
+;  tv, projec, x0, y0, xsize=xs,ysize=ys
+  tvimage, projec, /overplot
+
+  colorbar, position=barpos,range=[minval,maxval],/vertical,$
+  format='(f5.2)',/right,ncolors=ncolors,color=!p.color,charsize=1.4,$
+  divisions=divisions
+ endif
+
+ if keyword_set(cline) then $
+  contour,fdst(i1:i2,j1:j2),lonst(i1:i2),lat(j1:j2),levels=level, $
+  xstyle=1,ystyle=1,/overplot,/normal, $
+  /follow,c_thick=1.8
+  
+ if keyword_set(grid) then $
+  map_grid, /label, latlab=xlon[0],latalign=0.0,lonlab=ylat[0], $
+  lonalign=0.5, charsize = 1.0
+
+ map_set,/cylindrical,0.,0.,/continent,/noerase, Limit=limit,color=!p.color,/usa
+
+
+ wait, twait
+
+end

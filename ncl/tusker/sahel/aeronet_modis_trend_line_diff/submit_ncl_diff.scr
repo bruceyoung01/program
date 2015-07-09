@@ -1,0 +1,15 @@
+#!/bin/sh
+#PBS -N aeronet_modis_diff
+#PBS -l select=1
+#PBS -l walltime=10:00:00
+#PBS -l mem=16Gb
+#PBS -o ncl.stdout
+#PBS -e ncl.stderr
+#PBS -V
+
+#change to job directory
+cd /work/jwang7/bruceyoung01/model/ncl/sahel/aeronet_modis_trend_line_diff/
+#set up environmental variables
+
+#run program
+stdbuf -o0 -e0 ncl aeronet_modis_trend_line_daily_interpolate_diff.ncl &>ncl_run_diff.log

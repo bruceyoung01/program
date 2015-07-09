@@ -1,0 +1,53 @@
+
+The pro in this directory is mainly used to calculate and plot the results
+
+(1), pro_plot_LST_FN : the relationship between LST and fire number(in one 0.5*0.5 degree box) under the condition of AOD
+(a), plot_LSTb_firenum_l5.pro : AOD>0.5
+(b), plot_LSTb_firenum_s2m.pro : AOD<0.2
+(c), plot_LSTb_firenum_s2m_ca.pro : AOD<0.2 around Central America
+(d), plot_LSTb_firenum_s5m.pro : AOD<0.5
+(e), plot_LSTb_firenum_s5m_ca.pro : AOD<0.5 around Central America
+
+(2), pro_plot_monthly : 
+ *.pro : caculate and plot the monthly average MODIS LST>315K under the condition of AOD and with or without fire pixel.
+*_day.pro : calculate and plot the days with the monthly average MODIS LST>315K under the condition of AOD and with or without fire pixel.
+
+(a), plot_LST_grid_monthly_plot_fireno_fl5_day.pro : days of LST>315 and AOD>0.5 just fire pixel
+(b), plot_LST_grid_monthly_plot_fireno_fl5.pro : LST (LST>315), AOD>0.5 just fire pixel
+(c), plot_LST_grid_monthly_plot_fireno_fs2_day.pro : days of LST>315 and AOD<0.2 just fire pixel
+(d), plot_LST_grid_monthly_plot_fireno_fs2.pro : LST (LST>315), AOD<0.2 just fire pixel
+(e), plot_LST_grid_monthly_plot_fireno_fs5_day.pro : days of LST>315 and AOD<0.5 just fire pixel
+(f), plot_LST_grid_monthly_plot_fireno_fs5.pro : LST (LST>315), AOD<0.5 just fire pixel
+(g), plot_LST_grid_monthly_plot_fireno_nl5_day.pro : days of LST>315 and AOD>0.5 without fire pixel
+(h), plot_LST_grid_monthly_plot_fireno_nl5.pro : LST (LST>315), AOD>0.5 without fire pixel
+(i), plot_LST_grid_monthly_plot_fireno_ns2_day.pro : days of LST>315 and AOD<0.2 without fire pixel
+(j), plot_LST_grid_monthly_plot_fireno_ns2.pro : LST (LST>315), AOD<0.2 without fire pixel
+(i), plot_LST_grid_monthly_plot_fireno_ns5_day.pro : days of LST>315 and AOD<0.5 without fire pixel
+(j), plot_LST_grid_monthly_plot_fireno_ns5.pro : LST (LST>315), AOD<0.5 without fire pixel
+(k), plot_LST_grid_monthly_plot_fireno_l5_day.pro : days of LST>315 and AOD>0.5 with fire pixel
+(l), plot_LST_grid_monthly_plot_fireno_l5.pro : LST (LST>315), AOD>0.5 with fire pixel
+(m), plot_LST_grid_monthly_plot_fireno_s2_day.pro : days of LST>315 and AOD<0.2 with fire pixel
+(n), plot_LST_grid_monthly_plot_fireno_s2.pro : LST (LST>315), AOD<0.2 with fire pixel
+(o), plot_LST_grid_monthly_plot_fireno_s5_day.pro : days of LST>315 and AOD<0.5 with fire pixel
+(p), plot_LST_grid_monthly_plot_fireno_s5.pro : LST (LST>315), AOD<0.5 with fire pixel
+
+(3), pro_plot_monthly_AOD : plot the monthly average MODIS AOD
+plot_AOD_grid_monthly_plot.pro : main code
+plot_emission_subroutine_AOD_grid_monthly_plot.pro : subroutine
+
+(4), pro_plot_monthly_f_n : plot the monthly average LST difference between pixels with fire and without fire.
+plot_LST_grid_fire_no_monthly.pro : main code
+
+(5), pro_plot_monthly_grid_LST_fire_no :plot the monthly average MODIS LST both of with fire and without fire 
+(a), plot_LST_grid_monthly_plot_fireno.pro : LST without fire pixels
+(b), plot_LST_grid_monthly_plot_fire.pro : LST of fire pixels
+
+(6), pro_plot_monthlyl_s : plot the monthly average LST difference between AOD>0.5 and AOD<0.5 or AOD<0.2.
+(a), plot_LST_grid_fire_monthlyl_s.pro : LST difference AOD>0.5-AOD<0.2 of fire pixels
+(b), plot_LST_grid_nofire_monthlyl_s.pro : LST difference AOD>0.5-AOD<0.2 without fire pixels
+
+(7), pro_plot_ymonthly : calculate the monthly average LST of 11 years
+
+
+
+June 03 2010

@@ -1,0 +1,15 @@
+#!/bin/sh
+#PBS -N modis_ncep_total_1
+#PBS -l select=1
+#PBS -l walltime=72:00:00
+#PBS -l mem=6Gb
+#PBS -o ncl.stdout_1
+#PBS -e ncl.stderr_1
+#PBS -V
+
+#change to job directory
+cd /work/jwang7/bruceyoung01/model/ncl/sahel/modis_aod_ncep_wind/
+#set up environmental variables
+
+#run program
+stdbuf -o0 -e0 ncl modis_aod_ncep_wind_total_monthly_1.ncl &>ncl_run_1.log

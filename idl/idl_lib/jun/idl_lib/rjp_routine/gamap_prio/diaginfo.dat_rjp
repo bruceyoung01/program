@@ -1,0 +1,226 @@
+# diaginfo.dat
+# This file contains index information about CTM diagnostics
+# It is used by ctm_diaginfo.pro
+# --------------------------------------------------------------------
+# VERSION 2.0 :      mgs, 19 Aug 1998
+# VERSION 2.1 : mgs, bmy, 16 Mar 1999
+# VERSION 3.0 : mgs, bmy, 07 Jul 1999
+# VERSION 3.1 :      bmy, 25 May 1999  
+# VERSION 3.2 :      bmy, 02 Oct 2000 (for GAMAP version 1.46)
+# VERSION 3.3 :      bmy, 15 Jun 2001 (for GAMAP version 1.47)
+# VERSION 3.4 :      bmy, 05 Dec 2001 (for GAMAP version 1.49)
+# VERSION 3.5 :      bmy, 04 Apr 2002 (for GAMAP version 1.50)
+# --------------------------------------------------------------------
+# Format of lines as read is 
+# INDEX     (I7)     NDxx diagnostic number (03 = ND03, etc)
+# CATEGORY  (A8)     Category name under the new CTM diagnostics
+# TYPE      (A5)     OBSOLETE as of 1999
+# MAXTRACER (I5)     OBSOLETE as of 1999
+# OFFSET    (I5)     Constant to add to tracer numbers to convert
+#                    to the new CTM diagnostic indexing scheme, as
+#                    stored in 'tracerinfo.dat'
+# --------------------------------------------------------------------
+#
+#INDEX CATEGORY TYPE MAXT OFFSET 
+#     |.      |.   |.   |.   |
+01     UVW-MEAN  J-L    3  500
+02     UVW-EXTR  J-L    3  600 
+03     ZONE-AVG  J-L    1    0 
+04     VERT-SLP  J-L    1    0 
+05     NRTH-SLP  J-L    1    0 
+06     WET CONV  J-L    1    0 
+07     DRY CONV  J-L    1    0 
+08     PROD-AVG  J-L    1    0
+09     LOSS-AVG  J-L    1    0
+10     NRTH-TOT  J-L    1    0
+11     ACETSRCE  J-L    1 4800
+12     EMDIS-BL  I-L    1 4900
+13     DMS-BIOG  I-J    1  200
+13     SO2-AC-$  I-J    1  200
+13     SO2-AN-$  I-J    1  200
+13     SO2-BIOB  I-J    1  200
+13     SO2-BIOF  I-J    1  200
+13     SO2-EV-$  I-J    1  200
+13     SO2-NV-$  I-J    1  200
+13     SO4-AN-$  I-J    1  200
+13     NH3-ANTH  I-J    1  200
+13     NH3-NATU  I-J    1  200
+13     NH3-BIOB  I-J    1  200
+13     NH3-BIOF  I-J    1  200
+14     CV-FLX-$  I-J    1  200
+15     TURBMC-$  I-J    1  200
+16     WD-FRC-$  I-J    1 3800
+17     WD-LSR-$  I-J    1 3900
+17     WD-CVR-$  I-J    1 3900
+18     WD-LSW-$  I-J    1 3900
+18     WD-CVW-$  I-J    1 3900
+19     ID19-FLX  J-L    1    0
+19     DUSTSRCE  I-J    1 5400
+19     SALTSRCE  I-J    1 5400
+19     BC-ANTH   I-J    1 5400
+19     BC-BIOB   I-J    1 5400
+19     BC-BIOF   I-J    1 5400
+19     PL-BC=$   I-J    1 5400
+19     OC-ANTH   I-J    1 5400
+19     OC-BIOB   I-J    1 5400
+19     OC-BIOF   I-J    1 5400
+19     OC-BIOG   I-J    1 5400
+19     OC-ALPH   I-J    1 5400
+19     OC-LIMO   I-J    1 5400
+19     OC-ALCO   I-J    1 5400
+19     OC-TERP   I-J    1 5400
+19     OC-SESQ   I-J    1 5400
+19     PL-OC=$   I-J    1 5400
+21     OD-MAP-$  I-J    1 1400 
+22     JV-MAP-$  I-J    1  700
+23     CH3CCl3   I-J    1    0
+24     EW-FLX-$  I-J    1  200
+25     NS-FLX-$  I-J    1  200
+26     UP-FLX-$  I-J    1  200
+27     STRT-FLX  I-J    1  200
+28     BIOBSRCE  I-J    1  100
+29     CO--SRCE  I-J    1 1800
+30     LANDMAP   I-J    1  800
+31     PRESS-AV  I-J    1  900
+31     PS-PTOP   I-J    1  900
+32     NOX-AC-$  I-J    1  100
+32     NOX-BIOB  I-J    1  100
+32     NOX-BIOF  I-J    1  100
+32     NOX-LI-$  I-J    1  100
+32     NOX-SOIL  I-J    1  100
+32     NOX-FERT  I-J    1  100
+32     NOX-STRT  I-J    1  100
+32     NOX-AN-$  I-J    1  100
+33     COLUMN-T  I-J    1  400
+330    TROPO-AV  I-J    1  400
+34     BIOFSRCE  I-J    1  100
+35     500-AVRG  I-J    1    0
+36     ANTHSRCE  I-J    1  100
+35     NVOCSRCE  I-J    1  100
+360    CH3ISRCE  I-J    1  200    ! real diag number is 36!
+37     MC-FRC-$  I-J    1 4000
+38     WETDCV-$  I-J    1 3300
+39     WETDLS-$  I-J    1 3300
+40     INST-MAP  I-J    1    0
+41     PBLDEPTH  I-J    1 2800
+42     FLUX-L=$  I-J    1  100  
+43     CHEM-L=$  I-J    1 1000
+44     DRYDEP-F  I-J    1 1100
+44     DRYDEP-V  I-J    1 1100
+44     DRYD-FLX  I-J    1 7100
+44     DRYD-VEL  I-J    1 7200
+45     IJ-AVG-$  I-J    1    0
+46     BIOGSRCE  I-J    1 4700
+47     IJ-24H-$  I-J    1    0
+48     TIME-SER none    1 1200
+50     EQSM-FLX  I-L    1  100
+51     JD51-FLX  I-L    1  100  
+52     JD52-FLX  I-L    1  100  
+53     JD53-AVG  I-L    1    0  
+54     JD54-AVG  I-L    1    0
+55     TR-PAUSE  I-J    1 2700
+62     INST-MAP  I-J    1  300
+65     PORL-L=$  I-J    1 2200
+66     DAO-3D-$  I-J    1 1700
+67     DAO-FLDS  I-J    1 1300
+68     BXHGHT-$  I-J    1 2000
+69     DXYP      I-J    1 2100
+45     IJ-INS-$  I-J    1    0
+# -- OLD DIAGNOSTICS AND GISS-CTM SPECIAL STUFF --
+32     NOX-SRCE  I-J   39  100
+43     CHEMDIAG  I-J    1 1000
+45     HZ$-AVRG  I-J    1    0
+665    BXHT-L=$  I-J    1 2000
+666    AIRD-L=$  I-J    1 2300
+101    UVW-MEAN  J-L    3  500
+101    LAND MAP  I-J    1 3000
+101    ICE-LAND  I-J    1 3000
+101    OCN-TEMP  I-J    1 3000
+101    OICE/WAT  I-J    1 3000
+101    OICELAY2  I-J    1 3000
+101    OICESNOW  I-J    1 3000
+101    EARTSNOW  I-J    1 3000
+101    OICET-L1  I-J    1 3000
+101    EARTT-L1  I-J    1 3000
+101    EARTW-L1  I-J    1 3000
+101    EICE--L1  I-J    1 3000
+101    OICET-L2  I-J    1 3000
+101    LICESNOW  I-J    1 3000
+101    LICET-L1  I-J    1 3000
+101    LICET-L2  I-J    1 3000
+101    W-CAP-L1  I-J    1 3000
+101    W-CAP-L2  I-J    1 3000
+101    L=1-L=2-  I-J    1 3000
+101    DEEPCONV  I-J    1 3100
+# -- TOMS ozone data
+90     TOMS      I-J    1  300
+# -- Ocean mixed layer depth
+91     MLD       I-J    1 2000
+# -- Ozone columns in Dobson Units
+92     O3COLMAP  I-J    1 2500
+93     O3CLIM-$  I-J    1 2500
+# -- Global NPP emissions
+140    GLOB-NPP  I-J    1 2900
+# -- Aerosol for SMVGEAR
+110    ARSL-L=$  I-J    1 3200
+# -- EDGAR emissions 
+120    EDGR-B10  I-J    1 3400
+120    EDGR-B40  I-J    1 3400
+120    EDGR-F10  I-J    1 3400
+120    EDGR-F20  I-J    1 3400
+120    EDGR-F30  I-J    1 3400
+120    EDGR-F40  I-J    1 3400
+120    EDGR-F51  I-J    1 3400
+120    EDGR-F54  I-J    1 3400
+120    EDGR-F80  I-J    1 3400
+120    EDGR-F90  I-J    1 3400
+120    EDGR-I30  I-J    1 3400
+120    EDGR-L30  I-J    1 3400
+120    EDGR-L40  I-J    1 3400
+# -- NO P-L for stratosphere (qli, dbj)
+130    PNOY-L=$  I-J    1 3500
+# -- for Randall's columns
+140    COLMAP    I-J    1 3600
+141    INST-COL  I-J    1 3600
+# -- for UV albedoes
+150    UVALBEDO  I-J    1 3700
+# -- for mineral dust optical depths
+170    MDUST-$   I-J    1 4100
+# -- for soil precipitation
+180    SOILPREC  I-J    1 4200
+# -- for CH4 emissions 
+190    CH4-SRCE  I-J    1 4300
+# -- for DOC emissions 
+200    DOC-SRCE  I-J    1 4400
+# -- for CO and CH4 budgets 
+210    COBUDGET  I-J    1 4500
+220    CH4BUDGT  I-J    1 4600
+# -- for Tracer mass 
+230    TCMASS-$  I-J    1  400
+# -- truly obsolete stuff
+240    SRF-AVRG  I-J    1    0
+# -- for acetone fields
+250    EMISACET  I-J    1 4800
+# -- for Rose's croplands
+260    CROPLAND  I-J    1 5000
+# -- for Heterotrophic respiration
+270    HET-RESP  I-J    1 5100
+# -- for Parv's CO2 fields
+280    CO2-SRCE  I-J    1 5200
+# -- for James' CH4 fields
+290    CH4-EMIS  I-J    1 5300
+# -- for fossil fuel scale factors
+300    SCALFOSS  I-J    1 5400
+# -- for EC/OC biomass emis factor
+300    EMISFAC   I-J    1 5500
+# -- for bdf and rjp's sulfate
+213    PL-SUL=$  I-J    1 6500
+# -- for gng BC emissions
+300    BCemiss   I-J    1 8000
+# -- for mercury
+400    HG0-ANTH  I-J    1  200
+400    HG2-ANTH  I-J    1  200
+400    HGP-ANTH  I-J    1  200
+400    HG0-OCEA  I-J    1  200
+400    HG0-LAND  I-J    1  200
+400    PL-HG2-$  I-J    1  200

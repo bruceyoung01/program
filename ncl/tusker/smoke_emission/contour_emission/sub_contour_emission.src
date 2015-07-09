@@ -1,0 +1,18 @@
+#!/bin/sh
+#SBATCH --job-name=contour_emission
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=80240
+#SBATCH --time=23:00:00
+#SBATCH --error=contour_emission_%J.out
+#SBATCH --output=contour_emission_%J.stderr
+#SBATCH --partition=jwang7
+##SBATCH --qos=normal
+
+
+#change to job directory
+cd /lustre/work/jwang7/bruceyoung01/model/ncl/smoke_emission/contour_emission
+
+#run program
+stdbuf -o0 -e0 ncl contour_emission.ncl
+

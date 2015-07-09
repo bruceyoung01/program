@@ -1,0 +1,15 @@
+#!/bin/sh
+#PBS -N aeronet_pm
+#PBS -l select=1
+#PBS -l walltime=10:00:00
+#PBS -l mem=32Gb
+#PBS -o ncl.stdout
+#PBS -e ncl.stderr
+#PBS -V
+
+#change to job directory
+cd /work/jwang7/bruceyoung01/model/ncl/atlanta/select_wrfchem_point/
+#set up environmental variables
+
+#run program
+stdbuf -o0 -e0 ncl select_wrfchem_point.ncl &>ncl_run.log

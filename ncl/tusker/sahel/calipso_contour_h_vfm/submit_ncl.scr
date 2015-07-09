@@ -1,0 +1,15 @@
+#!/bin/sh
+#PBS -N CALIPSO_VFM
+#PBS -l select=1
+#PBS -l walltime=72:00:00
+#PBS -l mem=16Gb
+#PBS -o ncl.stdout
+#PBS -e ncl.stderr
+#PBS -V
+
+#change to job directory
+cd /work/jwang7/bruceyoung01/model/ncl/sahel/calipso_contour_h_vfm/
+#set up environmental variables
+
+#run program
+stdbuf -o0 -e0 ncl calipso_contour_h_vfm.ncl &>ncl_run.log

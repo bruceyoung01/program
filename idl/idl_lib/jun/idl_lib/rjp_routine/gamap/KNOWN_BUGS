@@ -1,0 +1,72 @@
+
+
+    This document describes known shortcomings and bugs in GAMAP 1.43
+    thru GAMAP 1.48 (last updated 28 Aug 2001)
+
+    mgs, 09 Jul 1999
+
+    * color handling: until today I never got true color to work on Unix
+      machines. Now I found out that gamap doesn't work well in this mode.
+      GAMAP has been tested in 8 bit color depth on Unix and Linux and
+      in true color mode on the Windows platform. In true color mode,
+      animations are screwed up. On 8 bit displays the number of colors
+      used may be sometimes too limited.
+
+    * Positioning of title and colorbars may still be refinable for odd
+      multipanel plots (eh, 12 panels isn't that odd!). Try out the
+      MPosition and CBPosition keywords if you want to get fancy!
+
+    * The C_LABELS keyword to contour plots is not honored.
+
+    * The documentation does not mention the new regridding routines
+      (regridv, sumv and the read_mdl.pro example file).
+
+
+    bmy, 15 Sep 1999
+
+    * Conversion of TAU -> YYMMDD for GISS-II and GISS-II-PRIME data
+      may be inaccurate since GISS wind fields do not take leap years 
+      into account.  
+
+
+    bmy, 20 Jan 1999 -- GAMAP 1.44
+
+    * GAMAP 1.44 must be run on IDL v. 5.3 and higher, since certain
+      IDL routines (rstrpos, str_sep) from previous IDL releases have
+      been obsoleted in v. 5.3.  
+
+
+    bmy, 20 Jun 2000 -- GAMAP 1.45
+	
+    * No further bugs have been reported at this time    
+
+
+    bmy, 03 Oct 2000 -- GAMAP 1.46
+	
+    * No further bugs have been reported at this time
+
+
+    bmy, 28 Aug 2001 -- GAMAP 1.48
+
+    * No further bugs have been reported at this time
+
+
+    bmy, 29 Jan 2004 -- GAMAP 2.01
+
+    * Many things have been totally updated in GAMAP v2-01, so it 
+      should be a lot more user-friendly than the earliest GAMAP
+      versions were.  
+ 
+    * Sometimes there is a problem when you use CTM_GET_DATABLOCK
+      to read less-than-global data blocks.  The array returned by
+      CTM_GET_DATABLOCK may still be of global data size even if the
+      array is of less-than-global size.  It is best to always use
+      LON, LAT, and LEV keywords to specify a data block's dimensions
+      when using CTM_GET_DATABLOCK.
+
+    * Many of the routines in GAMAP v2-01 have been rewritten so that
+      the heap memory associated with the pointer DataInfo.Data is
+      freed after each use.  In previous versions, this memory was
+      not freed, which would result in GAMAP using up all of the
+      available IDL memory.
+

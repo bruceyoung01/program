@@ -1,0 +1,70 @@
+From daemon Wed May 24 16:12:29 1995
+Received: from hoss.stx.com (hoss.stx.com [198.116.23.69]) by carioca.gsfc.nasa.gov (8.6.10/8.6.9) with SMTP id QAA07371 for <916@carioca.gsfc.nasa.gov>; Wed, 24 May 1995 16:14:20 -0400
+Received: by hoss.stx.com (920330.SGI/920502.SGI)
+	for 916@carioca.gsfc.nasa.gov id AA15930; Wed, 24 May 95 16:14:42 -0400
+From: au@hoss.stx.com (Andy Au)
+Message-Id: <9505242014.AA15930@hoss.stx.com>
+Subject: IDL Library for OPT
+To: 916@carioca.gsfc.nasa.gov
+Date: Wed, 24 May 1995 16:14:42 -0500 (EDT)
+X-Mailer: ELM [version 2.4 PL21]
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+Content-Length: 2914      
+Status: R
+
+
+Dear IDL Users,
+
+      I have assembled an IDL library that includes statistical, plotting and
+general mathematical utility routines from in-house (developed in OPT) and
+various (astronomical library and Code 916 library) sources.  They are
+installed on HOSS, QHEARTS and JWOCKY.  On QHEARTS and JWOCKY, the source
+listings of the library are put in the subdirectory
+/usr/local/lib/idl/lib/opt_lib/.  On HOSS, since the astronomical and the Code
+916 libraries are fully installed, only the in-house routines are grouped into
+an auxiliary library (/usr/local/lib/idl/aulib/).  Users are urged to take a
+look at this library and make use of these routines.  On-line help is
+available through the IDL command doc_library.  I would like to high-light
+some of these assembled routines.
+
+      Regressions, especially nonparametric data smoothing methods, are
+routine methods in our research.  However, most standard data smoothing
+methods are NOT end-point sensitive.
+
+      Two in-house routines, CLOESS and GCVSPL, have been developed to address
+the nonparametric data smoothing problem with end-points sensitivity.  CLOESS
+is based on a local regression method with which users may study the
+appropriate degree of smoothness applied to a data set.  It is a useful tool
+to look at a data set without an 'a priori' prejudice of what the model should
+look like.  On the other hand, GCVSPL is a smoothing spline routine that
+determines the optimal degree of smoothing to a data set based on the method
+of generalized cross validation (GCV).  It offers an "objective" method of
+smoothing a data set.
+
+      Other nonparametric forms of regression and data smoothing include a
+simple binning routine BIN (Binning based on fixed bin width) developed as an
+in-house routine, SMOOTH (Box-car running average to smooth noisy data), and
+CONVOL (Smoothing by convolution with user-specified kernel) in the standard
+IDL Routines, and a routine POLY_SMOOTH (Smoothing using self-convolution) in
+the astronomical library.  None of these routines are end-point sensitive.
+
+      For parametric regression, two routines, POLY_FIT (Curve fitting with a
+nth degree polynomial function) and CURVEFIT (Curve fitting with a user
+specified function), are already available in the default IDL Users' Library.
+
+      There are also some general utility routines in the library that users
+may find useful.  Examples of them include SURFCAT (determines for each pair
+of latitude and longitude in a data set if the location is over sea, over
+land, over low inland, over land and water, etc.), AIRTOVAC (air to vacuum
+wavelength), VACTOAIR (vacuum to air wavelength) and MONOTONIC (determine if a
+vector is monotonic).
+
+      Users are urged to use the library and advise me of any problems that
+may come up.  More useful routines will be added to the existing library in
+the future.  Thanks.
+
+                                          Andy Au
+
+

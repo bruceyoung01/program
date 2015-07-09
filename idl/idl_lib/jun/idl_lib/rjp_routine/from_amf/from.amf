@@ -1,0 +1,29 @@
+
+Hi Loretta,
+~amf/ozone/Splus/f.t.table  is the table
+Here is an excerpt from ~amf/ozone/median.trends.s
+where I call it:
+#Extract slope for nonzero slopes:
+ if (slpjunk$coef[2]!=0) {
+  tstat_round(lsprnt$coef.table[2,3],digits=3)
+  r2_round(as.numeric(lsprnt$summary[2]),digits=3)
+  slp_slpjunk$coef[2]
+  slp_format(round(slp, digits=3))
+  sig_t.table(pnum, tstat) }
+
+Feel free to poke around in my code or ask me.
+
+I'll send a separate email for the EPA project emissions.
+
+
+------------------------------------------
+**** PLEASE NOTE NEW E-MAIL *****
+afiore@post.harvard.edu
+
+Arlene Fiore
+Harvard University
+29 Oxford Street
+Cambridge, MA 02138
+(617) 495-4577 
+www.fas.harvard.edu/~afiore  
+
