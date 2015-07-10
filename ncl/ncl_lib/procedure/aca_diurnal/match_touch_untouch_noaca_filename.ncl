@@ -76,13 +76,12 @@ print("-----------" + symd1 + "-------------")
                               filelist_tmp(icase) = case(icase) + "_" + method(imethod) + "_" +  \
                                                     sday_or_night(iday_or_night) + "_" + symd1 + \
                                                     "_" + stime + "_ESMF.txt"
-                           end do
 ;  WRITE DOWN FILE NAMES INTO A FILELIST
-                           if (all(fileexists(dir + filelist_tmp))) then
-                              filelist_tmp_list = [/filelist_tmp/]
-                              print_table(filelist_tmp_list, "%s")
-                              write_table(dir + filelist, "a", filelist_tmp_list, "%s")
-                           end if
+                              if (fileexists(filelist_tmp(icase))) then
+                                 filelist_tmp_list = [/filelist_tmp(icase)/]
+                                 write_table(dir + filelist, "a", filelist_tmp_list, "%s")
+                              end if
+                           end do
                            delete([/filelist_tmp/])
                         end if
                      end do ;imethod
