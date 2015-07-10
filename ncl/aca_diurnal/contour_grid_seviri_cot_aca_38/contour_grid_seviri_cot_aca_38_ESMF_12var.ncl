@@ -105,7 +105,7 @@ begin
    end_year   = 2008
    start_month= 8
    end_month  = 8
-   start_day  = 1
+   start_day  = 3
    start_hour = 0
    end_hour   = 23
    start_min  = 0
