@@ -103,9 +103,9 @@ begin
 ;  SET UP THE START TIME AND END TIME
    start_year = 2008
    end_year   = 2008
-   start_month= 7
-   end_month  = 7
-   start_day  = 14
+   start_month= 8
+   end_month  = 8
+   start_day  = 1
    start_hour = 0
    end_hour   = 23
    start_min  = 0
@@ -117,7 +117,7 @@ begin
    end_ind_lon   = 2600
 
 ;  SELECT WHICH PARAMETER TO PLOT
-   element    = "cot16"
+   element    = "cot38"
 
 ;  WHICH PLOT IS TO BE PLOTTED
    logic_plot_daily    = False
