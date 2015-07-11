@@ -77,8 +77,9 @@ print("-----------" + symd1 + "-------------")
                                                     sday_or_night(iday_or_night) + "_" + symd1 + \
                                                     "_" + stime + "_ESMF.txt"
 ;  WRITE DOWN FILE NAMES INTO A FILELIST
-                              if (fileexists(filelist_tmp(icase))) then
+                              if (fileexists(dir + filelist_tmp(icase))) then
                                  filelist_tmp_list = [/filelist_tmp(icase)/]
+                                 print_table(filelist_tmp_list, "%s")
                                  write_table(dir + filelist, "a", filelist_tmp_list, "%s")
                               end if
                            end do

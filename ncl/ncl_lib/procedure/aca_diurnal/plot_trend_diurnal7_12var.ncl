@@ -49,7 +49,7 @@ begin
    dashpatterns               = (/2, 2, 2, 2, 2, 2, 2, 2, 2, 2/)
    markers                    = (/4, 4, 4, 4, 4, 4, 4, 4, 4, 4/)
    linecolors                 = (/"blue", "red", "pink", "purple", "green", \
-                                  "gold4", "brown", "peru", "orange", "black"/)
+                                  "gold4", "brown", "black", "orange", "peru"/)
    res@xyMarkLineMode         = "MarkLines"
    res@xyMarkers              = markers
    res@xyMarkerColors         = linecolors
@@ -117,34 +117,34 @@ begin
    else if (ivariable .eq. 3) then
       res@trYMaxF              = 30.0
       res@trYMinF              = 0.0
-      res@tiYAxisString        = "Cloud Optical Thickness 16"
+      res@tiYAxisString        = "Cloud Optical Thickness 38"
    else if (ivariable .eq. 4) then
       res@trYMaxF              = 5.0
       res@trYMinF              = 0.0
-      res@tiYAxisString        = "Cloud Optical Thickness 16 PCL"
+      res@tiYAxisString        = "Cloud Optical Thickness 38 PCL"
    else if (ivariable .eq. 5) then
       res@trYMaxF              = 30.0
       res@trYMinF              = 0.0
-      res@tiYAxisString        = "Cloud Effective Radius 16 (~F33~m~F21~m)"
+      res@tiYAxisString        = "Cloud Effective Radius 38 (~F33~m~F21~m)"
    else if (ivariable .eq. 6) then
       res@trYMaxF              = 30.0
       res@trYMinF              = 0.0
-      res@tiYAxisString        = "Cloud Effective Radius 16 PCL (~F33~m~F21~m)"
+      res@tiYAxisString        = "Cloud Effective Radius 38 PCL (~F33~m~F21~m)"
    else if (ivariable .eq. 7) then
       res@trYMaxF              = 300.0
       res@trYMinF              = 0.0
-      res@tiYAxisString        = "Cloud Water Path 16 (g/m~S~2~N~)"
+      res@tiYAxisString        = "Cloud Water Path 38 (g/m~S~2~N~)"
    else if (ivariable .eq. 8) then
       res@trYMaxF              = 50.0
       res@trYMinF              = 0.0
-      res@tiYAxisString        = "Cloud Water Path 16 PCL (g/m~S~2~N~)"
+      res@tiYAxisString        = "Cloud Water Path 38 PCL (g/m~S~2~N~)"
    else if (ivariable .eq. 9) then
       res@trYMaxF              = 10.0
       res@trYMinF              = 0.0
       res@tiYAxisString        = "Cloud Phase Optical Properties"
    else if (ivariable .eq.10) then
       res@trYMaxF              = 0.0
-      res@trYMinF              = -90.0
+      res@trYMinF              = -20.0
       res@tiYAxisString        = "Cloud Top Temperature (~F34~0~F21~C)"
    else if (ivariable .eq.11) then
       res@trYMaxF              = 10.0
@@ -157,7 +157,7 @@ begin
    else if (ivariable .eq.13) then
       res@trYMaxF              = 6.0
       res@trYMinF              = 0.0
-      res@tiYAxisString        = "Cloud_Phase_Infrared"
+      res@tiYAxisString        = "Cloud Phase Infrared"
    else if (ivariable .eq.14) then
       res@trYMaxF              = 5.0
       res@trYMinF              = 0.0

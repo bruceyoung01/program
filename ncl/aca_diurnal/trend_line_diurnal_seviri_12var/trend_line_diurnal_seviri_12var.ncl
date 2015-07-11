@@ -30,12 +30,12 @@ begin
    type       = "pdf"
 ;  type       = "png"
    plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/trend_line_diurnal_seviri_12var/"
-   wks        = gsn_open_wks(type, plot_dir + "1plot_trend_line_diurnal_seviri_12var_v03")
+   wks        = gsn_open_wks(type, plot_dir + "1plot_trend_line_diurnal_seviri_12var_v04")
    gsn_define_colormap(wks,"WhBlGrYeOrReVi202")
 
 ;  DATA DIRECTORY
    dir        = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/contour_grid_seviri_cot_aca_38/"
-   filelist   = "filelist_ESMF_v03"
+   filelist   = "filelist_ESMF_v04"
 
 ;  DEFINE BAD VALUE
    bv1        = -9999
@@ -45,7 +45,7 @@ begin
    start_year   = 2008
    end_year     = 2008
    start_month  = 6
-   end_month    = 6
+   end_month    = 7
    start_day    = 1
    start_hour   = 0
    end_hour     = 23
