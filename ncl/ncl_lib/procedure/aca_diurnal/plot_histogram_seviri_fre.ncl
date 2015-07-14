@@ -1,4 +1,4 @@
-;  $ID plot_histogram_seviri_fre.ncl V01 05/19/2015 10:12 BRUCE EXP$
+;  $ID plot_histogram_seviri_fre.ncl V01 07/13/2015 10:12 BRUCE EXP$
 ;
 ;******************************************************************************
 ;  PROGRAM plot_histogram_seviri_fre.ncl PLOTS 2-D HISTOGRAM WITH UNEQUAL 
@@ -10,11 +10,15 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 ) wks        (graphic) 
+;  (1 ) wks        (graphic) :WORK STATION                                [   ]
+;  (2 ) xbnd       (1-D)     :X AXIS BIN BOUNDARIES                       [   ]
+;  (3 ) ybnd       (1-D)     :Y AXIS BIN BOUNDARIES                       [   ]
+;  (4 ) data       (2-D)     :1ST DIMENSION IS Y AXIS; 2ND DIMENSION IS X AXIS
+;  (5 ) times      (a string):PLOT TITLE                                  [   ]
 ;
 ;  NOTES:
 ;  ============================================================================
-;  (1 ) ORIGINALLY WRITTEN BY NCL WEBSITE. MODIFIED BY BRUCE. (05/19/2015)
+;  (1 ) ORIGINALLY WRITTEN BY NCL WEBSITE. MODIFIED BY BRUCE. (07/13/2015)
 ;******************************************************************************
 
 undef("plot_histogram_seviri_fre")
@@ -43,13 +47,16 @@ begin
 
   res@cnFillOn             = True          ; Turn on contour fill
   res@cnFillMode           = "RasterFill"  ; Turn on raster fill
+  res@cnMissingValFillColor= "White"
   res@cnLinesOn            = False         ; Turn off contour lines
   res@cnLineLabelsOn       = False         ; turns off contour line labels
 
   res@cnLevelSelectionMode = "ManualLevels"
-  res@cnMinLevelValF       =  0
-  res@cnMaxLevelValF       =  10
-  res@cnLevelSpacingF      =  0.1
+  res@cnMinLevelValF       = 0
+  res@cnMaxLevelValF       = 10
+  res@cnLevelSpacingF      = 0.1
+; res@ContourParameters    = (/0., 10., 0.1/) 
+  res@cnNoDataLabelOn      = False
 
   res@trYReverse           = True           ; reverses y-axis 
 

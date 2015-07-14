@@ -19,6 +19,7 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/shea_util.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/wrf/WRFUserARW.ncl"
+load "$NCARG_ROOT/lib/ncarg/nclscripts/wrf/WRF_contributed.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/match_touch_untouch_noaca_filename.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/select_seviri_filename_hour_min.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/read_ascii_seviri_caliop.ncl"
@@ -31,8 +32,8 @@ begin
    type       = "pdf"
 ;  type       = "png"
    plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/joint_histogram_seviri/"
-   wks        = gsn_open_wks(type, plot_dir + "1plot_joint_histogram_seviri_v01")
-   gsn_define_colormap(wks,"MPL_gist_yarg")
+;  wks        = gsn_open_wks(type, plot_dir + "1plot_joint_histogram_seviri_v04")
+;  gsn_define_colormap(wks,"MPL_gist_yarg")
 
 ;  DATA DIRECTORY
    dir        = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/contour_grid_seviri_cot_aca_38/"
@@ -46,7 +47,7 @@ begin
    start_year   = 2008
    end_year     = 2008
    start_month  = 6
-   end_month    = 6
+   end_month    = 8
    start_day    = 1
    start_hour   = 0
    end_hour     = 23
@@ -80,7 +81,7 @@ begin
    dim_boundary  = (/ncase, nmethod, nhour, nmin, nctp_boundary-1, ncot_boundary-1/)
    seviri_count  = new(dim_boundary, integer, bv1)
    seviri_fre    = new(dim_boundary, float,   bv2)
-   nobs          = 2000
+   nobs          = 1000
    nctrack       = 3
    ncount_write  = 100
    ncount_write_day = nctrack*ncount_write
@@ -102,7 +103,9 @@ begin
 ;  DO method AND case LOOP TO GET ALL THE METHDS AND CASES
    do icase = 0, ncase-1
       do imethod = 0, nmethod-1
-         iloop = 0
+         wks = gsn_open_wks(type, plot_dir + "1plot_joint_histogram_seviri_" + \
+                            case(icase) + "_" + method(imethod) + "_v04")
+         gsn_define_colormap(wks,"MPL_gist_yarg")
 ;  DO HOUR LOOP TO COLLECT ALL THE DATA
          do ihour = start_hour, end_hour
 ;  DO MINUTE LOOP
@@ -112,7 +115,7 @@ begin
                simin  = sprinti("%0.2i", imin)
                stime  = sihour + ":" + simin + ":00"
                print("Time = " + stime)
-               nsfilename      = 50
+               nsfilename      = 200
                sfilename       = new((/nsfilename/), string)
                nsfilename_real = new(1, integer)
                logic_continue  = False
@@ -128,6 +131,7 @@ begin
                end if
 
 ;  DO nsfilename_real LOOP TO READ IN ALL THE DATA
+               iloop = 0
                do isfilename_real = 0, nsfilename_real-1
                   print("Now processing = " + sfilename(isfilename_real))
 ;  CALL SUBROUTINE read_ascii_seviri_caliop.ncl TO READ THE DATA
@@ -145,15 +149,31 @@ begin
                seviri_fre(icase, imethod, ihour, imin_loop, :, :))
 ;print(seviri_fre(icase, imethod, ihour, imin_loop, :, :))
 
-               title = stime + " " + case(icase) + " " + method(imethod)
+               if (.not.all(ismissing(seviri_fre(icase, imethod, ihour, imin_loop, :, :))) .and. \
+                   min(seviri_fre(icase, imethod, ihour, imin_loop, :, :)) .ne. \
+                   max(seviri_fre(icase, imethod, ihour, imin_loop, :, :))) then
+                  title = stime + " " + case(icase) + " " + method(imethod)
 ;  CALL plot_histogram_seviri_fre.ncl TO PLOT ADJOINT HISTOGRAM
-               plot_histogram_seviri_fre \
-               (wks, cot_boundary, ctp_boundary, \
-               seviri_fre(icase, imethod, ihour, imin_loop, :, :), \
-               title)
+                  plot_histogram_seviri_fre \
+                  (wks, cot_boundary, ctp_boundary, \
+                  seviri_fre(icase, imethod, ihour, imin_loop, :, :), \
+                  title)
+               end if
                imin_loop = imin_loop + 1
             end do ;imin
          end do ;ihour
+
+;  CALCULATE AVERAGE OF ALL THE DATA
+         seviri_count_sum = dim_sum_n(seviri_count(icase, imethod, :, :, :, :), 0)
+         seviri_fre_avg   = dim_sum_n(seviri_count_sum, 0)/int2flt(sum(seviri_count_sum))
+         if (.not.all(ismissing(seviri_fre_avg)) .and. \
+             min(seviri_fre_avg) .ne. max(seviri_fre_avg)) then
+             title = case(icase) + " " + method(imethod)
+;  CALL plot_histogram_seviri_fre.ncl TO PLOT JOINT HISTOGRAM
+             plot_histogram_seviri_fre \
+             (wks, cot_boundary, ctp_boundary, \
+             seviri_fre_avg, title)
+         end if
       end do ;imethod
    end do ;icase
 
