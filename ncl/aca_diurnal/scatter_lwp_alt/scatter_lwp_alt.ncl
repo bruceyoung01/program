@@ -33,7 +33,7 @@ begin
    gsn_define_colormap(wks,"WhBlGrYeOrReVi202")
 
 ;  DATA DIRECTORY
-   dir        = "/home/vy57456/zzbatmos_user/program/ncl/aca_diurnal/contour_grid_amsre_sum_aca/file/"
+   dir        = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/contour_grid_amsre_sum_aca/file/"
 
 ;  DEFINE BAD VALUE
    bv1        = -9999

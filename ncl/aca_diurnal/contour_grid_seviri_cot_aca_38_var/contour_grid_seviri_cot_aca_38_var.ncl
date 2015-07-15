@@ -331,11 +331,6 @@ begin
                      cpi = doubletofloat(Cloud_Phase_Infrared@scale_factor*\
                              (Cloud_Phase_Infrared + Cloud_Phase_Infrared@add_offset))
 
-;print(cpop(0:10, 0:5))
-;print(ctt(0:10, 0:5))
-;print(cth(0:10, 0:5))
-;print(ctp(0:10, 0:5))
-;print(cpi(0:10, 0:5))
                      acwv@_FillValue      = bv2a
                      cot38@_FillValue     = bv2
                      cot38_pcl@_FillValue = bv2
@@ -352,13 +347,6 @@ begin
 ;  acwv FROM bv2a TO bv2
 ;  ctt FROM bv2b TO bv2
 ;  st16 FROM bv2b TO bv2
-;cpop_oned = ndtooned(cpi)
-;index = ind(ismissing(cpop_oned))
-;if (.not.all(ismissing(index))) then
-;print("a1")
-;   print(cpop_oned(index))
-;end if
-;print("a2")
                      acwv = where(acwv .eq. bv2a,  bv2, acwv)
                      cpop = where(ismissing(cpop), bv2, cpop)
                      ctt  = where(ctt  .eq. bv2c,  bv2,  ctt)

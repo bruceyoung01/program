@@ -40,11 +40,12 @@ begin
    delimiter = " "
 
 ;  READ VARIABLE NAMES FROM TITLE
-   
+   name      = sdata(0)
    data      = sdata(1::)
 ;  READ ALL THE DATA AS IT IS
 ;  DO LOOP TO READ VARIABLES ONE BY ONE
    do iv = 0, nvariable-1
+      variable_name(iv)          = str_get_field(name, iv+1, delimiter)
       seviri_data(iv, 0:nline-2) = stringtofloat(str_get_field(data, iv+1, delimiter))
    end do
 
