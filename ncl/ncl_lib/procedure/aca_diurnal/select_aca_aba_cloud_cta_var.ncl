@@ -84,7 +84,7 @@ begin
                    aNumber_Layers_Found(:, 0) .eq. 1                    .and. \
                    cNumber_Layers_Found(:, 0) .eq. 1                    .and. \
                    aLayer_Top_Altitude(:, nalayer-1-ialayer) .le. 10.0  .and. \
-                   .not.ismissing(aLayer_Base_Altitude(:, nalayer-1-ialayer)))
+                   .not.all(ismissing(aLayer_Base_Altitude(:, nalayer-1-ialayer))))
       if (.not.all(ismissing(aindex))) then
          acLayer_Top_Altitude    (aindex) = aLayer_Top_Altitude    (aindex, nalayer-1-ialayer)
          acLayer_Base_Altitude   (aindex) = aLayer_Base_Altitude   (aindex, nalayer-1-ialayer)
@@ -104,16 +104,16 @@ begin
                    aNumber_Layers_Found(:, 0) .eq. 1          .and. \
                    cNumber_Layers_Found(:, 0) .eq. 1          .and. \
                    cLayer_Top_Pressure(:, iclayer) .ge. 600.0 .and. \
-                   .not.ismissing(cLayer_Top_Altitude(:, iclayer)))
+                   .not.all(ismissing(cLayer_Top_Altitude(:, iclayer))))
       if (.not.all(ismissing(cindex))) then
-	 ccLayer_Top_Altitude    (cindex) = cLayer_Top_Altitude    (cindex, nclayer-1-iclayer)
-	 ccLayer_Base_Altitude   (cindex) = cLayer_Base_Altitude   (cindex, nclayer-1-iclayer)
-	 ccLayer_Top_Pressure    (cindex) = cLayer_Top_Pressure    (cindex, nclayer-1-iclayer)
-	 ccMidlayer_Pressure     (cindex) = cMidlayer_Pressure     (cindex, nclayer-1-iclayer)
-	 ccLayer_Base_Pressure   (cindex) = cLayer_Base_Pressure   (cindex, nclayer-1-iclayer)
-	 ccLayer_Top_Temperature (cindex) = cLayer_Top_Temperature (cindex, nclayer-1-iclayer)
-	 ccMidlayer_Temperature  (cindex) = cMidlayer_Temperature  (cindex, nclayer-1-iclayer)
-	 ccLayer_Base_Temperature(cindex) = cLayer_Base_Temperature(cindex, nclayer-1-iclayer)
+	 ccLayer_Top_Altitude    (cindex) = cLayer_Top_Altitude    (cindex, iclayer)
+	 ccLayer_Base_Altitude   (cindex) = cLayer_Base_Altitude   (cindex, iclayer)
+	 ccLayer_Top_Pressure    (cindex) = cLayer_Top_Pressure    (cindex, iclayer)
+	 ccMidlayer_Pressure     (cindex) = cMidlayer_Pressure     (cindex, iclayer)
+	 ccLayer_Base_Pressure   (cindex) = cLayer_Base_Pressure   (cindex, iclayer)
+	 ccLayer_Top_Temperature (cindex) = cLayer_Top_Temperature (cindex, iclayer)
+	 ccMidlayer_Temperature  (cindex) = cMidlayer_Temperature  (cindex, iclayer)
+	 ccLayer_Base_Temperature(cindex) = cLayer_Base_Temperature(cindex, iclayer)
       end if
       delete([/cindex/])
    end do

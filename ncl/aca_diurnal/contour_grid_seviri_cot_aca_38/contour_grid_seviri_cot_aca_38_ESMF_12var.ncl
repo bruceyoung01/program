@@ -103,9 +103,9 @@ begin
 ;  SET UP THE START TIME AND END TIME
    start_year = 2008
    end_year   = 2008
-   start_month= 8
-   end_month  = 8
-   start_day  = 3
+   start_month= 9
+   end_month  = 9
+   start_day  = 15
    start_hour = 0
    end_hour   = 23
    start_min  = 0

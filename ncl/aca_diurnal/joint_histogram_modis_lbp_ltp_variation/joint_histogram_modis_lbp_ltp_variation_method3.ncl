@@ -1,7 +1,7 @@
-;  $ID: joint_histogram_modis_lbp_ltp_variation_diff_method3.ncl V01 05/17/2015 17:19 BRUCE EXP$
+;  $ID: joint_histogram_modis_lbp_ltp_variation_method3.ncl V01 05/17/2015 17:19 BRUCE EXP$
 ;
 ;******************************************************************************
-;  PROGRAM joint_histogram_modis_lbp_ltp_variatin_diff_method3 READS GRIDDED 
+;  PROGRAM joint_histogram_modis_lbp_ltp_variatin_method3 READS GRIDDED 
 ;  GLOBAL ACA DATA GENERATED FROM DR. ZHIBO ZHANG, SELECTS GRIDS DEPENDING ON 
 ;  CALIOP OBSERVATIONS OF AEROSOL AND CLOUD RELATIVE POSITION, TO GET CLEAR 
 ;  GRID AND ACA GRID, AND DETERMINES VERTICAL POSITION BASED ON CLOUD TOP 
@@ -243,7 +243,7 @@ begin
             Terra_cot_ctp_hist1 = new((dimsizes(Terra_cot_ctp_hist)), float, bv2)
 
 ;  CALL SUBROUTINE select_region_aca_clear_cloud.ncl TO SELECT DATA IN THE STUDY REGION AND 
-;  JUDGE WHETHER THE GRID IS CLEAR OR ACA
+;  CHECK WHETHER THE GRID IS CLEAR OR ACA
             select_region_aca_clear_cloud \
             (minlat, maxlat, minlon, maxlon, lat_grids, lon_grids, \
              sampled_grids_lat_index, sampled_grids_lon_index,     \

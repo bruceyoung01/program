@@ -63,11 +63,11 @@ procedure select_seviri_calipso_aca_cloud_costantino2013_write_all_var \
            cColumn_Optical_Depth_Cloud_532     :float,                  \;INPUT
            aColumn_Optical_Depth_Aerosols_532  :float,                  \;INPUT
            aColumn_Optical_Depth_Aerosols_1064 :float,                  \;INPUT
-           aLayer_Top_Altitude :float,   alay_base_altitude  :float,    \;INPUT
+           aLayer_Top_Altitude :float,   aLayer_Base_Altitude:float,    \;INPUT
            aLayer_Top_Pressure :float,   aMidlayer_Pressure  :float,    \;INPUT
            aLayer_Base_Pressure:float,   aLayer_Top_Temperature:float,  \;INPUT
            aMidlayer_Temperature:float,  aLayer_Base_Temperature:float, \;INPUT
-           clay_top_altitude   :float,   cLayer_Base_Altitude :float,   \;INPUT
+           cLayer_Top_Altitude :float,   cLayer_Base_Altitude :float,   \;INPUT
            cLayer_Top_Pressure :float,   cMidlayer_Pressure   :float,   \;INPUT
            cLayer_Base_Pressure:float,   cLayer_Top_Temperature:float,  \;INPUT
            cMidlayer_Temperature:float,  cLayer_Base_Temperature:float, \;INPUT
@@ -94,7 +94,7 @@ begin
    clon_nadir = clon(:, 1)
 
 ;  CALCULATE THE DISTANCE BETWEEN ACA BASE AND CLOUD TOP
-   aclay_altitude_diff = alay_base_altitude - clay_top_altitude
+   aclayer_altitude_diff = aLayer_Base_Altitude - cLayer_Top_Altitude
 
 ;  SELECT SEVIRI DATA IN THE STUDY REGION
    index_lat = ind(lat .ge. minlat .and. \
@@ -120,16 +120,16 @@ begin
                                       clat_nadir .le. lat(index_lat(i))+lat_grid_size/2. .and. \
                                       clon_nadir .ge. lon(index_lon(j))-lon_grid_size/2. .and. \
                                       clon_nadir .le. lon(index_lon(j))+lon_grid_size/2. .and. \
-                                      aclay_altitude_diff .gt. 0.0                       .and. \
+                                      aclayer_altitude_diff .gt. 0.0                     .and. \
                                       seviri_data_day(5, index_lat(i), index_lon(j)) .le. 300.0)
             if (.not.all(ismissing(index_clatlon_nadir))) then
                seviri_data_all(:, index_lat(i), index_lon(j)) = \
                (/seviri_data_day(:, index_lat(i), index_lon(j))/)
-               num_untouch   = num(aclay_altitude_diff(index_clatlon_nadir) .ge. 0.75)
-               num_touch     = num(aclay_altitude_diff(index_clatlon_nadir) .le. 0.10 .and. \
-                                   aclay_altitude_diff(index_clatlon_nadir) .ge. 0.0)
-               num_uncertain = num(aclay_altitude_diff(index_clatlon_nadir) .le. 0.75 .and. \
-                                   aclay_altitude_diff(index_clatlon_nadir) .ge. 0.10)
+               num_untouch   = num(aclayer_altitude_diff(index_clatlon_nadir) .ge. 0.75)
+               num_touch     = num(aclayer_altitude_diff(index_clatlon_nadir) .le. 0.10 .and. \
+                                   aclayer_altitude_diff(index_clatlon_nadir) .ge. 0.0)
+               num_uncertain = num(aclayer_altitude_diff(index_clatlon_nadir) .le. 0.75 .and. \
+                                   aclayer_altitude_diff(index_clatlon_nadir) .ge. 0.10)
 ;  @@@PREPARE DATA FOR PUTTING THEM INTO AN ARRAY@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                wseviri_data_all(icount_all, 0) = (/lat(index_lat(i))/)
                wseviri_data_all(icount_all, 1) = (/lon(index_lon(j))/)
@@ -194,8 +194,9 @@ begin
 
                if (num_untouch .gt. num_touch .and. \
                    num_untouch .gt. num_uncertain) then
-                  index_untouch = ind(aclay_altitude_diff(index_clatlon_nadir) .ge. 0.75)
+                  index_untouch = ind(aclayer_altitude_diff(index_clatlon_nadir) .ge. 0.75)
                   if (.not.all(ismissing(index_untouch))) then
+                     index_untouch = index_clatlon_nadir(index_untouch)
 ;  CONSIDER THIS SEVIRI GRID BOX AS ACA AND CLOUD UNTOUCH
                      seviri_data_untouch(:, index_lat(i), index_lon(j)) = \
                      (/seviri_data_day(:, index_lat(i), index_lon(j))/)
@@ -204,61 +205,61 @@ begin
                      wseviri_data_untouch(icount_untouch, 1) = (/lon(index_lon(j))/)
                      wseviri_data_untouch(icount_untouch, 2:13) = seviri_data_day(0:11, index_lat(i), index_lon(j))
                      if (.not.all(ismissing(cColumn_Optical_Depth_Cloud_532(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,14) = avg(cColumn_Optical_Depth_Cloud_532(index_untouch))
+                        wseviri_data_untouch(icount_untouch,14) = avg(cColumn_Optical_Depth_Cloud_532(index_untouch))
                      end if
                      if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_532(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,15) = avg(aColumn_Optical_Depth_Aerosols_532(index_untouch))
+                        wseviri_data_untouch(icount_untouch,15) = avg(aColumn_Optical_Depth_Aerosols_532(index_untouch))
                      end if
                      if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_1064(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,16) = avg(aColumn_Optical_Depth_Aerosols_1064(index_untouch))
+                        wseviri_data_untouch(icount_untouch,16) = avg(aColumn_Optical_Depth_Aerosols_1064(index_untouch))
                      end if
                      if (.not.all(ismissing(aLayer_Top_Altitude(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,17) = avg(aLayer_Top_Altitude(index_untouch))
+                        wseviri_data_untouch(icount_untouch,17) = avg(aLayer_Top_Altitude(index_untouch))
                      end if
                      if (.not.all(ismissing(aLayer_Base_Altitude(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,18) = avg(aLayer_Base_Altitude(index_untouch))
+                        wseviri_data_untouch(icount_untouch,18) = avg(aLayer_Base_Altitude(index_untouch))
                      end if
                      if (.not.all(ismissing(aLayer_Top_Pressure(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,19) = avg(aLayer_Top_Pressure(index_untouch))
+                        wseviri_data_untouch(icount_untouch,19) = avg(aLayer_Top_Pressure(index_untouch))
                      end if
                      if (.not.all(ismissing(aMidlayer_Pressure(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,20) = avg(aMidlayer_Pressure(index_untouch))
+                        wseviri_data_untouch(icount_untouch,20) = avg(aMidlayer_Pressure(index_untouch))
                      end if
                      if (.not.all(ismissing(aLayer_Base_Pressure(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,21) = avg(aLayer_Base_Pressure(index_untouch))
+                        wseviri_data_untouch(icount_untouch,21) = avg(aLayer_Base_Pressure(index_untouch))
                      end if
                      if (.not.all(ismissing(aLayer_Top_Temperature(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,22) = avg(aLayer_Top_Temperature(index_untouch))
+                        wseviri_data_untouch(icount_untouch,22) = avg(aLayer_Top_Temperature(index_untouch))
                      end if
                      if (.not.all(ismissing(aMidlayer_Temperature(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,23) = avg(aMidlayer_Temperature(index_untouch))
+                        wseviri_data_untouch(icount_untouch,23) = avg(aMidlayer_Temperature(index_untouch))
                      end if
                      if (.not.all(ismissing(aLayer_Base_Temperature(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,24) = avg(aLayer_Base_Temperature(index_untouch))
+                        wseviri_data_untouch(icount_untouch,24) = avg(aLayer_Base_Temperature(index_untouch))
                      end if
                      if (.not.all(ismissing(cLayer_Top_Altitude(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,25) = avg(cLayer_Top_Altitude(index_untouch))
+                        wseviri_data_untouch(icount_untouch,25) = avg(cLayer_Top_Altitude(index_untouch))
                      end if
                      if (.not.all(ismissing(cLayer_Base_Altitude(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,26) = avg(cLayer_Base_Altitude(index_untouch))
+                        wseviri_data_untouch(icount_untouch,26) = avg(cLayer_Base_Altitude(index_untouch))
                      end if
                      if (.not.all(ismissing(cLayer_Top_Pressure(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,27) = avg(cLayer_Top_Pressure(index_untouch))
+                        wseviri_data_untouch(icount_untouch,27) = avg(cLayer_Top_Pressure(index_untouch))
                      end if
                      if (.not.all(ismissing(cMidlayer_Pressure(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,28) = avg(cMidlayer_Pressure(index_untouch))
+                        wseviri_data_untouch(icount_untouch,28) = avg(cMidlayer_Pressure(index_untouch))
                      end if
                      if (.not.all(ismissing(cLayer_Base_Pressure(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,29) = avg(cLayer_Base_Pressure(index_untouch))
+                        wseviri_data_untouch(icount_untouch,29) = avg(cLayer_Base_Pressure(index_untouch))
                      end if
                      if (.not.all(ismissing(cLayer_Top_Temperature(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,30) = avg(cLayer_Top_Temperature(index_untouch))
+                        wseviri_data_untouch(icount_untouch,30) = avg(cLayer_Top_Temperature(index_untouch))
                      end if
                      if (.not.all(ismissing(cMidlayer_Temperature(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,31) = avg(cMidlayer_Temperature(index_untouch))
+                        wseviri_data_untouch(icount_untouch,31) = avg(cMidlayer_Temperature(index_untouch))
                      end if
                      if (.not.all(ismissing(cLayer_Base_Temperature(index_untouch)))) then
-                        wseviri_data_all(icount_untouch,32) = avg(cLayer_Base_Temperature(index_untouch))
+                        wseviri_data_untouch(icount_untouch,32) = avg(cLayer_Base_Temperature(index_untouch))
                      end if
 
                   icount_untouch = icount_untouch + 1
@@ -266,9 +267,10 @@ begin
                   delete([/index_untouch/])
                else if (num_touch .gt. num_untouch .and. \
                         num_touch .gt. num_uncertain) then
-                  index_touch = ind(aclay_altitude_diff(index_clatlon_nadir) .le. 0.10 .and. \
-                                    aclay_altitude_diff(index_clatlon_nadir) .ge. 0.0)
+                  index_touch = ind(aclayer_altitude_diff(index_clatlon_nadir) .le. 0.10 .and. \
+                                    aclayer_altitude_diff(index_clatlon_nadir) .ge. 0.0)
                   if (.not.all(ismissing(index_touch))) then
+                     index_touch = index_clatlon_nadir(index_touch)
 ;  CONSIDER THIS SEVIRI GRID BOX AS ACA AND CLOUD TOUCH
                      seviri_data_touch(:, index_lat(i), index_lon(j)) = \
                      (/seviri_data_day(:, index_lat(i), index_lon(j))/)
@@ -277,61 +279,61 @@ begin
                      wseviri_data_touch(icount_touch, 1) = (/lon(index_lon(j))/)
                      wseviri_data_touch(icount_touch, 2:13) = seviri_data_day(0:11, index_lat(i), index_lon(j))
                      if (.not.all(ismissing(cColumn_Optical_Depth_Cloud_532(index_touch)))) then
-                        wseviri_data_all(icount_touch,14) = avg(cColumn_Optical_Depth_Cloud_532(index_touch))
+                        wseviri_data_touch(icount_touch,14) = avg(cColumn_Optical_Depth_Cloud_532(index_touch))
                      end if
                      if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_532(index_touch)))) then
-                        wseviri_data_all(icount_touch,15) = avg(aColumn_Optical_Depth_Aerosols_532(index_touch))
+                        wseviri_data_touch(icount_touch,15) = avg(aColumn_Optical_Depth_Aerosols_532(index_touch))
                      end if
                      if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_1064(index_touch)))) then
-                        wseviri_data_all(icount_touch,16) = avg(aColumn_Optical_Depth_Aerosols_1064(index_touch))
+                        wseviri_data_touch(icount_touch,16) = avg(aColumn_Optical_Depth_Aerosols_1064(index_touch))
                      end if
                      if (.not.all(ismissing(aLayer_Top_Altitude(index_touch)))) then
-                        wseviri_data_all(icount_touch,17) = avg(aLayer_Top_Altitude(index_touch))
+                        wseviri_data_touch(icount_touch,17) = avg(aLayer_Top_Altitude(index_touch))
                      end if
                      if (.not.all(ismissing(aLayer_Base_Altitude(index_touch)))) then
-                        wseviri_data_all(icount_touch,18) = avg(aLayer_Base_Altitude(index_touch))
+                        wseviri_data_touch(icount_touch,18) = avg(aLayer_Base_Altitude(index_touch))
                      end if
                      if (.not.all(ismissing(aLayer_Top_Pressure(index_touch)))) then
-                        wseviri_data_all(icount_touch,19) = avg(aLayer_Top_Pressure(index_touch))
+                        wseviri_data_touch(icount_touch,19) = avg(aLayer_Top_Pressure(index_touch))
                      end if
                      if (.not.all(ismissing(aMidlayer_Pressure(index_touch)))) then
-                        wseviri_data_all(icount_touch,20) = avg(aMidlayer_Pressure(index_touch))
+                        wseviri_data_touch(icount_touch,20) = avg(aMidlayer_Pressure(index_touch))
                      end if
                      if (.not.all(ismissing(aLayer_Base_Pressure(index_touch)))) then
-                        wseviri_data_all(icount_touch,21) = avg(aLayer_Base_Pressure(index_touch))
+                        wseviri_data_touch(icount_touch,21) = avg(aLayer_Base_Pressure(index_touch))
                      end if
                      if (.not.all(ismissing(aLayer_Top_Temperature(index_touch)))) then
-                        wseviri_data_all(icount_touch,22) = avg(aLayer_Top_Temperature(index_touch))
+                        wseviri_data_touch(icount_touch,22) = avg(aLayer_Top_Temperature(index_touch))
                      end if
                      if (.not.all(ismissing(aMidlayer_Temperature(index_touch)))) then
-                        wseviri_data_all(icount_touch,23) = avg(aMidlayer_Temperature(index_touch))
+                        wseviri_data_touch(icount_touch,23) = avg(aMidlayer_Temperature(index_touch))
                      end if
                      if (.not.all(ismissing(aLayer_Base_Temperature(index_touch)))) then
-                        wseviri_data_all(icount_touch,24) = avg(aLayer_Base_Temperature(index_touch))
+                        wseviri_data_touch(icount_touch,24) = avg(aLayer_Base_Temperature(index_touch))
                      end if
                      if (.not.all(ismissing(cLayer_Top_Altitude(index_touch)))) then
-                        wseviri_data_all(icount_touch,25) = avg(cLayer_Top_Altitude(index_touch))
+                        wseviri_data_touch(icount_touch,25) = avg(cLayer_Top_Altitude(index_touch))
                      end if
                      if (.not.all(ismissing(cLayer_Base_Altitude(index_touch)))) then
-                        wseviri_data_all(icount_touch,26) = avg(cLayer_Base_Altitude(index_touch))
+                        wseviri_data_touch(icount_touch,26) = avg(cLayer_Base_Altitude(index_touch))
                      end if
                      if (.not.all(ismissing(cLayer_Top_Pressure(index_touch)))) then
-                        wseviri_data_all(icount_touch,27) = avg(cLayer_Top_Pressure(index_touch))
+                        wseviri_data_touch(icount_touch,27) = avg(cLayer_Top_Pressure(index_touch))
                      end if
                      if (.not.all(ismissing(cMidlayer_Pressure(index_touch)))) then
-                        wseviri_data_all(icount_touch,28) = avg(cMidlayer_Pressure(index_touch))
+                        wseviri_data_touch(icount_touch,28) = avg(cMidlayer_Pressure(index_touch))
                      end if
                      if (.not.all(ismissing(cLayer_Base_Pressure(index_touch)))) then
-                        wseviri_data_all(icount_touch,29) = avg(cLayer_Base_Pressure(index_touch))
+                        wseviri_data_touch(icount_touch,29) = avg(cLayer_Base_Pressure(index_touch))
                      end if
                      if (.not.all(ismissing(cLayer_Top_Temperature(index_touch)))) then
-                        wseviri_data_all(icount_touch,30) = avg(cLayer_Top_Temperature(index_touch))
+                        wseviri_data_touch(icount_touch,30) = avg(cLayer_Top_Temperature(index_touch))
                      end if
                      if (.not.all(ismissing(cMidlayer_Temperature(index_touch)))) then
-                        wseviri_data_all(icount_touch,31) = avg(cMidlayer_Temperature(index_touch))
+                        wseviri_data_touch(icount_touch,31) = avg(cMidlayer_Temperature(index_touch))
                      end if
                      if (.not.all(ismissing(cLayer_Base_Temperature(index_touch)))) then
-                        wseviri_data_all(icount_touch,32) = avg(cLayer_Base_Temperature(index_touch))
+                        wseviri_data_touch(icount_touch,32) = avg(cLayer_Base_Temperature(index_touch))
                      end if
 
                      icount_touch = icount_touch + 1
@@ -339,73 +341,74 @@ begin
                   delete([/index_touch/])
                else if (num_uncertain .gt. num_untouch .and. \
                         num_uncertain .gt. num_touch) then
-                  index_uncertain = ind(aclay_altitude_diff(index_clatlon_nadir) .le. 0.75 .and. \
-                                        aclay_altitude_diff(index_clatlon_nadir) .ge. 0.10)
+                  index_uncertain = ind(aclayer_altitude_diff(index_clatlon_nadir) .le. 0.75 .and. \
+                                        aclayer_altitude_diff(index_clatlon_nadir) .ge. 0.10)
                   if (.not.all(ismissing(index_uncertain))) then
-                  seviri_data_uncertain(:, index_lat(i), index_lon(j)) = \
-                  (/seviri_data_day(:, index_lat(i), index_lon(j))/)
+                     index_uncertain = index_clatlon_nadir(index_uncertain)
+                     seviri_data_uncertain(:, index_lat(i), index_lon(j)) = \
+                     (/seviri_data_day(:, index_lat(i), index_lon(j))/)
 ;  @@@PREPARE DATA FOR PUTTING THEM INTO AN ARRAY@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                  wseviri_data_uncertain(icount_uncertain, 0) = (/lat(index_lat(i))/)
-                  wseviri_data_uncertain(icount_uncertain, 1) = (/lon(index_lon(j))/)
-                  wseviri_data_uncertain(icount_uncertain, 2:13) = seviri_data_day(0:11, index_lat(i), index_lon(j))
-                  if (.not.all(ismissing(cColumn_Optical_Depth_Cloud_532(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,14) = avg(cColumn_Optical_Depth_Cloud_532(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_532(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,15) = avg(aColumn_Optical_Depth_Aerosols_532(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_1064(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,16) = avg(aColumn_Optical_Depth_Aerosols_1064(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aLayer_Top_Altitude(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,17) = avg(aLayer_Top_Altitude(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aLayer_Base_Altitude(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,18) = avg(aLayer_Base_Altitude(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aLayer_Top_Pressure(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,19) = avg(aLayer_Top_Pressure(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aMidlayer_Pressure(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,20) = avg(aMidlayer_Pressure(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aLayer_Base_Pressure(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,21) = avg(aLayer_Base_Pressure(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aLayer_Top_Temperature(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,22) = avg(aLayer_Top_Temperature(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aMidlayer_Temperature(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,23) = avg(aMidlayer_Temperature(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(aLayer_Base_Temperature(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,24) = avg(aLayer_Base_Temperature(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(cLayer_Top_Altitude(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,25) = avg(cLayer_Top_Altitude(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(cLayer_Base_Altitude(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,26) = avg(cLayer_Base_Altitude(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(cLayer_Top_Pressure(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,27) = avg(cLayer_Top_Pressure(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(cMidlayer_Pressure(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,28) = avg(cMidlayer_Pressure(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(cLayer_Base_Pressure(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,29) = avg(cLayer_Base_Pressure(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(cLayer_Top_Temperature(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,30) = avg(cLayer_Top_Temperature(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(cMidlayer_Temperature(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,31) = avg(cMidlayer_Temperature(index_uncertain))
-                  end if
-                  if (.not.all(ismissing(cLayer_Base_Temperature(index_uncertain)))) then
-                     wseviri_data_all(icount_uncertain,32) = avg(cLayer_Base_Temperature(index_uncertain))
-                  end if
-                  icount_uncertain = icount_uncertain + 1
+                     wseviri_data_uncertain(icount_uncertain, 0) = (/lat(index_lat(i))/)
+                     wseviri_data_uncertain(icount_uncertain, 1) = (/lon(index_lon(j))/)
+                     wseviri_data_uncertain(icount_uncertain, 2:13) = seviri_data_day(0:11, index_lat(i), index_lon(j))
+                     if (.not.all(ismissing(cColumn_Optical_Depth_Cloud_532(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,14) = avg(cColumn_Optical_Depth_Cloud_532(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_532(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,15) = avg(aColumn_Optical_Depth_Aerosols_532(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_1064(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,16) = avg(aColumn_Optical_Depth_Aerosols_1064(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aLayer_Top_Altitude(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,17) = avg(aLayer_Top_Altitude(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aLayer_Base_Altitude(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,18) = avg(aLayer_Base_Altitude(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aLayer_Top_Pressure(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,19) = avg(aLayer_Top_Pressure(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aMidlayer_Pressure(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,20) = avg(aMidlayer_Pressure(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aLayer_Base_Pressure(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,21) = avg(aLayer_Base_Pressure(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aLayer_Top_Temperature(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,22) = avg(aLayer_Top_Temperature(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aMidlayer_Temperature(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,23) = avg(aMidlayer_Temperature(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(aLayer_Base_Temperature(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,24) = avg(aLayer_Base_Temperature(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(cLayer_Top_Altitude(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,25) = avg(cLayer_Top_Altitude(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(cLayer_Base_Altitude(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,26) = avg(cLayer_Base_Altitude(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(cLayer_Top_Pressure(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,27) = avg(cLayer_Top_Pressure(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(cMidlayer_Pressure(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,28) = avg(cMidlayer_Pressure(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(cLayer_Base_Pressure(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,29) = avg(cLayer_Base_Pressure(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(cLayer_Top_Temperature(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,30) = avg(cLayer_Top_Temperature(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(cMidlayer_Temperature(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,31) = avg(cMidlayer_Temperature(index_uncertain))
+                     end if
+                     if (.not.all(ismissing(cLayer_Base_Temperature(index_uncertain)))) then
+                        wseviri_data_uncertain(icount_uncertain,32) = avg(cLayer_Base_Temperature(index_uncertain))
+                     end if
+                     icount_uncertain = icount_uncertain + 1
                   end if
                   delete([/index_uncertain/])
                end if
@@ -417,19 +420,19 @@ begin
 
 ;  @@@PUT NO ACA CASES SELECTION HERE TO MAKE SURE ACA AND NO ACA CASES HAPPEN ON THE SAME DAY.
 ;  NO ACA CASES
-            if (.not.all(ismissing(ind(ndtooned(aclay_altitude_diff) .gt. 0.0)))) then
+            if (.not.all(ismissing(ind(ndtooned(aclayer_altitude_diff) .gt. 0.0)))) then
             index_noaca = ind(clat_nadir .ge. lat(index_lat(i))-lat_grid_size/2. .and. \
                               clat_nadir .le. lat(index_lat(i))+lat_grid_size/2. .and. \
                               clon_nadir .ge. lon(index_lon(j))-lon_grid_size/2. .and. \
                               clon_nadir .le. lon(index_lon(j))+lon_grid_size/2. .and. \
-                              aclay_altitude_diff .lt. 0.0                       .and. \
+                              aclayer_altitude_diff .lt. 0.0                     .and. \
                               .not.all(ismissing(seviri_data_day(:, index_lat(i), index_lon(j)))) .or. \
                               clat_nadir .ge. lat(index_lat(i))-lat_grid_size/2. .and. \
                               clat_nadir .le. lat(index_lat(i))+lat_grid_size/2. .and. \
                               clon_nadir .ge. lon(index_lon(j))-lon_grid_size/2. .and. \
                               clon_nadir .le. lon(index_lon(j))+lon_grid_size/2. .and. \
-                              ismissing(alay_base_altitude)                      .and. \
-                              .not.ismissing(clay_top_altitude)                  .and. \
+                              ismissing(aLayer_Base_Altitude)                    .and. \
+                              .not.ismissing(cLayer_Top_Altitude)                .and. \
                               .not.all(ismissing(seviri_data_day(:, index_lat(i), index_lon(j)))))
                if (.not.all(ismissing(index_noaca))) then
 ;  CONSIDER THIS SEVIRI GRID BOX AS NO ACA
@@ -440,61 +443,61 @@ begin
                   wseviri_data_noaca(icount_noaca, 1) = (/lon(index_lon(j))/)
                   wseviri_data_noaca(icount_noaca, 2:13) = seviri_data_day(0:11, index_lat(i), index_lon(j))
                   if (.not.all(ismissing(cColumn_Optical_Depth_Cloud_532(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,14) = avg(cColumn_Optical_Depth_Cloud_532(index_noaca))
+                     wseviri_data_noaca(icount_noaca,14) = avg(cColumn_Optical_Depth_Cloud_532(index_noaca))
                   end if
                   if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_532(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,15) = avg(aColumn_Optical_Depth_Aerosols_532(index_noaca))
+                     wseviri_data_noaca(icount_noaca,15) = avg(aColumn_Optical_Depth_Aerosols_532(index_noaca))
                   end if
                   if (.not.all(ismissing(aColumn_Optical_Depth_Aerosols_1064(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,16) = avg(aColumn_Optical_Depth_Aerosols_1064(index_noaca))
+                     wseviri_data_noaca(icount_noaca,16) = avg(aColumn_Optical_Depth_Aerosols_1064(index_noaca))
                   end if
                   if (.not.all(ismissing(aLayer_Top_Altitude(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,17) = avg(aLayer_Top_Altitude(index_noaca))
+                     wseviri_data_noaca(icount_noaca,17) = avg(aLayer_Top_Altitude(index_noaca))
                   end if
                   if (.not.all(ismissing(aLayer_Base_Altitude(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,18) = avg(aLayer_Base_Altitude(index_noaca))
+                     wseviri_data_noaca(icount_noaca,18) = avg(aLayer_Base_Altitude(index_noaca))
                   end if
                   if (.not.all(ismissing(aLayer_Top_Pressure(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,19) = avg(aLayer_Top_Pressure(index_noaca))
+                     wseviri_data_noaca(icount_noaca,19) = avg(aLayer_Top_Pressure(index_noaca))
                   end if
                   if (.not.all(ismissing(aMidlayer_Pressure(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,20) = avg(aMidlayer_Pressure(index_noaca))
+                     wseviri_data_noaca(icount_noaca,20) = avg(aMidlayer_Pressure(index_noaca))
                   end if
                   if (.not.all(ismissing(aLayer_Base_Pressure(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,21) = avg(aLayer_Base_Pressure(index_noaca))
+                     wseviri_data_noaca(icount_noaca,21) = avg(aLayer_Base_Pressure(index_noaca))
                   end if
                   if (.not.all(ismissing(aLayer_Top_Temperature(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,22) = avg(aLayer_Top_Temperature(index_noaca))
+                     wseviri_data_noaca(icount_noaca,22) = avg(aLayer_Top_Temperature(index_noaca))
                   end if
                   if (.not.all(ismissing(aMidlayer_Temperature(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,23) = avg(aMidlayer_Temperature(index_noaca))
+                     wseviri_data_noaca(icount_noaca,23) = avg(aMidlayer_Temperature(index_noaca))
                   end if
                   if (.not.all(ismissing(aLayer_Base_Temperature(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,24) = avg(aLayer_Base_Temperature(index_noaca))
+                     wseviri_data_noaca(icount_noaca,24) = avg(aLayer_Base_Temperature(index_noaca))
                   end if
                   if (.not.all(ismissing(cLayer_Top_Altitude(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,25) = avg(cLayer_Top_Altitude(index_noaca))
+                     wseviri_data_noaca(icount_noaca,25) = avg(cLayer_Top_Altitude(index_noaca))
                   end if
                   if (.not.all(ismissing(cLayer_Base_Altitude(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,26) = avg(cLayer_Base_Altitude(index_noaca))
+                     wseviri_data_noaca(icount_noaca,26) = avg(cLayer_Base_Altitude(index_noaca))
                   end if
                   if (.not.all(ismissing(cLayer_Top_Pressure(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,27) = avg(cLayer_Top_Pressure(index_noaca))
+                     wseviri_data_noaca(icount_noaca,27) = avg(cLayer_Top_Pressure(index_noaca))
                   end if
                   if (.not.all(ismissing(cMidlayer_Pressure(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,28) = avg(cMidlayer_Pressure(index_noaca))
+                     wseviri_data_noaca(icount_noaca,28) = avg(cMidlayer_Pressure(index_noaca))
                   end if
                   if (.not.all(ismissing(cLayer_Base_Pressure(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,29) = avg(cLayer_Base_Pressure(index_noaca))
+                     wseviri_data_noaca(icount_noaca,29) = avg(cLayer_Base_Pressure(index_noaca))
                   end if
                   if (.not.all(ismissing(cLayer_Top_Temperature(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,30) = avg(cLayer_Top_Temperature(index_noaca))
+                     wseviri_data_noaca(icount_noaca,30) = avg(cLayer_Top_Temperature(index_noaca))
                   end if
                   if (.not.all(ismissing(cMidlayer_Temperature(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,31) = avg(cMidlayer_Temperature(index_noaca))
+                     wseviri_data_noaca(icount_noaca,31) = avg(cMidlayer_Temperature(index_noaca))
                   end if
                   if (.not.all(ismissing(cLayer_Base_Temperature(index_noaca)))) then
-                     wseviri_data_all(icount_noaca,32) = avg(cLayer_Base_Temperature(index_noaca))
+                     wseviri_data_noaca(icount_noaca,32) = avg(cLayer_Base_Temperature(index_noaca))
                   end if
                   icount_noaca = icount_noaca + 1
                end if

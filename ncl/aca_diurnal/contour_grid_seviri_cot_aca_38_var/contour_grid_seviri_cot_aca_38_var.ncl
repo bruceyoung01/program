@@ -417,6 +417,7 @@ begin
                   seviri_all(11,:, :) = cpi
 ;  IF ALL THE SEVIRI DATA ARE MISSING, THEN CONTINUE TO NEXT LOOP
                   if (all(ismissing(seviri_all))) then
+                     print("ALL THE SEVIRI DATA ARE MISSING!!!!!!!!")
                      continue
                   end if
 print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
@@ -514,6 +515,7 @@ print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
                       ccLayer_Top_Altitude, ccLayer_Base_Altitude, ccLayer_Top_Pressure,    \
                       ccMidlayer_Pressure, ccLayer_Base_Pressure, ccLayer_Top_Temperature,  \
                       ccMidlayer_Temperature, ccLayer_Base_Temperature)
+
 
 ;  CALL SUBROUTINE select_seviri_calipso_aca_cloud_costantino2010_write_all_var.ncl TO DISTINGUISH 
 ;  ACA AND CLOUD AS TOUCH AND UNTOUCH
