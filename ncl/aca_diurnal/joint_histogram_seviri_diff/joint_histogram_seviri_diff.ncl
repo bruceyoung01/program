@@ -29,8 +29,8 @@ load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/plot
 begin
 ;  OPEN A WORKSTATION AND CHOOSE COLORMAP
 ;  type       = "x11"
-   type       = "pdf"
-;  type       = "png"
+;  type       = "pdf"
+   type       = "png"
    plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/joint_histogram_seviri_diff/"
    wks        = gsn_open_wks(type, plot_dir + "1plot_joint_histogram_seviri_diff_v01")
    gsn_define_colormap(wks,"NCV_blu_red")

@@ -57,7 +57,8 @@ begin
    res@tmYRMinorLengthF       = 0.005
    res@tmYRMajorOutwardLengthF= 0.0
    res@tmYRMinorOutwardLengthF= 0.0
-
+   res@xyXStyle               = "Log"
+   res@xyYStyle               = "Log"
 ;  SET RESOURCES FOR SCATTER PLOT
    res@xyDashPatterns    = 1
    res@xyMarkLineModes   = (/"Markers", "Lines"/)
