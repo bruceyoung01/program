@@ -1,9 +1,0 @@
-steps:
-
-1) read in ACA_data, use sampled_grids_lat_index & sampled_grids_lon_index to locate the grid
-2) South East Atlantic Region 30S~10N; -20W~20E, July; August; Sep.
-2) use CALIOP_ACA_count to find ACA case, CALIOP_ACA_count>0 means this grid has ACA, CALIOP_ACA_count=0 no ACA
-3) read in ACA layer bottom pressure CALIOP_ACA_lbp_mean
-4) use CALIOP_ACA_lbp_mean and Terra_cot_ctp_hist to find clouds below ACA
-5) compare clean with ACA grids: Terra vs. Aqua cloud fraction & Cloud optical thickness
-
