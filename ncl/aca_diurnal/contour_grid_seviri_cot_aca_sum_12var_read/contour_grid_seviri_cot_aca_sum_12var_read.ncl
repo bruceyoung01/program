@@ -193,7 +193,7 @@ begin
             seviri_var(iivariable, :) = ndtooned(seviri_data(icase, imethod, iivariable, ihour, imin_loop, :, :))
          end do
          data_3d    = new((/nvariable, nlat, nlon/), float, bv2)
-;  CONVERT VARIABLE FROM 1-D TO 2-D WITH 1ST D IS LATITUDE, 2ND IS LONTITUDE
+;  CONVERT VARIABLE FROM 1-D TO 2-D WITH 1ST D IS LATITUDE, 2ND IS LONGITUDE
             do ilat = 0, nlat-1
                do ilon = 0, nlon-1
                   index_latlon = ind(seviri_lat .eq. lat_grid_1d(ilat) .and. \

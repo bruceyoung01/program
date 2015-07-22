@@ -13,10 +13,11 @@
 ;  33.866     2.000    -5.391     0.741   930.249     1.000 -9999.000     1.400
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 ) dir       (a string):DATA DIRECTORY                               [   ]
-;  (2 ) filename  (a string):FILE NAME                                    [   ]
-;  (3 ) nvariable  (integer):# OF VARIABLES RECORDED IN THE TEXT FILE     [   ]
-;  (4 ) seviri_data    (2-D):SELECTED AMSR-E LATITUDE                     [DEG]
+;  (1 ) dir           (a string):DATA DIRECTORY                           [   ]
+;  (2 ) filename      (a string):FILE NAME                                [   ]
+;  (3 ) nvariable     (integer) :# OF VARIABLES RECORDED IN THE TEXT FILE [   ]
+;  (4 ) variable_name (1-D)     :VARIABLE NAMES                           [   ]
+;  (5 ) seviri_data   (2-D)     :SELECTED SEVIRI DATA                     [   ]
 ;
 ;  NOTES:
 ;  ============================================================================

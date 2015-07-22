@@ -6,7 +6,15 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 )
+;  (1 ) dir       (a string):DIRECTORY OF MODIS FILES                    [   ]
+;  (2 ) filelist  (a string):FILE NAME CONTAINS ALL THE MODIS FILE NAMES [   ]
+;  (3 ) year      (scalar)  :YEAR OF MODIS DATA                          [   ]
+;  (4 ) month     (scalar)  :MONTH OF MODIS DATA                         [   ]
+;  (5 ) day       (scalar)  :DAY OF MODIS DATA                           [   ]
+;  (6 ) sfilename (1-D)     :SELECTED MODIS FILE NAMES                   [   ]
+;  (7 ) logic_filename (a logical scalar):TURE IF IT HAS MODIS FILE NAME(S) ON 
+;                                         THIS DAY, FALSE IF IT HAS NO ANY 
+;                                         FILE NAME(S) ON THIS DAY       [   ]
 ;
 ;  NOTES:
 ;  ============================================================================

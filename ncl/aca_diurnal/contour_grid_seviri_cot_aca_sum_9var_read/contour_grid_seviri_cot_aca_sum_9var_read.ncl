@@ -196,8 +196,8 @@ begin
                      end if
                   end if
                   delete([/index_latlon/])
-               end do
-            end do
+               end do ;ilon
+            end do ;ilat
 
 ;  DO IVARIABLE LOOP TO PLOT CONTOUR FOR EACH VARIABLE
          do ivariable = 2, nvariable-3

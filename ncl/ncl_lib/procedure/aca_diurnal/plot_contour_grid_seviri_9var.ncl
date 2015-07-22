@@ -5,14 +5,17 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 ) wks     (graphic)  : WORK STATION                                [---]
-;  (2 ) minlat  (float)    : MINIMUM LATITUDE                            [deg]
-;  (3 ) maxlat  (float)    : MAXIMUM LATITUDE                            [deg]
-;  (4 ) minlon  (float)    : MINIMUM LONGITUDE                           [deg]
-;  (5 ) maxlon  (float)    : MAXIMUM LONGITUDE                           [deg]
-;  (6 ) data    (float)    : VARIABLE                                    [---]
-;  (7 ) times   (character): TIME STEP OF PLOT                           [---]
-;  (8 ) mpplot  (graphic)  : PRE-DEFINED MAP                             [---]
+;  (1 ) wks        (graphic) : WORK STATION                               [   ]
+;  (2 ) ivariable  (scalar)  : VARIABLE INDEX                             [   ]
+;  (3 ) casemethod (a string):CASE AND MEHTOD NAME                        [   ]
+;  (4 ) minlat     (scalar)  : MINIMUM LATITUDE                           [DEG]
+;  (5 ) maxlat     (scalar)  : MAXIMUM LATITUDE                           [DEG]
+;  (6 ) minlon     (scalar)  : MINIMUM LONGITUDE                          [DEG]
+;  (7 ) maxlon     (scalar)  : MAXIMUM LONGITUDE                          [DEG]
+;  (8 ) lat        (2-D)     : LATITUDE                                   [DEG]
+;  (9 ) lon        (2-D)     : LONGITUDE                                  [DEG]
+;  (10) data       (2-D)     : VARIABLE                                   [   ]
+;  (11) times      (a string): TIME STEP OF PLOT                          [   ]
 ;
 ;  NOTES:
 ;  ============================================================================
