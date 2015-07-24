@@ -1,0 +1,8 @@
+# SUBMMTING JOB SCRIPT AND LOG FILE
+slurm.err
+slurm.out
+*.slurm
+# FILES GENERATED DURING PROCESSING
+*.nc
+*.log
+*.Log
