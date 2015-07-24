@@ -75,8 +75,8 @@ begin
 ; SET UP THE POSITION OF THE MAP             AMSR-E ; CALIPSO/MODIS
   mpres@vpWidthF                    = 0.15 ; 0.20   ; 0.15
   mpres@vpHeightF                   = 0.15 ; 0.20   ; 0.15
-  mpres@vpXF                        = 0.71 ; 0.57   ; 0.71
-  mpres@vpYF                        = 0.95 ; 0.80   ; 0.95
+  mpres@vpXF                        = 0.829 ; 0.57   ; 0.71
+  mpres@vpYF                        = 0.768 ; 0.80   ; 0.95
   mpres@mpFillDrawOrder             = "PreDraw"
   mpres@gsnDraw                     = False
   mpres@gsnFrame                    = False

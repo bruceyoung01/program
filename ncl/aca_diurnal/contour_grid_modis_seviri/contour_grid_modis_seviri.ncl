@@ -32,8 +32,9 @@ begin
 ;  type       = "x11"
    type       = "pdf"
 ;  type       = "png"
+   sdate      = "200806"
    plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/contour_grid_modis_seviri/"
-   plot_name  = "1plt_contour_grid_modis_seviri_v02"
+   plot_name  = "1plt_contour_grid_modis_seviri_" + sdate + "_v04"
    wks        = gsn_open_wks(type, plot_dir + plot_name)
    gsn_define_colormap(wks,"WhBlGrYeOrReVi202")
 
@@ -137,7 +138,6 @@ begin
 
 ;  CACLULATE AVERAGE
    data_3d_all_avg = dim_avg_n(data_3d_all, 0)
-   sdate           = "2008 06"
 ;  DO VARIABLE LOOP TO PLOT EACH VARIABLE
    do ivariable = 2, nvariable-1
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

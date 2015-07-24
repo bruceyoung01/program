@@ -23,9 +23,8 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/shea_util.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/wrf/WRFUserARW.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/esmf/ESMF_regridding.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/universal/gsn_csm_epa.ncl"
-load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/universal/grid_lat_lon.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/universal/polygon_map.ncl"
-load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/pixel_to_grid_degree.ncl"
+load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/universal/grid_lat_lon.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/pixel_to_grid_ESMF.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/plot_contour_grid_landmask_seviri.ncl"
 
@@ -98,7 +97,7 @@ begin
 ;  CALL SUBROUTINE grid_lat_lon.ncl TO GENERATE GRIDDED LATITUDE AND LONGITUDE
    grid_lat_lon \
    (minlat, maxlat, minlon, maxlon, lat_grid_size, lon_grid_size, \
-    lat_grid_1d, lon_grid_1d, lat_grid_2d, lon_grid_2d)
+   lat_grid_1d, lon_grid_1d, lat_grid_2d, lon_grid_2d)
 
 ;  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ;  START TO PROCESS DATA
@@ -161,11 +160,6 @@ begin
 print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
 print("Start to interpolate pixel data to gridded data")
 system("date")
-;  CALL SUBROUTINE pixel_to_grid_degree.ncl TO GRID THE PIXEL LEVEL DATA INTO
-;  GRIDDED LEVEL DATA
-;                 pixel_to_grid_degree \
-;                 (bv1, bv2, lat_grid_2d, lon_grid_2d, lat_grid_size, lon_grid_size, \
-;                 lat, lon, minpixel, cot16, cot16_grid, cot16_grid_n, cot16_grid_std)
 ;  CALL SUBROUTINE pixel_to_grid_ESMF.ncl TO GRID THE PIXEL LEVEL DATA INTO
 ;  GRIDDED LEVEL DATA
                   pixel_to_grid_ESMF \

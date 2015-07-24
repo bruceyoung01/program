@@ -129,8 +129,8 @@ begin
    if (ivariable .eq. 2 .or. \
        ivariable .eq. 9) then
       res@cnMinLevelValF            = 0.0
-      res@cnMaxLevelValF            = 5.0
-      res@cnLevelSpacingF           = 0.025
+      res@cnMaxLevelValF            = 2.5
+      res@cnLevelSpacingF           = 0.0125
       res@lbTitleString             = "Above Cloud Water Vapor (cm)"
    else if (ivariable .eq. 3 .or. \
             ivariable .eq. 10) then
@@ -141,8 +141,8 @@ begin
    else if (ivariable .eq. 4 .or. \
             ivariable .eq. 11) then
       res@cnMinLevelValF            = 0.0
-      res@cnMaxLevelValF            = 50.0
-      res@cnLevelSpacingF           = 0.25
+      res@cnMaxLevelValF            = 25.0
+      res@cnLevelSpacingF           = 0.125
       res@lbTitleString             = "Cloud Effective Radius (~F33~m~F21~m)"
    else if (ivariable .eq. 5 .or. \
             ivariable .eq. 12) then
@@ -164,9 +164,9 @@ begin
       res@lbTitleString             = "Cloud Top Height (m)"
    else if (ivariable .eq. 8 .or. \
             ivariable .eq. 15) then
-      res@cnMinLevelValF            = -50.0
+      res@cnMinLevelValF            = -100.0
       res@cnMaxLevelValF            = 0.0
-      res@cnLevelSpacingF           = 0.25
+      res@cnLevelSpacingF           = 0.5
       res@lbTitleString             = "Cloud Top Temperature (~F34~0~F21~C)"
    end if
    end if

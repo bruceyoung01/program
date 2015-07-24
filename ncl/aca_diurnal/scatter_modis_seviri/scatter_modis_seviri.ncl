@@ -28,10 +28,10 @@ load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/plot
 begin
 ;  OPEN A WORKSTATION AND CHOOSE COLORMAP
 ;  type       = "x11"
-   type       = "pdf"
-;  type       = "png"
+;  type       = "pdf"
+   type       = "png"
    plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/scatter_modis_seviri/"
-   plot_name  = "1plt_scatter_modis_seviri_v02"
+   plot_name  = "1plt_scatter_modis_seviri_v03"
    wks        = gsn_open_wks(type, plot_dir + plot_name)
    gsn_define_colormap(wks,"WhBlGrYeOrReVi202")
 
@@ -63,15 +63,15 @@ begin
       variable_name, modis_seviri)
 
 ;  DO VARIABLE LOOP TO PLOT EACH VARIABLE
-      do ivariable = 2, 8
+;     do ivariable = 2, 8
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ;  PLOT IMAGE
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ;  CALL SUBROUTINE plot_scatter_modis_seviri_reg.ncl TO PLOT SCATTER PLOTS
-         plot_scatter_modis_seviri_reg \
-         (wks, stime, ivariable, \
-         modis_seviri(ivariable, :), modis_seviri(ivariable+7, :))
-      end do
+;        plot_scatter_modis_seviri_reg \
+;        (wks, stime, ivariable, \
+;        modis_seviri(ivariable, :), modis_seviri(ivariable+7, :))
+;     end do
       modis_seviri_all(iloop, :, :) = modis_seviri
       iloop = iloop + 1
    end do

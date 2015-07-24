@@ -107,8 +107,8 @@ begin
 ;  SET UP THE START TIME AND END TIME
    start_year = 2008
    end_year   = 2008
-   start_month= 6
-   end_month  = 6
+   start_month= 7
+   end_month  = 9
    start_day  = 1
 
    start_ind_lat = 1400
@@ -139,16 +139,19 @@ begin
 
 ;  DO MONTH LOOP
       do imonth = start_month, end_month
-         nday = days_in_month(iyear, imonth)
+         nday_month = days_in_month(iyear, imonth)
 
 ;  DO DAY LOOP
-         do iday = start_day, nday-1
+         do iday = start_day, nday_month-1
             siyear  = sprinti("%0.4i", iyear)
             simonth = sprinti("%0.2i", imonth)
             siday   = sprinti("%0.2i", iday)
             stime   = siyear + "_" + simonth + "_" + siday
             print("Date : " + stime)
 
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;  SELECT MODIS DATA
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             logic_m3filename = True
             nm3filename_day  = 25
             sm3filename      = new((/nm3filename_day/), string,   bv0)

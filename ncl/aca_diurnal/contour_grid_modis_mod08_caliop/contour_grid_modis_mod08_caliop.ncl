@@ -34,12 +34,13 @@ begin
 ;  type       = "x11"
    type       = "pdf"
 ;  type       = "png"
-   wks        = gsn_open_wks(type,"1plot_contour_grid_modis_mod08_caliop_v01")
+   plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/contour_grid_modis_mod08_caliop/"
+   wks        = gsn_open_wks(type, plot_dir + "1plot_contour_grid_modis_myd08_caliop_v02")
    gsn_define_colormap(wks,"WhBlGrYeOrReVi202")
 
 ;  DATA DIRECTORY
-   dir        = "/home/vy57456/zzbatmos_common/Data/MODIS/MODIS_C6_D3/MOD08_D3/"
-   filelist   = "filelist_MOD08"
+   dir        = "/home/vy57456/zzbatmos_common/Data/MODIS/MODIS_C6_D3/MYD08_D3/"
+   filelist   = "filelist_MYD08"
 
 ;  CALIPSO DATA INFO
    cdir       = "/home/vy57456/zzbatmos_common/Data/CALIPSO/CAL_LID_L2_05kmAPro/"
@@ -49,19 +50,19 @@ begin
    bv2        = -9999.
 
 ;  SET UP LIMITED REGION
-   minlat     =-30.0
-   maxlat     = 10.0
-   minlon     =-20.0
-   maxlon     = 20.0
+   minlat     =-15.0
+   maxlat     =-2.0
+   minlon     =-14.0
+   maxlon     = 18.0
 ;  LATTITUDE AND LONGITUDE FOR STUDY REGION
    lat_pg     = (/minlat, minlat, maxlat, maxlat, minlat/)
    lon_pg     = (/minlon, maxlon, maxlon, minlon, minlon/)
 
 ;  SET UP THE START TIME AND END TIME
-   start_year = 2007
-   end_year   = 2007
-   start_month= 8
-   end_month  = 8
+   start_year = 2008
+   end_year   = 2008
+   start_month= 7
+   end_month  = 9
    start_day  = 1
 
 ;  SPECIFY DAY AND NIGHT

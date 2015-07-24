@@ -134,7 +134,7 @@ begin
    res@cnLevelSpacingF              = 1
    res@lbLabelStride                = 50
    res@lbTitleString                = "Liquid Water Path" + "(g/m~S~2~N~)"
-   res@tiMainString                 = "MODIS (Terra) " + times
+   res@tiMainString                 = "MODIS (Aqua) " + times
 
    plot = gsn_csm_contour_map(wks, data, map, res)
 

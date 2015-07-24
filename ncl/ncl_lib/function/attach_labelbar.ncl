@@ -20,6 +20,7 @@ begin
   lbres@lbLabelFontHeightF = 0.02          ; font height. default is small
   lbres@lbLabelJust        = "CenterLeft"  ; left justify labels
   lbres@lbLabelAlignment   = "ExternalEdges"
+; lbres@lbLabelAlignment   = "InteriorEdges"
   lbres@lbBoxLinesOn       = False
   lbres@lbTitleString      = "%"
   lbres@lbTitlePosition    = "Top"

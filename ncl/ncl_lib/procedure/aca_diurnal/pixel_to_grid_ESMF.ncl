@@ -43,7 +43,18 @@ begin
    Opt@SrcGridLat        = src_lat
    Opt@SrcGridLon        = src_lon
    Opt@SrcRegional       = True
-   Opt@SrcMask2D         = where(.not.ismissing(src_data(0, :, :)), 1, 0)
+;  SOMETIMES WE REGRID ONE VARIABLE, WHICH REQUIRE 2-D
+;  WHILE OCCASIONALLY WE REGRID MULTIPLE VARIABLES, WHICH REQUIRED 3-D
+;  SO BEFORE WE EMPLOY Opt@SrcMask2D, WE NEED TO MAKE SURE src_data IS 
+;  2-D OR 3-D
+   dim                   = dimsizes(src_data)
+   ndim                  = dimsizes(dim)
+   if (ndim .eq. 2) then
+      Opt@SrcMask2D      = where(.not.ismissing(src_data), 1, 0)
+   else if (ndim .eq. 3) then
+      Opt@SrcMask2D      = where(.not.ismissing(src_data(0, :, :)), 1, 0)
+   end if
+   end if
 
 ;  SETUP FOR THE DESTINATION DATA
    slat_grid_size        = flt2string(lat_grid_size)
