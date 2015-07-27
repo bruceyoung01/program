@@ -37,7 +37,7 @@ procedure read_modis_mod04_2d_1day \
 
 begin
 ;  GET ALL THE FILENAME IN ONE DAY
-   ninx = endinx(iday) - startinx(iday) + 1
+   ninx        = endinx(iday) - startinx(iday) + 1
    tmpfilename = new(ninx, string, bv0)
    tmpfilename = filename(startinx(iday):endinx(iday))
 
@@ -74,17 +74,17 @@ begin
       lat((np*iloop):(np*(iloop+1)-1), 0:nl-1)   = tmp_lat
       lon((np*iloop):(np*(iloop+1)-1), 0:nl-1)   = tmp_lon
       mdata_qa_land((np*iloop):(np*(iloop+1)-1), 0:nl-1)=  \
-      doubletoint(tmp_mdata_qa_land*                   \
-                  tmp_mdata_qa_land@scale_factor +     \
+      doubletoint(tmp_mdata_qa_land*                       \
+                  tmp_mdata_qa_land@scale_factor +         \
                   tmp_mdata_qa_land@add_offset)
       mdata_qa_ocean((np*iloop):(np*(iloop+1)-1), 0:nl-1)= \
-      doubletoint(tmp_mdata_qa_ocean*                  \
-                  tmp_mdata_qa_ocean@scale_factor +    \
+      doubletoint(tmp_mdata_qa_ocean*                      \
+                  tmp_mdata_qa_ocean@scale_factor +        \
                   tmp_mdata_qa_ocean@add_offset)
-      mdata((np*iloop):(np*(iloop+1)-1), 0:nl-1)   =   \
-      doubletofloat(tmp_mdata*tmp_mdata@scale_factor + \
+      mdata((np*iloop):(np*(iloop+1)-1), 0:nl-1)   =       \
+      doubletofloat(tmp_mdata*tmp_mdata@scale_factor +     \
                     tmp_mdata@add_offset)
-      delete([/tmp_lat, tmp_lon, tmp_dim, tmp, tmp_mdata, \
+      delete([/tmp_lat, tmp_lon, tmp_dim, tmp, tmp_mdata,  \
                tmp_mdata_qa_land, tmp_mdata_qa_ocean/])
       iloop = iloop + 1
    end do

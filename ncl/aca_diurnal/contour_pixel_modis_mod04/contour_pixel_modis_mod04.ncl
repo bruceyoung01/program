@@ -27,8 +27,8 @@ load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/plot
 
 begin
 ;  SETUP WORKSTATION
-;  type     = "x11"
-   type     = "pdf"
+   type     = "x11"
+;  type     = "pdf"
 ;  type     = "png"
    dir_plot = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/contour_pixel_modis_mod04/"
    wks      = gsn_open_wks(type, dir_plot + "1plt_contour_pixel_modis_mod04_ang_v03")
@@ -76,25 +76,22 @@ begin
    (dir, flist, logic_leap, nday, startinx, endinx, \
     year, mon, date, times, timee, dayname, daynum)
 
-;  DECLARE VARIABLES FOR SUBROUTINE read_modis_aod_1day.ncl
-   mnp            = 203
-   mnl            = 135
-   mfactor        = 15
-   tmnp           = mnp*mfactor
-   mlat           = new((/tmnp, mnl/), float, bv2)
-   mlon           = new((/tmnp, mnl/), float, bv2)
-   mdata          = new((/tmnp, mnl/), float, bv2)
-   mdata_qa_land  = new((/tmnp, mnl/), integer, bv1)
-   mdata_qa_ocean = new((/tmnp, mnl/), integer, bv1)
-
    do iday = 0, nday-1
       system("date")
       date_display = year(iday) + "-" + mon(iday) + "-" + date(iday) + "_" + times(iday) + "-" + timee(iday)
       print("DATE : " + date_display)
 
-      mlat  = 0.0
-      mlon  = 0.0
-      mdata = 0.0
+;  DECLARE VARIABLES FOR SUBROUTINE read_modis_aod_1day.ncl
+      mnp            = 203
+      mnl            = 135
+      mfactor        = 15
+      tmnp           = mnp*mfactor
+      mlat           = new((/tmnp, mnl/), float, bv2)
+      mlon           = new((/tmnp, mnl/), float, bv2)
+      mdata          = new((/tmnp, mnl/), float, bv2)
+      mdata_qa_land  = new((/tmnp, mnl/), integer, bv1)
+      mdata_qa_ocean = new((/tmnp, mnl/), integer, bv1)
+
 ;  CALL SUBROUTINE read_modis_mod04_2d_1day.ncl TO READ ALL THE LATITUDE, LONGITUDE, 
 ;  AOD QUALITY FLAG, AND AOD FOR ONE DAY.
       read_modis_mod04_2d_1day \
