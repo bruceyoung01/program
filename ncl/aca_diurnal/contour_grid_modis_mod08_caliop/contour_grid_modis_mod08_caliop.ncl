@@ -12,7 +12,7 @@
 ;  ============================================================================
 ;  (1 ) ORIGINALLY WRITTEN BY BRUCE. (06/10/2015)
 ;******************************************************************************
-
+;
 ;  LOAD FUNCTIONS AND PROCEDURES
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
