@@ -12,8 +12,8 @@
 ;  (4 ) maxlat         (scalar):MAXIMUM LATITUDE OF THE STUDY REGION     [   ]
 ;  (5 ) minlon         (scalar):MINIMUM LONGITUDE OF THE STUDY REGION    [   ]
 ;  (6 ) maxlon         (scalar):MAXIMUM LONGITUDE OF THE STUDY REGION    [   ]
-;  (7 ) mlat              (2-D):LATITUDE CORRESPONDING TO mdata          [   ]
-;  (8 ) mlon              (2-D):LONGITUDE CORRESPONDING TO mdata         [   ]
+;  (7 ) mlat              (1-D):LATITUDE CORRESPONDING TO mdata          [   ]
+;  (8 ) mlon              (1-D):LONGITUDE CORRESPONDING TO mdata         [   ]
 ;  (9 ) mdata             (2-D):MODIS MOD04/MYD04 DATA                   [   ]
 ;
 ;  NOTES:
@@ -21,8 +21,8 @@
 ;  (1 ) ORIGINALLY WRITTEN BY BRUCE. (01/17/2013)
 ;******************************************************************************
 
-undef("plot_contour_modis_modis_mod04")
-procedure plot_contour_modis_modis_mod04 \
+undef("plot_contour_grid_modis_mod04")
+procedure plot_contour_grid_modis_mod04 \
           (wks       :graphic,   title     :string,  \;INPUT
            minlat    :float,     maxlat    :float,   \;INPUT
            minlon    :float,     maxlon    :float,   \;INPUT
@@ -32,12 +32,12 @@ procedure plot_contour_modis_modis_mod04 \
 begin
 
 ;  ASSIGN LATITUDE AND LONGITUDE TO THE DATA
-   data!0                           = "lat"
-   data!1                           = "lon"
-   data&lat                         = mlat
-   data&lon                         = mlon
-   data&lat@units                   ="degrees_north"
-   data&lon@units                   ="degrees_east"
+   mdata!0                          = "lat"
+   mdata!1                          = "lon"
+   mdata&lat                        = mlat
+   mdata&lon                        = mlon
+   mdata&lat@units                  ="degrees_north"
+   mdata&lon@units                  ="degrees_east"
 
 ;  opt                              = True
 ;  opt@PrintStat                    = True
@@ -55,9 +55,9 @@ begin
    res@cnFillOn                     = True
    res@cnLinesOn                    = False
    res@cnLineLabelsOn               = False
-;  res@cnFillMode                   = "CellFill"
+   res@cnFillMode                   = "CellFill"
 ;  res@cnFillMode                   = "RasterFill"
-   res@trGridType                   = "TriangularMesh"
+;  res@trGridType                   = "TriangularMesh"
 ;  res@cnMissingValFillColor        = "White"
    res@cnLevelSelectionMode         = "ManualLevels"
    res@cnMinLevelValF               = 0.0
@@ -111,6 +111,7 @@ begin
    res@mpDataBaseVersion            = "MediumRes"
    res@pmTickMarkDisplayMode        = "always"
    res@mpFillDrawOrder              = "PreDraw"
+
 ; SET UP THE POSITION
    res@vpWidthF                     = 0.7
    res@vpHeightF                    = 0.25
