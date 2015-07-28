@@ -81,7 +81,7 @@ begin
    nvariable     = 28
    dim           = (/nvariable, nobs, ncount_write_day/)
    variable_name = new((/nvariable/), string)
-;  DO method AND case LOOP TO GET ALL THE METHDS AND CASES
+;  DO case LOOP TO GET ALL THE CASES
    do icase = 0, ncase-1
       print("Now processing = " + case(icase))
       modis_data = new(dim, float, bv2)

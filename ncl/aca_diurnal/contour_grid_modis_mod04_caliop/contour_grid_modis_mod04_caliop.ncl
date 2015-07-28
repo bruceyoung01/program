@@ -127,12 +127,11 @@ begin
 ;  DO MONTH LOOP
       do imonth = start_month, end_month
 ;  CALCULATE # OF DAYS IN THIS MONTH
-         lon_year    = days_in_month(iyear, imonth)
+         days_month    = days_in_month(iyear, imonth)
 ;  DO DAY LOOP
          iday_loop = 0
-         do iday = start_day, lon_year
+         do iday = start_day, days_month
 ;  FOR EVERY ITERATION, ASSUME THE FILE NAME EXISTS
-            logic_filename = True
             siyear  = sprinti("%0.4i", iyear)
             simonth = sprinti("%0.2i", imonth)
             siday   = sprinti("%0.2i", iday)
@@ -175,6 +174,7 @@ begin
 ;  PROCESS CALIPSO DATA
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ;  DEFINE VARIABLES FOR SUBROUTINE select_calipso_filename.ncl
+            logic_filename = True
             nscfilename    = 20
             scfilename     = new((/nscfilename/), string)
 ;  CALL SUBROUTINE select_calipso_filename.ncl TO SELECT FILE NAMES BASED ON 
