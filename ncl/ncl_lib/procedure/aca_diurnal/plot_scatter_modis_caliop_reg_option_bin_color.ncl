@@ -7,10 +7,18 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 ) wks      (workstation):WORK STATION                               [   ]
-;  (2 ) stime    (a string)   :ATTRIBUTES                                 [   ]
-;  (3 ) data1    (multi-D)    :DATA FOR X AXIS                            [   ]
-;  (4 ) data2    (multi-D)    :DATA FOR Y AXIS                            [   ]
+;  (1 ) wks     (workstation):WORK STATION                               [   ]
+;  (2 ) stime      (a string):ATTRIBUTES                                 [   ]
+;  (3 ) xtick_name (a string):X AXIS NAME                                [   ]
+;  (4 ) ytick_name (a string):Y AXIS NAME                                [   ]
+;  (5 ) xmin       (a scalar):MINIMUM VALUE OF X AXIS                    [   ]
+;  (6 ) xmax       (a scalar):MAXIMUM VALUE OF X AXIS                    [   ]
+;  (7 ) ymin       (a scalar):MINIMUM VALUE OF Y AXIS                    [   ]
+;  (8 ) ymax       (a scalar):MAXIMUM VALUE OF Y AXIS                    [   ]
+;  (9 ) data1           (X-D):DATA FOR X AXIS                            [   ]
+;  (10) data1_fre       (X-D):DATA1 FREQUENCY IN EACH BIN                [   ]
+;  (11) data2           (X-D):DATA FOR Y AXIS                            [   ]
+;  (12) data2_std       (X-D):DATA STANDARD DEVIATION                    [   ]
 ;
 ;  NOTES:
 ;  ============================================================================
@@ -44,7 +52,7 @@ begin
    res@trXMinF                = xmin
    res@trYMaxF                = ymax
    res@trYMinF                = ymin
-   res@trYReverse             = True
+;  res@trYReverse             = True
    res@tmXBMajorLengthF       = 0.01
    res@tmXBMinorLengthF       = 0.005
    res@tmXBMajorOutwardLengthF= 0.0
@@ -66,7 +74,7 @@ begin
 ;  SET RESOURCES FOR SCATTER PLOT
    ncolor                     = 200
    lmin                       = 0
-   lmax                       = 20
+   lmax                       = 10
    levels                     = ispan(lmin, lmax, 1)
    nlevels                    = dimsizes(levels)
    labels                     = new(nlevels,string)
@@ -93,9 +101,12 @@ begin
 ;  PLOT DOTS WITH VARIOUS COLOR BASED ON ITS VALUES
    data1_fre  = data1_fre*100
    overlays   = new(nlevels-1,graphic)
+
+;  ASSIGN ALL THE data1_fre BIGGER THAN levels(nlevels-1) TO levels(nlevels-1)
+   data1_fre  = where(data1_fre .gt. levels(nlevels-1), levels(nlevels-1), data1_fre)
    do ilevels = 0, nlevels-2
       index = ind(data1_fre .ge. levels(ilevels) .and. \
-                  data1_fre .lt. levels(ilevels+1))
+                  data1_fre .le. levels(ilevels+1))
       nindex = dimsizes(index)
       if (nindex .ge. 1                          .and. \
           .not.all(ismissing(index))             .and. \

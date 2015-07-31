@@ -1,12 +1,22 @@
 ;  $ID: divide_bin_fre.ncl V01 07/15/2015 16:12 BRUCE EXP$
 ;
 ;******************************************************************************
-;  PROCEDURE divide_bin_fre.ncl DIVIDES VARIABLES INTO BINS AND PLOTS THE 
-;  FREQUENCY WITH 2-D COLOR BAR.
+;  PROCEDURE divide_bin_fre.ncl DIVIDES VARIABLES INTO BINS, AND CALCULATE 
+;  FREQUENCY, STANDARD DEVIATION. 
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 )
+;  (1 ) xmin         (a scalar):MINIMUM VALUE OF X AXIS                   [   ]
+;  (2 ) xmax         (a scalar):MAXIMUM VALUE OF X AXIS                   [   ]
+;  (3 ) ymin         (a scalar):MINIMUM VALUE OF Y AXIS                   [   ]
+;  (4 ) ymax         (a scalar):MAXIMUM VALUE OF Y AXIS                   [   ]
+;  (5 ) npts         (a scalar):# OF BINS                                 [   ]
+;  (6 ) xdata             (X-D):XDATA                                     [   ]
+;  (7 ) ydata             (X-D):YDATA                                     [   ]
+;  (8 ) xdata_bin         (1-D):BINS FOR XDATA                            [   ]
+;  (9 ) xdata_fre         (1-D):FREQUENCY FOR XDATA IN EACH BIN           [   ]
+;  (10) ydata_bin         (1-D):BINS FOR YDATA                            [   ]
+;  (11) ydata_std         (1-D):STANDARD DEVIATION FOR YDATA              [   ]
 ;
 ;  NOTES:
 ;  ============================================================================

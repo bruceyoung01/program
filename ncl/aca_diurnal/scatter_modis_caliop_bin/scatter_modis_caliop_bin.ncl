@@ -36,7 +36,7 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/shea_util.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/wrf/WRFUserARW.ncl"
 load "/umbc/lustre/zzbatmos/users/vy57456/program/ncl/ncl_lib/function/attach_labelbar.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/read_ascii_modis_caliop.ncl"
-load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/divide_bin_fre.ncl"
+load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/divide_bin_fre_count.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/plot_scatter_modis_caliop_reg_option_bin_color.ncl"
 
 begin
@@ -45,19 +45,19 @@ begin
    type       = "pdf"
 ;  type       = "png"
    plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/scatter_modis_caliop_bin/"
-   wks        = gsn_open_wks(type, plot_dir + "1plt_scatter_modis_caliop_bin_v01_2")
+   wks        = gsn_open_wks(type, plot_dir + "1plt_scatter_modis_caliop_bin_v06")
    gsn_define_colormap(wks,"BlGrYeOrReVi200")
 
 ;  DATA DIRECTORY
-   dir        = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/write_modis_caliop_aca/"
+   dir        = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/write_modis_caliop_aca_distance/"
 
 ;  DEFINE BAD VALUE
    bv1        = -9999
    bv2        = -9999.
 
 ;  SET UP THE START TIME AND END TIME
-   start_year   = 2007
-   end_year     = 2007
+   start_year   = 2006
+   end_year     = 2010
    start_month  = 7
    end_month    = 9
    start_day    = 1
@@ -74,7 +74,7 @@ begin
 
    nobs          = 1500
    nctrack       = 3
-   ncount_write  = 100
+   ncount_write  = 300
    ncount_write_day = nctrack*ncount_write
 
 ;  DEFINE NEW ARRAY TO READ DATA
@@ -98,9 +98,37 @@ begin
          iloop = iloop + 1
       end do ;ifilename
 
-;  CALCULATE AEROSOL INDEX
+;  ADD COSTANTINO ET AL., 2013 ACP CRITERIA AND CALCULATE AEROSOL INDEX
       do iobs = 0, nobs-1
          do icount_write_day = 0, ncount_write_day-1
+;  ADD COSTANTINO ET AL., 2013 ACP CRITERIA
+;  (2 ) CLOUD TOP PRESSURE CTP>600hPa
+            if (.not.ismissing(modis_data(22, iobs, icount_write_day))) then
+               if (modis_data(22, iobs, icount_write_day) .lt. 600) then
+                  modis_data (:, iobs, icount_write_day) = bv2
+               end if
+            end if
+;  (3 ) 5<COT<35 (COT IS FROM MODIS)
+            if (.not.ismissing(modis_data(2,  iobs, icount_write_day))) then
+               if (modis_data(2,  iobs, icount_write_day) .lt. 5.0 .or. \
+                   modis_data(2,  iobs, icount_write_day) .gt. 35) then
+                  modis_data (:, iobs, icount_write_day) = bv2
+               end if
+            end if
+;  (4 ) AEROSOL TOP LAYER ALTITUDE ATA<10km
+            if (.not.ismissing(modis_data(12, iobs, icount_write_day))) then
+               if (modis_data(12, iobs, icount_write_day) .gt. 10.) then
+                  modis_data (:, iobs, icount_write_day) = bv2
+               end if
+            end if
+;  (5 ) LIQUID WATER PATH LWP<300 g/m^2
+            if (.not.ismissing(modis_data(3,  iobs, icount_write_day))) then
+               if (modis_data(3,  iobs, icount_write_day) .gt. 300) then
+                  modis_data (:, iobs, icount_write_day) = bv2
+               end if
+            end if
+
+;  CALCULATE AEROSOL INDEX
             modis_data(6, iobs, icount_write_day) = \
             modis_data(5, iobs, icount_write_day) * \
             modis_data(6, iobs, icount_write_day)
@@ -110,33 +138,37 @@ begin
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ;  PLOT IMAGE
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-      xvariable = (/6, 6, 6, 2, 2, 6/) ;AI , AI , AI , COD, COD, AI 
-      yvariable = (/4, 3, 2, 4, 3, 7/) ;CER, CWP, COD, CER, CWP, CTP
-      xmin      = (/0,  0,  0,  0,  0,  0 /)
-      xmax      = (/0.5,  0.5,  0.5,  20, 20, 0.5/)
-      ymin      = (/0,  0,  0,  0,  0,  700 /)
-      ymax      = (/20, 200,10, 20, 300,1000/)
-      xunit     = (/" ", " ", " ", " ", " ", " "/)
-      yunit     = (/" (~F33~m~F21~m)", " (g/m~S~2~N~)", \
-                    " ", " (~F33~m~F21~m)", \
-                    " (g/m~S~2~N~)", " (hPa)"/)
-      xtick_name= variable_name(xvariable) + xunit
-      ytick_name= variable_name(yvariable) + yunit
-      nplot     = 6
-      npts      = 200
-;  DEFINE ARRAY FOR SUBROUTINE divide_bin_fre.ncl
-      xdata_bin = new((/npts/), float, bv2)
-      xdata_fre = new((/npts/), float, bv2)
-      ydata_bin = new((/npts/), float, bv2)
-      ydata_std = new((/npts/), float, bv2)
+      xvariable   = (/6, 6, 6, 2, 2, 6/) ;AI , AI , AI , COD, COD, AI 
+      yvariable   = (/4, 3, 2, 4, 3, 7/) ;CER, CWP, COD, CER, CWP, CTP
+      xmin        = (/0,  0,  0,  0,  0,  0 /)
+      xmax        = (/1.0,  1.0,  1.0,  35, 35, 1.0/)
+      ymin        = (/0,  0,  5,  5,  0,  700 /)
+      ymax        = (/20, 200,15, 20, 300,1000/)
+      xunit       = (/" ", " ", " ", " ", " ", " "/)
+      yunit       = (/" (~F33~m~F21~m)", " (g/m~S~2~N~)", \
+                      " ", " (~F33~m~F21~m)", \
+                      " (g/m~S~2~N~)", " (hPa)"/)
+      xtick_name  = variable_name(xvariable) + xunit
+      ytick_name  = variable_name(yvariable) + yunit
+      nplot       = 6
+      npts        = 25
 ;  DO nplot LOOP TO PLOT IMAGES
-      do iplot = 5, 5;nplot-1
-;  CALL SUBROUTINE divide_bin_fre.ncl TO DIVIDE THE DATA INTO VARIOUS BINS
-         divide_bin_fre \
+      do iplot = 0, nplot-2
+
+;  DEFINE ARRAY FOR SUBROUTINE divide_bin_fre.ncl
+         xdata_bin   = new((/npts/), float, bv2)
+         xdata_fre   = new((/npts/), float, bv2)
+         ydata_bin   = new((/npts/), float, bv2)
+         ydata_std   = new((/npts/), float, bv2)
+         ydata_count = new((/npts/), integer, bv1)
+
+;  CALL SUBROUTINE divide_bin_fre_count.ncl TO DIVIDE THE DATA INTO VARIOUS BINS
+         divide_bin_fre_count \
          (xmin(iplot), xmax(iplot), ymin(iplot), ymax(iplot), npts, \
          modis_data(xvariable(iplot), :, :), \
          modis_data(yvariable(iplot), :, :), \
-         xdata_bin, xdata_fre, ydata_bin, ydata_std)
+         xdata_bin, xdata_fre, ydata_bin, ydata_std, ydata_count)
+
          stitle = case(icase) + "   " + \
                   variable_name(xvariable(iplot)) + " VS. " + \
                   variable_name(yvariable(iplot))
@@ -145,6 +177,9 @@ begin
              iplot .eq. 2 .or. \
              iplot .eq. 5) then
             xtick_name(iplot) = "Aerosol Index"
+            stitle = case(icase) + "   " + \
+                     xtick_name(iplot) + " VS. " + \
+                     variable_name(yvariable(iplot))
          end if
          nydata_bin = num(.not.ismissing(ydata_bin))
          if (nydata_bin .le. 2) then

@@ -1,9 +1,9 @@
 ;  $ID: select_modis_calipso_aca_cloud_costantino2013_write_all_28var.ncl V01 07/01/2015 23:52 BRUCE EXP$
 ;
 ;******************************************************************************
-;  PROCEDURE select_modis_calipso_aca_cloud_costantino2013_write_28all_var SELECTS ALL 
-;  THE MODIS GRIDS WITH THE RELATIVE VERTICAL POSITION OF AEROSOL AND CLOUD.
-;  WHICH INCLUDES TOUCH AND UNTOUCH.
+;  PROCEDURE select_modis_calipso_aca_cloud_costantino2013_write_all_28var 
+;  SELECTS ALL THE MODIS GRIDS WITH THE RELATIVE VERTICAL POSITION OF AEROSOL 
+;  AND CLOUD, WHICH INCLUDES TOUCH AND UNTOUCH.
 ;  L : DISTANCE BETWEEN CLOUD TOP ALTITUDE AND AEROSOL BASE ALTITUDE.
 ;  (a ) touch : L<100m;
 ;  (b ) uncertain : 100m<L<750m;
@@ -75,8 +75,8 @@ procedure select_modis_calipso_aca_cloud_costantino2013_write_all_28var \
 
 begin
 
-   dim_3d                 = (/nvariable, nlat, nlon/)
-   dim_write              = (/ncount_write, nelement_write/)
+   dim_3d                = (/nvariable, nlat, nlon/)
+   dim_write             = (/ncount_write, nelement_write/)
    modis_data_all        = new(dim_3d,    float, bv2)
    modis_data_untouch    = new(dim_3d,    float, bv2)
    modis_data_touch      = new(dim_3d,    float, bv2)

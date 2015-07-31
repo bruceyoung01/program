@@ -39,12 +39,40 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 ) Layer_Base_Altitude   (2-D):CALIOP L2 AEROSOL Layer_Base_Altitude [KM ]
-;  (2 ) Layer_Top_Altitude    (2-D):CALIOP L2 CLOUD Layer_Top_Altitude    [KM ]
-;  (3 ) acLayer_Base_Altitude (1-D):SELECTED Layer_Base_Altitude FOR ALL 
-;                                   THE LAYERS                            [KM ]
-;  (4 ) ccLayer_Top_Altitude  (1-D):SELECTED Layer_Top_Altitude FOR ALL 
-;                                   THE LAYERS                            [KM ]
+;  (1 ) aLayer_Top_Altitude   (2-D):CALIOP L2 AEROSOL Layer_Top_Altitude  [KM ]
+;  (2 ) aLayer_Base_Altitude  (2-D):CALIOP L2 AEROSOL Layer_Base_Altitude [KM ]
+;  (3 ) aLayer_Top_Pressure   (2-D):CALIOP L2 AEROSOL Layer_Top_Pressure  [HPA]
+;  (4 ) aMidlayer_Pressure    (2-D):CALIOP L2 AEROSOL Midlayer_Pressure   [HPA]
+;  (5 ) aLayer_Base_Pressure  (2-D):CALIOP L2 AEROSOL Layer_Base_Pressure [HPA]
+;  (6 ) aLayer_Top_Temperature(2-D):CALIOP L2 AEROSOL Layer_Top_Temperature [C]
+;  (7 ) aMidlayer_Temperature (2-D):CALIOP L2 AEROSOL Midlayer_Temperature[C  ]
+;  (8 ) aLayer_Base_Temperature(2-D):CALIOP L2 AEROSOL Layer_Base_Temperature[C]
+;  (9 ) aNumber_Layers_Found  (2-D):CALIOP L2 AEROSOL Number_Layers_Found [   ]
+;  (10) cLayer_Top_Altitude   (2-D):CALIOP L2 CLOUD Layer_Top_Altitude    [KM ]
+;  (11) cLayer_Base_Altitude  (2-D):CALIOP L2 CLOUD Layer_Base_Altitude   [KM ]
+;  (12) cLayer_Top_Pressure   (2-D):CALIOP L2 CLOUD Layer_Top_Pressure    [HPA]
+;  (13) cMidlayer_Pressure    (2-D):CALIOP L2 CLOUD Midlayer_Pressure     [HPA]
+;  (14) cLayer_Base_Pressure  (2-D):CALIOP L2 CLOUD Layer_Base_Pressure   [HPA]
+;  (15) cLayer_Top_Temperature(2-D):CALIOP L2 CLOUD Layer_Top_Temperature [C  ]
+;  (16) cMidlayer_Temperature (2-D):CALIOP L2 CLOUD Midlayer_Temperature  [C  ]
+;  (17) cLayer_Base_Temperature(2-D):CALIOP L2 CLOUD Layer_Base_Temperature[C ]
+;  (18) cNumber_Layers_Found  (2-D):CALIOP L2 CLOUD Number_Layers_Found   [   ]
+;  (19) acLayer_Top_Altitude   (2-D):CALIOP L2 AEROSOL Layer_Top_Altitude  [KM ]
+;  (20) acLayer_Base_Altitude  (2-D):CALIOP L2 AEROSOL Layer_Base_Altitude [KM ]
+;  (21) acLayer_Top_Pressure   (2-D):CALIOP L2 AEROSOL Layer_Top_Pressure  [HPA]
+;  (22) acMidlayer_Pressure    (2-D):CALIOP L2 AEROSOL Midlayer_Pressure   [HPA]
+;  (23) acLayer_Base_Pressure  (2-D):CALIOP L2 AEROSOL Layer_Base_Pressure [HPA]
+;  (24) acLayer_Top_Temperature(2-D):CALIOP L2 AEROSOL Layer_Top_Temperature [C]
+;  (25) acMidlayer_Temperature (2-D):CALIOP L2 AEROSOL Midlayer_Temperature[C  ]
+;  (26) acLayer_Base_Temperature(2-D):CALIOP L2 AEROSOL Layer_Base_Temperature[C]
+;  (27) ccLayer_Top_Altitude   (2-D):CALIOP L2 CLOUD Layer_Top_Altitude    [KM ]
+;  (28) ccLayer_Base_Altitude  (2-D):CALIOP L2 CLOUD Layer_Base_Altitude   [KM ]
+;  (29) ccLayer_Top_Pressure   (2-D):CALIOP L2 CLOUD Layer_Top_Pressure    [HPA]
+;  (30) ccMidlayer_Pressure    (2-D):CALIOP L2 CLOUD Midlayer_Pressure     [HPA]
+;  (31) ccLayer_Base_Pressure  (2-D):CALIOP L2 CLOUD Layer_Base_Pressure   [HPA]
+;  (32) ccLayer_Top_Temperature(2-D):CALIOP L2 CLOUD Layer_Top_Temperature [C  ]
+;  (33) ccMidlayer_Temperature (2-D):CALIOP L2 CLOUD Midlayer_Temperature  [C  ]
+;  (34) ccLayer_Base_Temperature(2-D):CALIOP L2 CLOUD Layer_Base_Temperature[C ]
 ;
 ;  NOTES:
 ;  ============================================================================
