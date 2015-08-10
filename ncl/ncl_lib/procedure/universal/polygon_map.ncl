@@ -23,10 +23,10 @@
 
 undef("polygon_map")
 procedure polygon_map \
-         (wks       :graphic,                   \ ; INPUT
-          minlat    :float,   maxlat   :float,  \ ; INPUT
-          minlon    :float,   maxlon   :float,  \ ; INPUT
-          lat_pg    :float,   lon_pg   :float)    ; INPUT
+         (wks       :graphic,                     \; INPUT
+          minlat    :numeric,   maxlat   :numeric,\; INPUT
+          minlon    :numeric,   maxlon   :numeric,\; INPUT
+          lat_pg    :numeric,   lon_pg   :numeric) ; INPUT
 
 
 begin
@@ -45,10 +45,10 @@ begin
   mpres@mpGridLonSpacingF           = 10.0
   mpres@mpLimitMode                 = "latlon"
 ; GET THE GLOBAL MAP
-  mpres@mpMinLatF                   = -90.0
-  mpres@mpMaxLatF                   =  90.0
-  mpres@mpMinLonF                   = -180.0
-  mpres@mpMaxLonF                   =  180.0
+  mpres@mpMinLatF                   = -40.0
+  mpres@mpMaxLatF                   =  40.0
+  mpres@mpMinLonF                   = -40.0
+  mpres@mpMaxLonF                   =  80.0
   
 ; COLOR OF CONTINIENTAL OUTLINES
   mpres@mpOutlineOn                 = True
@@ -75,8 +75,8 @@ begin
 ; SET UP THE POSITION OF THE MAP             AMSR-E ; CALIPSO/MODIS
   mpres@vpWidthF                    = 0.15 ; 0.20   ; 0.15
   mpres@vpHeightF                   = 0.15 ; 0.20   ; 0.15
-  mpres@vpXF                        = 0.829 ; 0.57   ; 0.71
-  mpres@vpYF                        = 0.768 ; 0.80   ; 0.95
+  mpres@vpXF                        = 0.78 ; 0.57   ; 0.71
+  mpres@vpYF                        = 0.95 ; 0.80   ; 0.95
   mpres@mpFillDrawOrder             = "PreDraw"
   mpres@gsnDraw                     = False
   mpres@gsnFrame                    = False

@@ -76,19 +76,18 @@ begin
    mnl        = 135
    mfactor    = 20
    tmnp       = mnp*mfactor
-   mlat       = new((/tmnp, mnl/), float, bv2)
-   mlon       = new((/tmnp, mnl/), float, bv2)
-   maod       = new((/tmnp, mnl/), float, bv2)
-   maod_qf    = new((/tmnp, mnl/), integer, bv1)
 
    do iday = 0, 0;nday-1
     system("date")
     date_display = year(iday) + "-" + mon(iday) + "-" + date(iday) + "_" + times(iday)
     print("DATE : " + date_display)
 
-    mlat = 0.0
-    mlon = 0.0
-    maod = 0.0
+;  DECLARE VARIABLES FOR SUBROUTINE read_modis_aod_1day.ncl
+   mlat       = new((/tmnp, mnl/), float, bv2)
+   mlon       = new((/tmnp, mnl/), float, bv2)
+   maod       = new((/tmnp, mnl/), float, bv2)
+   maod_qf    = new((/tmnp, mnl/), integer, bv1)
+
 ;  CALL SUBROUTINE read_modis_aod_1day.ncl TO READ ALL THE LATITUDE, LONGITUDE, 
 ;  AOD QUALITY FLAG, AND AOD FOR ONE DAY.
     read_modis_aod_1day \

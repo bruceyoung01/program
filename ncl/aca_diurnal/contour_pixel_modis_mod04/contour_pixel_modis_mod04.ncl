@@ -43,7 +43,7 @@ begin
    bv1        = -9999
    bv2        = -9999.
    minlat     = -15.0
-   maxlat     = -2.0
+   maxlat     = - 2.0
    minlon     = -14.0
    maxlon     =  18.0
 

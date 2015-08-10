@@ -5,7 +5,7 @@
 ;  contour_grid_amsre_sum_aca.ncl, AND PLOTS THE SCATTER PLOT BETWEEN LIQUID 
 ;  WATER PATH AND AEROSOL LAYER ALTITUDE.
 ;
-;  VARIABLES:
+;  FLOW CHART:
 ;  ============================================================================
 ;  (1 )
 ;
@@ -27,7 +27,8 @@ begin
 ;  type       = "x11"
    type       = "pdf"
 ;  type       = "png"
-   wks        = gsn_open_wks(type,"1plot_scatter_lwp_aba_v02")
+   plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/scatter_lwp_aba/"
+   wks        = gsn_open_wks(type, plot_dir + "1plot_scatter_lwp_aba_v02")
    gsn_define_colormap(wks,"WhBlGrYeOrReVi202")
 
 ;  DATA DIRECTORY
