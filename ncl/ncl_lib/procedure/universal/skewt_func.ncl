@@ -12,6 +12,11 @@
 ; Dennis Shea
 ; email: shea@ucar.edu
 ; ------------------------------------------------
+;  NOTES:
+;  ============================================================================
+;  (1 ) MODIFY TEMPERATURE UNIT FROM "Temperature (C)" TO "Temperature (~F34~0~F21~C)"
+;       (BRUCE, 08/10/2015)
+;******************************************************************************
 
 undef("skewty")
 function skewty(pres[*]:numeric)            ; y-coord given pressure (mb)
