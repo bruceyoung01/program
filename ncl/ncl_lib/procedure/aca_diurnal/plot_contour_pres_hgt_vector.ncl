@@ -6,7 +6,15 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 )
+;  (1 ) wks         (graphic):WORK STATION                               [   ]
+;  (2 ) stime      (a string):PLOT TITLE                                 [   ]
+;  (3 ) in         (a scalar):# OF POINTS OF X AXIS                      [   ]
+;  (4 ) npts       (a scalar):# OF TICKS                                 [   ]
+;  (5 ) p               (1-D):PRESSURE                                   [hPa]
+;  (6 ) lon             (1-D):X AXIS TICK NAMES                          [DEG]
+;  (7 ) data            (2-D):DATA TO BE PLOTTED                         [   ]
+;  (8 ) u               (2-D):U-WIND COMPONENT                           [m/s]
+;  (9 ) v               (2-D):V-WIND COMPONENT                           [m/s]
 ;
 ;  NOTES:
 ;  ============================================================================
@@ -70,13 +78,13 @@ begin
    cresn@tmXBValues            = fspan(0.,(in-1),npts)
    cresn@tmXBLabels            = sprintf("%5.2f", (lon(0:(in-1):stride)))
    cresn@cnLevelSelectionMode  = "ManualLevels"
-   cresn@cnMinLevelValF        = -50
-   cresn@cnMaxLevelValF        = 50
-   cresn@cnLevelSpacingF       = 0.5
-;  cresn@tiXAxisString         = "Longitude"
-   cresn@tiXAxisString         = "Latitude"
+   cresn@cnMinLevelValF        = -30
+   cresn@cnMaxLevelValF        = 20
+   cresn@cnLevelSpacingF       = 0.25
+   cresn@tiXAxisString         = "Longitude"
+;  cresn@tiXAxisString         = "Latitude"
    cresn@tiYAxisString         = "Altitude (hPa)"
-   cresn@tiMainString          = "NCEP FNL  " + stime
+   cresn@tiMainString          = "NCEP FNL Dew Point Temperature " + stime
 
 ;  SET UP VECTOR RESOURCES
    cresvn                          = True
@@ -93,7 +101,7 @@ begin
    cresvn@vcVectorDrawOrder        = "PostDraw"
    cresvn@vcMinDistanceF           = 0.04
    cresvn@vcMapDirection           = False
-   plot = gsn_csm_pres_hgt_vector(wks, data({1000:10}, :), u({1000:10}, :), w({1000:10}, :), cresvn)
+   plot = gsn_csm_pres_hgt_vector(wks, data({1000:100}, :), u({1000:100}, :), w({1000:100}, :), cresvn)
 
    draw(plot)
 

@@ -72,11 +72,11 @@ begin
 
 ; TURN ON MAP TICKNARKS
   mpres@pmTickMarkDisplayMode       = "always"
-; SET UP THE POSITION OF THE MAP             SKEWT  AMSR-E ; CALIPSO/MODIS
-  mpres@vpWidthF                    = 0.15 ; 0.15 ; 0.20   ; 0.15
-  mpres@vpHeightF                   = 0.15 ; 0.15 ; 0.20   ; 0.15
-  mpres@vpXF                        = 0.65 ; 0.78 ; 0.57   ; 0.71
-  mpres@vpYF                        = 0.824; 0.95 ; 0.80   ; 0.95
+; SET UP THE POSITION OF THE MAP      CON_VERTICAL; SKEWT; AMSR-E; CALIPSO/MODIS
+  mpres@vpWidthF                    = 0.15;0.15;0.15 ; 0.15 ; 0.20   ; 0.15
+  mpres@vpHeightF                   = 0.15;0.15;0.15 ; 0.15 ; 0.20   ; 0.15
+  mpres@vpXF                        = 0.65;0.78;0.65 ; 0.78 ; 0.57   ; 0.71
+  mpres@vpYF                        = 0.824;0.95;0.824; 0.95 ; 0.80   ; 0.95
   mpres@mpFillDrawOrder             = "PreDraw"
   mpres@gsnDraw                     = False
   mpres@gsnFrame                    = False

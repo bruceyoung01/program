@@ -41,7 +41,7 @@ begin
    type       = "pdf"
 ;  type       = "png"
    plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/contour_vertical_ncep_fnl_longitude/"
-   wks        = gsn_open_wks(type, plot_dir + "1plot_contour_vertical_ncep_fnl_longitude_v01")
+   wks        = gsn_open_wks(type, plot_dir + "1plot_contour_vertical_ncep_fnl_longitude_tdc_v01")
    gsn_define_colormap(wks,"BlGrYeOrReVi200")
 
 ;  NCEP FNL DATA DIRECTORY
@@ -92,7 +92,7 @@ begin
 
 ;  SWITCH FOR PLOTTING
    plot_daily   = False
-   plot_monthly = True
+   plot_monthly = False
    plot_yearly  = True
    plot_totally = True
 
@@ -329,7 +329,7 @@ begin
 ;  CALL SUBROUTINE plot_contour_pres_hgt_vector.ncl TO PLOT CONTOUR ALONG 
 ;  LONGITUDE AND VERTICAL.
                   plot_contour_pres_hgt_vector \
-                  (wks, stime, nlat_0_com, npts, p, lat_t, tmpc_daily, u_daily, vvel_daily)
+                  (wks, stime, nlat_0_com, npts, p, lat_t, tdc_daily, u_daily, vvel_daily)
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
                   polygon_map \
                   (wks, minlat, maxlat, minlon, maxlon, \
@@ -357,7 +357,7 @@ begin
 ;  CALL SUBROUTINE plot_contour_pres_hgt_vector.ncl TO PLOT CONTOUR ALONG 
 ;  LONGITUDE AND VERTICAL.
                   plot_contour_pres_hgt_vector \
-                  (wks, stime, nlat_0_com, npts, p, lat_t, tmpc_monthly, u_monthly, vvel_monthly)
+                  (wks, stime, nlat_0_com, npts, p, lat_t, tdc_monthly, u_monthly, vvel_monthly)
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
                   polygon_map \
                   (wks, minlat, maxlat, minlon, maxlon, \
@@ -385,7 +385,7 @@ begin
 ;  CALL SUBROUTINE plot_contour_pres_hgt_vector.ncl TO PLOT CONTOUR ALONG 
 ;  LONGITUDE AND VERTICAL.
                   plot_contour_pres_hgt_vector \
-                  (wks, stime, nlat_0_com, npts, p, lat_t, tmpc_yearly, u_yearly, vvel_yearly)
+                  (wks, stime, nlat_0_com, npts, p, lat_t, tdc_yearly, u_yearly, vvel_yearly)
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
                   polygon_map \
                   (wks, minlat, maxlat, minlon, maxlon, \
@@ -413,7 +413,7 @@ begin
 ;  CALL SUBROUTINE plot_contour_pres_hgt_vector.ncl TO PLOT CONTOUR ALONG 
 ;  LONGITUDE AND VERTICAL.
                   plot_contour_pres_hgt_vector \
-                  (wks, stime, nlat_0_com, npts, p, lat_t, tmpc_totally, u_totally, vvel_totally)
+                  (wks, stime, nlat_0_com, npts, p, lat_t, tdc_totally, u_totally, vvel_totally)
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
                   polygon_map \
                   (wks, minlat, maxlat, minlon, maxlon, \
