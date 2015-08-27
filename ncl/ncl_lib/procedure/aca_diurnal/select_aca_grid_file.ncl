@@ -6,7 +6,16 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 )
+;  (1 ) filename  (1-D)     :ACA DATA FILE NAMES                         [---]
+;  (2 ) iyear     (a scalar):YEAR OF ACA DATA FILE NAMES                 [---]
+;  (3 ) imonth    (a scalar):MONTH OF ACA DATA FILE NAMES                [---]
+;  (4 ) iday      (a scalar):DAY OF ACA DATA FILE NAMES                  [---]
+;  (5 ) dorn      (a string):DAY OR NIGHT STRING                         [---]
+;  (6 ) just      (a string):ADJUST OR NOADJUST STRING                   [---]
+;  (7 ) sfilename (1-D)     :SELECTED FILE NAMES FOR SPECIFIC YEAR, MONTH, 
+;                            AND DAY                                     [---]
+;  (8 ) logic_filename (a logical):LOGICAL NAME TO CHECK WHETHER THE SELECTED 
+;                                  FILE NAME(S) EXIST(S) OR NOT          [---]
 ;
 ;  NOTES:
 ;  ============================================================================
