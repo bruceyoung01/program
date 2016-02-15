@@ -45,10 +45,10 @@ begin
   mpres@mpGridLonSpacingF           = 10.0
   mpres@mpLimitMode                 = "latlon"
 ; GET THE GLOBAL MAP
-  mpres@mpMinLatF                   = -40.0
-  mpres@mpMaxLatF                   =  40.0
-  mpres@mpMinLonF                   = -40.0
-  mpres@mpMaxLonF                   =  80.0
+  mpres@mpMinLatF                   = -90.0
+  mpres@mpMaxLatF                   =  90.0
+  mpres@mpMinLonF                   = -180.0
+  mpres@mpMaxLonF                   =  180.0
   
 ; COLOR OF CONTINIENTAL OUTLINES
   mpres@mpOutlineOn                 = True
@@ -76,7 +76,7 @@ begin
   mpres@vpWidthF                    = 0.15;0.15;0.15 ; 0.15 ; 0.20   ; 0.15
   mpres@vpHeightF                   = 0.15;0.15;0.15 ; 0.15 ; 0.20   ; 0.15
   mpres@vpXF                        = 0.65;0.78;0.65 ; 0.78 ; 0.57   ; 0.71
-  mpres@vpYF                        = 0.824;0.95;0.824; 0.95 ; 0.80   ; 0.95
+  mpres@vpYF                        = 0.871;0.95;0.824; 0.95 ; 0.80   ; 0.95
   mpres@mpFillDrawOrder             = "PreDraw"
   mpres@gsnDraw                     = False
   mpres@gsnFrame                    = False

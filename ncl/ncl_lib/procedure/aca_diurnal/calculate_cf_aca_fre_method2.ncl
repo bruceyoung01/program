@@ -1,11 +1,16 @@
 ; $ID: calculate_cf_aca_fre_method2.ncl V01 06/02/2015 14:33 BRUCE EXP$
 ;
 ;******************************************************************************
-;  PROCEDURE calculate_cf_aca_fre_method2 CALCULATES CLOUD FRACTION AND ACA FREQUENCY.
+;  PROCEDURE calculate_cf_aca_fre_method2 CALCULATES CLOUD FRACTION AND ACA 
+;  FREQUENCY.
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 )
+;  (1 ) CALIOP_total_count    (1-D):CALIOP TOTAL COUNT                    [---]
+;  (2 ) CALIOP_cloud_count    (1-D):CALIOP CLOUD COUNT                    [---]
+;  (3 ) CALIOP_ACA_count_sum  (1-D):CALIOP ACA COUNT                      [---]
+;  (4 ) CALIOP_cf             (1-D):CALIOP CLOUD FRACTION                 [---]
+;  (5 ) CALIOP_ACA_fre        (1-D):CALIOP ACA FREQUENCY                  [---]
 ;
 ;  NOTES:
 ;  ============================================================================
@@ -14,8 +19,7 @@
 
 undef("calculate_cf_aca_fre_method2")
 procedure calculate_cf_aca_fre_method2 \
-          (nlat                 :integer, nlon               :integer, \
-           CALIOP_total_count   :integer, CALIOP_cloud_count :integer, \
+          (CALIOP_total_count   :integer, CALIOP_cloud_count :integer, \
            CALIOP_ACA_count_sum :integer,                              \
            CALIOP_cf            :float,   CALIOP_ACA_fre     :float)
 

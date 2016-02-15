@@ -5,7 +5,12 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 )
+;  (1 ) bv2                  (scalar):MISSING VALUE FOR FLOAT             [---]
+;  (2 ) CALIOP_total_count_time (1-D):CALIOP TOTAL COUNT                  [---]
+;  (3 ) CALIOP_cloud_count_time (1-D):CALIOP CLOUD COUNT                  [---]
+;  (4 ) CALIOP_ACA_count_time   (1-D):CALIOP ACA COUNT                    [---]
+;  (5 ) CALIOP_cf_time          (1-D):CALIOP CLOUD FRACTION               [---]
+;  (6 ) CALIOP_ACA_fre_time     (1-D):CALIOP ACA FREQUENCY                [---]
 ;
 ;  NOTES:
 ;  ============================================================================
@@ -15,7 +20,6 @@
 undef("calculate_cf_aca_fre_method1")
 procedure calculate_cf_aca_fre_method1 \
           (bv2                     :float,                                     \
-           nlat                    :integer, nlon                    :integer, \
            CALIOP_total_count_time :integer, CALIOP_cloud_count_time :integer, \
            CALIOP_ACA_count_time   :integer,                                   \
            CALIOP_cf_time          :float,   CALIOP_ACA_fre_time     :float)
@@ -33,13 +37,13 @@ begin
    index1 = ind(.not.ismissing(CALIOP_total_count_time_1d) .and. \
                                CALIOP_total_count_time_1d .gt. 0)
    CALIOP_cf_time_1d(index1) = CALIOP_cloud_count_time_1d(index1)/ \
-                        int2flt(CALIOP_total_count_time_1d(index1))
+                       int2flt(CALIOP_total_count_time_1d(index1))
    CALIOP_cf_time = onedtond(CALIOP_cf_time_1d, dimsizes(CALIOP_cf_time))
 
    index2 = ind(.not.ismissing(CALIOP_cloud_count_time_1d) .and. \
                                CALIOP_cloud_count_time_1d .gt. 0)
    CALIOP_ACA_fre_time_1d(index2) = CALIOP_ACA_count_time_1d(index2)/ \
-                        int2flt(CALIOP_cloud_count_time_1d(index2))
+                            int2flt(CALIOP_cloud_count_time_1d(index2))
    CALIOP_ACA_fre_time = onedtond(CALIOP_ACA_fre_time_1d, dimsizes(CALIOP_ACA_fre_time))
    delete([/index1, index2/])
 return

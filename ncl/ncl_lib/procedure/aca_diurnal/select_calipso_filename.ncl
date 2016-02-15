@@ -11,7 +11,7 @@
 ;  VARIABLES:
 ;  ============================================================================
 ;  (1 ) dir             (string):CALIPSO DATA DIRECTORY                   [   ]
-;  (2 ) filelist        (string):A FILE CONTAINING ALL THE CALIPSO FILENMES[  ]
+;  (2 ) filelist        (string):A FILE CONTAINING ALL THE CALIPSO FILENAMES[ ]
 ;  (3 ) year           (integer):YEAR NEEDED                              [   ]
 ;  (4 ) month          (integer):MONTH NEEDED                             [   ]
 ;  (5 ) day            (integer):DAY NEEDED                               [   ]

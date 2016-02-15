@@ -8,13 +8,14 @@
 ;  VARIABLES:
 ;  ============================================================================
 ;  (1 ) wks     (graphic)  : WORK STATION                                [---]
-;  (2 ) minlat  (float)    : MINIMUM LATITUDE                            [deg]
-;  (3 ) maxlat  (float)    : MAXIMUM LATITUDE                            [deg]
-;  (4 ) minlon  (float)    : MINIMUM LONGITUDE                           [deg]
-;  (5 ) maxlon  (float)    : MAXIMUM LONGITUDE                           [deg]
-;  (6 ) data    (float)    : VARIABLE                                    [---]
-;  (7 ) times   (character): TIME STEP OF PLOT                           [---]
-;  (8 ) mpplot  (graphic)  : PRE-DEFINED MAP                             [---]
+;  (2 ) minlat  (scalar)   : MINIMUM LATITUDE                            [deg]
+;  (3 ) maxlat  (scalar)   : MAXIMUM LATITUDE                            [deg]
+;  (4 ) minlon  (scalar)   : MINIMUM LONGITUDE                           [deg]
+;  (5 ) maxlon  (scalar)   : MAXIMUM LONGITUDE                           [deg]
+;  (6 ) lat     (1-D)      : GRIDDED LATITUDE                            [DEG]
+;  (7 ) lon     (1-D)      : GRIDDED LONGITUDE                           [DEG]
+;  (8 ) data    (float)    : VARIABLE                                    [---]
+;  (9 ) times   (character): TIME STEP OF PLOT                           [---]
 ;
 ;  NOTES:
 ;  ============================================================================
@@ -36,8 +37,8 @@ begin
    data!1                           = "lon"
    data&lat                         = lat
    data&lon                         = lon
-   data&lat@units                   ="degrees_north"
-   data&lon@units                   ="degrees_east"
+   data&lat@units                   = "degrees_north"
+   data&lon@units                   = "degrees_east"
 
 ;  ADD LAND AND SEA MASK
    b = addfile("$NCARG_ROOT/lib/ncarg/data/cdf/landsea.nc", "r")
@@ -124,14 +125,9 @@ begin
    res@lbBoxLinesOn                 = False
 
 ;  PLOT THE CONTOUR OVER THE CE MAP
-;  METHOD1
-;  res@tiMainString                 = times + "  [n/~F34~e~F21~(n)]  Cloud"
-;  METHOD2
-;  res@tiMainString                 = times + "  [n/~F34~e~F21~(N)]  Cloud"
-;  METHOD3
-   res@tiMainString                 = times + "  {n/~F34~e~F21~[available(n)]}  Cloud"
+   res@tiMainString                 = times
    res@tiMainFontHeightF            = 0.02
-   res@lbTitleString                = "Aqua (W/ Terra) Cloud Fraction"
+   res@lbTitleString                = "CALIOP Cloud Fraction"
    res@lbTitleFontHeightF           = 0.015
    res@lbTitlePosition              = "Bottom"
    plot                             = gsn_csm_contour_map(wks, data, map, res)

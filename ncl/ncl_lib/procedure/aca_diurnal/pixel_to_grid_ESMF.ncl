@@ -6,16 +6,17 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 ) src_lat          (2-D):SOURCE LATITUDE                            [DEG]
-;  (2 ) src_lon          (2-D):SOURCE LONGITUDE                           [DEG]
-;  (3 ) minlat        (scalar):MINIMUM LATITUDE IN THE STUDY REGION       [DEG]
-;  (4 ) maxlat        (scalar):MAXIMUM LATITUDE IN THE STUDY REGION       [DEG]
-;  (5 ) minlon        (scalar):MINIMUM LONGITUDE IN THE STUDY REGION      [DEG]
-;  (6 ) maxlon        (scalar):MAXIMUM LONGITUDE IN THE STUDY REGION      [DEG]
-;  (7 ) lat_grid_size (scalar):LATITUDE GRID SIZE                         [DEG]
-;  (8 ) lon_grid_size (scalar):LONGITUDE GRID SIZE                        [DEG]
-;  (9 ) src_data         (2-D):SOURCE DATA                                [   ]
-;  (10) dst_data         (2-D):DESTINATION DATA                           [   ]
+;  (1 ) bv2           (scalar):MISSING VALUE FOR FLOAT                    [DEG]
+;  (2 ) src_lat          (2-D):SOURCE LATITUDE                            [DEG]
+;  (3 ) src_lon          (2-D):SOURCE LONGITUDE                           [DEG]
+;  (4 ) minlat        (scalar):MINIMUM LATITUDE IN THE STUDY REGION       [DEG]
+;  (5 ) maxlat        (scalar):MAXIMUM LATITUDE IN THE STUDY REGION       [DEG]
+;  (6 ) minlon        (scalar):MINIMUM LONGITUDE IN THE STUDY REGION      [DEG]
+;  (7 ) maxlon        (scalar):MAXIMUM LONGITUDE IN THE STUDY REGION      [DEG]
+;  (8 ) lat_grid_size (scalar):LATITUDE GRID SIZE                         [DEG]
+;  (9 ) lon_grid_size (scalar):LONGITUDE GRID SIZE                        [DEG]
+;  (10) src_data         (2-D):SOURCE DATA                                [   ]
+;  (11) dst_data         (2-D):DESTINATION DATA                           [   ]
 ;
 ;  NOTES:
 ;  ============================================================================
@@ -44,15 +45,15 @@ begin
    Opt@SrcGridLon        = src_lon
    Opt@SrcRegional       = True
 ;  SOMETIMES WE REGRID ONE VARIABLE, WHICH REQUIRE 2-D
-;  WHILE OCCASIONALLY WE REGRID MULTIPLE VARIABLES, WHICH REQUIRED 3-D
-;  SO BEFORE WE EMPLOY Opt@SrcMask2D, WE NEED TO MAKE SURE src_data IS 
+;  WHILE OCCASIONALLY WE REGRID MULTIPLE VARIABLES, WHICH REQUIRE 3-D
+;  SO BEFORE WE EMPLOY Opt@SrcGridMask, WE NEED TO MAKE SURE src_data IS 
 ;  2-D OR 3-D
    dim                   = dimsizes(src_data)
    ndim                  = dimsizes(dim)
    if (ndim .eq. 2) then
-      Opt@SrcMask2D      = where(.not.ismissing(src_data), 1, 0)
+      Opt@SrcGridMask    = where(.not.ismissing(src_data), 1, 0)
    else if (ndim .eq. 3) then
-      Opt@SrcMask2D      = where(.not.ismissing(src_data(0, :, :)), 1, 0)
+      Opt@SrcGridMask    = where(.not.ismissing(src_data(0, :, :)), 1, 0)
    end if
    end if
 

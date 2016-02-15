@@ -7,7 +7,12 @@
 ;
 ;  FLOW CHART:
 ;  ============================================================================
-;  (1 )
+;  (1 ) SETUP THE BASIC INFO, SUCH AS OUTPUT FILE NAME, DIRECTORY, DEFAULT 
+;       MISSING VALUE, TIME, SPECIFIC INFO;
+;  (2 ) MATCH THE FILE NAMES FOR VARIOUS CASES, INCLUDING TOUCHING, UNTOUCHING, 
+;       NOACA;
+;  (3 ) DO icase, imethod, ihour, and imin LOOP;
+;  (4 ) BUILD THE FILE NAME BASED ON THE 
 ;
 ;  NOTES:
 ;  ============================================================================

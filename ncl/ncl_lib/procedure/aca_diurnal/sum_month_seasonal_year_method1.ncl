@@ -1,12 +1,24 @@
 ; $ID: sum_month_seasonal_year_method1.ncl V01 06/02/2015 14:07 BRUCE EXP$
 ;
 ;******************************************************************************
-;  PROCEDURE sum_month_seasonal_year_method1 SUMS ALL THE DATA FOR MONTHLY, SEASONAL, 
-;  AND YEARLY CALCULATION.
+;  PROCEDURE sum_month_seasonal_year_method1 SUMS ALL THE DATA FOR MONTHLY, 
+;  SEASONAL, AND YEARLY CALCULATION.
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 )
+;  (1 ) index          (1-D):SELECTED INDEX FOR VARIOUS CASES, INCLUDING 
+;                            REGION, ACA, CLEAR, CLOUD, AND CLOUD_ONLY    [---]
+;  (2 ) switch_select_region (logic):SWITCH FOR OPENNING THE REGION SELECTION 
+;                                    OR NOT                               [---]
+;  (3 ) sampled_grids_lat_index (1-D):SAMPLED GRIDS INDEX OF LATITUDE     [---]
+;  (4 ) sampled_grids_lon_index (1-D):SAMPLED GRIDS INDEX OF LONGITUDE    [---]
+;  (5 ) CALIOP_total_count      (1-D):CALIOP TOTAL COUNT                  [---]
+;  (6 ) CALIOP_cloud_count      (1-D):CALIOP CLOUD COUNT                  [---]
+;  (7 ) CALIOP_ACA_count_sum    (1-D):CALIOP ACA COUNT FOR VARIOUS AEROSOL 
+;                                     TYPES                               [---]
+;  (8 ) CALIOP_total_count_time (2-D):CALIOP TOTAL COUNT FOR SPECIFIC TIME[---]
+;  (9 ) CALIOP_cloud_count_time (2-D):CALIOP CLOUD COUNT FOR SPECIFIC TIME[---]
+;  (10) CALIOP_ACA_count_time   (2-D):CALIOP ACA COUNT FOR SPECIFIC TIME  [---]
 ;
 ;  NOTES:
 ;  ============================================================================

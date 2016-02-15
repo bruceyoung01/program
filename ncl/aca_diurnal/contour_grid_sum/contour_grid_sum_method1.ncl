@@ -10,9 +10,33 @@
 ;  (3 ) FREQUENCY/TOTAL_AVAILABLE_POINT
 ;  HERE IS METHOD 1.
 ;
-;  VARIABLES:
+;  FLOW CHART:
 ;  ============================================================================
-;  (1 )
+;  (1 ) SET UP BASIC INFO: 
+;       OUTPUT FILES, DIRECTORY, MISSING VALUE, REGION LIMITS, TIME, SWITCH;
+;  (2 ) DO YEAR, MONTH, AND DAY LOOPS;
+;  (3 ) SELECT ACA DATA FILE BASED ON THE YEAR, MONTH, DAY, DAYTIME/NIGHTTIME,
+;       ADJUST/NOADJUST;
+;  (4 ) READ VARIABLES FROM ACA DATA FILE;
+;  (5 ) GET THE INDICES FOR DIFFERENT CASES:
+;       REGION, ACA, CLEAR, CLOUD, CLOUD_ONLY;
+;  (6 ) SUM THE CALIOP TOTAL COUNT, CALIOP CLOUD COUNT, ACA COUNT FOR MONTH, 
+;       SEASON, AND YEAR;
+;  (7 ) CALCULATE CLOUD FRACTION AND ACA FREQUENCY FROM CALIOP TOTAL COUNT, 
+;       CALIOP CLOUD COUNT, AND ACA COUNT;
+;  (8 ) PLOT DAILY IMAGE;
+;  (9 ) END OF DAY LOOP;
+;  (10) CALCULATE CLOUD FRACTION AND ACA FREQUENCY FROM CALIOP TOTAL COUNT, 
+;       CALIOP CLOUD COUNT, AND ACA COUNT;
+;  (11) PLOT MONTHLY IMAGE;
+;  (12) END OF MONTH LOOP;
+;  (13) CALCULATE CLOUD FRACTION AND ACA FREQUENCY FROM CALIOP TOTAL COUNT, 
+;       CALIOP CLOUD COUNT, AND ACA COUNT;
+;  (14) PLOT SEASONAL IMAGE;
+;  (15) END OF YEAR LOOP;
+;  (16) CALCULATE CLOUD FRACTION AND ACA FREQUENCY FROM CALIOP TOTAL COUNT, 
+;       CALIOP CLOUD COUNT, AND ACA COUNT;
+;  (17) PLOT YEAR LOOP.
 ;
 ;  NOTES:
 ;  ============================================================================
@@ -37,8 +61,20 @@ begin
    type       = "x11"
 ;  type       = "pdf"
 ;  type       = "png"
-   wks        = gsn_open_wks(type,"1plot_contour_grid_sum_method1_cf_cloud_v05")
-   gsn_define_colormap(wks,"WhBlGrYeOrReVi202")
+;  DEFINE A STRING FOR DIFFERENT CASES
+;  THE CASES INCLUDING region, aca, clear, cloud, cloud_only
+   scase      = "cloud"
+;  RESTRICTION FOR FILE
+;  FOR DAY TIME, don = "d"; FOR NIGHT TIME, don = "n"
+   don        = "n"
+;  FOR ADJUST just = "_adjust"; FOR NOADJUST just = "oadjust"
+   just       = "_adjust"
+;  FOR ACA FREQUENCY = "aca_fre"; FOR CLOUD FRACTION = "cf"
+   para       = "aca_fre"
+   dir_plot   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/contour_grid_sum/"
+   wks        = gsn_open_wks(type, dir_plot + "1plot_contour_grid_sum_method1_" + \
+                             para + "_" + scase + "_" + don + "_v06_LuZ")
+   gsn_define_colormap(wks,"BlGrYeOrReVi200")
 
 ;  DATA DIRECTORY
    wdir       = "/home/vy57456/zzbatmos_common/Exchange/For_Zhifeng/ACA_Data/"
@@ -64,17 +100,14 @@ begin
 ;  SET UP THE START TIME AND END TIME
    start_year = 2007
    end_year   = 2014
-   start_month= 6
-   end_month  = 8
+   start_month= 8
+   end_month  = 9
    start_day  = 1
 
 ;  SET UP SEASONAL STRING: -DJF, -MMA, JJA, SON
-   sstring    = "JJA"
-;  RESTRICTION FOR FILE
-;  FOR DAY TIME, don = "d"; FOR NIGHT TIME, don = "n"
-   don        = "d"
-;  FOR ADJUST just = "_adjust"; FOR NOADJUST just = "oadjust"
-   just       = "_adjust"
+   sstring    = " Aug-Sep"
+;  METHOD 1 FORMULA; n IS COUNT
+   formula1   = "  [n/~F34~e~F21~(n)]"
 
 ;  SWITCH FOR SELECTED REGION
    switch_select_region = False
@@ -83,8 +116,8 @@ begin
 
 ;  WHICH PLOT IS TO BE PLOTTED
    logic_plot_daily    = False
-   logic_plot_monthly  = True
-   logic_plot_seasonal = True
+   logic_plot_monthly  = False
+   logic_plot_seasonal = False
    logic_plot_yearly   = True
 
 ;  DEFINE THE GLOBAL GRID ARRAY TO HOLD ALL THE DAILY DATA
@@ -146,8 +179,8 @@ begin
             siyear  = sprinti("%0.4i", iyear)
             simonth = sprinti("%0.2i", imonth)
             siday   = sprinti("%0.2i", iday)
-            stime   = siyear + "-" + simonth + "-" + siday
-            print("Now Processing : " + stime)
+            sitime  = siyear + "-" + simonth + "-" + siday
+            print("Now Processing : " + sitime)
             if (logic_plot_daily) then
                CALIOP_total_count_daily = new((/nlat, nlon/),   integer, bv1)
                CALIOP_total_count_daily = 0
@@ -225,7 +258,7 @@ begin
             CALIOP_ACA_count_daily)
 ;  CALL SUBROUTINE calculate_cf_aca_fre_method1.ncl TO CALCULATE CLOUD FRACTION AND ACA FREQUENCY
             calculate_cf_aca_fre_method1 \
-            (bv2, nlat, nlon, CALIOP_total_count_daily, CALIOP_cloud_count_daily, \
+            (bv2, CALIOP_total_count_daily, CALIOP_cloud_count_daily, \
             CALIOP_ACA_count_daily, CALIOP_cf_daily, CALIOP_ACA_fre_daily)
            end if
            if (logic_plot_monthly) then
@@ -236,10 +269,6 @@ begin
             CALIOP_total_count, CALIOP_cloud_count, CALIOP_ACA_count_sum, \
             CALIOP_total_count_monthly, CALIOP_cloud_count_monthly,       \
             CALIOP_ACA_count_monthly)
-;  CALL SUBROUTINE calculate_cf_aca_fre_method1.ncl TO CALCULATE CLOUD FRACTION AND ACA FREQUENCY
-            calculate_cf_aca_fre_method1 \
-            (bv2, nlat, nlon, CALIOP_total_count_monthly, CALIOP_cloud_count_monthly, \
-            CALIOP_ACA_count_monthly, CALIOP_cf_monthly, CALIOP_ACA_fre_monthly)
            end if
            if (logic_plot_seasonal) then
 ;  CALL SUBROUTINE sum_month_seasonal_year_method1.ncl TO SUM ALL THE DATA TOGETHER
@@ -249,10 +278,6 @@ begin
             CALIOP_total_count, CALIOP_cloud_count, CALIOP_ACA_count_sum, \
             CALIOP_total_count_seasonal, CALIOP_cloud_count_seasonal,     \
             CALIOP_ACA_count_seasonal)
-;  CALL SUBROUTINE calculate_cf_aca_fre_method1.ncl TO CALCULATE CLOUD FRACTION AND ACA FREQUENCY
-            calculate_cf_aca_fre_method1 \
-            (bv2, nlat, nlon, CALIOP_total_count_seasonal, CALIOP_cloud_count_seasonal, \
-            CALIOP_ACA_count_seasonal, CALIOP_cf_seasonal, CALIOP_ACA_fre_seasonal)
            end if
            if (logic_plot_yearly) then
 ;  CALL SUBROUTINE sum_month_seasonal_year_method1.ncl TO SUM ALL THE DATA TOGETHER
@@ -262,14 +287,13 @@ begin
             CALIOP_total_count, CALIOP_cloud_count, CALIOP_ACA_count_sum, \
             CALIOP_total_count_yearly, CALIOP_cloud_count_yearly,         \
             CALIOP_ACA_count_yearly)
-;  CALL SUBROUTINE calculate_cf_aca_fre_method1.ncl TO CALCULATE CLOUD FRACTION AND ACA FREQUENCY
-            calculate_cf_aca_fre_method1 \
-            (bv2, nlat, nlon, CALIOP_total_count_yearly, CALIOP_cloud_count_yearly, \
-            CALIOP_ACA_count_yearly, CALIOP_cf_yearly, CALIOP_ACA_fre_yearly)
            end if
 
-
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;  PLOT DAILY IMAGE
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             if (logic_plot_daily) then
+               stime = sitime + " " + scase + " " + don + formula1
 ;  CALL SUBROUTINE plot_contour_grid_landmask.ncl TO PLOT MONTHLY IMAGE WITH BACKGROUND MAP ON IT
                plot_contour_grid_landmask \
                (wks, minlat, maxlat, minlon, maxlon, \
@@ -287,8 +311,16 @@ begin
             delete([/dim_index_real/])
          end do ; iday
 
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;  PLOT MONTHLY IMAGE
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
          if (logic_plot_monthly) then
-            smonthly = siyear + "-" + simonth
+            smonthly = siyear  + "-" + simonth + " " + scase + " " + don + formula1
+;  CALL SUBROUTINE calculate_cf_aca_fre_method1.ncl TO CALCULATE CLOUD FRACTION AND ACA FREQUENCY
+            calculate_cf_aca_fre_method1 \
+            (bv2, CALIOP_total_count_monthly, CALIOP_cloud_count_monthly, \
+            CALIOP_ACA_count_monthly, CALIOP_cf_monthly, CALIOP_ACA_fre_monthly)
+
 ;  CALL SUBROUTINE plot_contour_grid_landmask.ncl TO PLOT MONTHLY IMAGE WITH BACKGROUND MAP ON IT
             plot_contour_grid_landmask \
             (wks, minlat, maxlat, minlon, maxlon, \
@@ -302,33 +334,50 @@ begin
          end if
       end do ; imonth
 
-         if (logic_plot_seasonal) then
-            sseasonal = siyear + sstring
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;  PLOT SEASONAL IMAGE
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      if (logic_plot_seasonal) then
+         sseasonal = siyear + sstring + " " + scase + " " + don + formula1
+;  CALL SUBROUTINE calculate_cf_aca_fre_method1.ncl TO CALCULATE CLOUD FRACTION AND ACA FREQUENCY
+         calculate_cf_aca_fre_method1 \
+         (bv2, CALIOP_total_count_seasonal, CALIOP_cloud_count_seasonal, \
+         CALIOP_ACA_count_seasonal, CALIOP_cf_seasonal, CALIOP_ACA_fre_seasonal)
+
 ;  CALL SUBROUTINE plot_contour_grid_landmask.ncl TO PLOT SEASONAL IMAGE WITH BACKGROUND MAP ON IT
-            plot_contour_grid_landmask \
-            (wks, minlat, maxlat, minlon, maxlon, \
-            lat, lon, CALIOP_cf_seasonal, sseasonal)
-         if (switch_pg) then
+         plot_contour_grid_landmask \
+         (wks, minlat, maxlat, minlon, maxlon, \
+         lat, lon, CALIOP_cf_seasonal, sseasonal)
+      if (switch_pg) then
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
-            polygon_map \
-            (wks, minlat, maxlat, minlon, maxlon, \
-            lat_pg, lon_pg)
-         end if
-         end if
+         polygon_map \
+         (wks, minlat, maxlat, minlon, maxlon, \
+         lat_pg, lon_pg)
+      end if
+      end if
    end do ; iyear
 
-         if (logic_plot_yearly) then
-            syearly = sprinti("%0.4i", start_year) + "-" + \
-                      sprinti("%0.4i", end_year)   + " " + sstring
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+;  PLOT YEARLY IMAGE
+;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+   if (logic_plot_yearly) then
+      syearly = sprinti("%0.4i", start_year) + "-" + \
+                sprinti("%0.4i", end_year)   + " " + \
+                sstring + " " + scase + " " + don + formula1
+;  CALL SUBROUTINE calculate_cf_aca_fre_method1.ncl TO CALCULATE CLOUD FRACTION AND ACA FREQUENCY
+      calculate_cf_aca_fre_method1 \
+      (bv2, CALIOP_total_count_yearly, CALIOP_cloud_count_yearly, \
+      CALIOP_ACA_count_yearly, CALIOP_cf_yearly, CALIOP_ACA_fre_yearly)
+
 ;  CALL SUBROUTINE plot_contour_grid_landmask.ncl TO PLOT YEARLY IMAGE WITH BACKGROUND MAP ON IT
-            plot_contour_grid_landmask \
-            (wks, minlat, maxlat, minlon, maxlon, \
-            lat, lon, CALIOP_cf_yearly, syearly)
-         if (switch_pg) then
+      plot_contour_grid_landmask \
+      (wks, minlat, maxlat, minlon, maxlon, \
+      lat, lon, CALIOP_ACA_fre_yearly, syearly)
+   if (switch_pg) then
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
-            polygon_map \
-            (wks, minlat, maxlat, minlon, maxlon, \
-            lat_pg, lon_pg)
-         end if
-         end if
+      polygon_map \
+      (wks, minlat, maxlat, minlon, maxlon, \
+      lat_pg, lon_pg)
+   end if
+   end if
 end

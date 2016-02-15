@@ -28,7 +28,8 @@ begin
    type       = "x11"
 ;  type       = "pdf"
 ;  type       = "png"
-   wks        = gsn_open_wks(type,"1plot_joint_histogram_modis_terra_v01")
+   plot_dir   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/joint_histogram_modis/"
+   wks        = gsn_open_wks(type, plot_dir + "1plot_joint_histogram_modis_terra_v01")
    gsn_define_colormap(wks,"MPL_gist_yarg")
 
 ;  DATA DIRECTORY

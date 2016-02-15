@@ -6,8 +6,8 @@
 ;
 ;  PROGRAM FLOW CHART:
 ;  ============================================================================
-;  (1 ). READ SEVIRI FILE NAME BASED ON YEAR, MONTH, DAY, HOUR, AND MIN.
-;  (2 ). PLOT THE IMAGE FOR EVERY 15 MIN.
+;  (1 ) READ SEVIRI FILE NAME BASED ON YEAR, MONTH, DAY, HOUR, AND MIN.
+;  (2 ) PLOT THE IMAGE FOR EVERY 15 MIN.
 ;
 ;  NOTES:
 ;  ============================================================================
@@ -91,7 +91,6 @@ begin
             do ihour = start_hour, end_hour
 ;  DO MINUTE LOOP
                do imin = start_min, end_min, min_stride
-print("aa")
                   siyear  = sprinti("%0.4i", iyear)
                   simonth = sprinti("%0.2i", imonth)
                   siday   = sprinti("%0.2i", iday)
@@ -116,9 +115,7 @@ print("aa")
                         lon!1 = "lon"
                         lat@_FillValue = bv3
                         lon@_FillValue = bv3
-print("bb")
                      end if
-print("cc")
                      Cloud_Optical_Thickness_16 = a->Cloud_Optical_Thickness_16(start_ind_lat:end_ind_lat, start_ind_lon:end_ind_lon)
                      cot16 = Cloud_Optical_Thickness_16*Cloud_Optical_Thickness_16@scale_factor
                      cot16@_FillValue = bv2
@@ -127,7 +124,6 @@ print("cc")
                      cot16@lat2d = lat
                      cot16@lon2d = lon
                      delete([/Cloud_Optical_Thickness_16/])
-print("dd")
                      if (all(ismissing(cot16))) then
                         print("----------------------------------------------")
                         print("VARIABLES ARE ALL MISSING VALUES!!!!!!!!!")
@@ -151,13 +147,11 @@ print("dd")
 ;  PLOT DAILY IMAGE
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                   if (logic_plot_daily) then
-print("ee")
                      sdaily = symd2 + " " + stime
 ;  CALL SUBROUTINE plot_contour_grid_landmask_seviri.ncl TO PLOT MONTHLY IMAGE WITH BACKGROUND MAP ON IT
                      plot_contour_grid_landmask_seviri     \
                      (wks, minlat, maxlat, minlon, maxlon, \
                      element, cot16, sdaily)
-print("ff")
                   if (switch_pg) then
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
                      polygon_map \
@@ -166,7 +160,6 @@ print("ff")
                   end if
                   end if
 
-print("gg")
                   delete([/cot16/])
                end do ;imin
             end do ;ihour

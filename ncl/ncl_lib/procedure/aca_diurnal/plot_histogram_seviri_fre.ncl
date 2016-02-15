@@ -44,6 +44,8 @@ begin
   res                      = True          ; plot mods desired
   res@gsnMaximize          = True          ; Maximize plot in frame.
   res@gsnSpreadColors      = True
+  res@gsnDraw              = False
+  res@gsnFrame             = False
 
   res@cnFillOn             = True          ; Turn on contour fill
   res@cnFillMode           = "RasterFill"  ; Turn on raster fill
@@ -53,8 +55,8 @@ begin
 
   res@cnLevelSelectionMode = "ManualLevels"
   res@cnMinLevelValF       = 0
-  res@cnMaxLevelValF       = 10
-  res@cnLevelSpacingF      = 0.1
+  res@cnMaxLevelValF       = 5
+  res@cnLevelSpacingF      = 0.05
 ; res@ContourParameters    = (/0., 10., 0.1/) 
   res@cnNoDataLabelOn      = False
 
@@ -77,7 +79,6 @@ begin
   res@tmXBValues           = fspan(res@trXMinF, res@trXMaxF, nxbnd) 
   res@tmXBLabels           = xbnd           
   res@sfXArray             = res@tmXBValues    
-
   res@tmYLMode             = "Explicit"                ; explicit labels
   res@tmYLValues           = fspan(res@trYMinF, res@trYMaxF, nybnd) 
   res@tmYLLabels           = ybnd          
@@ -86,8 +87,8 @@ begin
   res@tiXAxisString        = "COT"        ; x-axis title
   res@tiYAxisString        = "CTP [hPa]"  ; y-axis title
 
-  res@tiMainString         = times
+  res@tiMainString         = "SEVIRI OPER-R " + times
   plot = gsn_csm_contour(wks,data,res)       ; contour the variable
-
+  draw(plot)
 return
 end

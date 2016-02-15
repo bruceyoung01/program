@@ -10,13 +10,35 @@
 ;  (3 ) FREQUENCY/TOTAL_AVAILABLE_POINT
 ;  HERE IS METHOD 3.
 ;
-;  VARIABLES:
+;  FLOW CHART:
 ;  ============================================================================
-;  (1 )
+;  (1 ) SET UP BASIC INFO: 
+;       OUTPUT FILES, DIRECTORY, MISSING VALUE, REGION LIMITS, TIME, SWITCH;
+;  (2 ) DO YEAR, MONTH, AND DAY LOOPS;
+;  (3 ) SELECT ACA DATA FILE BASED ON THE YEAR, MONTH, DAY, DAYTIME/NIGHTTIME,
+;       ADJUST/NOADJUST;
+;  (4 ) READ VARIABLES FROM ACA DATA FILE;
+;  (5 ) GET THE INDICES FOR DIFFERENT CASES:
+;       REGION, ACA, CLEAR, CLOUD, CLOUD_ONLY;
+;  (6 ) CALCULATE CLOUD FRACTION AND ACA FREQUENCY FROM CALIOP TOTAL COUNT, 
+;       CALIOP CLOUD COUNT, AND ACA COUNT;
+;  (7 ) SUM CLOUD FRACTION, ACA FREQUENCY FOR MONTH, SEASON, AND YEAR;
+;  (8 ) PLOT DAILY IMAGE AND WRITE DAILY CALIOP COUNT DATA;
+;  (9 ) END OF DAY LOOP;
+;  (10) PLOT MONTHLY IMAGE AND WRITE MONTHLY CALIOP CLOUD FRACTION AND ACA 
+;       FREQUENCY DATA;
+;  (11) END OF MONTH LOOP;
+;  (12) PLOT SEASONAL IMAGE AND WRITE SEASONAL CALIOP CLOUD FRACTION AND ACA 
+;       FREQUENCY DATA;
+;  (13) END OF YEAR LOOP;
+;  (14) PLOT YEAR LOOP AND WRITE YEAR CALIOP CLOUD FRACTION AND ACA 
+;       FREQUENCY DATA.
 ;
 ;  NOTES:
 ;  ============================================================================
 ;  (1 ) ORIGINALLY WRITTEN BY BRUCE. (05/18/2015)
+;  (2 ) MODIFIED FROM contour_grid_sum_method3.ncl BY ADDING THE CODE FOR 
+;       WRITING THE DATA INTO A TEXT FILE. (BRUCE, 08/27/2015)
 ;******************************************************************************
 
 ;  LOAD FUNCTIONS AND PROCEDURES
@@ -28,6 +50,7 @@ load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/universal/gsn_cs
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/universal/polygon_map.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/select_aca_grid_file.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/select_region_aca_clear_cloud.ncl"
+load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/select_convert_2d_caliop_count.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/calculate_cf_aca_fre_method2.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/sum_month_seasonal_year_method3.ncl"
 load "/home/vy57456/zzbatmos_user/program/ncl/ncl_lib/procedure/aca_diurnal/plot_contour_grid_landmask.ncl"
@@ -37,7 +60,19 @@ begin
 ;  type       = "x11"
    type       = "pdf"
 ;  type       = "png"
-   wks        = gsn_open_wks(type,"1plot_contour_grid_sum_write_method3_aca_fre_aca_v05")
+;  DEFINE A STRING FOR DIFFERENT CASES
+;  THE CASES INCLUDING region, aca, clear, cloud, cloud_only
+   scase      = "aca"
+;  RESTRICTION FOR FILE
+;  FOR DAY TIME, don = "d"; FOR NIGHT TIME, don = "n"
+   don        = "n"
+;  FOR ADJUST just = "_adjust"; FOR NOADJUST just = "oadjust"
+   just       = "_adjust"
+;  FOR ACA FREQUENCY = "aca_fre"; FOR CLOUD FRACTION = "cf"
+   para       = "aca_fre"
+   dir_plot   = "/home/vy57456/zzbatmos_user/program_plot/ncl/aca_diurnal/contour_grid_sum_write/"
+   wks        = gsn_open_wks(type, dir_plot + "1plot_contour_grid_sum_write_method3_" + \
+                             para + "_" + scase + "_" + don + "_v06")
    gsn_define_colormap(wks,"WhBlGrYeOrReVi202")
 
 ;  DATA DIRECTORY
@@ -62,19 +97,16 @@ begin
    switch_pg  = True
 
 ;  SET UP THE START TIME AND END TIME
-   start_year = 2014
+   start_year = 2007
    end_year   = 2014
    start_month= 8
    end_month  = 9
    start_day  = 1
 
 ;  SET UP SEASONAL STRING: -DJF, -MMA, JJA, SON
-   sstring    = "JJA"
-;  RESTRICTION FOR FILE
-;  FOR DAY TIME, don = "d"; FOR NIGHT TIME, don = "n"
-   don        = "d"
-;  FOR ADJUST just = "_adjust"; FOR NOADJUST just = "oadjust"
-   just       = "_adjust"
+   sstring    = " Aug-Sep"
+;  METHOD 3 FORMULA; n IS THE COUNT
+   formula3   = "  {n/~F34~e~F21~[available(n)]}"
 
 ;  SWITCH FOR SELECTED REGION
    switch_select_region = True
@@ -82,7 +114,7 @@ begin
    switch_landsea_mask  = True
 
 ;  WHICH PLOT IS TO BE PLOTTED
-   logic_plot_daily    = False
+   logic_plot_daily    = True
    logic_plot_monthly  = True
    logic_plot_seasonal = True
    logic_plot_yearly   = True
@@ -92,6 +124,10 @@ begin
 ;  DEFINE THE GLOBAL GRID ARRAY TO HOLD ALL THE DAILY DATA
    nlat       = 180
    nlon       = 360
+;  DEFINE GRIDDED CALIOP_total_count, CALIOP_cloud_count, AND CALIOP_ACA_count
+   CALIOP_total_count_grid = new((/nlat, nlon/), integer, bv1)
+   CALIOP_cloud_count_grid = new((/nlat, nlon/), integer, bv1)
+   CALIOP_ACA_count_grid   = new((/nlat, nlon/), integer, bv1)
 
 ;  PREDEFINE THE TOTAL SELECTED SAMPLES IN THE STUDY REGION
 ;  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -152,8 +188,8 @@ begin
             siyear  = sprinti("%0.4i", iyear)
             simonth = sprinti("%0.2i", imonth)
             siday   = sprinti("%0.2i", iday)
-            stime   = siyear + "-" + simonth + "-" + siday
-            print("Now Processing : " + stime)
+            sitime  = siyear + "-" + simonth + "-" + siday
+            print("Now Processing : " + sitime)
             if (logic_plot_daily) then
                CALIOP_cf_day      = new((/1, nlat, nlon/),   float,   bv2)
                CALIOP_ACA_fre_day = new((/1, nlat, nlon/),   float,   bv2)
@@ -198,7 +234,7 @@ begin
             nsample             = dimsizes(sampled_grids_lat_index)
             CALIOP_cf           = new((/nsample/), float, bv2)
             CALIOP_ACA_fre      = new((/nsample/), float, bv2)
-;  DEFINE OUTPUT ARRARY FOR SUBROUTINE region_aca_clear.ncl
+;  DEFINE OUTPUT ARRAY FOR SUBROUTINE region_aca_clear.ncl
             index               = new((/ndim_index/), integer, bv1)
             index_region        = new((/ndim_index/), integer, bv1)
             index_aca           = new((/ndim_index/), integer, bv1)
@@ -208,13 +244,14 @@ begin
 
 ;  CALL SUBROUTINE select_region_aca_clear_cloud.ncl TO SELECT DATA IN THE STUDY REGION 
 ;  AND JUDGE WHETHER THE GRID IS ACA, CLEAR, CLOUD, AND CLOUD ONLY
-            select_region_aca_clear_cloud                      \
-            (minlat, maxlat, minlon, maxlon, lat, lon,         \
-             sampled_grids_lat_index, sampled_grids_lon_index, \
-             CALIOP_cloud_count, CALIOP_ACA_count,             \
-             index_region, index_aca, index_clear, index_cloud, index_cloud_only)
+            select_region_aca_clear_cloud                     \
+            (minlat, maxlat, minlon, maxlon, lat, lon,        \
+            sampled_grids_lat_index, sampled_grids_lon_index, \
+            CALIOP_cloud_count, CALIOP_ACA_count,             \
+            index_region, index_aca, index_clear, index_cloud,\
+            index_cloud_only)
 
-            index = index_cloud_only
+            index = index_aca
 ;  DEFINE THE ACTUAL SIZE OF index
             if (all(ismissing(index))) then
                continue
@@ -227,19 +264,28 @@ begin
             end if
 
 ;  CALL SUBROUTINE calculate_cf_aca_fre_method2.ncl TO CALCULATE CLOUD FRACTION AND ACA FREQUENCY
-            calculate_cf_aca_fre_method2 \
-            (nlat, nlon, CALIOP_total_count, CALIOP_cloud_count, \
+            calculate_cf_aca_fre_method2             \
+            (CALIOP_total_count, CALIOP_cloud_count, \
             CALIOP_ACA_count_sum, CALIOP_cf, CALIOP_ACA_fre)
 
-           if (logic_plot_daily) then
+            if (logic_plot_daily) then
+;  CALL SUBROUTINE select_convert_2d_caliop_count.ncl TO SELECT CALIOP COUNT DATA AND 
+;  CONVERT COUNT DATA INTO 2-D DATA
+           select_convert_2d_caliop_count                     \
+           (index, switch_select_region,                      \
+            sampled_grids_lat_index, sampled_grids_lon_index, \
+            CALIOP_total_count, CALIOP_cloud_count,           \
+            CALIOP_ACA_count_sum, CALIOP_total_count_grid,    \
+            CALIOP_cloud_count_grid, CALIOP_ACA_count_grid)
+
 ;  CALL SUBROUTINE sum_month_seasonal_year_method3.ncl TO SUM ALL THE DATA TOGETHER
            sum_month_seasonal_year_method3                    \
            (index, 0, switch_select_region,                   \
             sampled_grids_lat_index, sampled_grids_lon_index, \
             CALIOP_cf, CALIOP_ACA_fre, CALIOP_cf_day,         \
             CALIOP_ACA_fre_day)
-           end if
-           if (logic_plot_monthly) then
+            end if
+            if (logic_plot_monthly) then
 ;  CALL SUBROUTINE sum_month_seasonal_year_method3.ncl TO SUM ALL THE DATA TOGETHER
            sum_month_seasonal_year_method3                    \
            (index, iday_loop, switch_select_region,           \
@@ -268,19 +314,37 @@ begin
 ;  PLOT DAILY IMAGE
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             if (logic_plot_daily) then
-            CALIOP_ACA_fre_daily = dim_avg_n(CALIOP_ACA_fre_day, 0)
-            CALIOP_cf_daily      = dim_avg_n(CALIOP_cf_day, 0)
-            if (switch_pg) then
+               stime = sitime + " " + scase + " " + don; + formula3
+               CALIOP_ACA_fre_daily = dim_avg_n(CALIOP_ACA_fre_day, 0)
+               CALIOP_cf_daily      = dim_avg_n(CALIOP_cf_day, 0)
 ;  CALL SUBROUTINE plot_contour_grid_landmask.ncl TO PLOT DAILY IMAGE WITH BACKGROUND MAP ON IT
-               plot_contour_grid_landmask \
-               (wks, minlat, maxlat, minlon, maxlon,    \
-               lat, lon, CALIOP_cf_daily, stime)
-            if (switch_pg) then
-;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
-               polygon_map \
-               (wks, minlat, maxlat, minlon, maxlon, \
-               lat_pg, lon_pg)
-            end if
+;               plot_contour_grid_landmask            \
+;               (wks, minlat, maxlat, minlon, maxlon, \
+;               lat, lon, CALIOP_ACA_fre_daily, stime)
+;            if (switch_pg) then
+;;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
+;               polygon_map                           \
+;               (wks, minlat, maxlat, minlon, maxlon, \
+;               lat_pg, lon_pg)
+;            end if
+;  WRITE DOWN THE FINAL DATA INTO A FILE AS ASCII. FOR ZHENG LU (UNIVERSITY OF WYOMING)
+;  DEFINE TEXT FILE NAME
+               textfilename = sitime + "_" + don + "_" + scase + "_count.txt"
+;  HEADER FOR THE TEXT FILE
+               title = (/"Latitude Longitude CALIOP_total_count CALIOP_cloud_count CALIOP_ACA_count"/)
+               titlelist = [/title/]
+               write_table(dir_plot + textfilename, "w", titlelist, "%s ")
+;  DO LATITUDE AND LONGITUDE LOOPS TO WRTIE DOWN CALIOP COUNT INTO TEXT FILE
+               do ilat = 59, 100;nlat-1
+                  do ilon = 159, 200;nlon-1
+                     write_table(dir_plot + textfilename, "a", \
+                     [/lat(ilat), lon(ilon),                   \
+                       CALIOP_total_count_grid(ilat, ilon),    \
+                       CALIOP_cloud_count_grid(ilat, ilon),    \
+                       CALIOP_ACA_count_grid(ilat, ilon)/],    \
+                       "%7.2f %7.2f %4.0i %4.0i %4.0i")
+                  end do
+               end do
             delete([/CALIOP_ACA_fre_day, CALIOP_cf_day/])
             end if
             iday_loop   = iday_loop   + 1
@@ -293,26 +357,34 @@ begin
 ;  PLOT MONTHLY IMAGE
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
          if (logic_plot_monthly) then
-            smonthly               = siyear + "-" + simonth
+            smonthly = siyear  + "-" + simonth + "_" + scase + "_" + don;+ formula3
             CALIOP_ACA_fre_monthly = dim_avg_n(CALIOP_ACA_fre_month, 0)
             CALIOP_cf_monthly      = dim_avg_n(CALIOP_cf_month, 0)
 ;  CALL SUBROUTINE plot_contour_grid_landmask.ncl TO PLOT MONTHLY IMAGE WITH BACKGROUND MAP ON IT
-            plot_contour_grid_landmask \
-            (wks, minlat, maxlat, minlon, maxlon,    \
+            plot_contour_grid_landmask            \
+            (wks, minlat, maxlat, minlon, maxlon, \
             lat, lon, CALIOP_cf_monthly, smonthly)
          if (switch_pg) then
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
-            polygon_map \
+            polygon_map                           \
             (wks, minlat, maxlat, minlon, maxlon, \
             lat_pg, lon_pg)
          end if
 ;  WRITE DOWN THE FINAL DATA INTO A FILE AS ASCII. FOR ZHENG LU (UNIVERSITY OF WYOMING)
+;  DEFINE TEXT FILE NAME
+         textfilename = smonthly + "_" + don + "_" + scase + ".txt"
+;  HEADER FOR THE TEXT FILE
+         title = (/"Latitude Longitude Cloud_Fraction ACA_Frequency"/)
+         titlelist = [/title/]
+         write_table(dir_plot + textfilename, "w", titlelist, "%s ")
+;  DO LATITUDE AND LONGITUDE LOOPS TO WRTIE DOWN CALIOP CLOUD FRACTION AND 
+;  ACA FREQUENCY INTO TEXT FILE
          do ilat = 59, 100;nlat-1
             do ilon = 159, 200;nlon-1
-               write_table(smonthly + "_cloud_only.txt", "a", \
-               [/CALIOP_cf_monthly(ilat, ilon),        \
-                 CALIOP_ACA_fre_monthly(ilat, ilon),   \
-                 lat(ilat), lon(ilon)/],               \
+               write_table(dir_plot + textfilename, "a", \
+               [/lat(ilat), lon(ilon) ,                  \
+                 CALIOP_cf_monthly(ilat, ilon),          \
+                 CALIOP_ACA_fre_monthly(ilat, ilon)/],   \
                  "%7.2f %7.2f %7.2f %7.2f")
             end do
          end do
@@ -324,16 +396,16 @@ begin
 ;  PLOT SEASONAL IMAGE
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
       if (logic_plot_seasonal) then
-         sseasonal = siyear + " " + sstring
+         sseasonal = siyear + sstring + " " + scase + " " + don;+ formula3
          CALIOP_ACA_fre_seasonal = dim_avg_n(CALIOP_ACA_fre_season, 0)
          CALIOP_cf_seasonal      = dim_avg_n(CALIOP_cf_season, 0)
 ;  CALL SUBROUTINE plot_contour_landmask.ncl TO PLOT SEASONAL IMAGE WITH BACKGROUND MAP ON IT
-         plot_contour_grid_landmask \
-         (wks, minlat, maxlat, minlon, maxlon,    \
+         plot_contour_grid_landmask            \
+         (wks, minlat, maxlat, minlon, maxlon, \
          lat, lon, CALIOP_cf_seasonal, sseasonal)
       if (switch_pg) then
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
-         polygon_map \
+         polygon_map                           \
          (wks, minlat, maxlat, minlon, maxlon, \
          lat_pg, lon_pg)
       end if
@@ -346,16 +418,17 @@ begin
 ;  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
    if (logic_plot_yearly) then
       syearly               = sprinti("%0.4i", start_year) + "-" + \
-                              sprinti("%0.4i", end_year)   + " " + sstring
+                              sprinti("%0.4i", end_year)   + " " + \
+                              sstring + " " + scase + " " + don;+ formula3
       CALIOP_ACA_fre_yearly = dim_avg_n(CALIOP_ACA_fre_year, 0)
       CALIOP_cf_yearly      = dim_avg_n(CALIOP_cf_year, 0)
 ;  CALL SUBROUTINE plot_contour_grid_landmask.ncl TO PLOT YEARLY IMAGE WITH BACKGROUND MAP ON IT
-      plot_contour_grid_landmask \
+      plot_contour_grid_landmask            \
       (wks, minlat, maxlat, minlon, maxlon, \
       lat, lon, CALIOP_cf_yearly, syearly)
    if (switch_pg) then
 ;  CALL SUBROUTINE polygon_map.ncl TO PLOT MAP WITH POLYGON ON IT
-      polygon_map \
+      polygon_map                           \
       (wks, minlat, maxlat, minlon, maxlon, \
       lat_pg, lon_pg)
    end if

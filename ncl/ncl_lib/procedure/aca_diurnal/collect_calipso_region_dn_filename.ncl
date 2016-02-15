@@ -42,13 +42,13 @@ begin
                if (isdefined("clat") .and. isdefined("clon")) then
                   delete([/clat, clon/])
                end if
-               clat = a->Latitude
-               clon = a->Longitude
+               clat = a->Latitude(:, 0)
+               clon = a->Longitude(:, 0)
 ;  CHECK WHETHER THE CALIPSO IN THE STUDY REGION
-               index = ind(clat(:, 1) .ge. minlat .and. \
-                           clat(:, 1) .le. maxlat .and. \
-                           clon(:, 1) .ge. minlon .and. \
-                           clon(:, 1) .le. maxlon)
+               index = ind(clat .ge. minlat .and. \
+                           clat .le. maxlat .and. \
+                           clon .ge. minlon .and. \
+                           clon .le. maxlon)
                if (all(ismissing(index))) then
                   delete([/index/])
                else

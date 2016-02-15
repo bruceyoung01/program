@@ -10,7 +10,11 @@
 ;
 ;  VARIABLES:
 ;  ============================================================================
-;  (1 )
+;  (1 ) wks       (GRAPHIC): WORKSTATION                                  [   ]
+;  (2 ) xbnd      (1-D)    : X AXIS LABEL                                 [   ]
+;  (3 ) ybnd      (1-D)    : Y AXIS LABEL                                 [   ]
+;  (4 ) data      (2-D)    : JOINT HISTOGRAM DATA                         [   ]
+;  (5 ) times     (STRING) : STRING TO MARK TIME                          [   ]
 ;
 ;  NOTES:
 ;  ============================================================================
@@ -21,7 +25,7 @@ undef("plot_histogram_terra_cot_ctp_hist")
 procedure plot_histogram_terra_cot_ctp_hist \
           (wks          :graphic,                     \ ;INPUT
            xbnd         :float,     ybnd      :float, \ ;INPUT
-           data         :integer,   times     :string)  ;INPUT
+           data         :numeric,   times     :string)  ;INPUT
 
 begin
   nxbnd = dimsizes(xbnd)                              ; # of x bin boundaries   
@@ -37,6 +41,8 @@ begin
   res                      = True          ; plot mods desired
   res@gsnMaximize          = True          ; Maximize plot in frame.
   res@gsnSpreadColors      = True
+  res@gsnDraw              = False
+  res@gsnFrame             = False
 
   res@cnFillOn             = True          ; Turn on contour fill
   res@cnFillMode           = "RasterFill"  ; Turn on raster fill
@@ -44,19 +50,19 @@ begin
   res@cnLineLabelsOn       = False         ; turns off contour line labels
 
   res@cnLevelSelectionMode = "ManualLevels"
-  res@cnMinLevelValF       =  0
-  res@cnMaxLevelValF       =  5
-  res@cnLevelSpacingF      =  0.125
+  res@cnMinLevelValF       = 0
+  res@cnMaxLevelValF       = 5
+  res@cnLevelSpacingF      = 0.025
+  res@lbLabelStride        = 40
 
   res@trYReverse           = True           ; reverses y-axis 
 
   res@lbLabelBarOn         = True
   res@lbOrientation        = "vertical"     ; vertical label bar
-  res@lbLabelStride        = 8
   res@lbLabelFontThicknessF= 0.3
   res@lbBoxLinesOn         = False
-; res@lbTitleString        = "Terra_cot_ctp_hist"
-; res@lbTitlePosition     = "Right"
+  res@lbTitleString        = "%"
+  res@lbTitlePosition      = "Right"
 
   res@trXMinF              = -0.5           ; extend x and y axes 
   res@trXMaxF              =  nx-0.5
@@ -65,19 +71,19 @@ begin
 
   res@tmXBMode             = "Explicit"                ; explicit labels
   res@tmXBValues           = fspan(res@trXMinF,res@trXMaxF, nxbnd) 
-  res@tmXBLabels           = xbnd           
+  res@tmXBLabels           = xbnd
   res@sfXArray             = res@tmXBValues    
 
   res@tmYLMode             = "Explicit"                ; explicit labels
   res@tmYLValues           = fspan(res@trYMinF,res@trYMaxF, nybnd) 
-  res@tmYLLabels           = ybnd          
+  res@tmYLLabels           = ybnd
   res@sfYArray             = res@tmYLValues
 
   res@tiXAxisString        = "COT"        ; x-axis title
   res@tiYAxisString        = "CTP [hPa]"  ; y-axis title
 
-  res@tiMainString         = times + " Terra_cot_ctp_hist" + " ACA"
+  res@tiMainString         = "Aqua Liquid Cloud " + times
   plot = gsn_csm_contour(wks,data,res)       ; contour the variable
-
+  draw(plot)
 return
 end

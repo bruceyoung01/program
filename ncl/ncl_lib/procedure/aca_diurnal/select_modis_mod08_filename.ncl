@@ -3,6 +3,8 @@
 ;******************************************************************************
 ;  PROCEDURE select_modis_mod08_filename SELECTS MOD08/MYD08 FILE NAME BASED 
 ;  ON THE YEAR, MONTH, AND DAY.
+;  MODIS MOD08_M3/MYD08_M3 FILE NAME:
+;  MYD08_M3.A2013001.006.2014272180603.hdf
 ;
 ;  VARIABLES:
 ;  ============================================================================
